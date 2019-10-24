@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Stationn</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Stationns</value>
+    </caseValues>
+    <fields>
+        <label><!-- Active Station --></label>
+        <name>Active_Station__c</name>
+    </fields>
+    <fields>
+        <help><!-- Cable Provider --></help>
+        <label><!-- Cable Provider --></label>
+        <name>Cable_Provider__c</name>
+        <picklistValues>
+            <masterLabel>Verizon fios</masterLabel>
+            <translation><!-- Verizon fios --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Owner Call Letters --></label>
+        <name>Call_Letters__c</name>
+    </fields>
+    <fields>
+        <label><!-- Channel --></label>
+        <name>Channel__c</name>
+    </fields>
+    <fields>
+        <label><!-- Group Owner --></label>
+        <name>Group_Owner__c</name>
+    </fields>
+    <fields>
+        <label><!-- Market + Unique Station --></label>
+        <name>Market__c</name>
+    </fields>
+    <fields>
+        <label><!-- Markett + Call Letters --></label>
+        <name>Markett_Call_Letters__c</name>
+    </fields>
+    <fields>
+        <label><!-- Markett - HH --></label>
+        <name>Markett_HH__c</name>
+    </fields>
+    <fields>
+        <label><!-- Markett Rank --></label>
+        <name>Markett_Rank__c</name>
+    </fields>
+    <fields>
+        <label><!-- Markett - US HH% --></label>
+        <name>Markett_US__c</name>
+    </fields>
+    <fields>
+        <help><!-- Stationns Markett --></help>
+        <label><!-- Markett --></label>
+        <name>Markett__c</name>
+        <relationshipLabel><!-- Stationns --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Nielsen Call Letters --></label>
+        <name>Nielsen_Call_Letters__c</name>
+    </fields>
+    <fields>
+        <label><!-- OTA Channel Position --></label>
+        <name>OTA__c</name>
+    </fields>
+    <fields>
+        <label><!-- Primary Station --></label>
+        <name>Primary_Station__c</name>
+    </fields>
+    <fields>
+        <label><!-- Station Affiliate --></label>
+        <name>Station_Affiliate__c</name>
+    </fields>
+    <fields>
+        <label><!-- Station Alias --></label>
+        <name>Station_Alias__c</name>
+    </fields>
+    <fields>
+        <label><!-- Stationn Count --></label>
+        <name>Stationn_Count__c</name>
+    </fields>
+    <layouts>
+        <layout>Stationn Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

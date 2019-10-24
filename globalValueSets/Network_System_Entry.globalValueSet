@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>Ahmed</fullName>
+        <default>false</default>
+        <label>Ahmed</label>
+    </customValue>
+    <customValue>
+        <fullName>Anai</fullName>
+        <default>false</default>
+        <label>Anai</label>
+    </customValue>
+    <customValue>
+        <fullName>Kris</fullName>
+        <default>false</default>
+        <label>Kris</label>
+    </customValue>
+    <customValue>
+        <fullName>Michael</fullName>
+        <default>false</default>
+        <label>Michael</label>
+    </customValue>
+    <customValue>
+        <fullName>Brett</fullName>
+        <default>false</default>
+        <label>Brett</label>
+    </customValue>
+    <customValue>
+        <fullName>Regina</fullName>
+        <default>false</default>
+        <label>Regina</label>
+    </customValue>
+    <customValue>
+        <fullName>Cyre</fullName>
+        <default>false</default>
+        <label>Cyre</label>
+    </customValue>
+    <customValue>
+        <fullName>Client Entry</fullName>
+        <default>false</default>
+        <label>Client Entry</label>
+    </customValue>
+    <customValue>
+        <fullName>Kara</fullName>
+        <default>false</default>
+        <label>Kara</label>
+    </customValue>
+    <customValue>
+        <fullName>Jillian</fullName>
+        <default>false</default>
+        <label>Jillian</label>
+    </customValue>
+    <customValue>
+        <fullName>FBN Internal</fullName>
+        <default>false</default>
+        <label>FBN Internal</label>
+    </customValue>
+    <customValue>
+        <fullName>MAV Internal</fullName>
+        <default>false</default>
+        <label>MAV Internal</label>
+    </customValue>
+    <customValue>
+        <fullName>TVG Internal</fullName>
+        <default>false</default>
+        <label>TVG Internal</label>
+    </customValue>
+    <customValue>
+        <fullName>Jillian/Cornelia</fullName>
+        <default>false</default>
+        <label>Jillian/Cornelia</label>
+    </customValue>
+    <customValue>
+        <fullName>Cornelia/Jillian</fullName>
+        <default>false</default>
+        <label>Cornelia/Jillian</label>
+    </customValue>
+    <customValue>
+        <fullName>Lindsay</fullName>
+        <default>false</default>
+        <label>Lindsay</label>
+    </customValue>
+    <customValue>
+        <fullName>Emily</fullName>
+        <default>false</default>
+        <label>Emily</label>
+    </customValue>
+    <customValue>
+        <fullName>Josuel</fullName>
+        <default>false</default>
+        <label>Josuel</label>
+    </customValue>
+    <customValue>
+        <fullName>Cheng</fullName>
+        <default>false</default>
+        <label>Cheng</label>
+    </customValue>
+    <customValue>
+        <fullName>Cornelia</fullName>
+        <default>false</default>
+        <label>Cornelia</label>
+    </customValue>
+    <customValue>
+        <fullName>Jaclyn</fullName>
+        <default>false</default>
+        <label>Jaclyn</label>
+    </customValue>
+    <customValue>
+        <fullName>Jose</fullName>
+        <default>false</default>
+        <label>Jose</label>
+    </customValue>
+    <masterLabel>Network System Entry</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

@@ -1,0 +1,1497 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <allowInChatterGroups>false</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <description>Post log information for schedule</description>
+    <enableActivities>true</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableEnhancedLookup>true</enableEnhancedLookup>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>true</enableHistory>
+    <enableLicensing>false</enableLicensing>
+    <enableReports>true</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <externalSharingModel>ControlledByParent</externalSharingModel>
+    <fields>
+        <fullName>AM_PM__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF( RIGHT( Air_Time__c ,2)=&quot;am&quot;,&quot;am&quot;,
+IF( RIGHT( Air_Time__c ,2)=&quot;AM&quot;,&quot;am&quot;,
+IF( RIGHT( Air_Time__c ,2)=&quot;pm&quot;,&quot;pm&quot;,
+IF( RIGHT( Air_Time__c ,2)=&quot;PM&quot;,&quot;pm&quot;,
+IF( RIGHT( Air_Time__c ,2)=&quot;XM&quot;,&quot;am&quot;,
+IF( RIGHT( Air_Time__c ,2)=&quot;xm&quot;,&quot;am&quot;,
+
+&quot;False&quot;))))))</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>AM/PM</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Agency_Commission__c</fullName>
+        <externalId>false</externalId>
+        <formula>Spot_Rate__c *15/100</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Agency Commission</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Air_Date_Time__c</fullName>
+        <externalId>false</externalId>
+        <formula>TEXT(Air_Date__c ) &amp;&quot; - &quot;&amp; Air_Time__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Air Date/Time</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Air_Date_YYYY__c</fullName>
+        <externalId>false</externalId>
+        <formula>text( Air_Date__c )</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Air Date YYYYMMDD</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Air_Date__c</fullName>
+        <externalId>false</externalId>
+        <label>Air Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Air_Time__c</fullName>
+        <externalId>false</externalId>
+        <label>Air Time</label>
+        <length>50</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Availability__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Availability</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Brand__c</fullName>
+        <externalId>false</externalId>
+        <formula>Schedule__r.DealBrand__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Brand</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Break_Code__c</fullName>
+        <externalId>false</externalId>
+        <label>[Dep]Break Code</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>CM</fullName>
+                    <default>false</default>
+                    <label>CM</label>
+                </value>
+                <value>
+                    <fullName>LOC</fullName>
+                    <default>false</default>
+                    <label>LOC</label>
+                </value>
+                <value>
+                    <fullName>PRO</fullName>
+                    <default>false</default>
+                    <label>PRO</label>
+                </value>
+                <value>
+                    <fullName>CMN</fullName>
+                    <default>false</default>
+                    <label>CMN</label>
+                </value>
+                <value>
+                    <fullName>CML</fullName>
+                    <default>false</default>
+                    <label>CML</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Bundle_Avail_30__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF( Availability__c = TRUE, (VALUE(TEXT(Length__c)) / 30)*   Schedule__r.Units_Available__c   , 0)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Bundle Avail :30</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Bundle_Spot_30__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF( Availability__c = FALSE, VALUE(TEXT(Length__c)) / 30 , 0)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Bundle Spot :30</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Bundle_Spot_Rate__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF( Availability__c = FALSE, Spot_Rate__c , 0)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Bundle Spot Rate</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Bundle__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF( Availability__c = TRUE, Spot_Rate__c * Schedule__r.Equiv_30_Bundles__c    , 0)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Bundle Avail Rate</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Comments__c</fullName>
+        <externalId>false</externalId>
+        <formula>SpotDataMirror__r.Comments__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>[Dep]Comments</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Commercial_Title__c</fullName>
+        <externalId>false</externalId>
+        <label>Commercial Title</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Commercial_Type__c</fullName>
+        <externalId>false</externalId>
+        <label>Commercial Type</label>
+        <length>30</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Credit__c</fullName>
+        <externalId>false</externalId>
+        <label>[Dep]Credit</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Yes</fullName>
+                    <default>false</default>
+                    <label>Yes</label>
+                </value>
+                <value>
+                    <fullName>No</fullName>
+                    <default>false</default>
+                    <label>No</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Day_of_Week__c</fullName>
+        <externalId>false</externalId>
+        <formula>CASE( 
+MOD(  Air_Date__c  - DATE(1900, 1, 7), 7), 
+0, &quot;7Sun&quot;, 
+1, &quot;1Mon&quot;, 
+2, &quot;2Tues&quot;, 
+3, &quot;3Wed&quot;, 
+4, &quot;4Th&quot;, 
+5, &quot;5Fri&quot;, 
+6, &quot;6Sat&quot;, &quot;Error&quot;)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Day of Week</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Daypart__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF(AND(
+
+OR(LEFT(Air_Time__c,2)=&quot;6:&quot;,LEFT(Air_Time__c,2)=&quot;7:&quot;,LEFT(Air_Time__c,2)=&quot;8:&quot;,LEFT(Air_Time__c,2)=&quot;9:&quot;),
+
+OR(RIGHT( Air_Time__c ,2)=&quot;AM&quot;,RIGHT( Air_Time__c ,2)=&quot;am&quot;)),&quot;EM&quot;,
+
+&quot;FALSE&quot;)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Daypart</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Error__c</fullName>
+        <externalId>false</externalId>
+        <label>Error</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>MultiselectPicklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Deal entry error</fullName>
+                    <default>false</default>
+                    <label>Deal entry error</label>
+                </value>
+                <value>
+                    <fullName>Ran out of time rotation</fullName>
+                    <default>false</default>
+                    <label>Ran out of time rotation</label>
+                </value>
+                <value>
+                    <fullName>Overran units</fullName>
+                    <default>false</default>
+                    <label>Overran units</label>
+                </value>
+                <value>
+                    <fullName>Wrong rate</fullName>
+                    <default>false</default>
+                    <label>Wrong rate</label>
+                </value>
+                <value>
+                    <fullName>Wrong Traffic</fullName>
+                    <default>false</default>
+                    <label>Wrong Traffic</label>
+                </value>
+                <value>
+                    <fullName>Network - Deal Entry Error</fullName>
+                    <default>false</default>
+                    <label>Network - Deal Entry Error</label>
+                </value>
+                <value>
+                    <fullName>Network - Ran Out Of Rotation</fullName>
+                    <default>false</default>
+                    <label>Network - Ran Out Of Rotation</label>
+                </value>
+                <value>
+                    <fullName>Network - Overran Units</fullName>
+                    <default>false</default>
+                    <label>Network - Overran Units</label>
+                </value>
+                <value>
+                    <fullName>Network - Wrong Rate</fullName>
+                    <default>false</default>
+                    <label>Network - Wrong Rate</label>
+                </value>
+                <value>
+                    <fullName>Network - Wrong Traffic</fullName>
+                    <default>false</default>
+                    <label>Network - Wrong Traffic</label>
+                </value>
+                <value>
+                    <fullName>Network - Min Separation</fullName>
+                    <default>false</default>
+                    <label>Network - Min Separation</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+        <visibleLines>4</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Hour__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF(LEFT( Air_Time__c , 2)=&quot;1:&quot;,&quot;1&quot;, 
+IF(LEFT( Air_Time__c , 2)=&quot;2:&quot;,&quot;2&quot;, 
+IF(LEFT( Air_Time__c , 2)=&quot;3:&quot;,&quot;3&quot;, 
+IF(LEFT( Air_Time__c , 2)=&quot;4:&quot;,&quot;4&quot;, 
+IF(LEFT( Air_Time__c , 2)=&quot;5:&quot;,&quot;5&quot;,
+IF(LEFT( Air_Time__c , 2)=&quot;6:&quot;,&quot;6&quot;,
+IF(LEFT( Air_Time__c , 2)=&quot;7:&quot;,&quot;7&quot;,
+IF(LEFT( Air_Time__c , 2)=&quot;8:&quot;,&quot;8&quot;,
+IF(LEFT( Air_Time__c , 2)=&quot;9:&quot;,&quot;9&quot;,
+IF(LEFT( Air_Time__c , 2)=&quot;10&quot;,&quot;10&quot;,
+IF(LEFT( Air_Time__c , 2)=&quot;11&quot;,&quot;11&quot;,
+IF(LEFT( Air_Time__c , 2)=&quot;12&quot;,&quot;12&quot;,
+
+IF(LEFT( Air_Time__c , 2)=&quot;01&quot;,&quot;1&quot;, 
+IF(LEFT( Air_Time__c , 2)=&quot;02&quot;,&quot;2&quot;, 
+IF(LEFT( Air_Time__c , 2)=&quot;03&quot;,&quot;3&quot;, 
+IF(LEFT( Air_Time__c , 2)=&quot;04&quot;,&quot;4&quot;, 
+IF(LEFT( Air_Time__c , 2)=&quot;05&quot;,&quot;5&quot;,
+IF(LEFT( Air_Time__c , 2)=&quot;06&quot;,&quot;6&quot;,
+IF(LEFT( Air_Time__c , 2)=&quot;07&quot;,&quot;7&quot;,
+IF(LEFT( Air_Time__c , 2)=&quot;08&quot;,&quot;8&quot;,
+IF(LEFT( Air_Time__c , 2)=&quot;09&quot;,&quot;9&quot;,
+
+&quot;FALSE&quot;)))))))))))))))))))))</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Hour</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Hour_of_Day__c</fullName>
+        <externalId>false</externalId>
+        <formula>Hour__c  &amp; AM_PM__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Hour of Day</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>House_Number__c</fullName>
+        <externalId>false</externalId>
+        <label>[Dep]House Number</label>
+        <length>50</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>ISCI__c</fullName>
+        <externalId>false</externalId>
+        <label>ISCI</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Length__c</fullName>
+        <externalId>false</externalId>
+        <label>Length</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>15</fullName>
+                    <default>false</default>
+                    <label>15</label>
+                </value>
+                <value>
+                    <fullName>30</fullName>
+                    <default>false</default>
+                    <label>30</label>
+                </value>
+                <value>
+                    <fullName>45</fullName>
+                    <default>false</default>
+                    <label>45</label>
+                </value>
+                <value>
+                    <fullName>60</fullName>
+                    <default>false</default>
+                    <label>60</label>
+                </value>
+                <value>
+                    <fullName>90</fullName>
+                    <default>false</default>
+                    <label>90</label>
+                </value>
+                <value>
+                    <fullName>120</fullName>
+                    <default>false</default>
+                    <label>120</label>
+                </value>
+                <value>
+                    <fullName>5</fullName>
+                    <default>false</default>
+                    <label>5</label>
+                </value>
+                <value>
+                    <fullName>10</fullName>
+                    <default>false</default>
+                    <label>10</label>
+                </value>
+                <value>
+                    <fullName>75</fullName>
+                    <default>false</default>
+                    <label>75</label>
+                </value>
+                <value>
+                    <fullName>180</fullName>
+                    <default>false</default>
+                    <label>180</label>
+                </value>
+                <value>
+                    <fullName>300</fullName>
+                    <default>false</default>
+                    <label>300</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Line_Number__c</fullName>
+        <externalId>false</externalId>
+        <label>Line Number</label>
+        <length>5</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Line_Type__c</fullName>
+        <externalId>false</externalId>
+        <label>[Dep]Line Type</label>
+        <length>50</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Market__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>[Dep]Market</label>
+        <referenceTo>Market__c</referenceTo>
+        <relationshipLabel>Spot Data</relationshipLabel>
+        <relationshipName>Spot_Data</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Net_Total__c</fullName>
+        <externalId>false</externalId>
+        <formula>Spot_Rate__c *85/100</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Net Total</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Network_Deal_Number__c</fullName>
+        <externalId>false</externalId>
+        <formula>Schedule__r.Deal_Parent__r.Network_Deal_Number__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Network Deal Number</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Plot_End__c</fullName>
+        <externalId>false</externalId>
+        <label>Plot End</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Plot_Start__c</fullName>
+        <externalId>false</externalId>
+        <label>Plot Start</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Product__c</fullName>
+        <externalId>false</externalId>
+        <formula>SpotDataMirror__r.Product__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Product</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Program_ID__c</fullName>
+        <externalId>false</externalId>
+        <label>Program ID</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Rate_Check__c</fullName>
+        <externalId>false</externalId>
+        <formula>if( Schedule_Rate__c = Spot_Rate__c ,&quot;True&quot;,&quot;False&quot;)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Rate Check</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>RaycomKeyIndexed__c</fullName>
+        <externalId>true</externalId>
+        <label>Raycom Key Indexed</label>
+        <length>24</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>RaycomKey__c</fullName>
+        <externalId>false</externalId>
+        <formula>Raycom_Order_Number__c&amp;CASE( 
+MONTH (Schedule__r.Broadcast_Month__c ), 
+1, &quot;January&quot;, 
+2, &quot;February&quot;, 
+3, &quot;March&quot;, 
+4, &quot;April&quot;, 
+5, &quot;May&quot;, 
+6, &quot;June&quot;, 
+7, &quot;July&quot;, 
+8, &quot;August&quot;, 
+9, &quot;September&quot;, 
+10, &quot;October&quot;, 
+11, &quot;November&quot;, 
+&quot;December&quot; 
+)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Raycom Key</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Raycom_Invoice_Number__c</fullName>
+        <description>Raycom Invoice Number, Order number + Month/Version</description>
+        <externalId>false</externalId>
+        <label>Invoice Number</label>
+        <length>100</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Raycom_Order_Account_Brand__c</fullName>
+        <description>Concatenates Order Number and Brand for Payable Report</description>
+        <externalId>false</externalId>
+        <formula>Raycom_Order_Number__c &amp;&quot; - &quot;&amp;  Raycom_Invoice_Number__c  &amp;&quot; - &quot;&amp; Schedule__r.DealAccount__c &amp;&quot; - &quot;&amp; Brand__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Order + Account + Brand</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Raycom_Order_Number__c</fullName>
+        <externalId>false</externalId>
+        <label>Order Number</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>SDM_Created_By__c</fullName>
+        <externalId>false</externalId>
+        <formula>SpotDataMirror__r.CreatedBy.Username</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>SDM Created By</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Schedule_ID__c</fullName>
+        <description>Looks up the record ID of related schedule.</description>
+        <externalId>false</externalId>
+        <formula>Schedule__r.Id</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Schedule ID</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Schedule_Rate__c</fullName>
+        <externalId>false</externalId>
+        <formula>Schedule__r.Rate__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Schedule Rate</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Schedule__c</fullName>
+        <externalId>false</externalId>
+        <label>Schedule</label>
+        <referenceTo>Schedules__c</referenceTo>
+        <relationshipLabel>Spot Data</relationshipLabel>
+        <relationshipName>Spot_Data</relationshipName>
+        <relationshipOrder>0</relationshipOrder>
+        <reparentableMasterDetail>true</reparentableMasterDetail>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>MasterDetail</type>
+        <writeRequiresMasterRead>false</writeRequiresMasterRead>
+    </fields>
+    <fields>
+        <fullName>ScribeId__c</fullName>
+        <externalId>false</externalId>
+        <label>ScribeId</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>SpotDataMirror_Reference__c</fullName>
+        <description>This is used to add  related  schedule id +spot data name+index number( of trigger.new).
+used to relate this to spot data mirror record.</description>
+        <externalId>false</externalId>
+        <label>SpotDataMirror Reference</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>SpotDataMirror__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>SpotDataMirror</label>
+        <referenceTo>SpotDataMirror__c</referenceTo>
+        <relationshipLabel>Spot Data</relationshipLabel>
+        <relationshipName>Spot_Data</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>SpotDataRefEqual__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF ( OR ( LEFT(Id,15) = LEFT(SpotDataRef__c,15), ISBLANK(SpotDataMirror__c)) , true, false)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>SpotDataRefEqual</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>SpotDataRef__c</fullName>
+        <externalId>false</externalId>
+        <formula>SpotDataMirror__r.Spot_Data__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>SpotDataRef</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Spot_Count__c</fullName>
+        <externalId>false</externalId>
+        <formula>1</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Spot Count</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Spot_Equiv_30__c</fullName>
+        <externalId>false</externalId>
+        <formula>VALUE(TEXT(Length__c)) / 30</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Spot Equiv :30</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>1</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Spot_Rate__c</fullName>
+        <externalId>false</externalId>
+        <label>Spot Rate</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Spot_Status__c</fullName>
+        <externalId>false</externalId>
+        <label>[Dep]Spot Status</label>
+        <length>50</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Spot_Type__c</fullName>
+        <externalId>false</externalId>
+        <label>[Dep]Spot Type</label>
+        <length>50</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Spot_Week__c</fullName>
+        <externalId>false</externalId>
+        <formula>CASE( 
+MOD( Air_Date__c - DATE(1900, 1, 7), 7), 
+0, Air_Date__c - 6, 
+1, Air_Date__c , 
+2, Air_Date__c -1, 
+3, Air_Date__c - 2, 
+4,Air_Date__c - 3, 
+5, Air_Date__c - 4, 
+6, Air_Date__c - 5, DATE(2001, 1, 1))</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Spot Week</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Station_Market_Affiliate__c</fullName>
+        <externalId>false</externalId>
+        <formula>Station__r.Call_Letters__c &amp;&quot; - &quot;&amp; Station__r.Market__r.Name &amp;&quot; - &quot;&amp; Station__r.Affiliate__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Station Market Affiliate</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Station__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <description>Station call Letters</description>
+        <externalId>false</externalId>
+        <label>Station</label>
+        <referenceTo>Station__c</referenceTo>
+        <relationshipLabel>Spot Data</relationshipLabel>
+        <relationshipName>Spot_Data</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Stationn__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Stationn</label>
+        <referenceTo>Stationn__c</referenceTo>
+        <relationshipLabel>Spot Data</relationshipLabel>
+        <relationshipName>Spot_Data</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Status__c</fullName>
+        <externalId>false</externalId>
+        <label>Status</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Aired</fullName>
+                    <default>true</default>
+                    <label>Aired</label>
+                </value>
+                <value>
+                    <fullName>Discrepancy</fullName>
+                    <default>false</default>
+                    <label>Discrepancy</label>
+                </value>
+                <value>
+                    <fullName>Credited</fullName>
+                    <default>false</default>
+                    <label>Credited</label>
+                </value>
+                <value>
+                    <fullName>Discrepancy - Paid</fullName>
+                    <default>false</default>
+                    <label>Discrepancy - Paid</label>
+                </value>
+                <value>
+                    <fullName>Credited - Partial</fullName>
+                    <default>false</default>
+                    <label>Credited - Partial</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Time_Period__c</fullName>
+        <description>Time Period field for Bounce</description>
+        <externalId>false</externalId>
+        <label>Time Period</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>X800__c</fullName>
+        <externalId>false</externalId>
+        <label>800 #</label>
+        <length>40</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <label>Spot Data</label>
+    <listViews>
+        <fullName>All</fullName>
+        <columns>NAME</columns>
+        <columns>Status__c</columns>
+        <columns>Air_Date_Time__c</columns>
+        <columns>Schedule__c</columns>
+        <columns>CREATED_DATE</columns>
+        <columns>UPDATEDBY_USER</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Network_Deal_Number__c</field>
+            <operation>equals</operation>
+            <value>24331</value>
+        </filters>
+        <filters>
+            <field>Air_Date__c</field>
+            <operation>greaterOrEqual</operation>
+            <value>3/26/2018</value>
+        </filters>
+        <label>All</label>
+    </listViews>
+    <listViews>
+        <fullName>BUZZR_REPARENT</fullName>
+        <columns>NAME</columns>
+        <columns>Schedule__c</columns>
+        <columns>SpotDataMirror__c</columns>
+        <columns>SpotDataMirror_Reference__c</columns>
+        <columns>SpotDataRefEqual__c</columns>
+        <columns>CREATED_DATE</columns>
+        <columns>CREATEDBY_USER</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Schedule__c</field>
+            <operation>equals</operation>
+            <value>A-608815</value>
+        </filters>
+        <label>BUZZR REPARENT</label>
+    </listViews>
+    <listViews>
+        <fullName>CBS_FIX</fullName>
+        <columns>NAME</columns>
+        <columns>Schedule__c</columns>
+        <columns>Error__c</columns>
+        <columns>Status__c</columns>
+        <columns>Air_Date_Time__c</columns>
+        <columns>Air_Date__c</columns>
+        <columns>Air_Time__c</columns>
+        <columns>Brand__c</columns>
+        <columns>Commercial_Title__c</columns>
+        <columns>Spot_Rate__c</columns>
+        <columns>Length__c</columns>
+        <columns>ISCI__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Schedule__c</field>
+            <operation>contains</operation>
+            <value>A-450701</value>
+        </filters>
+        <label>CBS FIX</label>
+    </listViews>
+    <listViews>
+        <fullName>MLB_FIX</fullName>
+        <columns>NAME</columns>
+        <columns>Schedule__c</columns>
+        <columns>Air_Date_Time__c</columns>
+        <columns>Air_Date__c</columns>
+        <columns>Air_Time__c</columns>
+        <columns>Brand__c</columns>
+        <columns>Commercial_Title__c</columns>
+        <columns>Spot_Rate__c</columns>
+        <columns>Length__c</columns>
+        <columns>ISCI__c</columns>
+        <columns>Status__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Schedule__c</field>
+            <operation>contains</operation>
+            <value>A-771073</value>
+        </filters>
+        <label>MLB FIX</label>
+    </listViews>
+    <listViews>
+        <fullName>Mav_fix</fullName>
+        <columns>NAME</columns>
+        <columns>Schedule__c</columns>
+        <columns>Error__c</columns>
+        <columns>Status__c</columns>
+        <columns>Air_Date_Time__c</columns>
+        <columns>Air_Date__c</columns>
+        <columns>Air_Time__c</columns>
+        <columns>Brand__c</columns>
+        <columns>Commercial_Title__c</columns>
+        <columns>Spot_Rate__c</columns>
+        <columns>Length__c</columns>
+        <columns>ISCI__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Schedule__c</field>
+            <operation>contains</operation>
+            <value>A-450572</value>
+        </filters>
+        <label>Mav fix</label>
+    </listViews>
+    <listViews>
+        <fullName>N_A_FIX</fullName>
+        <columns>NAME</columns>
+        <columns>Schedule__c</columns>
+        <columns>Error__c</columns>
+        <columns>Status__c</columns>
+        <columns>Air_Date_Time__c</columns>
+        <columns>Air_Date__c</columns>
+        <columns>Air_Time__c</columns>
+        <columns>Brand__c</columns>
+        <columns>Commercial_Title__c</columns>
+        <columns>Spot_Rate__c</columns>
+        <columns>Length__c</columns>
+        <columns>ISCI__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Raycom_Invoice_Number__c</field>
+            <operation>contains</operation>
+            <value>#N/A</value>
+        </filters>
+        <label>N/A FIX</label>
+    </listViews>
+    <listViews>
+        <fullName>Raycom_Spot_Data_Change</fullName>
+        <columns>NAME</columns>
+        <columns>Schedule__c</columns>
+        <columns>Air_Date__c</columns>
+        <columns>Air_Time__c</columns>
+        <columns>Brand__c</columns>
+        <columns>Spot_Rate__c</columns>
+        <columns>Commercial_Title__c</columns>
+        <columns>ISCI__c</columns>
+        <columns>Raycom_Invoice_Number__c</columns>
+        <columns>Raycom_Order_Number__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Schedule__c</field>
+            <operation>contains</operation>
+            <value>926436</value>
+        </filters>
+        <label>Raycom Spot Data Change</label>
+    </listViews>
+    <listViews>
+        <fullName>SpotDataDuplicates</fullName>
+        <columns>NAME</columns>
+        <columns>Schedule__c</columns>
+        <columns>SpotDataMirror__c</columns>
+        <columns>SpotDataMirror_Reference__c</columns>
+        <columns>SpotDataRefEqual__c</columns>
+        <columns>CREATED_DATE</columns>
+        <columns>Air_Date_Time__c</columns>
+        <columns>CREATEDBY_USER</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>SpotDataRefEqual__c</field>
+            <operation>equals</operation>
+            <value>0</value>
+        </filters>
+        <label>SpotDataDuplicates</label>
+    </listViews>
+    <listViews>
+        <fullName>SpotDataDuplicates2</fullName>
+        <columns>NAME</columns>
+        <columns>Schedule__c</columns>
+        <columns>SpotDataMirror__c</columns>
+        <columns>SpotDataMirror_Reference__c</columns>
+        <columns>SpotDataRefEqual__c</columns>
+        <columns>CREATED_DATE</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>SpotDataMirror__c</field>
+            <operation>equals</operation>
+        </filters>
+        <filters>
+            <field>Schedule__c</field>
+            <operation>notEqual</operation>
+        </filters>
+        <filters>
+            <field>CREATED_DATE</field>
+            <operation>greaterThan</operation>
+            <value>10/16/2013 12:00 AM</value>
+        </filters>
+        <label>SpotDataDuplicates2</label>
+    </listViews>
+    <listViews>
+        <fullName>THISTV_FIX</fullName>
+        <booleanFilter>1 or 2</booleanFilter>
+        <columns>NAME</columns>
+        <columns>Schedule__c</columns>
+        <columns>Air_Date_Time__c</columns>
+        <columns>Air_Date__c</columns>
+        <columns>Air_Time__c</columns>
+        <columns>Brand__c</columns>
+        <columns>Commercial_Title__c</columns>
+        <columns>Spot_Rate__c</columns>
+        <columns>Length__c</columns>
+        <columns>ISCI__c</columns>
+        <columns>Comments__c</columns>
+        <columns>Status__c</columns>
+        <columns>Error__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Schedule__c</field>
+            <operation>contains</operation>
+            <value>382499,382510,382521,382532,382500,382511,382522,382534,382578,382589,382600</value>
+        </filters>
+        <filters>
+            <field>Schedule__c</field>
+            <operation>contains</operation>
+            <value>382611,382622,382579,382590,382601,382612,382623</value>
+        </filters>
+        <label>THIS TV FIX</label>
+    </listViews>
+    <listViews>
+        <fullName>Test_Network_Check</fullName>
+        <columns>NAME</columns>
+        <columns>Schedule__c</columns>
+        <columns>Air_Date_Time__c</columns>
+        <columns>Air_Date__c</columns>
+        <columns>Air_Time__c</columns>
+        <columns>Brand__c</columns>
+        <columns>Commercial_Title__c</columns>
+        <columns>Spot_Rate__c</columns>
+        <columns>Length__c</columns>
+        <columns>ISCI__c</columns>
+        <columns>Comments__c</columns>
+        <columns>Status__c</columns>
+        <columns>Error__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Schedule__c</field>
+            <operation>contains</operation>
+            <value>417686</value>
+        </filters>
+        <label>Test Network Check</label>
+    </listViews>
+    <listViews>
+        <fullName>This_Discrep_Editing</fullName>
+        <columns>NAME</columns>
+        <columns>Schedule__c</columns>
+        <columns>SpotDataMirror__c</columns>
+        <columns>Status__c</columns>
+        <columns>Error__c</columns>
+        <columns>CREATED_DATE</columns>
+        <columns>CREATEDBY_USER</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Brand__c</field>
+            <operation>contains</operation>
+            <value>revised naya</value>
+        </filters>
+        <filters>
+            <field>Schedule__c</field>
+            <operation>contains</operation>
+            <value>400247,400252,400251,400253,400268,402349,400267</value>
+        </filters>
+        <label>This Discrep Editing</label>
+    </listViews>
+    <listViews>
+        <fullName>Weekly_Discrepancy_Report</fullName>
+        <columns>NAME</columns>
+        <columns>Schedule__c</columns>
+        <columns>Air_Date_Time__c</columns>
+        <columns>Air_Date__c</columns>
+        <columns>Air_Time__c</columns>
+        <columns>Brand__c</columns>
+        <columns>Commercial_Title__c</columns>
+        <columns>Spot_Rate__c</columns>
+        <columns>Length__c</columns>
+        <columns>ISCI__c</columns>
+        <columns>Comments__c</columns>
+        <columns>Status__c</columns>
+        <columns>Error__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Spot_Week__c</field>
+            <operation>equals</operation>
+            <value>LAST_N_DAYS:10</value>
+        </filters>
+        <filters>
+            <field>Status__c</field>
+            <operation>equals</operation>
+            <value>Discrepancy</value>
+        </filters>
+        <label>Weekly Discrepancy Report</label>
+    </listViews>
+    <nameField>
+        <displayFormat>S-{000000}</displayFormat>
+        <label>Spot Data Name</label>
+        <trackHistory>false</trackHistory>
+        <type>AutoNumber</type>
+    </nameField>
+    <pluralLabel>Spot Data</pluralLabel>
+    <searchLayouts>
+        <customTabListAdditionalFields>Air_Date_Time__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Brand__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Break_Code__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Commercial_Title__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Length__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Spot_Rate__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Spot_Status__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Raycom_Order_Number__c</customTabListAdditionalFields>
+        <lookupDialogsAdditionalFields>Air_Date_Time__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Brand__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Commercial_Title__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Length__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Spot_Rate__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Status__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Raycom_Invoice_Number__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Station__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Raycom_Order_Number__c</lookupDialogsAdditionalFields>
+        <searchFilterFields>Raycom_Invoice_Number__c</searchFilterFields>
+        <searchFilterFields>Station__c</searchFilterFields>
+        <searchFilterFields>Market__c</searchFilterFields>
+        <searchResultsAdditionalFields>Air_Date_Time__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Brand__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Commercial_Title__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>ISCI__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Length__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Spot_Rate__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Status__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Raycom_Invoice_Number__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Raycom_Order_Number__c</searchResultsAdditionalFields>
+    </searchLayouts>
+    <sharingModel>ControlledByParent</sharingModel>
+    <validationRules>
+        <fullName>Bundles_Needs_Markets</fullName>
+        <active>false</active>
+        <errorConditionFormula>If(
+AND(  ISBLANK(Station__c),
+OR(Schedule__r.DealProgram__c =&quot;Tribune Multicast Connect&quot;,Schedule__r.DealProgram__c =&quot;Retro Raycom&quot;,Schedule__r.DealProgram__c =&quot;Media General Connect&quot;, Schedule__r.DealProgram__c =&quot;Raycom Bounce Locals&quot;)),TRUE, FALSE)</errorConditionFormula>
+        <errorDisplayField>Station__c</errorDisplayField>
+        <errorMessage>Spot Data attached to bundle properties need to be linked to a Station.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Commercial_Type_on_Deal_Doesnt_Match</fullName>
+        <active>false</active>
+        <errorConditionFormula>Commercial_Type__c  = Schedule__r.Deal_Parent__r.Commercial_Type__c</errorConditionFormula>
+        <errorMessage>Commercial Type needs to match the Commercial Type on the Deal</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Network_Deal_Must_Match</fullName>
+        <active>false</active>
+        <errorConditionFormula>AND(Network_Deal_Number__c  &lt;&gt;  Schedule__r.Network_Deal_Number__c , Schedule__r.Deal_Parent__r.Cable_Synd_PP_del__c = &quot;Cable&quot;)</errorConditionFormula>
+        <errorMessage>This network deal number of this spot does not match the schedule. Please find the correct schedule.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Rates_Must_Match</fullName>
+        <active>false</active>
+        <errorConditionFormula>AND(Spot_Rate__c  &lt;&gt;  Schedule_Rate__c,  Schedule__r.Deal_Parent__r.Cable_Synd_PP_del__c = &quot;Cable&quot;)</errorConditionFormula>
+        <errorDisplayField>Spot_Rate__c</errorDisplayField>
+        <errorMessage>The rate of this spot data does not match the rate on the schedule.  Please find the correct schedule.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Weeks_Must_Match</fullName>
+        <active>false</active>
+        <errorConditionFormula>Spot_Week__c  &lt;&gt;  Schedule__r.Week__c</errorConditionFormula>
+        <errorDisplayField>Air_Date__c</errorDisplayField>
+        <errorMessage>This air date of this spot data does not match the week on the schedule.  Please find the correct schedule.</errorMessage>
+    </validationRules>
+    <visibility>Public</visibility>
+</CustomObject>

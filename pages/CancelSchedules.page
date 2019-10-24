@@ -1,0 +1,18 @@
+<apex:page controller="CancelSchedulesController" showHeader="false" sidebar="false">
+	<Script>
+		function openParent(){
+			if({!done}==true || {!cancel}==true){
+				window.opener.location='/{!dealId}';
+				window.close();
+			}
+		}
+		openParent();
+	</Script>
+	<apex:form >
+		<apex:PageMessages />
+		<apex:actionStatus id="wait" startText="Wait.."/>
+		<apex:inputField value="{!dealLTCDate.LTC_Date__c}"/>
+		<apex:commandButton value="Save" action="{!save}" status="wait"/>
+		<apex:commandButton value="Cancel" action="{!cancel}" status="wait"/>
+	</apex:form>
+</apex:page>

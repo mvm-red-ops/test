@@ -1,0 +1,270 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Inventory</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Inventory</value>
+    </caseValues>
+    <fields>
+        <label><!-- Apple Warranty Status --></label>
+        <name>Apple_Warranty_Status__c</name>
+    </fields>
+    <fields>
+        <label><!-- Assignee --></label>
+        <name>Assignee__c</name>
+        <relationshipLabel><!-- Inventory (Assignee) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Backup? --></label>
+        <name>Backup__c</name>
+        <picklistValues>
+            <masterLabel>No</masterLabel>
+            <translation><!-- No --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes</masterLabel>
+            <translation><!-- Yes --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- CCleaner --></label>
+        <name>CCleaner__c</name>
+    </fields>
+    <fields>
+        <label><!-- Call Forwarded To --></label>
+        <name>Call_Forwarded_To__c</name>
+        <relationshipLabel><!-- Inventory (Call Forwarded To) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Comments --></label>
+        <name>Comments__c</name>
+    </fields>
+    <fields>
+        <label><!-- Date Acquired --></label>
+        <name>Date_Assigned__c</name>
+    </fields>
+    <fields>
+        <label><!-- ESET Cyber Security Pro --></label>
+        <name>ESET_Cyber_Security_Pro__c</name>
+    </fields>
+    <fields>
+        <label><!-- ESET EndPoint Security --></label>
+        <name>ESET_EndPoint_Security__c</name>
+    </fields>
+    <fields>
+        <label><!-- Google Chrome --></label>
+        <name>Google_Chrome__c</name>
+    </fields>
+    <fields>
+        <label><!-- Lexi Loader --></label>
+        <name>Lexi_Loader__c</name>
+    </fields>
+    <fields>
+        <label><!-- MalwareBytes --></label>
+        <name>MalwareBytes__c</name>
+    </fields>
+    <fields>
+        <label><!-- Microsoft Office --></label>
+        <name>Microsoft_Office__c</name>
+    </fields>
+    <fields>
+        <label><!-- Mobile --></label>
+        <name>Mobile__c</name>
+    </fields>
+    <fields>
+        <label><!-- Model Year --></label>
+        <name>Model_Year__c</name>
+    </fields>
+    <fields>
+        <label><!-- Needs Repair --></label>
+        <name>Needs_Repair__c</name>
+        <picklistValues>
+            <masterLabel>No</masterLabel>
+            <translation><!-- No --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes</masterLabel>
+            <translation><!-- Yes --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- PDF Pen --></label>
+        <name>PDF_Pen__c</name>
+    </fields>
+    <fields>
+        <label><!-- Personal Email --></label>
+        <name>Personal_Email__c</name>
+    </fields>
+    <fields>
+        <label><!-- Phone Number --></label>
+        <name>Phone_Number__c</name>
+    </fields>
+    <fields>
+        <label><!-- Qty --></label>
+        <name>Qty__c</name>
+        <picklistValues>
+            <masterLabel>1</masterLabel>
+            <translation><!-- 1 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>2</masterLabel>
+            <translation><!-- 2 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>3</masterLabel>
+            <translation><!-- 3 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>4</masterLabel>
+            <translation><!-- 4 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>5</masterLabel>
+            <translation><!-- 5 --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Reassigned To --></label>
+        <name>Reassigned_To__c</name>
+        <relationshipLabel><!-- Inventory (Reassigned To) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Reassigned When --></label>
+        <name>Reassigned_When__c</name>
+    </fields>
+    <fields>
+        <label><!-- Serial/Mac ID --></label>
+        <name>Serial__c</name>
+    </fields>
+    <fields>
+        <label><!-- Status --></label>
+        <name>Status__c</name>
+        <picklistValues>
+            <masterLabel>New</masterLabel>
+            <translation><!-- New --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Refurbished</masterLabel>
+            <translation><!-- Refurbished --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Used</masterLabel>
+            <translation><!-- Used --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Asset Description --></label>
+        <name>Type__c</name>
+        <picklistValues>
+            <masterLabel>ATT-HomeBase (Hot Spot)</masterLabel>
+            <translation><!-- ATT-HomeBase (Hot Spot) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Apple TV</masterLabel>
+            <translation><!-- Apple TV --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Cell Phone</masterLabel>
+            <translation><!-- Cell Phone --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Epson Printer</masterLabel>
+            <translation><!-- Epson Printer --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>HP Printer</masterLabel>
+            <translation><!-- HP Printer --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Mac Mini</masterLabel>
+            <translation><!-- Mac Mini --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>MacBook Air</masterLabel>
+            <translation><!-- MacBook Air --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>MacBook Pro</masterLabel>
+            <translation><!-- MacBook Pro --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Monitor</masterLabel>
+            <translation><!-- Monitor --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Monitor Stand</masterLabel>
+            <translation><!-- Monitor Stand --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Polycom Phone</masterLabel>
+            <translation><!-- Polycom Phone --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Windows Laptop</masterLabel>
+            <translation><!-- Windows Laptop --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>iMac</masterLabel>
+            <translation><!-- iMac --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>iPad</masterLabel>
+            <translation><!-- iPad --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Unit Cost --></label>
+        <name>Unit_Cost__c</name>
+    </fields>
+    <fields>
+        <label><!-- VMWare --></label>
+        <name>VMWare__c</name>
+    </fields>
+    <fields>
+        <label><!-- When Call Forwarded --></label>
+        <name>When_Call_Forwarded__c</name>
+    </fields>
+    <layouts>
+        <layout>Inventory Layout</layout>
+        <sections>
+            <label><!-- Assignee Detail --></label>
+            <section>Assignee Detail</section>
+        </sections>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Equipment Detail --></label>
+            <section>Equipment Detail</section>
+        </sections>
+        <sections>
+            <label><!-- Operational Programs --></label>
+            <section>Operational Programs</section>
+        </sections>
+        <sections>
+            <label><!-- Security Programs --></label>
+            <section>Security Programs</section>
+        </sections>
+    </layouts>
+    <startsWith>Consonant</startsWith>
+    <validationRules>
+        <errorMessage><!-- Please update Asset Description &quot;TYPE&quot; --></errorMessage>
+        <name>Asset_Description_Required</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Please make sure to update when calls were forwarded --></errorMessage>
+        <name>Call_Forwarded</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Requires Phone Number --></errorMessage>
+        <name>Requires_Phone_Number</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Requires Mac Serial or Phone ID --></errorMessage>
+        <name>Requires_Serial</name>
+    </validationRules>
+</CustomObjectTranslation>

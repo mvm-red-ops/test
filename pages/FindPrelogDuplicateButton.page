@@ -1,0 +1,6 @@
+<apex:page standardController="PrelogDataMirror__c" action="{!RedirectButton}" extensions="FindPrelogDuplicateButton" title="Find Duplicates">
+	<apex:form >
+		<apex:pageMessages />
+		<apex:commandButton value="Go Back" action="{!GoBackButton}" />
+	</apex:form>
+</apex:page>

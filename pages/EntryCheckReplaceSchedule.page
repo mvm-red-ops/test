@@ -1,0 +1,109 @@
+<apex:page controller="EntryCheckController" id="pg" title="PP Entry Check">
+<apex:sectionHeader title="Entry Check" subtitle="Replace Schedule"/>
+ <apex:form id="frm">
+  <apex:pageBlock id="pb">
+      <apex:actionStatus startText="Please Wait..." id="status" startStyle="font-size:18px"/>
+    <apex:actionFunction name="setDealAccount" action="{!setDealAccount}" rerender="op" status="status" >
+        <apex:param value="" name="accName" />
+    </apex:actionFunction>
+    <table width="100%">
+        <tr>
+            <td style="width:350px">
+                <apex:outputPanel id="op">
+                    <table width="100%">
+                    <tr>
+                    <td>
+                        <apex:outputText value="Deal Parent"/> 
+                    </td> 
+                    <td>
+                        <apex:inputField value="{!scheduleObj.Deal_Parent__c}" id="dp"/>
+                    </td>
+                    </tr>
+                    <tr>
+                        <td>
+                          <apex:outputText value="Rate"/>
+                        </td>
+                        <td>
+                          <apex:inputField value="{!scheduleObj.Rate__c}" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                          <apex:outputText value="Week"/>
+                        </td> 
+                        <td>
+                          <apex:inputField value="{!scheduleObj.Week__c}" />
+                       </td>
+                    </tr><tr><td>
+                          <apex:outputText value="Long Form"/> 
+                       </td> <td>               
+                          <apex:inputField value="{!scheduleObj.Long_Form__c}" />
+                       </td>
+                    </tr><tr>
+                    	<td>          
+                       		<apex:commandButton action="{!replace}" value="Replace"/>
+                    	</td>
+                    	<td colspan="2">          
+                       		<apex:commandButton action="{!back}" value="Back"/>
+                    	</td>
+                    </tr> 
+              </table>
+            </apex:outputPanel>
+     </td><td>
+            <center> 
+                <input value="New Deal" type="button" onClick="javascript:window.open('/setup/ui/recordtypeselect.jsp?ent=01I80000000G7EE&retURL=%2Fa0A%2Fo&save_new_url=%2Fa0A%2Fe%3FretURL%3D%252Fa0A%252Fo')" />
+            </center>
+            
+            
+            <apex:pageblocktable value="{!lstDealAccount}" var="dealAccount">
+             
+                <apex:column >
+                    <input type="Radio" name="rdo" id="chk-{!dealAccount.name}" onClick="clicked('{!dealAccount.id}','{!dealAccount.name}'); return false;"/>
+                </apex:column>
+             
+                <apex:column headerValue="Deal Name" value="{!dealAccount.name}">
+                    
+                </apex:column>
+                
+                <apex:column headerValue="Contact Account">
+                    {!dealAccount.ContactAccount__c}
+                </apex:column>
+                
+                <apex:column headerValue="Program">
+                    <!-- {!scheduleObj.DealProgram__c} -->
+                    {!dealAccount.Program__r.Name}
+                </apex:column>
+                                                
+                <apex:column headerValue="Created Date">
+                    <apex:outputText >                            
+                         <apex:outputText value="{0,date,M/d/yyyy}" >
+                            <apex:param value="{!dealAccount.createdDate}" />
+                         </apex:outputText>
+                    </apex:outputText>
+                </apex:column>
+                
+              </apex:pageblocktable>
+              
+      </td>
+     </tr>
+    </table> 
+  </apex:pageBlock>
+ </apex:form>
+ 
+ <script>
+    function clicked(chkId,chkName){
+    
+        var allchks = document.getElementById("pg:frm:pb:dp").value=chkName;
+        setDealAccount(chkId);
+        /*        
+         var allchks = document.getElementById("pg:frm:pb").getElementsByTagName('input');
+            for(var i = 0; i < allchks.length;i++){
+                if(allchks[i].id != 'chk-'+chkId)
+                    allchks[i].checked = flag;
+            }
+     */
+     pg:frm:pb:dp           
+    }
+               
+ </script>
+</apex:page>

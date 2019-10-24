@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Raycom Monthly Line Item</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Raycom Monthly Line Items</value>
+    </caseValues>
+    <fields>
+        <label><!-- Billing Month --></label>
+        <name>BillingMonth__c</name>
+    </fields>
+    <fields>
+        <label><!-- Invoice # --></label>
+        <name>Invoice__c</name>
+    </fields>
+    <fields>
+        <label><!-- Key --></label>
+        <name>Key__c</name>
+    </fields>
+    <fields>
+        <label><!-- Order # --></label>
+        <name>OrderNumber__c</name>
+    </fields>
+    <fields>
+        <label><!-- Spot Data Failure Count --></label>
+        <name>Spot_Data_Failure_Count__c</name>
+    </fields>
+    <fields>
+        <label><!-- Spot Data Failure Message --></label>
+        <name>Spot_Data_Failure_Message__c</name>
+    </fields>
+    <fields>
+        <label><!-- Station --></label>
+        <name>Station__c</name>
+    </fields>
+    <fields>
+        <label><!-- 58 Minutes Ago --></label>
+        <name>X58MinutesAgo__c</name>
+    </fields>
+    <layouts>
+        <layout>Raycom Monthly Line Item Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <startsWith>Consonant</startsWith>
+    <webLinks>
+        <label><!-- Start_Import_Process --></label>
+        <name>Start_Import_Process</name>
+    </webLinks>
+</CustomObjectTranslation>

@@ -1,0 +1,111 @@
+<apex:page controller="XMLOSIDeal" showHeader="true" sidebar="true">
+<head>
+	<script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
+	<script src="//cdnjs.cloudflare.com/ajax/libs/jszip/2.5.0/jszip.min.js"></script>
+
+	<script type="text/javascript">
+		var j$ = jQuery.noConflict();
+
+		j$(document).ready(function() {
+            var dealId = '{!dealId}';	// Get Deal Id from the controller
+            	j$('#message').html('Please wait while the XML files are generated. <img src="/img/loading32.gif" width="25" height="25" />');
+  
+
+			var zipFile = new JSZip();			// Instantiate a new zip file
+			var zipFileName = '{!zipFileName}';	// Get filename from the controller
+			var count = 0;						// File count
+			var scheduleIds;					// List of Schedule Ids
+
+			// Call controller function to get a list of XML files
+			// Response is an object with filename as key and XML body as value
+			Visualforce.remoting.Manager.invokeAction(
+				'{!$RemoteAction.XMLOSIDeal.getXMLFiles}',
+				dealId,
+				function(result, event) {
+					if(event.status) {
+						// Loop through files and add each one to the zip
+						// One result contains the Schedule Ids for all Schedule records that were used
+						for(var key in result) {
+							if(key == 'scheduleIds') {
+								scheduleIds = result[key];
+							} else {
+								count++;
+								compressFile(zipFile, key, result[key]);
+							}
+						}
+
+						if(count > 0) {
+							saveZip(zipFile);
+						} else {
+							j$('#message').html('No XML files were generated. Please make sure your deal is setup correctly with a program and schedule(s), and that the program has at least one active bundle pricing record. <a href="/' + dealId + '">Click here</a> to return to the deal.');
+						}
+					} else if(event.type === 'exception') {
+						j$('#message').html('An error occurred and the XML files were not able to be generated. <a href="/' + dealId + '">Click here</a> to return to the deal.<br/>Error message: ' + event.message);
+					} else {
+						j$('#message').html('An error occurred and the XML files were not able to be generated. <a href="/' + dealId + '">Click here</a> to return to the deal.<br/>Error message: ' + event.message);
+					}
+				}
+			);
+
+			// Compress a file and add it to the zip
+			function compressFile(zipFile, filename, body) {
+				zipFile.file(filename, body, {base64: true});
+			}
+
+			// Generate the zip file and send it back to Salesforce for attaching
+			function saveZip(zipFile) {
+				var data = zipFile.generate();
+
+				Visualforce.remoting.Manager.invokeAction(
+					'{!$RemoteAction.XMLOSIDeal.saveData}',
+					dealId,
+					zipFileName,
+					data,
+					function(result, event) {
+						if(event.status) {
+							if(result == 'SUCCESS') {
+								markXMLSent();
+							} else {
+								j$('#message').html('An error occurred and the XML files were not able to be generated. <a href="/' + dealId + '">Click here</a> to return to the deal.<br/>Error message: ' + result);
+							}
+						} else if(event.type === 'exception') {
+							j$('#message').html('An error occurred and the XML files were not able to be generated. <a href="/' + dealId + '">Click here</a> to return to the deal.<br/>Error message: ' + event.message);
+						} else {
+							j$('#message').html('An error occurred and the XML files were not able to be generated. <a href="/' + dealId + '">Click here</a> to return to the deal.<br/>Error message: ' + event.message);
+						}
+					}
+				);
+			}
+
+			// Mark the XML Sent field on the Schedule records
+			function markXMLSent() {
+				Visualforce.remoting.Manager.invokeAction(
+					'{!$RemoteAction.XMLOSIDeal.markXMLSent}',
+					scheduleIds,
+					function(result, event) {
+						if(event.status) {
+							if(result == 'SUCCESS') {
+								j$('#message').html('Success!');
+								alert('The XML files were successfully generated and a new zip file has been attached to the deal. You will now be redirected back to the deal.');
+								window.location = '/' + dealId;
+							} else {
+								j$('#message').html('An error occurred and the XML Sent field on the Schedule was not correctly saved. However, the XML zip was successfully generated and attached to the Deal. <a href="/' + dealId + '">Click here</a> to return to the deal.<br/>Error message: ' + result);
+							}
+						} else if(event.type === 'exception') {
+							j$('#message').html('An error occurred and the XML Sent field on the Schedule was not correctly saved. However, the XML zip was successfully generated and attached to the Deal. <a href="/' + dealId + '">Click here</a> to return to the deal.<br/>Error message: ' + event.message);
+						} else {
+							j$('#message').html('An error occurred and the XML Sent field on the Schedule was not correctly saved. However, the XML zip was successfully generated and attached to the Deal. <a href="/' + dealId + '">Click here</a> to return to the deal.<br/>Error message: ' + event.message);
+						}
+					}
+				);
+			}
+		});
+    </script>
+</head>
+
+<body>
+	<br/>
+	<h2 id="message"></h2>
+	<br/>
+</body>
+</apex:page>

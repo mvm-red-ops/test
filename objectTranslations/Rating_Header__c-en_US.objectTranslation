@@ -1,0 +1,474 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Rating Header</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Rating Headers</value>
+    </caseValues>
+    <fields>
+        <label><!-- A18+ (000) --></label>
+        <name>A18_000__c</name>
+    </fields>
+    <fields>
+        <label><!-- A18-34 (000) --></label>
+        <name>A18_34_000__c</name>
+    </fields>
+    <fields>
+        <label><!-- A18-34 --></label>
+        <name>A18_34__c</name>
+    </fields>
+    <fields>
+        <label><!-- A18-49 (000) --></label>
+        <name>A18_49_000__c</name>
+    </fields>
+    <fields>
+        <label><!-- A18-49 --></label>
+        <name>A18_49__c</name>
+    </fields>
+    <fields>
+        <label><!-- A18+ --></label>
+        <name>A18__c</name>
+    </fields>
+    <fields>
+        <label><!-- A25+ (000) --></label>
+        <name>A25_000__c</name>
+    </fields>
+    <fields>
+        <label><!-- A25-34 (000) --></label>
+        <name>A25_34_000__c</name>
+    </fields>
+    <fields>
+        <label><!-- A25-34 --></label>
+        <name>A25_34__c</name>
+    </fields>
+    <fields>
+        <label><!-- A25-49 (000) --></label>
+        <name>A25_49_000__c</name>
+    </fields>
+    <fields>
+        <label><!-- A25-49 --></label>
+        <name>A25_49__c</name>
+    </fields>
+    <fields>
+        <label><!-- A25-54 (000) --></label>
+        <name>A25_54_000__c</name>
+    </fields>
+    <fields>
+        <label><!-- A25-54 --></label>
+        <name>A25_54__c</name>
+    </fields>
+    <fields>
+        <label><!-- A25+ --></label>
+        <name>A25__c</name>
+    </fields>
+    <fields>
+        <label><!-- A35+ (000) --></label>
+        <name>A35_000__c</name>
+    </fields>
+    <fields>
+        <label><!-- A35-64 (000) --></label>
+        <name>A35_64_000__c</name>
+    </fields>
+    <fields>
+        <label><!-- A35-64 --></label>
+        <name>A35_64__c</name>
+    </fields>
+    <fields>
+        <label><!-- A35+ --></label>
+        <name>A35__c</name>
+    </fields>
+    <fields>
+        <label><!-- A50+ (000) --></label>
+        <name>A50_000__c</name>
+    </fields>
+    <fields>
+        <label><!-- A50+ --></label>
+        <name>A50__c</name>
+    </fields>
+    <fields>
+        <label><!-- A55+ (000) --></label>
+        <name>A55_000__c</name>
+    </fields>
+    <fields>
+        <label><!-- A55+ --></label>
+        <name>A55__c</name>
+    </fields>
+    <fields>
+        <label><!-- A65+ (000) --></label>
+        <name>A65_000__c</name>
+    </fields>
+    <fields>
+        <label><!-- A65+ --></label>
+        <name>A65__c</name>
+    </fields>
+    <fields>
+        <label><!-- Actuals/Estimates --></label>
+        <name>Actuals_Estimates__c</name>
+        <picklistValues>
+            <masterLabel>Actuals</masterLabel>
+            <translation><!-- Actuals --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Estimates</masterLabel>
+            <translation><!-- Estimates --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- 99% Impressions x .50 --></help>
+        <label><!-- BC 74% Factor .50 HH (000) --></label>
+        <name>BC_74_Factor_50_HH_000__c</name>
+    </fields>
+    <fields>
+        <label><!-- BC 74% Factor .50 HH --></label>
+        <name>BC_74_Factor_50_HH__c</name>
+    </fields>
+    <fields>
+        <label><!-- BC 74% Factor .66 HH --></label>
+        <name>BC_74_Factor_66__c</name>
+    </fields>
+    <fields>
+        <help><!-- 99% Impressions  x .66 --></help>
+        <label><!-- BC 74% Factor .66 HH (000) --></label>
+        <name>Bill_Cunningham_74_66__c</name>
+    </fields>
+    <fields>
+        <label><!-- Bounce Daypart --></label>
+        <name>Bounce_Daypart__c</name>
+        <picklistValues>
+            <masterLabel>MS 12a-3a</masterLabel>
+            <translation><!-- MS 12a-3a --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>MS 3a-6a</masterLabel>
+            <translation><!-- MS 3a-6a --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>MS 6a-9a</masterLabel>
+            <translation><!-- MS 6a-9a --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>MS 6p-12a</masterLabel>
+            <translation><!-- MS 6p-12a --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>MS 9a-6p</masterLabel>
+            <translation><!-- MS 9a-6p --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ROS-</masterLabel>
+            <translation><!-- ROS- --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- End Date --></label>
+        <name>End_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Est Median Age --></label>
+        <name>Est_Median_Age__c</name>
+    </fields>
+    <fields>
+        <label><!-- F18+ (000) --></label>
+        <name>F18_000__c</name>
+    </fields>
+    <fields>
+        <label><!-- F18-34 (000) --></label>
+        <name>F18_34_000__c</name>
+    </fields>
+    <fields>
+        <label><!-- F18-34 --></label>
+        <name>F18_34__c</name>
+    </fields>
+    <fields>
+        <label><!-- F18-49 (000) --></label>
+        <name>F18_49_000__c</name>
+    </fields>
+    <fields>
+        <label><!-- F18-49 --></label>
+        <name>F18_49__c</name>
+    </fields>
+    <fields>
+        <label><!-- F18+ --></label>
+        <name>F18__c</name>
+    </fields>
+    <fields>
+        <label><!-- F25+ (000) --></label>
+        <name>F25_000__c</name>
+    </fields>
+    <fields>
+        <label><!-- F25-49 (000) --></label>
+        <name>F25_49_000__c</name>
+    </fields>
+    <fields>
+        <label><!-- F25-49 --></label>
+        <name>F25_49__c</name>
+    </fields>
+    <fields>
+        <label><!-- F25-54 (000) --></label>
+        <name>F25_54_000__c</name>
+    </fields>
+    <fields>
+        <label><!-- F25-54 --></label>
+        <name>F25_54__c</name>
+    </fields>
+    <fields>
+        <label><!-- F25+ --></label>
+        <name>F25__c</name>
+    </fields>
+    <fields>
+        <label><!-- F35+ (000) --></label>
+        <name>F35_000__c</name>
+    </fields>
+    <fields>
+        <label><!-- F35-64 (000) --></label>
+        <name>F35_64_000__c</name>
+    </fields>
+    <fields>
+        <label><!-- F35-64 --></label>
+        <name>F35_64__c</name>
+    </fields>
+    <fields>
+        <label><!-- F35+ --></label>
+        <name>F35__c</name>
+    </fields>
+    <fields>
+        <label><!-- F50+ (000) --></label>
+        <name>F50_000__c</name>
+    </fields>
+    <fields>
+        <label><!-- F50+ --></label>
+        <name>F50__c</name>
+    </fields>
+    <fields>
+        <label><!-- F55+ (000) --></label>
+        <name>F55_000__c</name>
+    </fields>
+    <fields>
+        <label><!-- F55+ --></label>
+        <name>F55__c</name>
+    </fields>
+    <fields>
+        <label><!-- F65+ (000) --></label>
+        <name>F65_000__c</name>
+    </fields>
+    <fields>
+        <label><!-- F65+ --></label>
+        <name>F65__c</name>
+    </fields>
+    <fields>
+        <label><!-- HH --></label>
+        <name>HH_RTG__c</name>
+    </fields>
+    <fields>
+        <label><!-- HH (000) --></label>
+        <name>HH__c</name>
+    </fields>
+    <fields>
+        <label><!-- M18+ (000) --></label>
+        <name>M18_000__c</name>
+    </fields>
+    <fields>
+        <label><!-- M18-34 (000) --></label>
+        <name>M18_34_000__c</name>
+    </fields>
+    <fields>
+        <label><!-- M18-34 --></label>
+        <name>M18_34__c</name>
+    </fields>
+    <fields>
+        <label><!-- M18-49 (000) --></label>
+        <name>M18_49_000__c</name>
+    </fields>
+    <fields>
+        <label><!-- M18-49 --></label>
+        <name>M18_49__c</name>
+    </fields>
+    <fields>
+        <label><!-- M18+ --></label>
+        <name>M18__c</name>
+    </fields>
+    <fields>
+        <label><!-- M25+ (000) --></label>
+        <name>M25_000__c</name>
+    </fields>
+    <fields>
+        <label><!-- M25-49 (000) --></label>
+        <name>M25_49_000__c</name>
+    </fields>
+    <fields>
+        <label><!-- M25-49 --></label>
+        <name>M25_49__c</name>
+    </fields>
+    <fields>
+        <label><!-- M25-54 (000) --></label>
+        <name>M25_54_000__c</name>
+    </fields>
+    <fields>
+        <label><!-- M25-54 --></label>
+        <name>M25_54__c</name>
+    </fields>
+    <fields>
+        <label><!-- M25+ --></label>
+        <name>M25__c</name>
+    </fields>
+    <fields>
+        <label><!-- M35+ (000) --></label>
+        <name>M35_000__c</name>
+    </fields>
+    <fields>
+        <label><!-- M35-64 (000) --></label>
+        <name>M35_64_000__c</name>
+    </fields>
+    <fields>
+        <label><!-- M35-64 --></label>
+        <name>M35_64__c</name>
+    </fields>
+    <fields>
+        <label><!-- M35+ --></label>
+        <name>M35__c</name>
+    </fields>
+    <fields>
+        <label><!-- M50+ (000) --></label>
+        <name>M50_000__c</name>
+    </fields>
+    <fields>
+        <label><!-- M50+ --></label>
+        <name>M50__c</name>
+    </fields>
+    <fields>
+        <label><!-- M55+ (000) --></label>
+        <name>M55_000__c</name>
+    </fields>
+    <fields>
+        <label><!-- M55+ --></label>
+        <name>M55__c</name>
+    </fields>
+    <fields>
+        <label><!-- M65+ (000) --></label>
+        <name>M65_000__c</name>
+    </fields>
+    <fields>
+        <label><!-- M65+ --></label>
+        <name>M65__c</name>
+    </fields>
+    <fields>
+        <label><!-- Methodology --></label>
+        <name>Methodology__c</name>
+        <picklistValues>
+            <masterLabel>C3</masterLabel>
+            <translation><!-- C3 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Live+3Days</masterLabel>
+            <translation><!-- Live+3Days --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Live+SD</masterLabel>
+            <translation><!-- Live+SD --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>NSI</masterLabel>
+            <translation><!-- NSI --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>NTI</masterLabel>
+            <translation><!-- NTI --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Rentrak</masterLabel>
+            <translation><!-- Rentrak --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- P12-17 (000) --></label>
+        <name>P12_17_000__c</name>
+    </fields>
+    <fields>
+        <label><!-- P12-17 --></label>
+        <name>P12_17__c</name>
+    </fields>
+    <fields>
+        <label><!-- P2+ (000) --></label>
+        <name>P2_000__c</name>
+    </fields>
+    <fields>
+        <label><!-- P2-11 (000) --></label>
+        <name>P2_11_000__c</name>
+    </fields>
+    <fields>
+        <label><!-- P2-11 --></label>
+        <name>P2_11__c</name>
+    </fields>
+    <fields>
+        <label><!-- P2+ --></label>
+        <name>P2__c</name>
+    </fields>
+    <fields>
+        <label><!-- P6-11 (000) --></label>
+        <name>P6_11_000__c</name>
+    </fields>
+    <fields>
+        <label><!-- P6-11 --></label>
+        <name>P6_11__c</name>
+    </fields>
+    <fields>
+        <label><!-- Program --></label>
+        <name>Program__c</name>
+        <relationshipLabel><!-- Rating Headers --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- RTG Count --></label>
+        <name>RTG_Count__c</name>
+    </fields>
+    <fields>
+        <label><!-- Season --></label>
+        <name>Season__c</name>
+        <picklistValues>
+            <masterLabel>2008 - 2009</masterLabel>
+            <translation><!-- 2008 - 2009 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>2009 - 2010</masterLabel>
+            <translation><!-- 2009 - 2010 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>2010 - 2011</masterLabel>
+            <translation><!-- 2010 - 2011 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>2011 - 2012</masterLabel>
+            <translation><!-- 2011 - 2012 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>2012 - 2013</masterLabel>
+            <translation><!-- 2012 - 2013 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>2013 - 2014</masterLabel>
+            <translation><!-- 2013 - 2014 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>2014 - 2015</masterLabel>
+            <translation><!-- 2014 - 2015 --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Start Date --></label>
+        <name>Start_Date__c</name>
+    </fields>
+    <layouts>
+        <layout>Rating Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Demo Information --></label>
+            <section>Demo Information</section>
+        </sections>
+    </layouts>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

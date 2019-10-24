@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>SF Credit Memo Detail</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>SF Credit Memo Details</value>
+    </caseValues>
+    <fields>
+        <label><!-- Account --></label>
+        <name>Account__c</name>
+    </fields>
+    <fields>
+        <label><!-- Brand --></label>
+        <name>Brand__c</name>
+    </fields>
+    <fields>
+        <label><!-- Comments --></label>
+        <name>Comments__c</name>
+    </fields>
+    <fields>
+        <label><!-- Credit Amount --></label>
+        <name>Credit_Amount__c</name>
+    </fields>
+    <fields>
+        <label><!-- Intacct SI Number --></label>
+        <name>Intacct_SI_Number__c</name>
+    </fields>
+    <fields>
+        <label><!-- Program --></label>
+        <name>Program__c</name>
+    </fields>
+    <fields>
+        <label><!-- SF Credit Memo Detail --></label>
+        <name>SF_Credit_Memo_Detail__c</name>
+        <relationshipLabel><!-- SF Credit Memo Details --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Schedule Week --></label>
+        <name>Schedule_Week__c</name>
+    </fields>
+    <fields>
+        <label><!-- Schedule --></label>
+        <name>Schedule__c</name>
+        <relationshipLabel><!-- SF Credit Memo Details --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Unit Length --></label>
+        <name>Unit_Length__c</name>
+    </fields>
+    <layouts>
+        <layout>SF Credit Memo Detail Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <startsWith>Consonant</startsWith>
+    <validationRules>
+        <errorMessage><!-- This SFCM has been processed and marked off as complete by Finance. Please consult with Finance before making any changes. All changes must be approved by Finance. --></errorMessage>
+        <name>SFCM_Complete</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Schedule selected does not appear on the list of schedules found on the deal. --></errorMessage>
+        <name>SF_CM_Schedules_equal_Master_Deal</name>
+    </validationRules>
+</CustomObjectTranslation>

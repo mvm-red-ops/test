@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Clearance</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Clearances</value>
+    </caseValues>
+    <fields>
+        <label><!-- AA HH% --></label>
+        <name>AA_HH__c</name>
+    </fields>
+    <fields>
+        <label><!-- Affiliate --></label>
+        <name>Affiliate__c</name>
+    </fields>
+    <fields>
+        <label><!-- Call Letters --></label>
+        <name>Call_Letters__c</name>
+    </fields>
+    <fields>
+        <label><!-- Clearance List --></label>
+        <name>Clearance_List__c</name>
+        <relationshipLabel><!-- Clearances --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Daypart --></label>
+        <name>Daypart__c</name>
+        <picklistValues>
+            <masterLabel>DAY</masterLabel>
+            <translation><!-- DAY --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>EM</masterLabel>
+            <translation><!-- EM --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>LF</masterLabel>
+            <translation><!-- LF --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>PR</masterLabel>
+            <translation><!-- PR --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- First Time Period --></label>
+        <name>First_Time_Period__c</name>
+    </fields>
+    <fields>
+        <label><!-- Launch Date --></label>
+        <name>Launch_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Market --></label>
+        <name>Market__c</name>
+    </fields>
+    <fields>
+        <label><!-- Off Air Date --></label>
+        <name>Off_Air_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Second Time Period --></label>
+        <name>Second_Time_Period__c</name>
+    </fields>
+    <fields>
+        <label><!-- Station --></label>
+        <name>Station__c</name>
+        <relationshipLabel><!-- Clearances --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- US HH% --></label>
+        <name>US_HH__c</name>
+    </fields>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

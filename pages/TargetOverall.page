@@ -1,0 +1,280 @@
+<apex:page controller="TargetOverallController">
+    <script>
+        function setFocusOnLoad() {}
+    </script>
+
+    <apex:actionStatus id="status1" startText="Loading..." startStyle="font-size:15px"/>
+    <apex:actionStatus id="status2" startText="Saving..." startStyle="font-size:15px"/>
+    <apex:sectionheader Title="Target" subtitle="Overall - Brands Report"/>
+    <apex:form id="frm">
+        <table width="100%">
+            <tr>
+                <td>Start Date</td>
+                <td><apex:inputField value="{!schedule.Week__c}"/></td>
+                <td>Program</td>
+                <td><apex:inputfield value="{!deal.Program__c}"/></td>
+            </tr>
+            <tr>
+                <td>End Date</td>
+                <td><apex:inputField value="{!schedule.Day__c}"/></td>
+                <td>Agency</td>
+                <td><apex:inputfield value="{!deal.Client_Account__c}"/></td>
+                <td>Contact</td>
+                <td><apex:inputfield value="{!deal.Contact__c}"/></td>
+            </tr>
+            <tr>
+                <td>TEAM</td>
+                <td>
+                    <apex:selectList size="1" value="{!selectedTeam}">
+                        <apex:selectOptions value="{!team}"/>
+                    </apex:selectList>
+                </td>
+                <td>Brand</td>
+                <td><apex:inputfield value="{!deal.Brands__c}"/></td>
+                <td>Deal Owner</td>
+                <td><apex:inputfield value="{!deal.OwnerId}" required="false"/></td>
+            </tr>
+            <tr>    
+                <td>Test</td>
+                <td><apex:inputfield value="{!schedule.TEST__c}"/></td>
+            </tr>
+            <tr>
+                <td colspan="6">
+                    <center>
+                        <apex:commandButton value="Search" action="{!search}" status="status1"/>
+                        <apex:commandButton value="Save" action="{!save}" status="status2"/>
+                    </center>
+                </td>
+            </tr>
+        </table>
+        <!--<apex:outputPanel rendered="{!(!hasRecords)}">
+            <apex:pageMessages />
+        </apex:outputPanel>-->
+        
+            <table border="1px" BORDERCOLOR="Gray" cellpadding="5" cellspacing="0" style="border-collapse:collapse; border-style:solid; border-width:1px;">
+                <tr>
+                    <td style="background-color:cyan; width:150px;">
+                        <B>Program</B>
+                    </td>
+                    <td style="background-color:cyan;">
+                        <table  border="1px" BORDERCOLOR="Gray" cellpadding="5" cellspacing="0" style="border-collapse:collapse; border-style:solid; border-width:1px;">
+                            <tr>
+                                <td style="background-color:cyan; width:200px;">
+                                    <B>Brand</B>
+                                </td>
+                                <td style="background-color:cyan; width:100px;">
+                                    &nbsp;
+                                </td>
+                                <td style="width:120px">
+                                    <B>Status</B>
+                                </td>
+                                <td style="width:120px">
+                                    <B>Status Details</B>
+                                </td>
+                                <!-- 
+                                <td style="width:120px">
+                                    <B>To Do</B>
+                                </td>
+                                 -->
+                                <td style="width:120px">
+                                    <B>Comments</B>
+                                </td>
+                                <td style="width:120px">
+                                    <B>AE LC</B>
+                                </td>
+                                <td style="width:120px">
+                                    <B>AE Status</B>
+                                </td>
+                                <apex:repeat value="{!monthHeading}" var="mh">
+                                    <td style="background-color:cyan; width:100px;">
+                                        <apex:outputtext ><B>{!mh}</B></apex:outputtext>
+                                    </td>
+                                </apex:repeat>
+                                <td style="background-color:gray; color:white; width:100px;">
+                                    <B>Total</B>
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+            </table>
+            <table border="1px" BORDERCOLOR="Gray" cellpadding="5" cellspacing="0" style="border-collapse:collapse; border-style:solid; border-width:1px;">
+                <apex:repeat value="{!progModelList}" var="pList">
+                    <tr>
+                        <td style=" width:150px;"><apex:outputText >{!pList.program}</apex:outputText></td>
+                        <td>
+                            <table border="1px" BORDERCOLOR="Gray" cellpadding="5" cellspacing="0" style="border-collapse:collapse; border-style:solid; border-width:1px;">
+                            <apex:repeat value="{!pList.brands}" var="bList">
+                                
+                                    <tr>
+                                        <td style="width:200px;">
+                                            <apex:outputText >{!bList.brand}</apex:outputText>
+                                        </td>
+                                        <td style="width:100px;">
+                                            Total $$$<br/>
+                                            Avg 30
+                                        </td>
+                                        <!-- <td style="width:120px;">
+                                            <apex:inputField value="{!bList.target.Status__c}" style="width:80px"/>
+                                        </td>
+                                        <td style="width:120px;">
+                                            <apex:inputField value="{!bList.target.Status_Detail__c}" style="width:80px"/>
+                                        </td>-->
+                                        <!-- 
+                                        <td style="width:120px;">
+                                            <apex:inputField value="{!bList.target.To_Do__c}" style="width:50px"/>
+                                        </td>
+                                         -->
+                                        <!-- <td style="width:120px;">
+                                            <apex:inputField value="{!bList.target.Comments__c}" style="width:80px"/>
+                                        </td>
+                                        <td style="width:120px;">
+                                            <apex:outputText value="{0,date,MM-dd-yyyy}">
+                                                <apex:param value="{!bList.target.AE_LC__c}" />
+                                            </apex:outputText>
+                                        </td>
+                                        <td style="width:120px;">
+                                            <apex:outputText value="{!bList.target.AE_Status__c}" style="width:80px"/>
+                                        </td>-->
+                                        <apex:repeat value="{!bList.monthSum}" var="mList">
+                                            <td  style="width:100px">
+                                                <apex:outputText value="{0, number, 0.00}">
+                                                    $<apex:param value="{!mList.sumTotalDollar}" />
+                                                </apex:outputText><br/>
+                                                <apex:outputText value="{0, number, 0.00}" rendered="{!if(mList.Avg30>0,true,false)}">
+                                                    $<apex:param value="{!mList.Avg30}" />
+                                                </apex:outputText>
+                                            </td>
+                                        </apex:repeat>
+                                        <td style="background-color:gray; color:white; width:100px;">
+                                            <apex:outputText value="{0, number, 0.00}">
+                                                $<apex:param value="{!bList.total.sumTotalDollar}" />
+                                            </apex:outputText><br/>
+                                            <apex:outputText value="{0, number, 0.00}">
+                                                $<apex:param value="{!bList.total.Avg30}" />
+                                            </apex:outputText>
+                                        </td>
+                                    </tr>
+                               
+                            </apex:repeat>
+                             </table>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="background-color:Gray; color: white;">
+                            <B>Sub Total</B>
+                        </td>
+                        <td style="background-color:Gray; color:white;">
+                            <table  border="1px" BORDERCOLOR="Gray" cellpadding="5" cellspacing="0" style="border-collapse:collapse; border-style:solid; border-width:1px;">
+                                <tr>
+                                    <td style="background-color:Gray; color:white; width:200px;">
+                                        &nbsp;
+                                    </td>
+                                    <td style="background-color:gray; color:white; width:100px;">
+                                        Total $$$ <br/>
+                                        Avg 30
+                                    </td>
+                                    <td style="width:120px">
+                                        &nbsp;
+                                    </td>
+                                    <td style="width:120px">
+                                        &nbsp;
+                                    </td>
+                                    <td style="width:120px">
+                                        &nbsp;
+                                    </td>
+                                    <td style="width:120px">
+                                        &nbsp;
+                                    </td>
+                                    <td style="width:120px">
+                                        &nbsp;
+                                    </td>
+                                    <td style="width:120px">
+                                        &nbsp;
+                                    </td>
+                                    <apex:repeat value="{!pList.subTotals}" var="st">
+                                        <td style="background-color:gray; color:white; width:100px;">
+                                            <apex:outputText value="{0, number, 0.00}">
+                                                $<apex:param value="{!st.sumTotalDollar}" />
+                                            </apex:outputText><br/>
+                                            <apex:outputText value="{0, number, 0.00}">
+                                                $<apex:param value="{!st.Avg30}" />
+                                            </apex:outputText>
+                                        </td>
+                                    </apex:repeat>
+                                    <td style="background-color:gray; color:white; width:100px;">
+                                        <B>
+                                            <apex:outputText value="{0, number, 0.00}">
+                                                $<apex:param value="{!pList.total.sumTotalDollar}" />
+                                            </apex:outputText><br/>
+                                            <apex:outputText value="{0, number, 0.00}">
+                                                $<apex:param value="{!pList.total.Avg30}" />
+                                            </apex:outputText>
+                                        </B>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                </apex:repeat>
+            </table>
+            <table border="1px" BORDERCOLOR="white" cellpadding="5" cellspacing="0" style="border-collapse:collapse; border-style:solid; border-width:1px;">
+                <tr>
+                    <td style="background-color:Gray; color:white; width:150px;">
+                        <B>Grand Totals</B>
+                    </td>
+                
+                    <td style="background-color:Gray;">
+                        <table>
+                            <tr>
+                                <td style="background-color:gray; color:white; width:200px;">
+                                    &nbsp;
+                                </td>
+                                <td style="background-color:gray; color:white; width:100px;">
+                                    Total $$$<br/>
+                                    Avg 30
+                                </td>
+                                <td style="width:120px">
+                                    &nbsp;
+                                </td>
+                                <td style="width:120px">
+                                    &nbsp;
+                                </td>
+                                <td style="width:120px">
+                                    &nbsp;
+                                </td>
+                                <td style="width:120px">
+                                    &nbsp;
+                                </td>
+                                <td style="width:120px">
+                                    &nbsp;
+                                </td>
+                                <td style="width:120px">
+                                    &nbsp;
+                                </td>
+                                <apex:repeat value="{!grandTotalList}" var="gList">
+                                    <td style="background-color:gray; color:white; width:100px;">
+                                        <apex:outputText value="{0, number, 0.00}">
+                                            $<apex:param value="{!gList.sumTotalDollar}" />
+                                        </apex:outputText><br/>
+                                        <apex:outputText value="{0, number, 0.00}">
+                                            $<apex:param value="{!gList.Avg30}" />
+                                        </apex:outputText>
+                                    </td>
+                                </apex:repeat>
+                                <td style="background-color:gray; color:white; width:100px;">
+                                    <B><apex:outputText value="{0, number, 0.00}">
+                                        $<apex:param value="{!superGrandTotal.sumTotalDollar}" />
+                                    </apex:outputText><br/>
+                                    <apex:outputText value="{0, number, 0.00}">
+                                        $<apex:param value="{!superGrandTotal.Avg30}" />
+                                    </apex:outputText></B>
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+            </table>
+        
+    </apex:form>
+</apex:page>

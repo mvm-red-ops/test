@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>WO</fullName>
+        <default>false</default>
+        <label>WO</label>
+    </customValue>
+    <customValue>
+        <fullName>Broadway</fullName>
+        <default>false</default>
+        <label>Broadway</label>
+    </customValue>
+    <customValue>
+        <fullName>Salesforce</fullName>
+        <default>false</default>
+        <label>Salesforce</label>
+    </customValue>
+    <customValue>
+        <fullName>Local System</fullName>
+        <default>false</default>
+        <label>Local System</label>
+    </customValue>
+    <customValue>
+        <fullName>Broadview</fullName>
+        <default>false</default>
+        <label>Broadview</label>
+    </customValue>
+    <masterLabel>Network System</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

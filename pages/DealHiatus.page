@@ -1,0 +1,229 @@
+<apex:page controller="DealHiatusController" title="Deal Hiatus" docType="html-5.0">
+	<apex:form id="form">
+        <apex:includeScript value="{!$Resource.saberjueryui}"/> 
+        <apex:includeScript value="{!$Resource.saberjquery}"/> 
+        <apex:includeScript value="{!URLFOR($Resource.jquery_vfFloatingHeaders)}" />
+        <script src="{!URLFOR($Resource.jquery_vfFloatingHeaders)}"></script>
+        <apex:stylesheet value="{!URLFOR($Resource.JQuery2, 'css/redmond/jquery-ui-1.8.14.custom.css')}"/>
+        <apex:includeScript value="{!$Resource.blockui}"/> 
+        <apex:includeScript value="{!$Resource.blockuijson}"/>
+        <style>
+            .tableContainer
+            {
+                height:290px; 
+                width: 100%;
+                overflow: auto;
+            }       
+            .floatingStyle 
+            { 
+                position:relative; 
+            } 
+            .ui-state-active
+            {
+                border: 1px solid #fbd850;
+                background: #FFFF66;
+                font-weight: bold;
+                color: #E1701D;
+            }
+            a { color: #000000; }
+            a:visited 
+            {
+                color: #000000;
+            }
+            .label {min-width:110px;font-weight:bold;display:inline-block;}
+            .field {display:inline;}
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() 
+            { 
+                $('.floatingHeaderTable').vfFloatingHeaders();
+            }); 
+
+            function checkAll(cb,cbid)
+            {
+                if ($(cb).attr('checked'))
+                {
+                    $('input[id$="' + cbid+ '"]:enabled').attr('checked',true);
+                    $('input[id$="' + cbid+ '"]:enabled').parent().parent().css('background-color', '#FFFF66');
+                }
+                else
+                {
+                    $('input[id$="' + cbid+ '"]:enabled').attr('checked',false);
+                    $('input[id$="' + cbid+ '"]:enabled').parent().parent().css('background-color', '');
+                }
+            }
+            function uncheckAll() {
+                $('#tabs input:checked').each(function() {
+                    $(this).attr('checked', false);
+                    $(this).parent().parent().css('background-color', '');
+                });
+            }
+            function highlightRow(cb) {
+                if ($(cb).is(':checked')) {
+                    $(cb).parent().parent().css('background-color', '#FFFF66');
+                } else {
+                    $(cb).parent().parent().css('background-color', '');
+                }
+            }
+            function goToPageEnter(event)  {
+                if (window.event && window.event.keyCode == 13 || event.which == 13) {
+                    event.preventDefault();
+                    $(event.target).trigger('change');
+                }
+            }
+
+            function hiatusEndDateChanged(item) {
+                if($(item).val()) {
+                    $('.hiatusTime').prop('disabled', true);
+                    $('.hiatusTime').val('');
+                } else {
+                    $('.hiatusTime').prop('disabled', false);
+                }
+            }
+
+            function hiatusTimeBeforeChanged(item) {
+                if($(item).val()) {
+                    $('.hiatusEndDate').prop('disabled', true);
+                    $('.hiatusEndDate').val('');
+                    $('.hiatusTimeAfter').prop('disabled', true);
+                    $('.hiatusTimeAfter').val('');
+                } else {
+                    $('.hiatusEndDate').prop('disabled', false);
+                    $('.hiatusTimeAfter').prop('disabled', false);
+                }
+            }
+
+            function hiatusTimeAfterChanged(item) {
+                if($(item).val()) {
+                    $('.hiatusEndDate').prop('disabled', true);
+                    $('.hiatusEndDate').val('');
+                    $('.hiatusTimeBefore').prop('disabled', true);
+                    $('.hiatusTimeBefore').val('');
+                } else {
+                    $('.hiatusEndDate').prop('disabled', false);
+                    $('.hiatusTimeBefore').prop('disabled', false);
+                }
+            }
+        </script> 
+        <apex:sectionHeader title="Deal Hiatus"/>
+        <apex:pageblock title="Search">
+            <table width="100%">   
+                <tr>  
+                    <td align="left">
+                        <apex:inputText value="{!Searchfield }"/>  
+                        <apex:commandbutton action="{!DoSearch}" value="Search" status="pageStatus" /> <apex:actionStatus startText="(Loading...)" id="pageStatus"/>
+                        <apex:inputCheckbox value="{!BarterCheckbox}" />&nbsp;Barter&nbsp;&nbsp;|&nbsp;&nbsp;
+                        <apex:selectList value="{!SelectedCableSynd}" size="1"><apex:selectOptions value="{!CableSyndSOList}" /></apex:selectList>
+                        <apex:selectList value="{!programTeam}" size="1"><apex:selectOptions value="{!programTeamOptions}"/></apex:selectList>&nbsp;&nbsp;|&nbsp;
+                        <apex:inputCheckbox value="{!filterReconciledWeeks}" />&nbsp;Hide reconciled weeks&nbsp;&nbsp;
+                    </td>
+                    <td align="right">
+                        <table cellspacing="5">
+                            <tr>
+                                <td colspan="2">Range&nbsp;&nbsp;<apex:selectList value="{!SelectedDateLiteral}" size="1"><apex:selectOptions value="{!DateLiteralSOList}" /><apex:actionSupport event="onchange" rerender="StartDateField,EndDateField" action="{!ReturnSOQLDateString}" /></apex:selectList></td>
+                            </tr>
+                            <tr>
+                                <td>From&nbsp;&nbsp;<apex:inputField value="{!WeekStartDate.Day__c}" id="StartDateField" /></td>
+                                <td>To&nbsp;&nbsp;<apex:inputField value="{!WeekEndDate.Day__c}" id="EndDateField" /></td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>  
+                <tr>
+                    <td>
+                        <font size="1">
+                            For advanced searches please separate the keywords with a comma ','
+                        </font>
+                    </td>
+                </tr>
+            </table>
+        </apex:pageblock>
+        <apex:outputPanel rendered="{!IF(Searchfield != null && Searchfield != '-', true, false)}" id="DealDisplay">
+            <apex:pageBlock title="Deals" >
+            	<apex:outputPanel styleClass="tableContainer" layout="block" style="overflow:auto;max-height:350px" >
+                    <table cellpadding="5" border="0">
+                        <tr>
+                            <td style="vertical-align: middle;"><b>Start Date (required): </b><apex:inputField value="{!hiatusTempScheduleStart.Week__c}" id="hiatusStartDate" /></td>
+                            <td style="vertical-align: middle;"><b>End Date: </b><apex:inputField value="{!hiatusTempScheduleEnd.Week__c}" id="hiatusEndDate" styleClass="hiatusEndDate" onchange="hiatusEndDateChanged(this);"/></td>
+                            <td style="vertical-align: middle;"><b>Hiatus Time Before: </b><apex:selectList value="{!hiatusTimeBefore}" size="1" id="hiatusTimeBefore" styleClass="hiatusTime hiatusTimeBefore" onchange="hiatusTimeBeforeChanged(this);"><apex:selectOptions value="{!hiatusTimeOptions}" /></apex:selectList></td>
+                            <td style="vertical-align: middle;"><b>Hiatus Time After: </b><apex:selectList value="{!hiatusTimeAfter}" size="1" id="hiatusTimeAfter" styleClass="hiatusTime hiatusTimeAfter" onchange="hiatusTimeAfterChanged(this);"><apex:selectOptions value="{!hiatusTimeOptions}" /></apex:selectList></td>
+                            <td>
+                                <apex:commandbutton action="{!HiatusUpdate}" value="Update" status="hiatusUpdateStatus"/>
+                                <apex:actionStatus id="hiatusUpdateStatus"><apex:facet name="start"><apex:image value="{!$Resource.ajax_loader}"/></apex:facet></apex:actionStatus>
+                            </td>
+                        </tr>
+                    </table>
+                    <table border="1" cellpadding="5" cellspacing="0" >
+                        <tr>
+                            <td style="background-color:#AAAAAA; width:20px;">
+                                <apex:inputcheckbox value="{!selectAll}" onclick="checkAll(this, 'dealcheckbox')" styleClass="checkAllCheckbox" /> 
+                            </td>
+                            <td style="background-color:#AAAAAA;"><B>Deal Link</B></td>
+                            <td style="background-color:#AAAAAA;"><B>Brands</B></td>
+                            <td style="background-color:#AAAAAA;"><B>Agency</B></td>
+                            <td style="background-color:#AAAAAA;"><B>Program</B></td>
+                            <td style="background-color:#AAAAAA;"><B>Contact</B></td>
+                            <td style="background-color:#AAAAAA;"><B>Campaign</B></td>
+                            <td style="background-color:#AAAAAA;"><B>Network Deal Number</B></td>
+                            <td style="background-color:#AAAAAA;"><B>Week MIN</B></td>
+                            <td style="background-color:#AAAAAA;"><B>Agency Deal Number</B></td>
+                            <td style="background-color:#AAAAAA;"><B>Units Available</B></td>
+                            <td style="background-color:#AAAAAA;"><B>Total Dollars</B></td>
+                        </tr>
+                        <apex:repeat value="{!DealObjList}" var="dealObj">
+                            <tr>
+                                <td style="text-align:center;">
+                                    <apex:inputcheckbox id="dealcheckbox" value="{!dealObj.ischecked}" onchange="highlightRow(this)" />
+                                </td>
+                                <td style="text-align:center;">
+                                    <apex:outputLink style="color:#000000;" value="/{!dealObj.deal.Id}" id="deallink1" target="_blank">
+		                                <apex:outputField value="{!dealObj.deal.Name}"/> 
+		                            </apex:outputLink> 
+                                </td>
+                                <td style="text-align:center;">
+                                    <apex:outputLink style="color:#000000;" value="/{!dealObj.deal.Brands__c}" id="brandlink" target="_blank">
+		                                <apex:outputtext value="{!dealObj.deal.Brands__r.Name}"/>    
+		                            </apex:outputLink>
+                                </td>
+                                <td style="text-align:center;">
+                                    <apex:outputLink style="color:#000000;" value="/{!dealObj.deal.Contact__r.Account.id}" id="agencylink" target="_blank">
+		                                <apex:outputField value="{!dealObj.deal.ContactAccount__c}"/>
+		                            </apex:outputLink>
+                                </td>
+                                <td style="text-align:center;">
+                                    <apex:outputLink style="color:#000000;" value="/{!dealObj.deal.Program__r.id}" id="prolink" target="_blank">
+		                                <apex:outputtext value="{!dealObj.deal.Program__r.Name}"/>
+		                            </apex:outputLink>
+                                </td>
+                                <td style="text-align:center;">
+                                    <apex:outputLink style="color:#000000;" value="/{!dealObj.deal.Contact__r.id}" id="conlink" target="_blank">
+		                                <apex:outputtext value="{!dealObj.deal.Contact__r.Name}"/> 
+		                            </apex:outputLink>
+                                </td>
+                                <td style="text-align:center;">
+                                    <apex:outputField value="{!dealObj.deal.Campaign__c}"/>
+                                </td>
+                                <td style="text-align:center;">
+                                    <apex:outputField value="{!dealObj.deal.Network_Deal_Number__c}"/>
+                                </td>
+                                <td style="text-align:center;">
+                                    <apex:outputField value="{!dealObj.deal.Week_MIN_Field__c}"/>
+                                </td>
+                                <td style="text-align:center;">
+                                    <apex:outputField value="{!dealObj.deal.Agency_Deal_Number__c}"/>
+                                </td>
+                                <td style="text-align:center;">
+                                    <apex:outputField value="{!dealObj.deal.Sum_of_Units_Available__c}"/>
+                                </td>
+                                <td style="text-align:center;">
+                                    <apex:outputField value="{!dealObj.deal.Sum_of_Total_Dollars__c}"/>
+                                </td>
+                            </tr>
+                        </apex:repeat>
+					</table>
+                </apex:OutputPanel>
+            </apex:pageBlock>  
+        </apex:outputPanel>
+        <apex:pageMessages id="message"></apex:pageMessages>
+	</apex:form>
+</apex:page>

@@ -1,0 +1,2090 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <allowInChatterGroups>false</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <enableActivities>false</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>false</enableHistory>
+    <enableLicensing>false</enableLicensing>
+    <enableReports>false</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <externalSharingModel>ReadWrite</externalSharingModel>
+    <fields>
+        <fullName>AA_HH__c</fullName>
+        <externalId>false</externalId>
+        <label>AA HH %</label>
+        <precision>16</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Percent</type>
+    </fields>
+    <fields>
+        <fullName>ADS__c</fullName>
+        <externalId>false</externalId>
+        <label>ADS %</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Percent</type>
+    </fields>
+    <fields>
+        <fullName>AntennaTV_Affiliate__c</fullName>
+        <externalId>false</externalId>
+        <label>AntennaTV Affiliate</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>ABC</fullName>
+                    <default>false</default>
+                    <label>ABC</label>
+                </value>
+                <value>
+                    <fullName>CBS</fullName>
+                    <default>false</default>
+                    <label>CBS</label>
+                </value>
+                <value>
+                    <fullName>CW</fullName>
+                    <default>false</default>
+                    <label>CW</label>
+                </value>
+                <value>
+                    <fullName>Cozi TV</fullName>
+                    <default>false</default>
+                    <label>Cozi TV</label>
+                </value>
+                <value>
+                    <fullName>FOX</fullName>
+                    <default>false</default>
+                    <label>FOX</label>
+                </value>
+                <value>
+                    <fullName>H&amp;I</fullName>
+                    <default>false</default>
+                    <label>H&amp;I</label>
+                </value>
+                <value>
+                    <fullName>Independent</fullName>
+                    <default>false</default>
+                    <label>Independent</label>
+                </value>
+                <value>
+                    <fullName>MeTV</fullName>
+                    <default>false</default>
+                    <label>MeTV</label>
+                </value>
+                <value>
+                    <fullName>MundoMax</fullName>
+                    <default>false</default>
+                    <label>MundoMax</label>
+                </value>
+                <value>
+                    <fullName>MyNetworkTV</fullName>
+                    <default>false</default>
+                    <label>MyNetworkTV</label>
+                </value>
+                <value>
+                    <fullName>NBC</fullName>
+                    <default>false</default>
+                    <label>NBC</label>
+                </value>
+                <value>
+                    <fullName>Star</fullName>
+                    <default>false</default>
+                    <label>Star</label>
+                </value>
+                <value>
+                    <fullName>Telemundo</fullName>
+                    <default>false</default>
+                    <label>Telemundo</label>
+                </value>
+                <value>
+                    <fullName>ThisTV</fullName>
+                    <default>false</default>
+                    <label>ThisTV</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>AntennaTV_Call_Letters__c</fullName>
+        <externalId>false</externalId>
+        <label>AntennaTV Call Letters</label>
+        <length>100</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>AntennaTV_Channel_Position__c</fullName>
+        <externalId>false</externalId>
+        <label>AntennaTV Channel Position</label>
+        <precision>16</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>AntennaTV_Launch_Date__c</fullName>
+        <externalId>false</externalId>
+        <label>AntennaTV Launch Date</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>AntennaTV__c</fullName>
+        <externalId>false</externalId>
+        <label>AntennaTV Affiliate Owner</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Bahakel Comm</fullName>
+                    <default>false</default>
+                    <label>Bahakel Comm</label>
+                </value>
+                <value>
+                    <fullName>Belo Corporation</fullName>
+                    <default>false</default>
+                    <label>Belo Corporation</label>
+                </value>
+                <value>
+                    <fullName>Block</fullName>
+                    <default>false</default>
+                    <label>Block</label>
+                </value>
+                <value>
+                    <fullName>Boise Telecasters</fullName>
+                    <default>false</default>
+                    <label>Boise Telecasters</label>
+                </value>
+                <value>
+                    <fullName>Bonten</fullName>
+                    <default>false</default>
+                    <label>Bonten</label>
+                </value>
+                <value>
+                    <fullName>Broadland Properties</fullName>
+                    <default>false</default>
+                    <label>Broadland Properties</label>
+                </value>
+                <value>
+                    <fullName>Calkins Media</fullName>
+                    <default>false</default>
+                    <label>Calkins Media</label>
+                </value>
+                <value>
+                    <fullName>Camino Real</fullName>
+                    <default>false</default>
+                    <label>Camino Real</label>
+                </value>
+                <value>
+                    <fullName>Cedar Rapids Television Co</fullName>
+                    <default>false</default>
+                    <label>Cedar Rapids Television Co</label>
+                </value>
+                <value>
+                    <fullName>Cocola Broadcasting</fullName>
+                    <default>false</default>
+                    <label>Cocola Broadcasting</label>
+                </value>
+                <value>
+                    <fullName>Community Broadcast Group</fullName>
+                    <default>false</default>
+                    <label>Community Broadcast Group</label>
+                </value>
+                <value>
+                    <fullName>Cox</fullName>
+                    <default>false</default>
+                    <label>Cox</label>
+                </value>
+                <value>
+                    <fullName>Delta Media</fullName>
+                    <default>false</default>
+                    <label>Delta Media</label>
+                </value>
+                <value>
+                    <fullName>Dreamcatcher</fullName>
+                    <default>false</default>
+                    <label>Dreamcatcher</label>
+                </value>
+                <value>
+                    <fullName>DTV America Corp</fullName>
+                    <default>false</default>
+                    <label>DTV America Corp</label>
+                </value>
+                <value>
+                    <fullName>Ellington Broadcasting</fullName>
+                    <default>false</default>
+                    <label>Ellington Broadcasting</label>
+                </value>
+                <value>
+                    <fullName>Esteem Broadcasting</fullName>
+                    <default>false</default>
+                    <label>Esteem Broadcasting</label>
+                </value>
+                <value>
+                    <fullName>Fireweed Communications Corporation</fullName>
+                    <default>false</default>
+                    <label>Fireweed Communications Corporation</label>
+                </value>
+                <value>
+                    <fullName>Flood Communication</fullName>
+                    <default>false</default>
+                    <label>Flood Communication</label>
+                </value>
+                <value>
+                    <fullName>FOX</fullName>
+                    <default>false</default>
+                    <label>FOX</label>
+                </value>
+                <value>
+                    <fullName>Freelancer TV</fullName>
+                    <default>false</default>
+                    <label>Freelancer TV</label>
+                </value>
+                <value>
+                    <fullName>Gannett Company</fullName>
+                    <default>false</default>
+                    <label>Gannett Company</label>
+                </value>
+                <value>
+                    <fullName>GoCom Media Of Illinois/Sinclair</fullName>
+                    <default>false</default>
+                    <label>GoCom Media Of Illinois/Sinclair</label>
+                </value>
+                <value>
+                    <fullName>Gray</fullName>
+                    <default>false</default>
+                    <label>Gray</label>
+                </value>
+                <value>
+                    <fullName>Great Plains Television</fullName>
+                    <default>false</default>
+                    <label>Great Plains Television</label>
+                </value>
+                <value>
+                    <fullName>Guardian Television Network</fullName>
+                    <default>false</default>
+                    <label>Guardian Television Network</label>
+                </value>
+                <value>
+                    <fullName>Howard Stirk Holdings</fullName>
+                    <default>false</default>
+                    <label>Howard Stirk Holdings</label>
+                </value>
+                <value>
+                    <fullName>Hubbard</fullName>
+                    <default>false</default>
+                    <label>Hubbard</label>
+                </value>
+                <value>
+                    <fullName>JKB Associates</fullName>
+                    <default>false</default>
+                    <label>JKB Associates</label>
+                </value>
+                <value>
+                    <fullName>KGBY Partners</fullName>
+                    <default>false</default>
+                    <label>KGBY Partners</label>
+                </value>
+                <value>
+                    <fullName>King Kong Broadcasting</fullName>
+                    <default>false</default>
+                    <label>King Kong Broadcasting</label>
+                </value>
+                <value>
+                    <fullName>KTBS LLC</fullName>
+                    <default>false</default>
+                    <label>KTBS LLC</label>
+                </value>
+                <value>
+                    <fullName>Lenfest Broadcasting</fullName>
+                    <default>false</default>
+                    <label>Lenfest Broadcasting</label>
+                </value>
+                <value>
+                    <fullName>LIN TV Corporation</fullName>
+                    <default>false</default>
+                    <label>LIN TV Corporation</label>
+                </value>
+                <value>
+                    <fullName>Louisiana Media Company</fullName>
+                    <default>false</default>
+                    <label>Louisiana Media Company</label>
+                </value>
+                <value>
+                    <fullName>Media General</fullName>
+                    <default>false</default>
+                    <label>Media General</label>
+                </value>
+                <value>
+                    <fullName>Meredith Corporation</fullName>
+                    <default>false</default>
+                    <label>Meredith Corporation</label>
+                </value>
+                <value>
+                    <fullName>Mission Broadcasting Group</fullName>
+                    <default>false</default>
+                    <label>Mission Broadcasting Group</label>
+                </value>
+                <value>
+                    <fullName>MMMAC, LLC</fullName>
+                    <default>false</default>
+                    <label>MMMAC, LLC</label>
+                </value>
+                <value>
+                    <fullName>Mountain Licenses LP</fullName>
+                    <default>false</default>
+                    <label>Mountain Licenses LP</label>
+                </value>
+                <value>
+                    <fullName>National Cable Network</fullName>
+                    <default>false</default>
+                    <label>National Cable Network</label>
+                </value>
+                <value>
+                    <fullName>Nexstar Broadcasting Group</fullName>
+                    <default>false</default>
+                    <label>Nexstar Broadcasting Group</label>
+                </value>
+                <value>
+                    <fullName>NGB, Inc</fullName>
+                    <default>false</default>
+                    <label>NGB, Inc</label>
+                </value>
+                <value>
+                    <fullName>Northland TV</fullName>
+                    <default>false</default>
+                    <label>Northland TV</label>
+                </value>
+                <value>
+                    <fullName>Oregon TV, LLC</fullName>
+                    <default>false</default>
+                    <label>Oregon TV, LLC</label>
+                </value>
+                <value>
+                    <fullName>Other</fullName>
+                    <default>false</default>
+                    <label>Other</label>
+                </value>
+                <value>
+                    <fullName>Pacific Southern, LLC</fullName>
+                    <default>false</default>
+                    <label>Pacific Southern, LLC</label>
+                </value>
+                <value>
+                    <fullName>Palm Television, LP</fullName>
+                    <default>false</default>
+                    <label>Palm Television, LP</label>
+                </value>
+                <value>
+                    <fullName>Pappas</fullName>
+                    <default>false</default>
+                    <label>Pappas</label>
+                </value>
+                <value>
+                    <fullName>Paxton Media Group</fullName>
+                    <default>false</default>
+                    <label>Paxton Media Group</label>
+                </value>
+                <value>
+                    <fullName>Perkin Media</fullName>
+                    <default>false</default>
+                    <label>Perkin Media</label>
+                </value>
+                <value>
+                    <fullName>Raycom Media</fullName>
+                    <default>false</default>
+                    <label>Raycom Media</label>
+                </value>
+                <value>
+                    <fullName>Red River</fullName>
+                    <default>false</default>
+                    <label>Red River</label>
+                </value>
+                <value>
+                    <fullName>Register Communications</fullName>
+                    <default>false</default>
+                    <label>Register Communications</label>
+                </value>
+                <value>
+                    <fullName>Saga Broadcasting, LLC</fullName>
+                    <default>false</default>
+                    <label>Saga Broadcasting, LLC</label>
+                </value>
+                <value>
+                    <fullName>San Antonio Television LLC</fullName>
+                    <default>false</default>
+                    <label>San Antonio Television LLC</label>
+                </value>
+                <value>
+                    <fullName>Sarkes Tarzian, Inc.</fullName>
+                    <default>false</default>
+                    <label>Sarkes Tarzian, Inc.</label>
+                </value>
+                <value>
+                    <fullName>Scripps</fullName>
+                    <default>false</default>
+                    <label>Scripps</label>
+                </value>
+                <value>
+                    <fullName>Sinclair</fullName>
+                    <default>false</default>
+                    <label>Sinclair</label>
+                </value>
+                <value>
+                    <fullName>Son Broadcasting</fullName>
+                    <default>false</default>
+                    <label>Son Broadcasting</label>
+                </value>
+                <value>
+                    <fullName>Tegna</fullName>
+                    <default>false</default>
+                    <label>Tegna</label>
+                </value>
+                <value>
+                    <fullName>Three Sisters Brpadcasting, LLC</fullName>
+                    <default>false</default>
+                    <label>Three Sisters Brpadcasting, LLC</label>
+                </value>
+                <value>
+                    <fullName>Titan</fullName>
+                    <default>false</default>
+                    <label>Titan</label>
+                </value>
+                <value>
+                    <fullName>Tribune</fullName>
+                    <default>false</default>
+                    <label>Tribune</label>
+                </value>
+                <value>
+                    <fullName>Tutt Media</fullName>
+                    <default>false</default>
+                    <label>Tutt Media</label>
+                </value>
+                <value>
+                    <fullName>Union Street Video LLC</fullName>
+                    <default>false</default>
+                    <label>Union Street Video LLC</label>
+                </value>
+                <value>
+                    <fullName>Univision</fullName>
+                    <default>false</default>
+                    <label>Univision</label>
+                </value>
+                <value>
+                    <fullName>Venture Technologies</fullName>
+                    <default>false</default>
+                    <label>Venture Technologies</label>
+                </value>
+                <value>
+                    <fullName>WBOC, INC</fullName>
+                    <default>false</default>
+                    <label>WBOC, INC</label>
+                </value>
+                <value>
+                    <fullName>Weese Enterprises</fullName>
+                    <default>false</default>
+                    <label>Weese Enterprises</label>
+                </value>
+                <value>
+                    <fullName>Weigel Broadcasting</fullName>
+                    <default>false</default>
+                    <label>Weigel Broadcasting</label>
+                </value>
+                <value>
+                    <fullName>Winstar Broadcasting</fullName>
+                    <default>false</default>
+                    <label>Winstar Broadcasting</label>
+                </value>
+                <value>
+                    <fullName>Woods</fullName>
+                    <default>false</default>
+                    <label>Woods</label>
+                </value>
+                <value>
+                    <fullName>WBIN, Inc</fullName>
+                    <default>false</default>
+                    <label>WBIN, Inc</label>
+                </value>
+                <value>
+                    <fullName>Morris</fullName>
+                    <default>false</default>
+                    <label>Morris</label>
+                </value>
+                <value>
+                    <fullName>Journal</fullName>
+                    <default>false</default>
+                    <label>Journal</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>BounceTV_Call_Letters__c</fullName>
+        <externalId>true</externalId>
+        <label>BounceTV Call Letters</label>
+        <length>100</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>BounceTV_Channel_Position__c</fullName>
+        <externalId>false</externalId>
+        <label>BounceTV Channel Position</label>
+        <precision>16</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>BounceTV_Launch_Date__c</fullName>
+        <externalId>false</externalId>
+        <label>BounceTV Launch Date</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Bounce_TV_Affiliate_Owner__c</fullName>
+        <externalId>false</externalId>
+        <label>Bounce TV Affiliate Owner</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Belo Corporation</fullName>
+                    <default>false</default>
+                    <label>Belo Corporation</label>
+                </value>
+                <value>
+                    <fullName>Broadland Properties</fullName>
+                    <default>false</default>
+                    <label>Broadland Properties</label>
+                </value>
+                <value>
+                    <fullName>Calkins Media</fullName>
+                    <default>false</default>
+                    <label>Calkins Media</label>
+                </value>
+                <value>
+                    <fullName>Cocola Broadcasting</fullName>
+                    <default>false</default>
+                    <label>Cocola Broadcasting</label>
+                </value>
+                <value>
+                    <fullName>FOX</fullName>
+                    <default>false</default>
+                    <label>FOX</label>
+                </value>
+                <value>
+                    <fullName>Gannett Company</fullName>
+                    <default>false</default>
+                    <label>Gannett Company</label>
+                </value>
+                <value>
+                    <fullName>Great Plains Television</fullName>
+                    <default>false</default>
+                    <label>Great Plains Television</label>
+                </value>
+                <value>
+                    <fullName>Guardian Television Network</fullName>
+                    <default>false</default>
+                    <label>Guardian Television Network</label>
+                </value>
+                <value>
+                    <fullName>JKB Associates</fullName>
+                    <default>false</default>
+                    <label>JKB Associates</label>
+                </value>
+                <value>
+                    <fullName>King Kong Broadcasting</fullName>
+                    <default>false</default>
+                    <label>King Kong Broadcasting</label>
+                </value>
+                <value>
+                    <fullName>Lenfest Broadcasting</fullName>
+                    <default>false</default>
+                    <label>Lenfest Broadcasting</label>
+                </value>
+                <value>
+                    <fullName>LIN TV Corporation</fullName>
+                    <default>false</default>
+                    <label>LIN TV Corporation</label>
+                </value>
+                <value>
+                    <fullName>Louisiana Media Company</fullName>
+                    <default>false</default>
+                    <label>Louisiana Media Company</label>
+                </value>
+                <value>
+                    <fullName>Meredith Corporation</fullName>
+                    <default>false</default>
+                    <label>Meredith Corporation</label>
+                </value>
+                <value>
+                    <fullName>Mission Broadcasting Group</fullName>
+                    <default>false</default>
+                    <label>Mission Broadcasting Group</label>
+                </value>
+                <value>
+                    <fullName>Nexstar Broadcasting Group</fullName>
+                    <default>false</default>
+                    <label>Nexstar Broadcasting Group</label>
+                </value>
+                <value>
+                    <fullName>Other</fullName>
+                    <default>false</default>
+                    <label>Other</label>
+                </value>
+                <value>
+                    <fullName>Raycom Media</fullName>
+                    <default>false</default>
+                    <label>Raycom Media</label>
+                </value>
+                <value>
+                    <fullName>Register Communications</fullName>
+                    <default>false</default>
+                    <label>Register Communications</label>
+                </value>
+                <value>
+                    <fullName>Scripps</fullName>
+                    <default>false</default>
+                    <label>Scripps</label>
+                </value>
+                <value>
+                    <fullName>Weigel Broadcasting</fullName>
+                    <default>false</default>
+                    <label>Weigel Broadcasting</label>
+                </value>
+                <value>
+                    <fullName>Esteem Broadcasting</fullName>
+                    <default>false</default>
+                    <label>Esteem Broadcasting</label>
+                </value>
+                <value>
+                    <fullName>Titan</fullName>
+                    <default>false</default>
+                    <label>Titan</label>
+                </value>
+                <value>
+                    <fullName>Univision</fullName>
+                    <default>false</default>
+                    <label>Univision</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Bounce_TV_Affiliate__c</fullName>
+        <externalId>false</externalId>
+        <label>Bounce TV Affiliate</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>ABC</fullName>
+                    <default>false</default>
+                    <label>ABC</label>
+                </value>
+                <value>
+                    <fullName>CBS</fullName>
+                    <default>false</default>
+                    <label>CBS</label>
+                </value>
+                <value>
+                    <fullName>CW</fullName>
+                    <default>false</default>
+                    <label>CW</label>
+                </value>
+                <value>
+                    <fullName>FOX</fullName>
+                    <default>false</default>
+                    <label>FOX</label>
+                </value>
+                <value>
+                    <fullName>HSN</fullName>
+                    <default>false</default>
+                    <label>HSN</label>
+                </value>
+                <value>
+                    <fullName>ME-TV</fullName>
+                    <default>false</default>
+                    <label>ME-TV</label>
+                </value>
+                <value>
+                    <fullName>My Network TV</fullName>
+                    <default>false</default>
+                    <label>My Network TV</label>
+                </value>
+                <value>
+                    <fullName>NBC</fullName>
+                    <default>false</default>
+                    <label>NBC</label>
+                </value>
+                <value>
+                    <fullName>Telefutura</fullName>
+                    <default>false</default>
+                    <label>Telefutura</label>
+                </value>
+                <value>
+                    <fullName>UNIMAS</fullName>
+                    <default>false</default>
+                    <label>UNIMAS</label>
+                </value>
+                <value>
+                    <fullName>Univision</fullName>
+                    <default>false</default>
+                    <label>Univision</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>BuzzrTV_Affiliate_Owner__c</fullName>
+        <externalId>false</externalId>
+        <label>BuzzrTV Affiliate Owner</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>American Spirit Media</fullName>
+                    <default>false</default>
+                    <label>American Spirit Media</label>
+                </value>
+                <value>
+                    <fullName>Cox</fullName>
+                    <default>false</default>
+                    <label>Cox</label>
+                </value>
+                <value>
+                    <fullName>Gannett</fullName>
+                    <default>false</default>
+                    <label>Gannett</label>
+                </value>
+                <value>
+                    <fullName>LIN TV</fullName>
+                    <default>false</default>
+                    <label>LIN TV</label>
+                </value>
+                <value>
+                    <fullName>Raycom Media</fullName>
+                    <default>false</default>
+                    <label>Raycom Media</label>
+                </value>
+                <value>
+                    <fullName>Scripps</fullName>
+                    <default>false</default>
+                    <label>Scripps</label>
+                </value>
+                <value>
+                    <fullName>Weigel Broadcasting</fullName>
+                    <default>false</default>
+                    <label>Weigel Broadcasting</label>
+                </value>
+                <value>
+                    <fullName>Univision</fullName>
+                    <default>false</default>
+                    <label>Univision</label>
+                </value>
+                <value>
+                    <fullName>COX Media Group</fullName>
+                    <default>false</default>
+                    <label>COX Media Group</label>
+                </value>
+                <value>
+                    <fullName>PMCM TV, LLC</fullName>
+                    <default>false</default>
+                    <label>PMCM TV, LLC</label>
+                </value>
+                <value>
+                    <fullName>Sinclair Broadcast Group</fullName>
+                    <default>false</default>
+                    <label>Sinclair Broadcast Group</label>
+                </value>
+                <value>
+                    <fullName>Great Plains Television</fullName>
+                    <default>false</default>
+                    <label>Great Plains Television</label>
+                </value>
+                <value>
+                    <fullName>Citadel Communications</fullName>
+                    <default>false</default>
+                    <label>Citadel Communications</label>
+                </value>
+                <value>
+                    <fullName>FOX</fullName>
+                    <default>false</default>
+                    <label>FOX</label>
+                </value>
+                <value>
+                    <fullName>Nexstar Broadcasting Group</fullName>
+                    <default>false</default>
+                    <label>Nexstar Broadcasting Group</label>
+                </value>
+                <value>
+                    <fullName>Ramar Communications</fullName>
+                    <default>false</default>
+                    <label>Ramar Communications</label>
+                </value>
+                <value>
+                    <fullName>DTV</fullName>
+                    <default>false</default>
+                    <label>DTV</label>
+                </value>
+                <value>
+                    <fullName>Sunbeam</fullName>
+                    <default>false</default>
+                    <label>Sunbeam</label>
+                </value>
+                <value>
+                    <fullName>Independent</fullName>
+                    <default>false</default>
+                    <label>Independent</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>BuzzrTV_Call_Letters__c</fullName>
+        <externalId>true</externalId>
+        <label>BuzzrTV Call Letters</label>
+        <length>100</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>BuzzrTV_Channel_Position__c</fullName>
+        <externalId>false</externalId>
+        <label>BuzzrTV Channel Position</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>BuzzrTV_Launch_Date__c</fullName>
+        <externalId>false</externalId>
+        <label>BuzzrTV Launch Date</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>BuzzrTV__c</fullName>
+        <externalId>false</externalId>
+        <label>BuzzrTV Affiliate</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>ABC</fullName>
+                    <default>false</default>
+                    <label>ABC</label>
+                </value>
+                <value>
+                    <fullName>CBS</fullName>
+                    <default>false</default>
+                    <label>CBS</label>
+                </value>
+                <value>
+                    <fullName>FOX</fullName>
+                    <default>false</default>
+                    <label>FOX</label>
+                </value>
+                <value>
+                    <fullName>NBC</fullName>
+                    <default>false</default>
+                    <label>NBC</label>
+                </value>
+                <value>
+                    <fullName>CW</fullName>
+                    <default>false</default>
+                    <label>CW</label>
+                </value>
+                <value>
+                    <fullName>MyNetworkTV</fullName>
+                    <default>false</default>
+                    <label>MyNetworkTV</label>
+                </value>
+                <value>
+                    <fullName>Univision</fullName>
+                    <default>false</default>
+                    <label>Univision</label>
+                </value>
+                <value>
+                    <fullName>Unimas</fullName>
+                    <default>false</default>
+                    <label>Unimas</label>
+                </value>
+                <value>
+                    <fullName>ME-TV</fullName>
+                    <default>false</default>
+                    <label>ME-TV</label>
+                </value>
+                <value>
+                    <fullName>Independent</fullName>
+                    <default>false</default>
+                    <label>Independent</label>
+                </value>
+                <value>
+                    <fullName>COZI</fullName>
+                    <default>false</default>
+                    <label>COZI</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Cozi_TV_Affiliate_Owner__c</fullName>
+        <externalId>false</externalId>
+        <label>Cozi TV Affiliate Owner</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>NBC</fullName>
+                    <default>false</default>
+                    <label>NBC</label>
+                </value>
+                <value>
+                    <fullName>Dispatch Broadcast Group</fullName>
+                    <default>false</default>
+                    <label>Dispatch Broadcast Group</label>
+                </value>
+                <value>
+                    <fullName>Scripps</fullName>
+                    <default>false</default>
+                    <label>Scripps</label>
+                </value>
+                <value>
+                    <fullName>Block Communications</fullName>
+                    <default>false</default>
+                    <label>Block Communications</label>
+                </value>
+                <value>
+                    <fullName>Intermountain West</fullName>
+                    <default>false</default>
+                    <label>Intermountain West</label>
+                </value>
+                <value>
+                    <fullName>Trans America</fullName>
+                    <default>false</default>
+                    <label>Trans America</label>
+                </value>
+                <value>
+                    <fullName>Ellis-Wilson</fullName>
+                    <default>false</default>
+                    <label>Ellis-Wilson</label>
+                </value>
+                <value>
+                    <fullName>Franklin Media</fullName>
+                    <default>false</default>
+                    <label>Franklin Media</label>
+                </value>
+                <value>
+                    <fullName>Cordillera Communications</fullName>
+                    <default>false</default>
+                    <label>Cordillera Communications</label>
+                </value>
+                <value>
+                    <fullName>Community Broadcast Group</fullName>
+                    <default>false</default>
+                    <label>Community Broadcast Group</label>
+                </value>
+                <value>
+                    <fullName>London Broadcast Group</fullName>
+                    <default>false</default>
+                    <label>London Broadcast Group</label>
+                </value>
+                <value>
+                    <fullName>Red River Broadcasting</fullName>
+                    <default>false</default>
+                    <label>Red River Broadcasting</label>
+                </value>
+                <value>
+                    <fullName>Morris Multimedia</fullName>
+                    <default>false</default>
+                    <label>Morris Multimedia</label>
+                </value>
+                <value>
+                    <fullName>Granite Broadcasting Corporation</fullName>
+                    <default>false</default>
+                    <label>Granite Broadcasting Corporation</label>
+                </value>
+                <value>
+                    <fullName>NRJ TV, LLC</fullName>
+                    <default>false</default>
+                    <label>NRJ TV, LLC</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Cozi_TV_Affiliate__c</fullName>
+        <externalId>false</externalId>
+        <label>Cozi TV Affiliate</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>NBC</fullName>
+                    <default>false</default>
+                    <label>NBC</label>
+                </value>
+                <value>
+                    <fullName>Cozi</fullName>
+                    <default>false</default>
+                    <label>Cozi</label>
+                </value>
+                <value>
+                    <fullName>Independent</fullName>
+                    <default>false</default>
+                    <label>Independent</label>
+                </value>
+                <value>
+                    <fullName>My Network</fullName>
+                    <default>false</default>
+                    <label>My Network</label>
+                </value>
+                <value>
+                    <fullName>Me-TV</fullName>
+                    <default>false</default>
+                    <label>Me-TV</label>
+                </value>
+                <value>
+                    <fullName>CBS/This TV</fullName>
+                    <default>false</default>
+                    <label>CBS/This TV</label>
+                </value>
+                <value>
+                    <fullName>ABC</fullName>
+                    <default>false</default>
+                    <label>ABC</label>
+                </value>
+                <value>
+                    <fullName>FOX</fullName>
+                    <default>false</default>
+                    <label>FOX</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Cozi_TV_Call_Letters__c</fullName>
+        <externalId>true</externalId>
+        <label>Cozi TV Call Letters</label>
+        <length>100</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Cozi_TV_Channel_Position__c</fullName>
+        <externalId>false</externalId>
+        <label>Cozi TV Channel Position</label>
+        <length>20</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Cozi_TV_Launch_Date__c</fullName>
+        <externalId>false</externalId>
+        <label>Cozi TV Launch Date</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>DMA_Rank__c</fullName>
+        <externalId>true</externalId>
+        <label>DMA Rank</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>true</unique>
+    </fields>
+    <fields>
+        <fullName>EscapeTV_Affiliate_Owner__c</fullName>
+        <externalId>false</externalId>
+        <label>EscapeTV Affiliate Owner</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>American Spirit Media</fullName>
+                    <default>false</default>
+                    <label>American Spirit Media</label>
+                </value>
+                <value>
+                    <fullName>Citadel Communications</fullName>
+                    <default>false</default>
+                    <label>Citadel Communications</label>
+                </value>
+                <value>
+                    <fullName>Cox Media Group</fullName>
+                    <default>false</default>
+                    <label>Cox Media Group</label>
+                </value>
+                <value>
+                    <fullName>Great Plains Television</fullName>
+                    <default>false</default>
+                    <label>Great Plains Television</label>
+                </value>
+                <value>
+                    <fullName>Louisiana Media Company</fullName>
+                    <default>false</default>
+                    <label>Louisiana Media Company</label>
+                </value>
+                <value>
+                    <fullName>PMCM TV, LLC</fullName>
+                    <default>false</default>
+                    <label>PMCM TV, LLC</label>
+                </value>
+                <value>
+                    <fullName>Raycom</fullName>
+                    <default>false</default>
+                    <label>Raycom</label>
+                </value>
+                <value>
+                    <fullName>Univision</fullName>
+                    <default>false</default>
+                    <label>Univision</label>
+                </value>
+                <value>
+                    <fullName>Scripps</fullName>
+                    <default>false</default>
+                    <label>Scripps</label>
+                </value>
+                <value>
+                    <fullName>Lockwood</fullName>
+                    <default>false</default>
+                    <label>Lockwood</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>EscapeTV_Affiliate__c</fullName>
+        <externalId>false</externalId>
+        <label>EscapeTV Affiliate</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Unimas</fullName>
+                    <default>false</default>
+                    <label>Unimas</label>
+                </value>
+                <value>
+                    <fullName>ME-TV</fullName>
+                    <default>false</default>
+                    <label>ME-TV</label>
+                </value>
+                <value>
+                    <fullName>ABC</fullName>
+                    <default>false</default>
+                    <label>ABC</label>
+                </value>
+                <value>
+                    <fullName>Univision</fullName>
+                    <default>false</default>
+                    <label>Univision</label>
+                </value>
+                <value>
+                    <fullName>NBC</fullName>
+                    <default>false</default>
+                    <label>NBC</label>
+                </value>
+                <value>
+                    <fullName>FOX</fullName>
+                    <default>false</default>
+                    <label>FOX</label>
+                </value>
+                <value>
+                    <fullName>CBS</fullName>
+                    <default>false</default>
+                    <label>CBS</label>
+                </value>
+                <value>
+                    <fullName>Independent</fullName>
+                    <default>false</default>
+                    <label>Independent</label>
+                </value>
+                <value>
+                    <fullName>My Network TV</fullName>
+                    <default>false</default>
+                    <label>My Network TV</label>
+                </value>
+                <value>
+                    <fullName>CW</fullName>
+                    <default>false</default>
+                    <label>CW</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>EscapeTV_Call_Letters__c</fullName>
+        <externalId>true</externalId>
+        <label>EscapeTV Call Letters</label>
+        <length>100</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>EscapeTV_Channel_Position__c</fullName>
+        <externalId>false</externalId>
+        <label>EscapeTV Channel Position</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>EscapeTV_Launch_Date__c</fullName>
+        <externalId>false</externalId>
+        <label>EscapeTV Launch Date</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>GritTV_Affiliate_Owner__c</fullName>
+        <externalId>false</externalId>
+        <label>GritTV Affiliate Owner</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Univision</fullName>
+                    <default>false</default>
+                    <label>Univision</label>
+                </value>
+                <value>
+                    <fullName>Sinclair Broadcast Group</fullName>
+                    <default>false</default>
+                    <label>Sinclair Broadcast Group</label>
+                </value>
+                <value>
+                    <fullName>Raycom</fullName>
+                    <default>false</default>
+                    <label>Raycom</label>
+                </value>
+                <value>
+                    <fullName>Cox Media Group</fullName>
+                    <default>false</default>
+                    <label>Cox Media Group</label>
+                </value>
+                <value>
+                    <fullName>Great Plains Television</fullName>
+                    <default>false</default>
+                    <label>Great Plains Television</label>
+                </value>
+                <value>
+                    <fullName>Citadel Communications</fullName>
+                    <default>false</default>
+                    <label>Citadel Communications</label>
+                </value>
+                <value>
+                    <fullName>Carlisle One Media</fullName>
+                    <default>false</default>
+                    <label>Carlisle One Media</label>
+                </value>
+                <value>
+                    <fullName>PMCM TV, LLC</fullName>
+                    <default>false</default>
+                    <label>PMCM TV, LLC</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>GritTV_Affiliate__c</fullName>
+        <externalId>false</externalId>
+        <label>GritTV Affiliate</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>ABC</fullName>
+                    <default>false</default>
+                    <label>ABC</label>
+                </value>
+                <value>
+                    <fullName>CBS</fullName>
+                    <default>false</default>
+                    <label>CBS</label>
+                </value>
+                <value>
+                    <fullName>NBC</fullName>
+                    <default>false</default>
+                    <label>NBC</label>
+                </value>
+                <value>
+                    <fullName>FOX</fullName>
+                    <default>false</default>
+                    <label>FOX</label>
+                </value>
+                <value>
+                    <fullName>Univision</fullName>
+                    <default>false</default>
+                    <label>Univision</label>
+                </value>
+                <value>
+                    <fullName>Unimas</fullName>
+                    <default>false</default>
+                    <label>Unimas</label>
+                </value>
+                <value>
+                    <fullName>MyNetworkTV</fullName>
+                    <default>false</default>
+                    <label>MyNetworkTV</label>
+                </value>
+                <value>
+                    <fullName>Me-TV</fullName>
+                    <default>false</default>
+                    <label>Me-TV</label>
+                </value>
+                <value>
+                    <fullName>CW</fullName>
+                    <default>false</default>
+                    <label>CW</label>
+                </value>
+                <value>
+                    <fullName>Independent</fullName>
+                    <default>false</default>
+                    <label>Independent</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>GritTV_Call_Letters__c</fullName>
+        <externalId>false</externalId>
+        <label>GritTV Call Letters</label>
+        <length>100</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>GritTV_Channel_Position__c</fullName>
+        <externalId>false</externalId>
+        <label>GritTV Channel Position</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>GritTV_Launch_Date__c</fullName>
+        <externalId>false</externalId>
+        <label>GritTV Launch Date</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Justice_Network_Affiliate_Owner__c</fullName>
+        <externalId>false</externalId>
+        <label>Justice Network Affiliate Owner</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Tegna</fullName>
+                    <default>false</default>
+                    <label>Tegna</label>
+                </value>
+                <value>
+                    <fullName>LIN TV</fullName>
+                    <default>false</default>
+                    <label>LIN TV</label>
+                </value>
+                <value>
+                    <fullName>Raycom Media</fullName>
+                    <default>false</default>
+                    <label>Raycom Media</label>
+                </value>
+                <value>
+                    <fullName>Scripps</fullName>
+                    <default>false</default>
+                    <label>Scripps</label>
+                </value>
+                <value>
+                    <fullName>Weigel broadcasting</fullName>
+                    <default>false</default>
+                    <label>Weigel broadcasting</label>
+                </value>
+                <value>
+                    <fullName>Univision</fullName>
+                    <default>false</default>
+                    <label>Univision</label>
+                </value>
+                <value>
+                    <fullName>COX Media Group</fullName>
+                    <default>false</default>
+                    <label>COX Media Group</label>
+                </value>
+                <value>
+                    <fullName>PMCM TV, LLC</fullName>
+                    <default>false</default>
+                    <label>PMCM TV, LLC</label>
+                </value>
+                <value>
+                    <fullName>Cocola Broadcasting</fullName>
+                    <default>false</default>
+                    <label>Cocola Broadcasting</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Justice_Network_Affiliate__c</fullName>
+        <externalId>false</externalId>
+        <label>Justice Network Affiliate</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>ABC</fullName>
+                    <default>false</default>
+                    <label>ABC</label>
+                </value>
+                <value>
+                    <fullName>CBS</fullName>
+                    <default>false</default>
+                    <label>CBS</label>
+                </value>
+                <value>
+                    <fullName>FOX</fullName>
+                    <default>false</default>
+                    <label>FOX</label>
+                </value>
+                <value>
+                    <fullName>NBC</fullName>
+                    <default>false</default>
+                    <label>NBC</label>
+                </value>
+                <value>
+                    <fullName>ME-TV</fullName>
+                    <default>false</default>
+                    <label>ME-TV</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Justice_Network_Call_Letters__c</fullName>
+        <externalId>true</externalId>
+        <label>Justice Network Call Letters</label>
+        <length>100</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Justice_Network_Channel_Position__c</fullName>
+        <externalId>false</externalId>
+        <label>Justice Network Channel Position</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Justice_Network_Launch_Date__c</fullName>
+        <externalId>false</externalId>
+        <label>Justice Network Launch Date</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Market_Rank__c</fullName>
+        <externalId>false</externalId>
+        <formula>if( LEN(text(X2014_2015_DMA_Rank__c  ))=1,&quot;00&quot;&amp;TEXT(X2014_2015_DMA_Rank__c) , 
+
+if( LEN(text(X2014_2015_DMA_Rank__c  ))=2,&quot;0&quot;&amp;TEXT(X2014_2015_DMA_Rank__c), 
+
+TEXT(X2014_2015_DMA_Rank__c)))
+
+&amp;&quot; - &quot;&amp;Name</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Market Rank</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>OTA__c</fullName>
+        <externalId>false</externalId>
+        <label>OTA %</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Percent</type>
+    </fields>
+    <fields>
+        <fullName>ThisTV_Affiliate_Owner__c</fullName>
+        <externalId>false</externalId>
+        <label>ThisTV Affiliate Owner</label>
+        <length>50</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>ThisTV_Affiliate__c</fullName>
+        <externalId>false</externalId>
+        <label>ThisTV Affiliate</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>ABC</fullName>
+                    <default>false</default>
+                    <label>ABC</label>
+                </value>
+                <value>
+                    <fullName>CBS</fullName>
+                    <default>false</default>
+                    <label>CBS</label>
+                </value>
+                <value>
+                    <fullName>CW</fullName>
+                    <default>false</default>
+                    <label>CW</label>
+                </value>
+                <value>
+                    <fullName>EstrellaTV</fullName>
+                    <default>false</default>
+                    <label>EstrellaTV</label>
+                </value>
+                <value>
+                    <fullName>FOX</fullName>
+                    <default>false</default>
+                    <label>FOX</label>
+                </value>
+                <value>
+                    <fullName>Independent</fullName>
+                    <default>false</default>
+                    <label>Independent</label>
+                </value>
+                <value>
+                    <fullName>MeTV</fullName>
+                    <default>false</default>
+                    <label>MeTV</label>
+                </value>
+                <value>
+                    <fullName>MyNetworkTV</fullName>
+                    <default>false</default>
+                    <label>MyNetworkTV</label>
+                </value>
+                <value>
+                    <fullName>NBC</fullName>
+                    <default>false</default>
+                    <label>NBC</label>
+                </value>
+                <value>
+                    <fullName>SonLife</fullName>
+                    <default>false</default>
+                    <label>SonLife</label>
+                </value>
+                <value>
+                    <fullName>TBD</fullName>
+                    <default>false</default>
+                    <label>TBD</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>ThisTV_Call_Letters__c</fullName>
+        <externalId>false</externalId>
+        <label>ThisTV Call Letters</label>
+        <length>100</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>ThisTV_Channel_Position__c</fullName>
+        <externalId>false</externalId>
+        <label>ThisTV Channel Position</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>ThisTV_Launch_Date__c</fullName>
+        <externalId>false</externalId>
+        <label>ThisTV Launch Date</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Time_Zone__c</fullName>
+        <externalId>false</externalId>
+        <label>Time Zone</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>HST</fullName>
+                    <default>false</default>
+                    <label>HST</label>
+                </value>
+                <value>
+                    <fullName>AKST</fullName>
+                    <default>false</default>
+                    <label>AKST</label>
+                </value>
+                <value>
+                    <fullName>PST</fullName>
+                    <default>false</default>
+                    <label>PST</label>
+                </value>
+                <value>
+                    <fullName>MST</fullName>
+                    <default>false</default>
+                    <label>MST</label>
+                </value>
+                <value>
+                    <fullName>CST</fullName>
+                    <default>false</default>
+                    <label>CST</label>
+                </value>
+                <value>
+                    <fullName>EST</fullName>
+                    <default>false</default>
+                    <label>EST</label>
+                </value>
+                <value>
+                    <fullName>AST</fullName>
+                    <default>false</default>
+                    <label>AST</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>US_HH__c</fullName>
+        <externalId>false</externalId>
+        <label>US HH %</label>
+        <precision>16</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Percent</type>
+    </fields>
+    <fields>
+        <fullName>Wired_Cable__c</fullName>
+        <externalId>false</externalId>
+        <label>Wired Cable %</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Percent</type>
+    </fields>
+    <fields>
+        <fullName>X2014_2015_DMA_Rank__c</fullName>
+        <externalId>true</externalId>
+        <label>2014 - 2015 DMA Rank</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>true</unique>
+    </fields>
+    <label>Market</label>
+    <listViews>
+        <fullName>ANTV</fullName>
+        <columns>NAME</columns>
+        <columns>X2014_2015_DMA_Rank__c</columns>
+        <columns>US_HH__c</columns>
+        <columns>AntennaTV_Affiliate__c</columns>
+        <columns>AntennaTV__c</columns>
+        <columns>AntennaTV_Call_Letters__c</columns>
+        <columns>AntennaTV_Channel_Position__c</columns>
+        <columns>AntennaTV_Launch_Date__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>AntennaTV_Call_Letters__c</field>
+            <operation>notEqual</operation>
+        </filters>
+        <label>ANTV</label>
+    </listViews>
+    <listViews>
+        <fullName>All</fullName>
+        <columns>NAME</columns>
+        <columns>X2014_2015_DMA_Rank__c</columns>
+        <columns>US_HH__c</columns>
+        <columns>AA_HH__c</columns>
+        <columns>Justice_Network_Affiliate__c</columns>
+        <columns>Justice_Network_Affiliate_Owner__c</columns>
+        <columns>Justice_Network_Call_Letters__c</columns>
+        <columns>Justice_Network_Channel_Position__c</columns>
+        <columns>Justice_Network_Launch_Date__c</columns>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+    </listViews>
+    <listViews>
+        <fullName>BOUNCE</fullName>
+        <columns>DMA_Rank__c</columns>
+        <columns>NAME</columns>
+        <columns>US_HH__c</columns>
+        <columns>Bounce_TV_Affiliate__c</columns>
+        <columns>Bounce_TV_Affiliate_Owner__c</columns>
+        <columns>BounceTV_Call_Letters__c</columns>
+        <columns>BounceTV_Channel_Position__c</columns>
+        <columns>BounceTV_Launch_Date__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Bounce_TV_Affiliate__c</field>
+            <operation>notEqual</operation>
+        </filters>
+        <label>BOUNCE</label>
+    </listViews>
+    <listViews>
+        <fullName>COZI</fullName>
+        <columns>DMA_Rank__c</columns>
+        <columns>NAME</columns>
+        <columns>US_HH__c</columns>
+        <columns>Cozi_TV_Affiliate__c</columns>
+        <columns>Cozi_TV_Affiliate_Owner__c</columns>
+        <columns>Cozi_TV_Call_Letters__c</columns>
+        <columns>Cozi_TV_Channel_Position__c</columns>
+        <columns>Cozi_TV_Launch_Date__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Cozi_TV_Affiliate__c</field>
+            <operation>notEqual</operation>
+        </filters>
+        <label>COZI</label>
+    </listViews>
+    <listViews>
+        <fullName>Escape</fullName>
+        <columns>DMA_Rank__c</columns>
+        <columns>NAME</columns>
+        <columns>US_HH__c</columns>
+        <columns>EscapeTV_Affiliate__c</columns>
+        <columns>EscapeTV_Affiliate_Owner__c</columns>
+        <columns>EscapeTV_Call_Letters__c</columns>
+        <columns>EscapeTV_Channel_Position__c</columns>
+        <columns>EscapeTV_Launch_Date__c</columns>
+        <filterScope>Everything</filterScope>
+        <label>Escape</label>
+    </listViews>
+    <listViews>
+        <fullName>Grit</fullName>
+        <columns>DMA_Rank__c</columns>
+        <columns>NAME</columns>
+        <columns>US_HH__c</columns>
+        <columns>GritTV_Affiliate__c</columns>
+        <columns>GritTV_Affiliate_Owner__c</columns>
+        <columns>GritTV_Call_Letters__c</columns>
+        <columns>GritTV_Channel_Position__c</columns>
+        <columns>GritTV_Launch_Date__c</columns>
+        <filterScope>Everything</filterScope>
+        <label>Grit</label>
+    </listViews>
+    <listViews>
+        <fullName>Justice_Network</fullName>
+        <columns>Market_Rank__c</columns>
+        <columns>DMA_Rank__c</columns>
+        <columns>NAME</columns>
+        <columns>US_HH__c</columns>
+        <columns>Justice_Network_Affiliate__c</columns>
+        <columns>Justice_Network_Affiliate_Owner__c</columns>
+        <columns>Justice_Network_Call_Letters__c</columns>
+        <columns>Justice_Network_Channel_Position__c</columns>
+        <columns>Justice_Network_Launch_Date__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Justice_Network_Call_Letters__c</field>
+            <operation>notEqual</operation>
+        </filters>
+        <label>Justice Network</label>
+    </listViews>
+    <listViews>
+        <fullName>Raycom</fullName>
+        <columns>DMA_Rank__c</columns>
+        <columns>BounceTV_Call_Letters__c</columns>
+        <columns>NAME</columns>
+        <columns>US_HH__c</columns>
+        <columns>AA_HH__c</columns>
+        <columns>Bounce_TV_Affiliate__c</columns>
+        <columns>Bounce_TV_Affiliate_Owner__c</columns>
+        <columns>BounceTV_Channel_Position__c</columns>
+        <columns>BounceTV_Launch_Date__c</columns>
+        <columns>Cozi_TV_Launch_Date__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Bounce_TV_Affiliate_Owner__c</field>
+            <operation>equals</operation>
+            <value>Raycom Media</value>
+        </filters>
+        <label>Raycom</label>
+    </listViews>
+    <listViews>
+        <fullName>THISTV</fullName>
+        <columns>NAME</columns>
+        <columns>X2014_2015_DMA_Rank__c</columns>
+        <columns>US_HH__c</columns>
+        <columns>ThisTV_Affiliate__c</columns>
+        <columns>ThisTV_Affiliate_Owner__c</columns>
+        <columns>ThisTV_Call_Letters__c</columns>
+        <columns>ThisTV_Channel_Position__c</columns>
+        <columns>ThisTV_Launch_Date__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>ThisTV_Call_Letters__c</field>
+            <operation>notEqual</operation>
+        </filters>
+        <label>THISTV</label>
+    </listViews>
+    <nameField>
+        <label>Market Name</label>
+        <type>Text</type>
+    </nameField>
+    <pluralLabel>Markets</pluralLabel>
+    <searchLayouts/>
+    <sharingModel>ReadWrite</sharingModel>
+    <visibility>Public</visibility>
+</CustomObject>

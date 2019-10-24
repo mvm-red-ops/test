@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>SF Credit Memo Old</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>SF Credit Memos Old</value>
+    </caseValues>
+    <fields>
+        <label><!-- Account --></label>
+        <name>Account__c</name>
+    </fields>
+    <fields>
+        <label><!-- Brand --></label>
+        <name>Brand__c</name>
+    </fields>
+    <fields>
+        <label><!-- Comments --></label>
+        <name>Comments__c</name>
+    </fields>
+    <fields>
+        <label><!-- Complete --></label>
+        <name>Complete__c</name>
+    </fields>
+    <fields>
+        <label><!-- Credit Amount --></label>
+        <name>Credit_Amount__c</name>
+    </fields>
+    <fields>
+        <label><!-- Credit Date --></label>
+        <name>Credit_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Intacct SI Number --></label>
+        <name>Intacct_SI_Number__c</name>
+    </fields>
+    <fields>
+        <label><!-- Paid Date --></label>
+        <name>Paid_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Program --></label>
+        <name>Program__c</name>
+    </fields>
+    <fields>
+        <label><!-- Schedule Week --></label>
+        <name>Schedule_Week__c</name>
+    </fields>
+    <fields>
+        <label><!-- Schedule --></label>
+        <name>Schedule__c</name>
+        <relationshipLabel><!-- SF Credit Memos Old --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Status --></label>
+        <name>Status__c</name>
+        <picklistValues>
+            <masterLabel>Approved by Finance</masterLabel>
+            <translation><!-- Approved by Finance --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Approved by Partner</masterLabel>
+            <translation><!-- Approved by Partner --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Pending</masterLabel>
+            <translation><!-- Pending --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Type --></label>
+        <name>Type__c</name>
+        <picklistValues>
+            <masterLabel>Agency Discount</masterLabel>
+            <translation><!-- Agency Discount --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Agency Discount - Approved by Network</masterLabel>
+            <translation><!-- Agency Discount - Approved by Network --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Credit</masterLabel>
+            <translation><!-- Credit --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Credit - Approved by Network</masterLabel>
+            <translation><!-- Credit - Approved by Network --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Network Error</masterLabel>
+            <translation><!-- Network Error --></translation>
+        </picklistValues>
+    </fields>
+    <layouts>
+        <layout>Credit Memo Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

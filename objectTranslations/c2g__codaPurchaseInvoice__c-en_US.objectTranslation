@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <label><!-- Dummy Payable Invoice --></label>
+        <name>Dummy_Payable_Invoice__c</name>
+    </fields>
+    <fields>
+        <label><!-- PI Payable Invoice --></label>
+        <name>PI_Payable_Invoice__c</name>
+    </fields>
+    <webLinks>
+        <label><!-- Post_Selected_AP_Invoices --></label>
+        <name>Post_Selected_AP_Invoices</name>
+    </webLinks>
+</CustomObjectTranslation>

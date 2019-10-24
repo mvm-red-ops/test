@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Advertiser</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Advertisers</value>
+    </caseValues>
+    <fields>
+        <help><!-- Please populate this field only if the LOG has an expiration date --></help>
+        <label><!-- ADV LOG with Expiration Date --></label>
+        <name>ADV_LOG_with_Expiration_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Account --></label>
+        <name>Account__c</name>
+        <relationshipLabel><!-- Advertisers --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Address --></label>
+        <name>Address__c</name>
+    </fields>
+    <fields>
+        <help><!-- Checked = Advertiser has been approved to book by Finance 
+Unchecked = Advertiser has NOT been approved to book by Finance --></help>
+        <label><!-- Advertiser Approved to Book --></label>
+        <name>Advertiser_Approved_to_Book__c</name>
+    </fields>
+    <fields>
+        <help><!-- Please check this box if the advertiser is CIA --></help>
+        <label><!-- Advertiser CIA --></label>
+        <name>Advertiser_CIA__c</name>
+    </fields>
+    <fields>
+        <help><!-- Used to count the number of Advertisers in a given data set --></help>
+        <label><!-- Advertiser Count --></label>
+        <name>Advertiser_Count__c</name>
+    </fields>
+    <fields>
+        <label><!-- Advertiser Credit Limit --></label>
+        <name>Advertiser_Credit_Limit__c</name>
+    </fields>
+    <fields>
+        <label><!-- Advertiser External ID --></label>
+        <name>Advertiser_External_ID__c</name>
+    </fields>
+    <fields>
+        <label><!-- Advertiser Number --></label>
+        <name>Advertiser_Number__c</name>
+    </fields>
+    <fields>
+        <label><!-- Advertiser Terms --></label>
+        <name>Advertiser_Terms__c</name>
+        <picklistValues>
+            <masterLabel>DUR</masterLabel>
+            <translation><!-- DUR --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>NET 30</masterLabel>
+            <translation><!-- NET 30 --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Comments --></label>
+        <name>Comments__c</name>
+    </fields>
+    <fields>
+        <label><!-- SF Commercial Type --></label>
+        <name>Commercial__c</name>
+        <picklistValues>
+            <masterLabel>--</masterLabel>
+            <translation><!-- - -  --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>DR</masterLabel>
+            <translation><!-- DR --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>END</masterLabel>
+            <translation><!-- END --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>GM</masterLabel>
+            <translation><!-- GM --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>HYBRID</masterLabel>
+            <translation><!-- HYBRID --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>PROMO</masterLabel>
+            <translation><!-- PROMO --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>PSA</masterLabel>
+            <translation><!-- PSA --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>TUNE IN</masterLabel>
+            <translation><!-- TUNE IN --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Dupe --></label>
+        <name>Dupe__c</name>
+    </fields>
+    <fields>
+        <label><!-- Duplicate Approval --></label>
+        <name>Duplicate_Approval__c</name>
+        <picklistValues>
+            <masterLabel>Approved</masterLabel>
+            <translation><!-- Approved --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Not Approved</masterLabel>
+            <translation><!-- Not Approved --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- If this box is checked off, Finance has placed a hold on this account and no booking without approval from Finance. --></help>
+        <label><!-- Hold Placed on Advertiser Account --></label>
+        <name>Hold_Placed_on_Advertiser_Account__c</name>
+    </fields>
+    <fields>
+        <label><!-- Intacct Adv Balance --></label>
+        <name>Intacct_Adv_Balance__c</name>
+    </fields>
+    <fields>
+        <label><!-- LOG Comments --></label>
+        <name>LOG_Comments__c</name>
+    </fields>
+    <fields>
+        <help><!-- This box will be checked off if Finance has received an LOG --></help>
+        <label><!-- Letter Of Guarantee --></label>
+        <name>LOG__c</name>
+    </fields>
+    <fields>
+        <label><!-- Merge --></label>
+        <name>Merge__c</name>
+    </fields>
+    <fields>
+        <help><!-- This check box will be used to monitor advertisers w/ payment issues --></help>
+        <label><!-- Monitoring --></label>
+        <name>Monitoring__c</name>
+    </fields>
+    <fields>
+        <label><!-- Unique Advertiser Identifier --></label>
+        <name>Unique_Advertiser_Identifier__c</name>
+    </fields>
+    <layouts>
+        <layout>Advertiser Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Finance Details --></label>
+            <section>Finance Details</section>
+        </sections>
+    </layouts>
+    <startsWith>Vowel</startsWith>
+</CustomObjectTranslation>

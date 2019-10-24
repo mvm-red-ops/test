@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <label><!-- Actual Period 100 --></label>
+        <name>ActualPeriod100__c</name>
+    </fields>
+    <fields>
+        <label><!-- Actual Period 101 --></label>
+        <name>ActualPeriod101__c</name>
+    </fields>
+    <fields>
+        <label><!-- Actual YTD Period 100 --></label>
+        <name>ActualYTDPeriod100__c</name>
+    </fields>
+    <fields>
+        <label><!-- Actual YTD Period 101 --></label>
+        <name>ActualYTDPeriod101__c</name>
+    </fields>
+    <fields>
+        <label><!-- Budget Period 100 --></label>
+        <name>BudgetPeriod100__c</name>
+    </fields>
+    <fields>
+        <label><!-- Budget Period 101 --></label>
+        <name>BudgetPeriod101__c</name>
+    </fields>
+    <fields>
+        <label><!-- Budget YTD Period 100 --></label>
+        <name>BudgetYTDPeriod100__c</name>
+    </fields>
+    <fields>
+        <label><!-- Budget YTD Period 101 --></label>
+        <name>BudgetYTDPeriod101__c</name>
+    </fields>
+    <fields>
+        <label><!-- Variance Period 100 --></label>
+        <name>VariancePeriod100__c</name>
+    </fields>
+    <fields>
+        <label><!-- Variance Period 101 --></label>
+        <name>VariancePeriod101__c</name>
+    </fields>
+    <fields>
+        <label><!-- Variance YTD Period 100 --></label>
+        <name>VarianceYTDPeriod100__c</name>
+    </fields>
+    <fields>
+        <label><!-- Variance YTD Period 101 --></label>
+        <name>VarianceYTDPeriod101__c</name>
+    </fields>
+</CustomObjectTranslation>

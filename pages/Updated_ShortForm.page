@@ -1,0 +1,34 @@
+<apex:page controller="ShortForm">
+    <apex:form >
+      <apex:pageMessages escape="false"/>
+      
+      <apex:sectionHeader title="SHORT FORM"/>
+      
+        <apex:pageBlock title="MANAGEMENT REPORTS">   
+            <apex:outputLink value="/apex/management">Management Report</apex:outputLink><br/><br/>
+            <apex:outputLink value="/apex/AvailabilityReportCable">Cable Availability Report</apex:outputLink><br/><br/>
+            <apex:outputLink value="/apex/AvailabilityReportSyndication">Syndication Availability Report</apex:outputLink><br/><br/>
+            <apex:outputLink value="/apex/DoubleCheck">Double Check - Syndication Report</apex:outputLink><br/><br/>
+        </apex:pageBlock>
+      
+       <apex:pageBlock title="RECONCILING">
+           
+           <apex:pageBlockSection title="CONTACT DATES BATCH"> 
+                <apex:commandButton value="Start Contact Dates Batch" action="{!StartBatchJob}" /><br /><br/>
+                <apex:commandButton value="Start Contact Dates Batch - Post Log Week" action="{!StartBatchJobPostLog}" /><br /><br/>
+                <apex:commandButton value="Start Contact Dates Batch - Pre Log Week" action="{!StartBatchJobPreLog}" /><br /><br/>
+                <apex:commandButton value="Start Contact Dates Batch - Next Week's Pre Log" action="{!StartBatchJobNextWeekPreLog}" /><br /><br/>
+            </apex:pageBlockSection>
+           
+            <apex:pageBlockSection title="POST LOG RECONCILING" >
+                <apex:commandButton value="Start Spot Data Mirror Batch" action="{!StartSpotDataMirrorBatchJob}" /><br /><br/>
+                <apex:commandButton value="Start Spot Data Mirror Batch for records with Schedules" action="{!StartSpotDataMirrorWithSchedulesBatchJob}" /><br/><br/>
+            </apex:pageBlockSection>
+            
+            <apex:pageBlockSection title="PRE LOG RECONCILING">
+                <apex:commandButton value="Start Prelog Data Mirror Batch" action="{!StartPreLogDataMirrorBatchJob}" />
+            </apex:pageBlockSection>
+            
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Series</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Series</value>
+    </caseValues>
+    <fields>
+        <label><!-- Account --></label>
+        <name>Owner__c</name>
+        <relationshipLabel><!-- Series --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Poster URL --></label>
+        <name>Poster_URL__c</name>
+    </fields>
+    <fields>
+        <label><!-- Thumbnail URL --></label>
+        <name>Thumbnail_URL__c</name>
+    </fields>
+    <fields>
+        <label><!-- Type --></label>
+        <name>Type__c</name>
+        <picklistValues>
+            <masterLabel>collection</masterLabel>
+            <translation><!-- collection --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>curated</masterLabel>
+            <translation><!-- curated --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>genre</masterLabel>
+            <translation><!-- genre --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>season</masterLabel>
+            <translation><!-- season --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>series</masterLabel>
+            <translation><!-- series --></translation>
+        </picklistValues>
+    </fields>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

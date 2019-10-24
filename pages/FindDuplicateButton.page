@@ -1,0 +1,6 @@
+<apex:page standardController="SpotDataMirror__c" action="{!RedirectButton}" extensions="FindDuplicateButton" title="Find Duplicates">
+	<apex:form >
+		<apex:pageMessages />
+		<apex:commandButton value="Go Back" action="{!GoBackButton}" />
+	</apex:form>
+</apex:page>

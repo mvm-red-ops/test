@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <label><!-- Age Analysis Category --></label>
+        <name>Age_Analysis_Category__c</name>
+    </fields>
+    <fields>
+        <label><!-- Aged Category --></label>
+        <name>Aged_Category__c</name>
+    </fields>
+    <fields>
+        <label><!-- As of Age --></label>
+        <name>As_of_Age__c</name>
+    </fields>
+    <fields>
+        <label><!-- Credit --></label>
+        <name>Credit__c</name>
+    </fields>
+    <fields>
+        <label><!-- Debit --></label>
+        <name>Debit__c</name>
+    </fields>
+    <fields>
+        <label><!-- Document Date --></label>
+        <name>Document_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Document Number --></label>
+        <name>Document_Number__c</name>
+    </fields>
+    <fields>
+        <label><!-- Dual Credit --></label>
+        <name>Dual_Credit__c</name>
+    </fields>
+    <fields>
+        <label><!-- Dual Debit --></label>
+        <name>Dual_Debit__c</name>
+    </fields>
+    <fields>
+        <label><!-- PO # --></label>
+        <name>PO__c</name>
+    </fields>
+    <fields>
+        <label><!-- SIN Brand --></label>
+        <name>SIN_Brand__c</name>
+    </fields>
+    <fields>
+        <label><!-- SIN Program --></label>
+        <name>SIN_Program__c</name>
+    </fields>
+    <fields>
+        <label><!-- Source Doc Number --></label>
+        <name>Source_Doc_Number__c</name>
+    </fields>
+</CustomObjectTranslation>

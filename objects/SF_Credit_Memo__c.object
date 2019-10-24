@@ -1,0 +1,644 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <allowInChatterGroups>true</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <enableActivities>true</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>true</enableHistory>
+    <enableLicensing>false</enableLicensing>
+    <enableReports>true</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <externalSharingModel>ReadWrite</externalSharingModel>
+    <fields>
+        <fullName>Account__c</fullName>
+        <externalId>false</externalId>
+        <formula>Deal__r.ContactAccount__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Account</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Advertiser__c</fullName>
+        <externalId>false</externalId>
+        <formula>Deal__r.Advertiser__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Advertiser</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>At_Fault__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>At Fault</label>
+        <referenceTo>User</referenceTo>
+        <relationshipName>SF_Credit_Memos1</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Brand__c</fullName>
+        <externalId>false</externalId>
+        <formula>Deal__r.Brands__r.Name</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Brand</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Comments__c</fullName>
+        <externalId>false</externalId>
+        <label>Comments</label>
+        <length>32768</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Complete__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Complete</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Deal__c</fullName>
+        <deleteConstraint>Restrict</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Deal</label>
+        <referenceTo>Deal__c</referenceTo>
+        <relationshipLabel>SF Credit Memos</relationshipLabel>
+        <relationshipName>SF_Credit_Memos</relationshipName>
+        <required>true</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Double_Check__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <inlineHelpText>Double check was missed by the user linked to this field</inlineHelpText>
+        <label>Double Check</label>
+        <referenceTo>User</referenceTo>
+        <relationshipName>SF_Credit_Memos</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>ERROR_REASON__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Populate this field if the SFCM was created due to MVMS error.</inlineHelpText>
+        <label>ERROR REASON</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>MultiselectPicklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Booked with no Order</fullName>
+                    <default>false</default>
+                    <label>Booked with no Order</label>
+                </value>
+                <value>
+                    <fullName>Cancellation not Entered</fullName>
+                    <default>false</default>
+                    <label>Cancellation not Entered</label>
+                </value>
+                <value>
+                    <fullName>Incorrect Break Entered</fullName>
+                    <default>false</default>
+                    <label>Incorrect Break Entered</label>
+                </value>
+                <value>
+                    <fullName>Incorrect Cable Day-part</fullName>
+                    <default>false</default>
+                    <label>Incorrect Cable Day-part</label>
+                </value>
+                <value>
+                    <fullName>Incorrect Days Allowed Selected</fullName>
+                    <default>false</default>
+                    <label>Incorrect Days Allowed Selected</label>
+                </value>
+                <value>
+                    <fullName>Incorrect Spot Separation</fullName>
+                    <default>false</default>
+                    <label>Incorrect Spot Separation</label>
+                </value>
+                <value>
+                    <fullName>Incorrect Times Selected</fullName>
+                    <default>false</default>
+                    <label>Incorrect Times Selected</label>
+                </value>
+                <value>
+                    <fullName>Post Log Error</fullName>
+                    <default>false</default>
+                    <label>Post Log Error</label>
+                </value>
+                <value>
+                    <fullName>Pre Log Error</fullName>
+                    <default>false</default>
+                    <label>Pre Log Error</label>
+                </value>
+                <value>
+                    <fullName>Ran Out of Rotation</fullName>
+                    <default>false</default>
+                    <label>Ran Out of Rotation</label>
+                </value>
+                <value>
+                    <fullName>Weekly Recon Processed Incorrectly</fullName>
+                    <default>false</default>
+                    <label>Weekly Recon Processed Incorrectly</label>
+                </value>
+                <value>
+                    <fullName>Wrong ISCI Code / 800#</fullName>
+                    <default>false</default>
+                    <label>Wrong ISCI Code / 800#</label>
+                </value>
+                <value>
+                    <fullName>Wrong Length</fullName>
+                    <default>false</default>
+                    <label>Wrong Length</label>
+                </value>
+                <value>
+                    <fullName>Wrong Rate</fullName>
+                    <default>false</default>
+                    <label>Wrong Rate</label>
+                </value>
+                <value>
+                    <fullName>Wrong Traffic (incl. Incorrect Traffic Instructions)</fullName>
+                    <default>false</default>
+                    <label>Wrong Traffic (incl. Incorrect Traffic Instructions)</label>
+                </value>
+                <value>
+                    <fullName>Wrong Units Available</fullName>
+                    <default>false</default>
+                    <label>Wrong Units Available</label>
+                </value>
+                <value>
+                    <fullName>Wrong Week Selected</fullName>
+                    <default>false</default>
+                    <label>Wrong Week Selected</label>
+                </value>
+                <value>
+                    <fullName>Hiatus Missed</fullName>
+                    <default>false</default>
+                    <label>Hiatus Missed</label>
+                </value>
+                <value>
+                    <fullName>Incorrect Amount of Units</fullName>
+                    <default>false</default>
+                    <label>Incorrect Amount of Units</label>
+                </value>
+                <value>
+                    <fullName>Order Entered Incorrectly</fullName>
+                    <default>false</default>
+                    <label>Order Entered Incorrectly</label>
+                </value>
+                <value>
+                    <fullName>Revision Missed (Not Entered)</fullName>
+                    <default>false</default>
+                    <label>Revision Missed (Not Entered)</label>
+                </value>
+                <value>
+                    <fullName>Incorrect LTC (Add&apos;t Units Ran)</fullName>
+                    <default>false</default>
+                    <label>Incorrect LTC (Add&apos;t Units Ran)</label>
+                </value>
+                <value>
+                    <fullName>NOT MVMS Fault - Approved by Management to absorb</fullName>
+                    <default>false</default>
+                    <label>NOT MVMS Fault - Approved by Management to absorb</label>
+                </value>
+                <value>
+                    <fullName>Aired in restricted programming</fullName>
+                    <default>false</default>
+                    <label>Aired in restricted programming</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+        <visibleLines>4</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Error_Caused_By__c</fullName>
+        <externalId>false</externalId>
+        <label>Error Caused By</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Agency</fullName>
+                    <default>false</default>
+                    <label>Agency</label>
+                </value>
+                <value>
+                    <fullName>Marathon Ventures</fullName>
+                    <default>false</default>
+                    <label>Marathon Ventures</label>
+                </value>
+                <value>
+                    <fullName>Network</fullName>
+                    <default>false</default>
+                    <label>Network</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Finance_Comments__c</fullName>
+        <externalId>false</externalId>
+        <label>Finance Comments</label>
+        <length>32768</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>5</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Intacct_CM__c</fullName>
+        <externalId>false</externalId>
+        <label>Intacct CM</label>
+        <length>25</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Program__c</fullName>
+        <externalId>false</externalId>
+        <formula>Deal__r.Program__r.Name</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Program</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Request_Assistance_Comments__c</fullName>
+        <externalId>false</externalId>
+        <label>Request Assistance Comments</label>
+        <length>32768</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Request_Assistance__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Request Assistance</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>SF_Credit_Memo_Total__c</fullName>
+        <externalId>false</externalId>
+        <label>SF Credit Memo Total</label>
+        <summarizedField>SF_Credit_Memo_Detail__c.Credit_Amount__c</summarizedField>
+        <summaryForeignKey>SF_Credit_Memo_Detail__c.SF_Credit_Memo_Detail__c</summaryForeignKey>
+        <summaryOperation>sum</summaryOperation>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Summary</type>
+    </fields>
+    <fields>
+        <fullName>Status__c</fullName>
+        <externalId>false</externalId>
+        <label>Status</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Pending</fullName>
+                    <default>false</default>
+                    <label>Pending</label>
+                </value>
+                <value>
+                    <fullName>Approved by Finance</fullName>
+                    <default>false</default>
+                    <label>Approved by Finance</label>
+                </value>
+                <value>
+                    <fullName>Approved by Op&apos;s Task Force</fullName>
+                    <default>false</default>
+                    <label>Approved by Op&apos;s Task Force</label>
+                </value>
+                <value>
+                    <fullName>Approved by Upper Management</fullName>
+                    <default>false</default>
+                    <label>Approved by Upper Management</label>
+                </value>
+                <value>
+                    <fullName>Approved by Partner</fullName>
+                    <default>false</default>
+                    <label>Approved by Partner</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Task_Force_Comments__c</fullName>
+        <externalId>false</externalId>
+        <label>Task Force Comments</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>Type__c</fullName>
+        <externalId>false</externalId>
+        <label>Type</label>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Agency Discount</fullName>
+                    <default>false</default>
+                    <label>Agency Discount</label>
+                </value>
+                <value>
+                    <fullName>Agency Discount - Approved by Network</fullName>
+                    <default>false</default>
+                    <label>Agency Discount - Approved by Network</label>
+                </value>
+                <value>
+                    <fullName>Credit</fullName>
+                    <default>false</default>
+                    <label>Credit</label>
+                </value>
+                <value>
+                    <fullName>Credit - Approved by Network</fullName>
+                    <default>false</default>
+                    <label>Credit - Approved by Network</label>
+                </value>
+                <value>
+                    <fullName>Network Error</fullName>
+                    <default>false</default>
+                    <label>Network Error</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <label>SF Credit Memo</label>
+    <listViews>
+        <fullName>All1</fullName>
+        <columns>NAME</columns>
+        <columns>Type__c</columns>
+        <columns>Deal__c</columns>
+        <columns>Account__c</columns>
+        <columns>Brand__c</columns>
+        <columns>Program__c</columns>
+        <columns>SF_Credit_Memo_Total__c</columns>
+        <columns>CREATED_DATE</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>CREATEDBY_USER</field>
+            <operation>contains</operation>
+            <value>yogita</value>
+        </filters>
+        <label>Yogita Telhu</label>
+    </listViews>
+    <listViews>
+        <fullName>All_Jill</fullName>
+        <columns>NAME</columns>
+        <columns>Type__c</columns>
+        <columns>Deal__c</columns>
+        <columns>Account__c</columns>
+        <columns>Brand__c</columns>
+        <columns>Program__c</columns>
+        <columns>SF_Credit_Memo_Total__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>CREATEDBY_USER</field>
+            <operation>contains</operation>
+            <value>yogita</value>
+        </filters>
+        <label>All - Jill</label>
+    </listViews>
+    <nameField>
+        <displayFormat>SFCM-{00000}</displayFormat>
+        <label>SF Credit Memo Name</label>
+        <trackHistory>false</trackHistory>
+        <type>AutoNumber</type>
+    </nameField>
+    <pluralLabel>SF Credit Memos</pluralLabel>
+    <searchLayouts>
+        <searchResultsAdditionalFields>Program__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Account__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>SF_Credit_Memo_Total__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Type__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Status__c</searchResultsAdditionalFields>
+    </searchLayouts>
+    <sharingModel>ReadWrite</sharingModel>
+    <validationRules>
+        <fullName>At_Fault_Review</fullName>
+        <active>true</active>
+        <description>If SFCM type equals &apos;Credit&apos;, record must identify who caused the error (MV, Network)</description>
+        <errorConditionFormula>AND(OR( ISPICKVAL( Type__c , &quot;Credit - Approved by Network&quot;), ISPICKVAL(Type__c, &quot;Credit&quot;)), ISPICKVAL( Error_Caused_By__c , &quot;&quot;))</errorConditionFormula>
+        <errorMessage>If SFCM Type = Credit, Please populate the &apos;Error Caused By&apos; field.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Double_Check</fullName>
+        <active>true</active>
+        <errorConditionFormula>AND(ISNEW(),ISBLANK(Double_Check__c))</errorConditionFormula>
+        <errorMessage>Please populate Double Check field with appropriate MVMS Team Member.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Must_Enter_Comments</fullName>
+        <active>true</active>
+        <errorConditionFormula>ISBLANK( Comments__c )</errorConditionFormula>
+        <errorDisplayField>Comments__c</errorDisplayField>
+        <errorMessage>Please add an explanation.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>SFCM_Complete</fullName>
+        <active>false</active>
+        <description>This rule will ensure that no changes are made to any SFCM that has been processed and is considered &quot;complete&quot;.</description>
+        <errorConditionFormula>Complete__c = True</errorConditionFormula>
+        <errorMessage>This SFCM has been processed and marked off as complete by Finance. Please consult with Finance before making any changes. All changes must be approved by Finance.</errorMessage>
+    </validationRules>
+    <visibility>Public</visibility>
+</CustomObject>

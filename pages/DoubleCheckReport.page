@@ -1,0 +1,231 @@
+<apex:page controller="DoubleCheckReportController" title="Double check-Syndication">
+    <apex:sectionHeader title="Double Check - Syndication"/>
+    <apex:form id="frm">
+        <apex:actionStatus id="status1" startText="Loading..." startStyle="font-size:18px"/>
+        <apex:actionStatus id="status2" startText="Saving..." startStyle="font-size:18px"/>
+        <apex:actionFunction action="{!search}" name="search" reRender="frm" status="status1"/>
+        <apex:pageBlock >
+            <table>
+            <tr>
+                <td>Deal  </td>
+                <td><apex:inputField value="{!schedule.Deal_Parent__c}" required="false"/></td>
+                <td>Filler </td>
+                <td><apex:inputCheckbox value="{!filler}"/></td>
+                <!-- <td><apex:commandButton value="Search" action="{!search}" reRender="frm" status="status1"/></td> -->
+                <td><apex:commandButton value="Search" onClick="search();return false;" onkeypress="return runScript(event)" status="status1"/></td>
+                <td><apex:commandButton value="Save" action="{!save}" reRender="frm" status="status2"/></td>
+            </tr>
+            </table>
+        </apex:pageBlock>
+
+<!--Deal Section-->
+        <apex:outputPanel rendered="{!filter}">
+            <apex:pageMessages />
+        </apex:outputPanel>
+        <apex:pageBlock title="DEAL" rendered="{!hasDeals && filter}">
+            <apex:pageblockSection >
+                <apex:inputField value="{!dealObj.Program__c}"/>
+                <apex:inputField value="{!dealObj.Contact__c}"/>
+                <apex:outputField value="{!dealObj.ContactAccount__c}"/>
+                <apex:inputField value="{!dealObj.Length__c}"/>
+                <apex:inputField value="{!dealObj.Brands__c}"/>
+                <apex:inputField value="{!dealObj.Campaign__c}"/>
+                <apex:inputField value="{!dealObj.Agency_Deal_Number__c}"/>
+                <apex:inputField value="{!dealObj.Network_Deal_Number__c}"/>
+                <apex:outputField value="{!dealObj.Sum_of_Total_Dollars__c}"/>
+                <apex:outputField value="{!dealObj.Sum_of_Units_Available__c}"/>
+            </apex:pageblockSection>
+        </apex:pageBlock>
+        
+<!--Schedule Section-->
+        <apex:pageBlock title="SCHEDULES" rendered="{!hasSchedulerecord && filter}">
+                <table border="1px" BORDERCOLOR="LightGray" cellpadding="5" cellspacing="0"  style=" border-collapse:collapse; border-style:solid; border-width:1px;">
+                    <tr>
+                    <td style="background-color:cyan; width:40px;"><B>Rate</B></td>
+                    <td style="background-color:cyan; width:120px;">&nbsp;</td>
+                    <apex:repeat value="{!headingModels}" var="headingModel">
+                        <td style="background-color:cyan;"> <b>
+                            <apex:outputText >                            
+                                 <apex:outputText value="{0,date,M/d/yyyy}">
+                                    <apex:param value="{!headingModel.startOfWeek}" />
+                                 </apex:outputText>
+                            </apex:outputText>
+                        </b> </td>
+                    </apex:repeat>
+                    <td style="background-color:rgb(129,130,144); color:white; width:50px;">
+                        <b>Grand Total </b>
+                    </td>
+                    <apex:repeat value="{!rateModelList}" var="rt">
+                        <tr>
+                            <td>
+                                <apex:outputText value="{!rt.Rate}" style="width:5px"/>
+                            </td>
+                            <td><table>
+                                <tr><td style="height:23px">Units Available</td></tr>
+                                <tr><td style="height:23px">Units Pre Empted</td></tr>
+                                <tr><td style="height:23px">Units Aired</td></tr>
+                                <tr><td style="height:23px">Total Dollars</td></tr>
+                                <tr><td style="height:23px">Equiv:30</td></tr>
+                            </table></td>
+                            <apex:repeat value="{!rt.weeks}" var="wk">
+                                 <td valign="bottom">
+                                    <table width="50%">
+                                        <tr>
+                                            <td>
+                                                <apex:inputField value="{!wk.schObj.Units_Available__c}" style="width:50px"/>                                                
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <apex:inputField value="{!wk.schObj.Units_Preempted__c}" style="width:50px"/>                                                
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td style="height:23px">
+                                                <apex:outputText style="width:50px">{!wk.schObj.Units_Aired__c}</apex:outputText>                                              
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td style="height:23px">
+                                                <apex:outputText style="width:50px">{!wk.schObj.Total_Dollars__c}</apex:outputText>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td style="height:23px">
+                                                <apex:outputText style="width:50px">{!wk.schObj.Equiv_30__c}</apex:outputText>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                 </td>
+                            </apex:repeat>
+                            <apex:repeat value="{!rt.gSum}" var="gSum">
+                                <td valign="bottom" style="background-color:rgb(129,130,144); color:white;">
+                                    <table >
+                                        <tr>
+                                            <td style="color:white;height:23px">
+                                                <apex:outputText style="width:50px"> {!gSum.AvailGrandSum}</apex:outputText>                                                
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td style="color:white;height:23px">
+                                                <apex:outputText style="width:50px"> {!gSum.PreEmptGrandSum}</apex:outputText>                                                
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td style="color:white;height:23px">
+                                                <apex:outputText style="width:50px"> {!gSum.AiredGrandSum}</apex:outputText>                                                
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td style="color:white;height:23px">
+                                                <apex:outputText style="width:50px"> {!gSum.tDollarGrandsum}</apex:outputText>                                                
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td style="color:white;height:23px">
+                                                <apex:outputText style="width:50px"> {!gSum.EquivGrandSum}</apex:outputText>                                                
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </td>
+                            </apex:repeat>
+                        </tr>
+                    </apex:repeat>
+                </tr>     
+                  
+                <apex:repeat value="{!grandTotal}" var="gt">
+                        <tr>
+                            <td valign="bottom" style="background-color:rgb(129,130,144); color:white;">
+                                <B>Grand Total</B>
+                            </td>
+                            <td valign="bottom" style="background-color:rgb(129,130,144); color:white;">
+                                <table>
+                                    <tr><td style="color:white">Units Available</td></tr>
+                                    <tr><td style="color:white">Units Pre Empted</td></tr>
+                                    <tr><td style="color:white">Units Aired</td></tr>
+                                    <tr><td style="color:white">Total Dollars</td></tr>
+                                    <tr><td style="color:white">Equiv:30</td></tr>
+                                </table>
+                            </td>
+                            <apex:repeat value="{!gt.weeks}" var="wk">
+                                 <td valign="bottom" style="background-color:rgb(129,130,144); color:white;">
+                                    <table >
+                                        <tr>
+                                            <td style="color:white">
+                                                <apex:outputText > {!wk.sumUnitAvail}</apex:outputText>                                                
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td style="color:white">
+                                                <apex:outputText > {!wk.sumUnitPreEmp}</apex:outputText>                                                
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td style="color:white">
+                                                <apex:outputText > {!wk.sumUnitAired}</apex:outputText>                                                
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td style="color:white">
+                                                <apex:outputText > {!wk.sumTotalDollar}</apex:outputText>                                                
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td style="color:white">
+                                                <apex:outputText > {!wk.sumEquiv}</apex:outputText>                                                
+                                            </td>
+                                        </tr>
+                                    </table>
+                                 </td>
+                            </apex:repeat>
+                            <td valign="bottom" style="background-color:rgb(129,130,144); color:white;">
+                                <table>
+                                    <tr>
+                                        <td style="color:white"><B><apex:outputText >{!superTotal.availGrandTotal}</apex:outputText></B></td>
+                                    </tr>
+                                    <tr>
+                                        <td style="color:white"><B><apex:outputText >{!superTotal.preEmptGrandTotal}</apex:outputText></B></td>
+                                    </tr>
+                                    <tr>
+                                        <td style="color:white"><B><apex:outputText >{!superTotal.airedGrandTotal}</apex:outputText></B></td>
+                                    </tr>
+                                    <tr>
+                                        <td style="color:white"><B><apex:outputText >{!superTotal.tDollarGrandTotal}</apex:outputText></B></td>
+                                    </tr>
+                                    <tr>
+                                        <td style="color:white"><B><apex:outputText >{!superTotal.equivGrandTotal}</apex:outputText></B></td>
+                                    </tr>
+                                </table>
+                            </td>
+                            </tr>
+                </apex:repeat>
+            </table>
+        </apex:pageBlock>
+        
+<!--Comments Section-->
+        <apex:pageBlock title="COMMENTS:TESTS" rendered="{!hasRecord && filter}" id="comment">
+            <!--<center><apex:commandButton value="Save" action="{!saveCommentSec}" status="status2" reRender="frm"/></center>-->
+            <apex:pageBlockSection columns="3">
+                <apex:pageBlockTable value="{!schCommentList}" var="sch">
+                    <apex:column headerValue="Week" footerValue="Grand Totals({!size3} Records)">
+                        <apex:outputField value="{!sch.Week__c}"/>
+                    </apex:column>
+                    <apex:column headerValue="Comments"><apex:inputField value="{!sch.Comments__c}"/></apex:column>
+                    <apex:column headerValue="Test"><apex:inputField value="{!sch.TEST__c}"/></apex:column>
+                    <apex:column headerValue="Filler"><apex:inputField value="{!sch.Filler__c}"/></apex:column>
+                    <apex:column headerValue="Schedule">
+                        <a href="/{!sch.id}" target="_blank"><apex:inputField value="{!sch.name}"/></a>
+                    </apex:column>
+                </apex:pageBlockTable>
+            </apex:pageBlockSection>
+        </apex:pageBlock>
+    </apex:form>
+    <script>
+        function runScript(e) {
+            if (e.keyCode == 13) {
+                save();
+                return false;
+            }
+        }
+    </script>
+</apex:page>

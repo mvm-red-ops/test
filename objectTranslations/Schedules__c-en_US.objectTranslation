@@ -1,0 +1,3262 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Schedule</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Schedules</value>
+    </caseValues>
+    <fieldSets>
+        <label><!-- Deal Revision --></label>
+        <name>Deal_Revision</name>
+    </fieldSets>
+    <fields>
+        <label><!-- DealAccess Code --></label>
+        <name>Access_Code__c</name>
+    </fields>
+    <fields>
+        <label><!-- Account Brand Program --></label>
+        <name>Account_Brand_Program__c</name>
+    </fields>
+    <fields>
+        <label><!-- Additional Intacct SI Number Comments --></label>
+        <name>Additional_Intacct_SI_Number_Comments__c</name>
+    </fields>
+    <fields>
+        <label><!-- Additional Intacct SI Number --></label>
+        <name>Additional_Intacct_SI_Number__c</name>
+    </fields>
+    <fields>
+        <label><!-- [Dep]Affidavit --></label>
+        <name>Affidavit__c</name>
+    </fields>
+    <fields>
+        <label><!-- Archived Prelog Booked Dollars --></label>
+        <name>Archived_Prelog_Booked_Dollars__c</name>
+    </fields>
+    <fields>
+        <label><!-- Archived Prelog Count --></label>
+        <name>Archived_Prelog_Count__c</name>
+    </fields>
+    <fields>
+        <label><!-- [Dep]Auto Credited --></label>
+        <name>Auto_Credited__c</name>
+    </fields>
+    <fields>
+        <label><!-- BG Color --></label>
+        <name>BGColor__c</name>
+    </fields>
+    <fields>
+        <label><!-- [Dep]Barter Movie --></label>
+        <name>Barter_Movie__c</name>
+    </fields>
+    <fields>
+        <label><!-- Barter Package --></label>
+        <name>Barter_Package__c</name>
+    </fields>
+    <fields>
+        <label><!-- Bonus Bundle Units --></label>
+        <name>Bonus_Bundle_Units__c</name>
+    </fields>
+    <fields>
+        <label><!-- Booked Dollars - Live Demo --></label>
+        <name>Booked_Dollars_Live_Demo__c</name>
+    </fields>
+    <fields>
+        <help><!-- Calculates Increvenue Booked, rather than Cleared/Aired. --></help>
+        <label><!-- Booked Increvenue --></label>
+        <name>Booked_Increvenue__c</name>
+    </fields>
+    <fields>
+        <label><!-- Booking Timeline --></label>
+        <name>Booking_Timeline__c</name>
+    </fields>
+    <fields>
+        <label><!-- Broadcast Month --></label>
+        <name>Broadcast_Month__c</name>
+    </fields>
+    <fields>
+        <label><!-- Bundle Approved --></label>
+        <name>Bundle_Approved__c</name>
+    </fields>
+    <fields>
+        <label><!-- [Dep]Bundle Ghost --></label>
+        <name>Bundle_Ghost__c</name>
+    </fields>
+    <fields>
+        <label><!-- [Dep]Bundle Order Number --></label>
+        <name>Bundle_Order_Number__c</name>
+    </fields>
+    <fields>
+        <help><!-- if( AND(Units_Available__c &gt;0,  NOT(DealBrand__c   =  &quot;GM Units&quot;)),
+(case(Deal_Parent__r.Length__c, &quot;10&quot;,10, &quot;30&quot;, 30, &quot;45&quot;, 45, &quot;60&quot;, 60, &quot;75&quot;, 75, &quot;105&quot;, 105, &quot;120&quot;, 120, &quot;240&quot;, 240, &quot;300&quot;, 300, &quot;15&quot;, 15, &quot;90&quot;, 90, &quot;180&quot;, 180, &quot;1710&quot;, 1710, 0) * UnitsA --></help>
+        <label><!-- CALC EQUIV :30 --></label>
+        <name>CALC_EQUIV_30__c</name>
+    </fields>
+    <fields>
+        <label><!-- CIA Status --></label>
+        <name>CIA_Status__c</name>
+        <picklistValues>
+            <masterLabel>Approved</masterLabel>
+            <translation><!-- Approved --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Denied</masterLabel>
+            <translation><!-- Denied --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Pending</masterLabel>
+            <translation><!-- Pending --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- CIA --></label>
+        <name>CIA__c</name>
+    </fields>
+    <fields>
+        <label><!-- CONGA Syndication Test Follow Up URL --></label>
+        <name>CONGA_Syndication_Test_Follow_Up_URL__c</name>
+    </fields>
+    <fields>
+        <label><!-- CONGA Workflow Hyperlink --></label>
+        <name>CONGA_Workflow_Hyperlink__c</name>
+    </fields>
+    <fields>
+        <label><!-- [Dep]COOL TV Daypart --></label>
+        <name>COOL_TV_Daypart__c</name>
+        <picklistValues>
+            <masterLabel>1a-4a -- LN</masterLabel>
+            <translation><!-- 1a-4a - -  LN --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>3p-7p – FR</masterLabel>
+            <translation><!-- 3p-7p – FR --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>6a-9a – EM</masterLabel>
+            <translation><!-- 6a-9a – EM --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>7p-1a – PR</masterLabel>
+            <translation><!-- 7p-1a – PR --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>9a-3p – Day</masterLabel>
+            <translation><!-- 9a-3p – Day --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ROS</masterLabel>
+            <translation><!-- ROS --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- AIRED --></label>
+        <name>COUNTMENOT__c</name>
+    </fields>
+    <fields>
+        <label><!-- Cable/Synd/PP --></label>
+        <name>Cable_Synd_PP__c</name>
+    </fields>
+    <fields>
+        <label><!-- Cancel Date --></label>
+        <name>Cancel_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Cap --></label>
+        <name>Cap__c</name>
+        <picklistValues>
+            <masterLabel>50%</masterLabel>
+            <translation><!-- 50% --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>80%</masterLabel>
+            <translation><!-- 80% --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Ghost</masterLabel>
+            <translation><!-- Ghost --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Uncapped</masterLabel>
+            <translation><!-- Uncapped --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- Check when the agency owning the time period listed on the record has changed from the previous month.  In most cases, this will be handled be pricing and planning during a monthly data upload operation. --></help>
+        <label><!-- [Dep]Churn --></label>
+        <name>Churn__c</name>
+    </fields>
+    <fields>
+        <label><!-- Clearance Percentage --></label>
+        <name>Clearance_Percentage__c</name>
+    </fields>
+    <fields>
+        <label><!-- Clearance --></label>
+        <name>Clearance__c</name>
+    </fields>
+    <fields>
+        <label><!-- Comments --></label>
+        <name>Comments__c</name>
+    </fields>
+    <fields>
+        <label><!-- CONGA Cable Test Follow Up URL --></label>
+        <name>Conga_Cable_Test_Follow_Up_URL__c</name>
+    </fields>
+    <fields>
+        <label><!-- Conga Capped Schedules URL --></label>
+        <name>Conga_Capped_Schedules_URL__c</name>
+    </fields>
+    <fields>
+        <help><!-- Used for Conga Workflow Cable Test Follow Up --></help>
+        <label><!-- [Dep]Conga Workflow Trigger --></label>
+        <name>Conga_Workflow_Trigger__c</name>
+    </fields>
+    <fields>
+        <label><!-- Created Date Time --></label>
+        <name>Created_Date_Time__c</name>
+    </fields>
+    <fields>
+        <help><!-- Calculates Hour of Day for Schedule Created using MID function.  DOES NOT account for Daylight Savings --></help>
+        <label><!-- Created Hour --></label>
+        <name>Created_Hour__c</name>
+    </fields>
+    <fields>
+        <help><!-- Week Booked Relative to Quarter Change --></help>
+        <label><!-- Created Week in Quarter --></label>
+        <name>Created_Week_in_Quarter__c</name>
+    </fields>
+    <fields>
+        <help><!-- Select any days that CANNOT be included and should be EXCLUDED from the schedule --></help>
+        <label><!-- [Dep]Day Restrictions --></label>
+        <name>Day_Restrictions__c</name>
+        <picklistValues>
+            <masterLabel>Fri</masterLabel>
+            <translation><!-- Fri --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Mon</masterLabel>
+            <translation><!-- Mon --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Sat</masterLabel>
+            <translation><!-- Sat --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Sun</masterLabel>
+            <translation><!-- Sun --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Thur</masterLabel>
+            <translation><!-- Thur --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Tues</masterLabel>
+            <translation><!-- Tues --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Wed</masterLabel>
+            <translation><!-- Wed --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Day --></label>
+        <name>Day__c</name>
+    </fields>
+    <fields>
+        <label><!-- Day of Week --></label>
+        <name>Day_of_Week__c</name>
+    </fields>
+    <fields>
+        <label><!-- Daypart --></label>
+        <name>Daypart__c</name>
+    </fields>
+    <fields>
+        <label><!-- Days Allowed Formula --></label>
+        <name>DaysAllowedFormula__c</name>
+    </fields>
+    <fields>
+        <label><!-- Days Allowed Formula --></label>
+        <name>Days_Allowed_Formula__c</name>
+    </fields>
+    <fields>
+        <help><!-- Select the days that this schedule CAN air on. --></help>
+        <label><!-- Days Allowed --></label>
+        <name>Days_Allowed__c</name>
+        <picklistValues>
+            <masterLabel>Fri</masterLabel>
+            <translation><!-- Fri --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Mon</masterLabel>
+            <translation><!-- Mon --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Sat</masterLabel>
+            <translation><!-- Sat --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Sun</masterLabel>
+            <translation><!-- Sun --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Thu</masterLabel>
+            <translation><!-- Thu --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Tue</masterLabel>
+            <translation><!-- Tue --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Wed</masterLabel>
+            <translation><!-- Wed --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- For Syndication Post Logs --></help>
+        <label><!-- Days of Air --></label>
+        <name>Days_of_Air__c</name>
+    </fields>
+    <fields>
+        <help><!-- Formula to determine most recent integration since cable/syndication/other integrate on different schedules --></help>
+        <label><!-- Days Until Intg --></label>
+        <name>Days_until_intg__c</name>
+    </fields>
+    <fields>
+        <label><!-- DealAccount --></label>
+        <name>DealAccount__c</name>
+    </fields>
+    <fields>
+        <label><!-- DealAdvertiser --></label>
+        <name>DealAdvertiser__c</name>
+    </fields>
+    <fields>
+        <label><!-- DealBrand --></label>
+        <name>DealBrand__c</name>
+    </fields>
+    <fields>
+        <label><!-- DealClientCode --></label>
+        <name>DealClientCode__c</name>
+    </fields>
+    <fields>
+        <label><!-- DealContactID --></label>
+        <name>DealContactID__c</name>
+    </fields>
+    <fields>
+        <label><!-- DealContact --></label>
+        <name>DealContact__c</name>
+    </fields>
+    <fields>
+        <label><!-- DealEstimate --></label>
+        <name>DealEstimate__c</name>
+    </fields>
+    <fields>
+        <label><!-- DealName --></label>
+        <name>DealName__c</name>
+    </fields>
+    <fields>
+        <label><!-- DealProgram --></label>
+        <name>DealProgram__c</name>
+    </fields>
+    <fields>
+        <label><!-- [Dep]Deal Info --></label>
+        <name>Deal_Info_del__c</name>
+    </fields>
+    <fields>
+        <label><!-- Deal Parent --></label>
+        <name>Deal_Parent__c</name>
+        <relationshipLabel><!-- Schedules --></relationshipLabel>
+    </fields>
+    <fields>
+        <help><!-- Demo_Rate__c  / (case(Deal_Parent__r.Length__c, &quot;30&quot;, 30, &quot;45&quot;,45, &quot;60&quot;, 60, &quot;75&quot;, 75, &quot;120&quot;, 120, &quot;240&quot;, 240, &quot;300&quot;, 300, &quot;15&quot;, 15, &quot;90&quot;, 90, &quot;180&quot;, 180, &quot;05&quot;, 0, &quot;10&quot;, 10, 0) / 30) --></help>
+        <label><!-- :30 Rate - Live Demo --></label>
+        <name>Demo_30_Rate__c</name>
+    </fields>
+    <fields>
+        <label><!-- Program - Live Demo --></label>
+        <name>Demo_Program__c</name>
+    </fields>
+    <fields>
+        <label><!-- Rate - Live Demo --></label>
+        <name>Demo_Rate__c</name>
+    </fields>
+    <fields>
+        <label><!-- Discrepancy Bundle --></label>
+        <name>Discrepancy_Bundle__c</name>
+    </fields>
+    <fields>
+        <help><!-- Used internally for comments regarding the error or discrepancy. --></help>
+        <label><!-- [Dep]Discrepancy Comment --></label>
+        <name>Discrepancy_Comment__c</name>
+    </fields>
+    <fields>
+        <label><!-- Discrepancy Report URL --></label>
+        <name>Discrepancy_Report_URL__c</name>
+    </fields>
+    <fields>
+        <label><!-- Discrepancy Total Amount --></label>
+        <name>Discrepancy_Total_Amount__c</name>
+    </fields>
+    <fields>
+        <label><!-- Booked Dollars --></label>
+        <name>Dollars_Booked__c</name>
+    </fields>
+    <fields>
+        <label><!-- Canceled Dollars --></label>
+        <name>Dollars_Canceled__c</name>
+    </fields>
+    <fields>
+        <label><!-- Due Date --></label>
+        <name>Due_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Duplicate Check 1a --></label>
+        <name>Duplicate_Check_1a__c</name>
+    </fields>
+    <fields>
+        <label><!-- Duplicate Check --></label>
+        <name>Duplicate_Check__c</name>
+    </fields>
+    <fields>
+        <label><!-- EUR Filler Decile --></label>
+        <name>EUR_Filler_Decile__c</name>
+    </fields>
+    <fields>
+        <label><!-- End Time --></label>
+        <name>End_Time__c</name>
+        <picklistValues>
+            <masterLabel>01:00A</masterLabel>
+            <translation><!-- 01:00A --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>01:00P</masterLabel>
+            <translation><!-- 01:00P --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>01:30A</masterLabel>
+            <translation><!-- 01:30A --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>01:30P</masterLabel>
+            <translation><!-- 01:30P --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>02:00A</masterLabel>
+            <translation><!-- 02:00A --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>02:00P</masterLabel>
+            <translation><!-- 02:00P --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>02:30A</masterLabel>
+            <translation><!-- 02:30A --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>02:30P</masterLabel>
+            <translation><!-- 02:30P --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>03:00A</masterLabel>
+            <translation><!-- 03:00A --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>03:00P</masterLabel>
+            <translation><!-- 03:00P --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>03:30A</masterLabel>
+            <translation><!-- 03:30A --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>03:30P</masterLabel>
+            <translation><!-- 03:30P --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>04:00A</masterLabel>
+            <translation><!-- 04:00A --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>04:00P</masterLabel>
+            <translation><!-- 04:00P --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>04:30A</masterLabel>
+            <translation><!-- 04:30A --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>04:30P</masterLabel>
+            <translation><!-- 04:30P --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>05:00A</masterLabel>
+            <translation><!-- 05:00A --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>05:00P</masterLabel>
+            <translation><!-- 05:00P --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>05:30A</masterLabel>
+            <translation><!-- 05:30A --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>05:30P</masterLabel>
+            <translation><!-- 05:30P --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>06:00A</masterLabel>
+            <translation><!-- 06:00A --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>06:00P</masterLabel>
+            <translation><!-- 06:00P --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>06:30A</masterLabel>
+            <translation><!-- 06:30A --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>06:30P</masterLabel>
+            <translation><!-- 06:30P --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>07:00A</masterLabel>
+            <translation><!-- 07:00A --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>07:00P</masterLabel>
+            <translation><!-- 07:00P --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>07:30A</masterLabel>
+            <translation><!-- 07:30A --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>07:30P</masterLabel>
+            <translation><!-- 07:30P --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>08:00A</masterLabel>
+            <translation><!-- 08:00A --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>08:00P</masterLabel>
+            <translation><!-- 08:00P --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>08:30A</masterLabel>
+            <translation><!-- 08:30A --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>08:30P</masterLabel>
+            <translation><!-- 08:30P --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>09:00A</masterLabel>
+            <translation><!-- 09:00A --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>09:00P</masterLabel>
+            <translation><!-- 09:00P --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>09:30A</masterLabel>
+            <translation><!-- 09:30A --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>09:30P</masterLabel>
+            <translation><!-- 09:30P --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>10:00A</masterLabel>
+            <translation><!-- 10:00A --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>10:00P</masterLabel>
+            <translation><!-- 10:00P --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>10:30A</masterLabel>
+            <translation><!-- 10:30A --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>10:30P</masterLabel>
+            <translation><!-- 10:30P --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>11:00A</masterLabel>
+            <translation><!-- 11:00A --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>11:00P</masterLabel>
+            <translation><!-- 11:00P --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>11:30A</masterLabel>
+            <translation><!-- 11:30A --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>11:30P</masterLabel>
+            <translation><!-- 11:30P --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>12:00A</masterLabel>
+            <translation><!-- 12:00A --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>12:00P</masterLabel>
+            <translation><!-- 12:00P --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>12:30A</masterLabel>
+            <translation><!-- 12:30A --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>12:30P</masterLabel>
+            <translation><!-- 12:30P --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- Equiv :30 Booked for use in clearance calculations --></help>
+        <label><!-- Equiv :30 - Booked --></label>
+        <name>Equiv_30_Booked__c</name>
+    </fields>
+    <fields>
+        <help><!-- if( ISPICKVAL( Status__c , &quot;Canceled&quot;), 0, 
+
+case(Deal_Parent__r.Length__c, &quot;10&quot;, 10, &quot;30&quot;, 30, &quot;45&quot;, 45, &quot;60&quot;, 60, &quot;75&quot;, 75, &quot;120&quot;, 120, &quot;300&quot;, 300, &quot;15&quot;, 15, &quot;90&quot;, 90, &quot;180&quot;, 180, 0)/30 *  Total_Bundle_Units__c 
+
+) --></help>
+        <label><!-- Equiv :30 - Bundles --></label>
+        <name>Equiv_30_Bundles__c</name>
+    </fields>
+    <fields>
+        <help><!-- if( ISPICKVAL( Status__c , &quot;Canceled&quot;), 
+
+case(Deal_Parent__r.Length__c, &quot;10&quot;, 10, &quot;30&quot;, 30, &quot;45&quot;, 45, &quot;60&quot;, 60, &quot;75&quot;, 75, &quot;120&quot;, 120, &quot;300&quot;, 300, &quot;15&quot;, 15, &quot;90&quot;, 90, &quot;180&quot;, 180, 0)/30 * Units_Available__c,
+0
+
+) --></help>
+        <label><!-- Equiv :30 - Canceled --></label>
+        <name>Equiv_30_Canceled__c</name>
+    </fields>
+    <fields>
+        <label><!-- Equiv :30 --></label>
+        <name>Equiv_30__c</name>
+    </fields>
+    <fields>
+        <help><!-- Input the amount of dollars lost due to error.....for internal use --></help>
+        <label><!-- [Dep]Error Cost --></label>
+        <name>Error_Cost__c</name>
+    </fields>
+    <fields>
+        <label><!-- [Dep]Error Logged Date --></label>
+        <name>Error_Logged_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- [Dep]Error Logged To --></label>
+        <name>Error_Logged_To__c</name>
+        <relationshipLabel><!-- Schedules --></relationshipLabel>
+    </fields>
+    <fields>
+        <help><!-- Input one (or more) reasons error occurred --></help>
+        <label><!-- [Dep]Error Reason --></label>
+        <name>Error_Reason__c</name>
+        <picklistValues>
+            <masterLabel>Agency Favor</masterLabel>
+            <translation><!-- Agency Favor --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Booked with no Order</masterLabel>
+            <translation><!-- Booked with no Order --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Cancellation not Entered</masterLabel>
+            <translation><!-- Cancellation not Entered --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Incorrect Break Entered</masterLabel>
+            <translation><!-- Incorrect Break Entered --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Incorrect Cable Daypart</masterLabel>
+            <translation><!-- Incorrect Cable Daypart --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Incorrect Days Allowed Selected</masterLabel>
+            <translation><!-- Incorrect Days Allowed Selected --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Incorrect Spot Separation</masterLabel>
+            <translation><!-- Incorrect Spot Separation --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Incorrect Times Selected</masterLabel>
+            <translation><!-- Incorrect Times Selected --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Network - Cancelled Spots Aired</masterLabel>
+            <translation><!-- Network - Cancelled Spots Aired --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Network - Incorrect Break Entered</masterLabel>
+            <translation><!-- Network - Incorrect Break Entered --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Network - Incorrect Spot Separation</masterLabel>
+            <translation><!-- Network - Incorrect Spot Separation --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Network - Incorrect Units Placed</masterLabel>
+            <translation><!-- Network - Incorrect Units Placed --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Network - Ran Out of Rotation</masterLabel>
+            <translation><!-- Network - Ran Out of Rotation --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Network - Wrong Traffic Aired</masterLabel>
+            <translation><!-- Network - Wrong Traffic Aired --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Not Entered</masterLabel>
+            <translation><!-- Not Entered --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Other</masterLabel>
+            <translation><!-- Other --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Post Log Error</masterLabel>
+            <translation><!-- Post Log Error --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Prelog Error</masterLabel>
+            <translation><!-- Prelog Error --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Ran Out of Rotation</masterLabel>
+            <translation><!-- Ran Out of Rotation --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Raycom Bonus</masterLabel>
+            <translation><!-- Raycom Bonus --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Tribune Bonus</masterLabel>
+            <translation><!-- Tribune Bonus --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Weekly Recon Processed Incorrectly</masterLabel>
+            <translation><!-- Weekly Recon Processed Incorrectly --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Wrong ISCI Code/800#</masterLabel>
+            <translation><!-- Wrong ISCI Code/800# --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Wrong Length</masterLabel>
+            <translation><!-- Wrong Length --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Wrong Rate</masterLabel>
+            <translation><!-- Wrong Rate --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Wrong Traffic</masterLabel>
+            <translation><!-- Wrong Traffic --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Wrong Units Available</masterLabel>
+            <translation><!-- Wrong Units Available --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Wrong Week Selected</masterLabel>
+            <translation><!-- Wrong Week Selected --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Filler Rate --></label>
+        <name>Filler_Rate__c</name>
+    </fields>
+    <fields>
+        <help><!-- Check if this order is Filler to be used in case of a tape or inventory issue. --></help>
+        <label><!-- [Dep]Filler --></label>
+        <name>Filler__c</name>
+    </fields>
+    <fields>
+        <label><!-- [Dep]GM --></label>
+        <name>GM__c</name>
+    </fields>
+    <fields>
+        <label><!-- Ghost Order --></label>
+        <name>Ghost_Order__c</name>
+    </fields>
+    <fields>
+        <label><!-- HH (000) --></label>
+        <name>HH_000__c</name>
+    </fields>
+    <fields>
+        <label><!-- Hearst Units --></label>
+        <name>Hearst_Units__c</name>
+    </fields>
+    <fields>
+        <label><!-- ISCI 2 --></label>
+        <name>ISCI2__c</name>
+    </fields>
+    <fields>
+        <label><!-- ISCI 3 --></label>
+        <name>ISCI3__c</name>
+    </fields>
+    <fields>
+        <label><!-- ISCI CODE --></label>
+        <name>ISCI_CODE__c</name>
+    </fields>
+    <fields>
+        <label><!-- Impressions (000) --></label>
+        <name>Impressions_000__c</name>
+    </fields>
+    <fields>
+        <label><!-- In-game --></label>
+        <name>In_game__c</name>
+    </fields>
+    <fields>
+        <help><!-- Calculates incremental dollars generated relative to filler rate. --></help>
+        <label><!-- Increvenue --></label>
+        <name>Increvenue__c</name>
+    </fields>
+    <fields>
+        <label><!-- Incumbency --></label>
+        <name>Incumbency__c</name>
+    </fields>
+    <fields>
+        <label><!-- Intacct CM Number --></label>
+        <name>Intacct_CM_Number__c</name>
+    </fields>
+    <fields>
+        <label><!-- Intacct SI Number Date Fully Paid --></label>
+        <name>Intacct_SI_Number_Date_Fully_Paid__c</name>
+    </fields>
+    <fields>
+        <label><!-- Intacct SI Number Payment Status --></label>
+        <name>Intacct_SI_Number_Payment_Status__c</name>
+    </fields>
+    <fields>
+        <label><!-- Intacct SI Number --></label>
+        <name>Intacct_SI_Number__c</name>
+    </fields>
+    <fields>
+        <help><!-- Determines whether a schedule has integrated or not. --></help>
+        <label><!-- Integrated --></label>
+        <name>Integrated__c</name>
+    </fields>
+    <fields>
+        <label><!-- Integrates This Week --></label>
+        <name>Integrates_This_Week__c</name>
+    </fields>
+    <fields>
+        <help><!-- Automatically calculates integration date base on parameters set on the Program Record --></help>
+        <label><!-- Intg Date --></label>
+        <name>Intg_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Intg Week --></label>
+        <name>Intg_Week__c</name>
+    </fields>
+    <fields>
+        <label><!-- Invoice Date --></label>
+        <name>Invoice_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- [Dep]Kids Block --></label>
+        <name>Kids_Block__c</name>
+    </fields>
+    <fields>
+        <label><!-- LF Order Line Number --></label>
+        <name>LFOrderLineNumber__c</name>
+    </fields>
+    <fields>
+        <label><!-- [Dep]LF Brand --></label>
+        <name>LF_Brand__c</name>
+        <relationshipLabel><!-- Schedules --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- LF Daypart --></label>
+        <name>LF_Daypart__c</name>
+    </fields>
+    <fields>
+        <help><!-- Notes the reason that the schedule will not be returning for the following month, where applicable. --></help>
+        <label><!-- [Dep]LF Next Month Status --></label>
+        <name>LF_Next_Month_Status__c</name>
+        <picklistValues>
+            <masterLabel>Cancel</masterLabel>
+            <translation><!-- Cancel --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Dark</masterLabel>
+            <translation><!-- Dark --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Outbid</masterLabel>
+            <translation><!-- Outbid --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- Rate needed for rebooking of a long form schedule, based on agency results. --></help>
+        <label><!-- [Dep]LF Rate Needed --></label>
+        <name>LF_Rate_Needed__c</name>
+    </fields>
+    <fields>
+        <help><!-- Additional text commentary on performance of a long form schedule, from agency. --></help>
+        <label><!-- [Dep]LF Results --></label>
+        <name>LF_Results__c</name>
+    </fields>
+    <fields>
+        <label><!-- LF Week --></label>
+        <name>LF_Week__c</name>
+    </fields>
+    <fields>
+        <label><!-- LF Traffic --></label>
+        <name>LF_traffic__c</name>
+    </fields>
+    <fields>
+        <label><!-- Last Modified Time --></label>
+        <name>Last_Modified_Time__c</name>
+    </fields>
+    <fields>
+        <label><!-- Litton Program Shows --></label>
+        <name>Litton_Program_Shows__c</name>
+        <picklistValues>
+            <masterLabel>All In with Laila Ali</masterLabel>
+            <translation><!-- All In with Laila Ali --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>All In with Laila Ali (2)</masterLabel>
+            <translation><!-- All In with Laila Ali (2) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Animal Tails</masterLabel>
+            <translation><!-- Animal Tails --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Culture Click</masterLabel>
+            <translation><!-- Culture Click --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Everyday Health</masterLabel>
+            <translation><!-- Everyday Health --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Everyday Health (2)</masterLabel>
+            <translation><!-- Everyday Health (2) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Food For Thought with Claire Thomas</masterLabel>
+            <translation><!-- Food For Thought with Claire Thomas --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Food For Thought with Claire Thomas (2)</masterLabel>
+            <translation><!-- Food For Thought with Claire Thomas (2) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Jack Hanna’s Animal Adventures</masterLabel>
+            <translation><!-- Jack Hanna’s Animal Adventures --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Jack Hanna’s Wild Countdown</masterLabel>
+            <translation><!-- Jack Hanna’s Wild Countdown --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Jack Hanna’s Wild Countdown (2)</masterLabel>
+            <translation><!-- Jack Hanna’s Wild Countdown (2) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Outback Adventures with Tim Faulkner</masterLabel>
+            <translation><!-- Outback Adventures with Tim Faulkner --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Outback Adventures with Tim Faulkner (2)</masterLabel>
+            <translation><!-- Outback Adventures with Tim Faulkner (2) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Reluctantly Healthy</masterLabel>
+            <translation><!-- Reluctantly Healthy --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Rock the Park</masterLabel>
+            <translation><!-- Rock the Park --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Sea Rescue</masterLabel>
+            <translation><!-- Sea Rescue --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Sea Rescue (2)</masterLabel>
+            <translation><!-- Sea Rescue (2) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>The Brady Barr Experience</masterLabel>
+            <translation><!-- The Brady Barr Experience --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Long Form --></label>
+        <name>Long_Form__c</name>
+        <picklistValues>
+            <masterLabel>A-10:00</masterLabel>
+            <translation><!-- A-10:00 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>A-10:30</masterLabel>
+            <translation><!-- A-10:30 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>A-11:00</masterLabel>
+            <translation><!-- A-11:00 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>A-11:30</masterLabel>
+            <translation><!-- A-11:30 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>A-12:00</masterLabel>
+            <translation><!-- A-12:00 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>A-12:30</masterLabel>
+            <translation><!-- A-12:30 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>A-1:00</masterLabel>
+            <translation><!-- A-1:00 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>A-1:30</masterLabel>
+            <translation><!-- A-1:30 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>A-2:00</masterLabel>
+            <translation><!-- A-2:00 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>A-2:30</masterLabel>
+            <translation><!-- A-2:30 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>A-3:00</masterLabel>
+            <translation><!-- A-3:00 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>A-3:30</masterLabel>
+            <translation><!-- A-3:30 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>A-4:00</masterLabel>
+            <translation><!-- A-4:00 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>A-4:30</masterLabel>
+            <translation><!-- A-4:30 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>A-5:00</masterLabel>
+            <translation><!-- A-5:00 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>A-5:30</masterLabel>
+            <translation><!-- A-5:30 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>A-6:00</masterLabel>
+            <translation><!-- A-6:00 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>A-6:30</masterLabel>
+            <translation><!-- A-6:30 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>A-7:00</masterLabel>
+            <translation><!-- A-7:00 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>A-7:30</masterLabel>
+            <translation><!-- A-7:30 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>A-8:00</masterLabel>
+            <translation><!-- A-8:00 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>A-8:30</masterLabel>
+            <translation><!-- A-8:30 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>A-9:00</masterLabel>
+            <translation><!-- A-9:00 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>A-9:30</masterLabel>
+            <translation><!-- A-9:30 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>P-12:00</masterLabel>
+            <translation><!-- P-12:00 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>P-12:30</masterLabel>
+            <translation><!-- P-12:30 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>P-1:00</masterLabel>
+            <translation><!-- P-1:00 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>P-1:30</masterLabel>
+            <translation><!-- P-1:30 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>P-2:00</masterLabel>
+            <translation><!-- P-2:00 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>P-2:30</masterLabel>
+            <translation><!-- P-2:30 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>P-3:00</masterLabel>
+            <translation><!-- P-3:00 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>P-3:30</masterLabel>
+            <translation><!-- P-3:30 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>P-4:00</masterLabel>
+            <translation><!-- P-4:00 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>P-4:30</masterLabel>
+            <translation><!-- P-4:30 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>P-5:00</masterLabel>
+            <translation><!-- P-5:00 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>P-5:30</masterLabel>
+            <translation><!-- P-5:30 --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- All available cable dayparts.  Select &quot;Network&quot; above to filter the list based on a specific network. --></help>
+        <label><!-- Cable Dayparts --></label>
+        <name>MGM_HD_Daypart__c</name>
+        <picklistValues>
+            <masterLabel>12A-3A -- LN</masterLabel>
+            <translation><!-- 12A-3A - -  LN --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>3A-6A -- ON</masterLabel>
+            <translation><!-- 3A-6A - -  ON --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>5:00a-5:30a</masterLabel>
+            <translation><!-- 5:00a-5:30a --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>5:30a-6:00a</masterLabel>
+            <translation><!-- 5:30a-6:00a --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>6A-9A – EM</masterLabel>
+            <translation><!-- 6A-9A – EM --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>6P-12A – PR</masterLabel>
+            <translation><!-- 6P-12A – PR --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>9A-6P – Day</masterLabel>
+            <translation><!-- 9A-6P – Day --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>DA  - MS - 9a-4p</masterLabel>
+            <translation><!-- DA  - MS - 9a-4p --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>DA - MF 10a-5p - 3Q</masterLabel>
+            <translation><!-- DA - MF 10a-5p - 3Q --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>DA - MF 12p-4p</masterLabel>
+            <translation><!-- DA - MF 12p-4p --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>DA - MF 1p-6p</masterLabel>
+            <translation><!-- DA - MF 1p-6p --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>DA - MF 9a-6p</masterLabel>
+            <translation><!-- DA - MF 9a-6p --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>DA - MS 10a-4p</masterLabel>
+            <translation><!-- DA - MS 10a-4p --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>DA - MS 12p-6p</masterLabel>
+            <translation><!-- DA - MS 12p-6p --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>DA - MS 6A-4P</masterLabel>
+            <translation><!-- DA - MS 6A-4P --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>DA - MS 6a-7p</masterLabel>
+            <translation><!-- DA - MS 6a-7p --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>DA - MS 8a-6p</masterLabel>
+            <translation><!-- DA - MS 8a-6p --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>DA - MS 8a-8p</masterLabel>
+            <translation><!-- DA - MS 8a-8p --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>DA - MS 9a-5p</masterLabel>
+            <translation><!-- DA - MS 9a-5p --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>DA - MS 9a-6p</masterLabel>
+            <translation><!-- DA - MS 9a-6p --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>DA - MS 9a-7p</masterLabel>
+            <translation><!-- DA - MS 9a-7p --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>DA - SS 12p-7p</masterLabel>
+            <translation><!-- DA - SS 12p-7p --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>DA - SS 9a-6p</masterLabel>
+            <translation><!-- DA - SS 9a-6p --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>EF - MF 1p-5p</masterLabel>
+            <translation><!-- EF - MF 1p-5p --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>EF - MF 4p-7p 4Q</masterLabel>
+            <translation><!-- EF - MF 4p-7p 4Q --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>EF - MS 4p-7p</masterLabel>
+            <translation><!-- EF - MS 4p-7p --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>EF - MS 5p-8p</masterLabel>
+            <translation><!-- EF - MS 5p-8p --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>EF - SS 1p-5p</masterLabel>
+            <translation><!-- EF - SS 1p-5p --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>EM - MF 6a-12p</masterLabel>
+            <translation><!-- EM - MF 6a-12p --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>EM - MF 6a-1p</masterLabel>
+            <translation><!-- EM - MF 6a-1p --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>EM - MS 4a-9a</masterLabel>
+            <translation><!-- EM - MS 4a-9a --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>EM - MS 5a-10a - 3Q</masterLabel>
+            <translation><!-- EM - MS 5a-10a - 3Q --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>EM - MS 5a-8a</masterLabel>
+            <translation><!-- EM - MS 5a-8a --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>EM - MS 5a-9a</masterLabel>
+            <translation><!-- EM - MS 5a-9a --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>EM - MS 6a-10a</masterLabel>
+            <translation><!-- EM - MS 6a-10a --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>EM - MS 6a-12p</masterLabel>
+            <translation><!-- EM - MS 6a-12p --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>EM - MS 6a-9a</masterLabel>
+            <translation><!-- EM - MS 6a-9a --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>EM - MS 8a-12p</masterLabel>
+            <translation><!-- EM - MS 8a-12p --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>EM - SS 6a-12p</masterLabel>
+            <translation><!-- EM - SS 6a-12p --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>EM - SS 6a-1p</masterLabel>
+            <translation><!-- EM - SS 6a-1p --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>JC - MF 11p-12a</masterLabel>
+            <translation><!-- JC - MF 11p-12a --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>JC - MF 2a-3a</masterLabel>
+            <translation><!-- JC - MF 2a-3a --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>JC - MS 12a-5a</masterLabel>
+            <translation><!-- JC - MS 12a-5a --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>JC - MS 7p-12a</masterLabel>
+            <translation><!-- JC - MS 7p-12a --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>JC - SS 10p-12a</masterLabel>
+            <translation><!-- JC - SS 10p-12a --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>JC - SS 1:30a-3a</masterLabel>
+            <translation><!-- JC - SS 1:30a-3a --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>LF - MF 5p-8p</masterLabel>
+            <translation><!-- LF - MF 5p-8p --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>LF - MS 11p-1a</masterLabel>
+            <translation><!-- LF - MS 11p-1a --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>LF - SS 5p-8p</masterLabel>
+            <translation><!-- LF - SS 5p-8p --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>LN - MS 12a - 3a</masterLabel>
+            <translation><!-- LN - MS 12a - 3a --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>LN - MS 12a-3a</masterLabel>
+            <translation><!-- LN - MS 12a-3a --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>LN - MS 2a-6a</masterLabel>
+            <translation><!-- LN - MS 2a-6a --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>MF 10a-4p</masterLabel>
+            <translation><!-- MF 10a-4p --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>MF 10p-1a</masterLabel>
+            <translation><!-- MF 10p-1a --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>MF 12a-2a</masterLabel>
+            <translation><!-- MF 12a-2a --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>MF 12a-5a</masterLabel>
+            <translation><!-- MF 12a-5a --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>MF 1a-5a</masterLabel>
+            <translation><!-- MF 1a-5a --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>MF 3p-7p</masterLabel>
+            <translation><!-- MF 3p-7p --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>MF 4p-6p</masterLabel>
+            <translation><!-- MF 4p-6p --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>MF 5a-9a</masterLabel>
+            <translation><!-- MF 5a-9a --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>MF 5p-7p</masterLabel>
+            <translation><!-- MF 5p-7p --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>MF 6a-6p</masterLabel>
+            <translation><!-- MF 6a-6p --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>MF 6a-9a</masterLabel>
+            <translation><!-- MF 6a-9a --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>MF 6p-12a</masterLabel>
+            <translation><!-- MF 6p-12a --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>MF 7a-10a</masterLabel>
+            <translation><!-- MF 7a-10a --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>MF 7p-8:30p</masterLabel>
+            <translation><!-- MF 7p-8:30p --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>MF 8:30p-10p</masterLabel>
+            <translation><!-- MF 8:30p-10p --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>MF 8a-3p</masterLabel>
+            <translation><!-- MF 8a-3p --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>MF 9a-5p</masterLabel>
+            <translation><!-- MF 9a-5p --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>MS 11a-6p</masterLabel>
+            <translation><!-- MS 11a-6p --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>MS 12a-2a</masterLabel>
+            <translation><!-- MS 12a-2a --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>MS 12a-4a</masterLabel>
+            <translation><!-- MS 12a-4a --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>MS 12a-6a</masterLabel>
+            <translation><!-- MS 12a-6a --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>MS 12p-6p</masterLabel>
+            <translation><!-- MS 12p-6p --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>MS 1p-6p</masterLabel>
+            <translation><!-- MS 1p-6p --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>MS 2a-5a</masterLabel>
+            <translation><!-- MS 2a-5a --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>MS 2a-6a</masterLabel>
+            <translation><!-- MS 2a-6a --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>MS 3p-5p</masterLabel>
+            <translation><!-- MS 3p-5p --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>MS 6a-11a</masterLabel>
+            <translation><!-- MS 6a-11a --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>MS 6a-12p</masterLabel>
+            <translation><!-- MS 6a-12p --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>MS 6a-6p</masterLabel>
+            <translation><!-- MS 6a-6p --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>MS 7p-10p</masterLabel>
+            <translation><!-- MS 7p-10p --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>MS 7p-11p</masterLabel>
+            <translation><!-- MS 7p-11p --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>MS 7p-12a</masterLabel>
+            <translation><!-- MS 7p-12a --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>MS 8p-2a</masterLabel>
+            <translation><!-- MS 8p-2a --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Matinee Game MS</masterLabel>
+            <translation><!-- Matinee Game MS --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ON - MF 12a-2a</masterLabel>
+            <translation><!-- ON - MF 12a-2a --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ON - MF 3a-5a</masterLabel>
+            <translation><!-- ON - MF 3a-5a --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ON - MS 12a-4a</masterLabel>
+            <translation><!-- ON - MS 12a-4a --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ON - MS 12a-5a</masterLabel>
+            <translation><!-- ON - MS 12a-5a --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ON - MS 12a-6a</masterLabel>
+            <translation><!-- ON - MS 12a-6a --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ON - MS 12a-9a</masterLabel>
+            <translation><!-- ON - MS 12a-9a --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ON - MS 1a-4a</masterLabel>
+            <translation><!-- ON - MS 1a-4a --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ON - MS 3a - 6a</masterLabel>
+            <translation><!-- ON - MS 3a - 6a --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ON - MS 3a-6a</masterLabel>
+            <translation><!-- ON - MS 3a-6a --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ON - SS 12a-1:30a</masterLabel>
+            <translation><!-- ON - SS 12a-1:30a --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ON - SS 3a-5a</masterLabel>
+            <translation><!-- ON - SS 3a-5a --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>PR - MF 7p-11p</masterLabel>
+            <translation><!-- PR - MF 7p-11p --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>PR - MF 8p-12a</masterLabel>
+            <translation><!-- PR - MF 8p-12a --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>PR - MS 5p-12a - 3Q</masterLabel>
+            <translation><!-- PR - MS 5p-12a - 3Q --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>PR - MS 6p-12a</masterLabel>
+            <translation><!-- PR - MS 6p-12a --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>PR - MS 6p-2a</masterLabel>
+            <translation><!-- PR - MS 6p-2a --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>PR - MS 7P-3A</masterLabel>
+            <translation><!-- PR - MS 7P-3A --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>PR - MS 7p-11p</masterLabel>
+            <translation><!-- PR - MS 7p-11p --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>PR - MS 7p-12a</masterLabel>
+            <translation><!-- PR - MS 7p-12a --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>PR - MS 8p-12a</masterLabel>
+            <translation><!-- PR - MS 8p-12a --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>PR - SS 7p-10p</masterLabel>
+            <translation><!-- PR - SS 7p-10p --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>PR - SS 8p-12a</masterLabel>
+            <translation><!-- PR - SS 8p-12a --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Prime Game MS</masterLabel>
+            <translation><!-- Prime Game MS --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ROS-</masterLabel>
+            <translation><!-- ROS- --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SS 11a-6p</masterLabel>
+            <translation><!-- SS 11a-6p --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SS 12a-5a</masterLabel>
+            <translation><!-- SS 12a-5a --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SS 12a-6a</masterLabel>
+            <translation><!-- SS 12a-6a --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SS 6A-7P</masterLabel>
+            <translation><!-- SS 6A-7P --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SS 6a-11a</masterLabel>
+            <translation><!-- SS 6a-11a --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SS 6a-6a</masterLabel>
+            <translation><!-- SS 6a-6a --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SS 6a-6p</masterLabel>
+            <translation><!-- SS 6a-6p --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SS 6a-9a</masterLabel>
+            <translation><!-- SS 6a-9a --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SS 6p-12a</masterLabel>
+            <translation><!-- SS 6p-12a --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SS 8a-7p</masterLabel>
+            <translation><!-- SS 8a-7p --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SS 9a-4p</masterLabel>
+            <translation><!-- SS 9a-4p --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>WC - MS 12a-2a</masterLabel>
+            <translation><!-- WC - MS 12a-2a --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Max Allowable Units by Max Per Day --></label>
+        <name>Max_Allowable_Units_Per_Day__c</name>
+    </fields>
+    <fields>
+        <help><!-- The max amount of spots that can run each day for this schedule --></help>
+        <label><!-- Max Per Day --></label>
+        <name>Max_Per_Day__c</name>
+    </fields>
+    <fields>
+        <label><!-- Media General Units Group 2 Daypart A --></label>
+        <name>Media_General_Units_Group_2_Daypart_A__c</name>
+    </fields>
+    <fields>
+        <label><!-- Media General Units Group 2 Daypart B --></label>
+        <name>Media_General_Units_Group_2_Daypart_B__c</name>
+    </fields>
+    <fields>
+        <label><!-- Media General Units --></label>
+        <name>Media_General_Units__c</name>
+    </fields>
+    <fields>
+        <label><!-- Military Time --></label>
+        <name>MilitaryTime__c</name>
+    </fields>
+    <fields>
+        <label><!-- Military End Time --></label>
+        <name>Military_End_Time__c</name>
+    </fields>
+    <fields>
+        <label><!-- Military Start Time --></label>
+        <name>Military_Start_Time__c</name>
+    </fields>
+    <fields>
+        <label><!-- [Dep]Missing Long Form Traffic Current --></label>
+        <name>Missing_Long_Form_Traffic_Current__c</name>
+    </fields>
+    <fields>
+        <label><!-- [Dep]Missing Long Form Traffic --></label>
+        <name>Missing_Long_Form_Traffic__c</name>
+    </fields>
+    <fields>
+        <label><!-- Missing Traffic Current URL --></label>
+        <name>Missing_Traffic_Current_URL__c</name>
+    </fields>
+    <fields>
+        <label><!-- [Dep]Missing Traffic - Current Week --></label>
+        <name>Missing_Traffic_Current_Week__c</name>
+    </fields>
+    <fields>
+        <label><!-- [Dep]Missing Traffic --></label>
+        <name>Missing_Traffic__c</name>
+    </fields>
+    <fields>
+        <label><!-- Month --></label>
+        <name>Month__c</name>
+    </fields>
+    <fields>
+        <label><!-- [Dep]NFL Daypart --></label>
+        <name>NFL_Daypart__c</name>
+        <picklistValues>
+            <masterLabel>EM M-F 6A-9A</masterLabel>
+            <translation><!-- EM M-F 6A-9A --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Early Morning ROS S/S 6A-9A</masterLabel>
+            <translation><!-- Early Morning ROS S/S 6A-9A --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Fringe ROS M-Su 4P-7P</masterLabel>
+            <translation><!-- Fringe ROS M-Su 4P-7P --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Latenight ROS M-Sun 12M-3A</masterLabel>
+            <translation><!-- Latenight ROS M-Sun 12M-3A --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Overnight ROS M-Su 3A-6A</masterLabel>
+            <translation><!-- Overnight ROS M-Su 3A-6A --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Prime ROS M-Su 7P-12M</masterLabel>
+            <translation><!-- Prime ROS M-Su 7P-12M --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Weekday Day ROS M-Fr 9A-4P</masterLabel>
+            <translation><!-- Weekday Day ROS M-Fr 9A-4P --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Weekend Day ROS S/S 9A-4P</masterLabel>
+            <translation><!-- Weekend Day ROS S/S 9A-4P --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Negative Preemption Check --></label>
+        <name>Negative_Preemption_Check__c</name>
+    </fields>
+    <fields>
+        <help><!-- Total Gross Dollars minus agency commission. --></help>
+        <label><!-- Net Total --></label>
+        <name>Net_Total__c</name>
+    </fields>
+    <fields>
+        <label><!-- Network Deal Number --></label>
+        <name>Network_Deal_Number__c</name>
+    </fields>
+    <fields>
+        <help><!-- Select a Network to dynamically filter the list of relevant cable dayparts. --></help>
+        <label><!-- Networks --></label>
+        <name>Networks__c</name>
+        <picklistValues>
+            <masterLabel>Antenna TV</masterLabel>
+            <translation><!-- Antenna TV --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>BlueHighways Spot</masterLabel>
+            <translation><!-- BlueHighways Spot --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Bounce</masterLabel>
+            <translation><!-- Bounce --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>BounceTV - Local</masterLabel>
+            <translation><!-- BounceTV - Local --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>BuzzrTV</masterLabel>
+            <translation><!-- BuzzrTV --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CBS Sports</masterLabel>
+            <translation><!-- CBS Sports --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CBS Sports Local</masterLabel>
+            <translation><!-- CBS Sports Local --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>COOL</masterLabel>
+            <translation><!-- COOL --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Cozi</masterLabel>
+            <translation><!-- Cozi --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>DOC</masterLabel>
+            <translation><!-- DOC --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>EscapeTV</masterLabel>
+            <translation><!-- EscapeTV --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>FamilyNet</masterLabel>
+            <translation><!-- FamilyNet --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>FidoTV</masterLabel>
+            <translation><!-- FidoTV --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>GritTV</masterLabel>
+            <translation><!-- GritTV --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>JLTV</masterLabel>
+            <translation><!-- JLTV --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Justice Network</masterLabel>
+            <translation><!-- Justice Network --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Laff</masterLabel>
+            <translation><!-- Laff --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>MAV TV</masterLabel>
+            <translation><!-- MAV TV --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>MGM HD</masterLabel>
+            <translation><!-- MGM HD --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>MLB</masterLabel>
+            <translation><!-- MLB --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>NFLN</masterLabel>
+            <translation><!-- NFLN --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>NHL Network</masterLabel>
+            <translation><!-- NHL Network --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>NHL Network - Local</masterLabel>
+            <translation><!-- NHL Network - Local --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Newsy</masterLabel>
+            <translation><!-- Newsy --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>OUTSIDE</masterLabel>
+            <translation><!-- OUTSIDE --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Quest Network</masterLabel>
+            <translation><!-- Quest Network --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SiTV</masterLabel>
+            <translation><!-- SiTV --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Stadium</masterLabel>
+            <translation><!-- Stadium --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>TENNIS</masterLabel>
+            <translation><!-- TENNIS --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>TVG</masterLabel>
+            <translation><!-- TVG --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>TVG - Local</masterLabel>
+            <translation><!-- TVG - Local --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>TVG2</masterLabel>
+            <translation><!-- TVG2 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>TVG2 - Local</masterLabel>
+            <translation><!-- TVG2 - Local --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Telefutura Select</masterLabel>
+            <translation><!-- Telefutura Select --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Test Network</masterLabel>
+            <translation><!-- Test Network --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>This TV</masterLabel>
+            <translation><!-- This TV --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Tribune Sports</masterLabel>
+            <translation><!-- Tribune Sports --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Univision Select</masterLabel>
+            <translation><!-- Univision Select --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Youtoo</masterLabel>
+            <translation><!-- Youtoo --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- Filler checks based on program&apos;s floor rates on the program object. --></help>
+        <label><!-- New Filler --></label>
+        <name>New_Filler__c</name>
+    </fields>
+    <fields>
+        <label><!-- New Week in Quarter --></label>
+        <name>New_Week_in_Quarter__c</name>
+    </fields>
+    <fields>
+        <label><!-- Order Line Number --></label>
+        <name>OrderLineNumber__c</name>
+    </fields>
+    <fields>
+        <label><!-- OrderNumber --></label>
+        <name>OrderNumber__c</name>
+    </fields>
+    <fields>
+        <label><!-- Overran Units V2 --></label>
+        <name>Overran_Units_V2__c</name>
+    </fields>
+    <fields>
+        <label><!-- Overran Units V3 --></label>
+        <name>Overran_Units_V3__c</name>
+    </fields>
+    <fields>
+        <label><!-- Overran Units V4 --></label>
+        <name>Overran_Units_V4__c</name>
+    </fields>
+    <fields>
+        <label><!-- Overran Units V5 --></label>
+        <name>Overran_Units_V5__c</name>
+    </fields>
+    <fields>
+        <label><!-- Overran Units V6 --></label>
+        <name>Overran_Units_V6__c</name>
+    </fields>
+    <fields>
+        <label><!-- Overran Units V1 --></label>
+        <name>Overran_Units_v1__c</name>
+    </fields>
+    <fields>
+        <label><!-- PI Payout TEST --></label>
+        <name>PI_Payout_TEST__c</name>
+    </fields>
+    <fields>
+        <label><!-- PI Payout --></label>
+        <name>PI_Payout__c</name>
+    </fields>
+    <fields>
+        <label><!-- PI Performance Follow Up URL --></label>
+        <name>PI_Performance_Follow_Up_URL__c</name>
+    </fields>
+    <fields>
+        <label><!-- PI --></label>
+        <name>PI__c</name>
+    </fields>
+    <fields>
+        <label><!-- PP Revision Comment --></label>
+        <name>PP_Revision_Comment__c</name>
+        <picklistValues>
+            <masterLabel>ADDED</masterLabel>
+            <translation><!-- ADDED --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CANCELED</masterLabel>
+            <translation><!-- CANCELED --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CREDIT</masterLabel>
+            <translation><!-- CREDIT --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>PARTIAL CREDIT</masterLabel>
+            <translation><!-- PARTIAL CREDIT --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>PRE-EMPTED</masterLabel>
+            <translation><!-- PRE-EMPTED --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>RATE CHANGE</masterLabel>
+            <translation><!-- RATE CHANGE --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- PP Revision --></label>
+        <name>PP_Revision__c</name>
+    </fields>
+    <fields>
+        <label><!-- Performance Dollars --></label>
+        <name>Performance_Dollars__c</name>
+    </fields>
+    <fields>
+        <label><!-- Performance % --></label>
+        <name>Performance__c</name>
+    </fields>
+    <fields>
+        <label><!-- Phantom --></label>
+        <name>Phantom__c</name>
+    </fields>
+    <fields>
+        <help><!-- For Syndication Post Logs --></help>
+        <label><!-- Pod --></label>
+        <name>Pod__c</name>
+    </fields>
+    <fields>
+        <label><!-- PreLog Booked Dollars --></label>
+        <name>PreLog_Booked_Dollars__c</name>
+    </fields>
+    <fields>
+        <label><!-- Prelog Clearance --></label>
+        <name>Prelog_1_Clearance__c</name>
+    </fields>
+    <fields>
+        <label><!-- Prelog 30s Preempted --></label>
+        <name>Prelog_30s_Preempted__c</name>
+    </fields>
+    <fields>
+        <label><!-- Prelog Booked Dollars New --></label>
+        <name>Prelog_Booked_Dollars_New__c</name>
+    </fields>
+    <fields>
+        <label><!-- Prelog Clearance --></label>
+        <name>Prelog_Clearance__c</name>
+    </fields>
+    <fields>
+        <label><!-- Prelog Count Dynamic --></label>
+        <name>Prelog_Count_Dynamic__c</name>
+    </fields>
+    <fields>
+        <label><!-- Prelog Count New --></label>
+        <name>Prelog_Count_New__c</name>
+    </fields>
+    <fields>
+        <label><!-- Prelog Count Version 1 --></label>
+        <name>Prelog_Count_Version_1__c</name>
+    </fields>
+    <fields>
+        <label><!-- Prelog Count Version 2 --></label>
+        <name>Prelog_Count_Version_2__c</name>
+    </fields>
+    <fields>
+        <label><!-- Prelog Count Version 3 --></label>
+        <name>Prelog_Count_Version_3__c</name>
+    </fields>
+    <fields>
+        <label><!-- Prelog Count Version 4 --></label>
+        <name>Prelog_Count_Version_4__c</name>
+    </fields>
+    <fields>
+        <label><!-- Prelog Count Version 5 --></label>
+        <name>Prelog_Count_Version_5__c</name>
+    </fields>
+    <fields>
+        <label><!-- Prelog Count Version 6 --></label>
+        <name>Prelog_Count_Version_6__c</name>
+    </fields>
+    <fields>
+        <label><!-- Prelog Count --></label>
+        <name>Prelog_Count__c</name>
+    </fields>
+    <fields>
+        <label><!-- Prelog Dollars Dynamic --></label>
+        <name>Prelog_Dollars_Dynamic__c</name>
+    </fields>
+    <fields>
+        <label><!-- Prelog Dollars Version 1 --></label>
+        <name>Prelog_Dollars_Version_1__c</name>
+    </fields>
+    <fields>
+        <label><!-- Prelog Dollars Version 2 --></label>
+        <name>Prelog_Dollars_Version_2__c</name>
+    </fields>
+    <fields>
+        <label><!-- Prelog Dollars Version 3 --></label>
+        <name>Prelog_Dollars_Version_3__c</name>
+    </fields>
+    <fields>
+        <label><!-- Prelog Dollars Version 4 --></label>
+        <name>Prelog_Dollars_Version_4__c</name>
+    </fields>
+    <fields>
+        <label><!-- Prelog Dollars Version 5 --></label>
+        <name>Prelog_Dollars_Version_5__c</name>
+    </fields>
+    <fields>
+        <label><!-- Prelog Dollars Version 6 --></label>
+        <name>Prelog_Dollars_Version_6__c</name>
+    </fields>
+    <fields>
+        <help><!-- Link to Schedule of Previous Months incumbent. --></help>
+        <label><!-- [Dep]Previous Incumbent --></label>
+        <name>Previous_Incumbent__c</name>
+        <relationshipLabel><!-- Schedules --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- [Dep]Previous Units Available --></label>
+        <name>Previous_Units_Available__c</name>
+    </fields>
+    <fields>
+        <label><!-- Priority --></label>
+        <name>Priority__c</name>
+    </fields>
+    <fields>
+        <label><!-- Program Product --></label>
+        <name>Product__c</name>
+        <relationshipLabel><!-- Schedules --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Program Week --></label>
+        <name>Program_Week__c</name>
+    </fields>
+    <fields>
+        <help><!-- If(DATE(CreatedDate) &lt; (Week__c - (Week_in_Quarter__c-1)*7), &quot;Y&quot;, &quot;N&quot;) --></help>
+        <label><!-- Quarter Change --></label>
+        <name>Quarter_Change__c</name>
+    </fields>
+    <fields>
+        <label><!-- Quarter --></label>
+        <name>Quarter__c</name>
+    </fields>
+    <fields>
+        <label><!-- Rate --></label>
+        <name>Rate__c</name>
+    </fields>
+    <fields>
+        <label><!-- [Dep]Rating Estimate --></label>
+        <name>Rating_Estimate__c</name>
+        <relationshipLabel><!-- Schedules --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- [Dep]Rating --></label>
+        <name>Rating__c</name>
+        <relationshipLabel><!-- Schedules --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Raycom Dollars --></label>
+        <name>Raycom_Dollars__c</name>
+    </fields>
+    <fields>
+        <label><!-- Bundle Make Good --></label>
+        <name>Raycom_Make_Good__c</name>
+    </fields>
+    <fields>
+        <label><!-- Raycom Rate --></label>
+        <name>Raycom_Rate__c</name>
+    </fields>
+    <fields>
+        <label><!-- Raycom Units - Daypart B --></label>
+        <name>Raycom_Units_Daypart_B__c</name>
+    </fields>
+    <fields>
+        <label><!-- Raycom Units - Daypart C --></label>
+        <name>Raycom_Units_Daypart_C__c</name>
+    </fields>
+    <fields>
+        <label><!-- Raycom Units --></label>
+        <name>Raycom_Units__c</name>
+    </fields>
+    <fields>
+        <label><!-- Real Week in Quarter --></label>
+        <name>Real_Week_in_Quarter__c</name>
+    </fields>
+    <fields>
+        <label><!-- [Dep]Recommended --></label>
+        <name>Recommended__c</name>
+    </fields>
+    <fields>
+        <label><!-- Reconciled --></label>
+        <name>Reconciled__c</name>
+    </fields>
+    <fields>
+        <label><!-- Request Missing Traffic URL --></label>
+        <name>Request_Missing_Traffic_URL__c</name>
+    </fields>
+    <fields>
+        <label><!-- Retro Raycom Units --></label>
+        <name>Retro_Raycom_Units__c</name>
+    </fields>
+    <fields>
+        <label><!-- [Dep]Reviewed for Invoicing --></label>
+        <name>Reviewed_for_Invoicing__c</name>
+    </fields>
+    <fields>
+        <label><!-- [Dep]Rotation --></label>
+        <name>Rotation__c</name>
+        <picklistValues>
+            <masterLabel>50-50 Split</masterLabel>
+            <translation><!-- 50-50 Split --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Limited Ratio</masterLabel>
+            <translation><!-- Limited Ratio --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Pattern</masterLabel>
+            <translation><!-- Pattern --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Spot</masterLabel>
+            <translation><!-- Spot --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- [Dep]SI Number if Billed --></label>
+        <name>SI_Number_if_Billed__c</name>
+        <relationshipLabel><!-- Schedules --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- [Dep]SS10 Titles Value --></label>
+        <name>SS10_Titles_Value__c</name>
+    </fields>
+    <fields>
+        <label><!-- [Dep]SS10 Titles --></label>
+        <name>SS10_Titles__c</name>
+        <picklistValues>
+            <masterLabel>After Alice	5/30/11 - 6/26/11</masterLabel>
+            <translation><!-- After Alice	5/30/11 - 6/26/11 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>An American Affair	8/29/11 - 9/25/11</masterLabel>
+            <translation><!-- An American Affair	8/29/11 - 9/25/11 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Angel&apos;s Dance	8/1/11 - 8/28/11</masterLabel>
+            <translation><!-- Angel&apos;s Dance	8/1/11 - 8/28/11 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>B Girl	8/29/11 - 9/25/11</masterLabel>
+            <translation><!-- B Girl	8/29/11 - 9/25/11 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Base II 4/30/12 - 5/27/12</masterLabel>
+            <translation><!-- Base II 4/30/12 - 5/27/12 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Big Bad Wolf	10/31/11 - 11/27/11</masterLabel>
+            <translation><!-- Big Bad Wolf	10/31/11 - 11/27/11 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Confessions Of A Sociopathic Social Climber 2/27/12 - 3/25/12</masterLabel>
+            <translation><!-- Confessions Of A Sociopathic Social Climber 2/27/12 - 3/25/12 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Contaminated Man	1/3/11 - 1/30/11</masterLabel>
+            <translation><!-- Contaminated Man	1/3/11 - 1/30/11 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Courage to Love 1/30/12 - 2/26/12</masterLabel>
+            <translation><!-- Courage to Love 1/30/12 - 2/26/12 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Curtain Call 1/2/12 - 1/29/12</masterLabel>
+            <translation><!-- Curtain Call 1/2/12 - 1/29/12 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Cyborg III	3/28/11 - 4/24/11</masterLabel>
+            <translation><!-- Cyborg III	3/28/11 - 4/24/11 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>End of Innocence 4/30/12 - 5/27/12</masterLabel>
+            <translation><!-- End of Innocence 4/30/12 - 5/27/12 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Fraternity	5/30/11 - 6/26/11</masterLabel>
+            <translation><!-- Fraternity	5/30/11 - 6/26/11 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Future Sport	1/31/11 - 2/27/11</masterLabel>
+            <translation><!-- Future Sport	1/31/11 - 2/27/11 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Gideon	1/3/11 - 1/30/11</masterLabel>
+            <translation><!-- Gideon	1/3/11 - 1/30/11 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Gunshy	7/25/11 - 8/28/11</masterLabel>
+            <translation><!-- Gunshy	7/25/11 - 8/28/11 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Gypsy Eyes 4/2/12 - 4/29/12</masterLabel>
+            <translation><!-- Gypsy Eyes 4/2/12 - 4/29/12 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Home of the Giants 1/30/12 - 2/26/12</masterLabel>
+            <translation><!-- Home of the Giants 1/30/12 - 2/26/12 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Hoods	7/4/11 - 7/31/11</masterLabel>
+            <translation><!-- Hoods	7/4/11 - 7/31/11 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Karate Dog 1/30/12 - 2/26/12</masterLabel>
+            <translation><!-- Karate Dog 1/30/12 - 2/26/12 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Lake City	8/1/11 - 8/28/11</masterLabel>
+            <translation><!-- Lake City	8/1/11 - 8/28/11 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Lymelife	3/28/11 - 4/24/11</masterLabel>
+            <translation><!-- Lymelife	3/28/11 - 4/24/11 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Mojave Moon	2/28/11 - 3/24/11</masterLabel>
+            <translation><!-- Mojave Moon	2/28/11 - 3/24/11 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Money Kings	10/3/11 - 10/30/11</masterLabel>
+            <translation><!-- Money Kings	10/3/11 - 10/30/11 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Nature&apos;s Grave 5/28/12 - 6/24/12</masterLabel>
+            <translation><!-- Nature&apos;s Grave 5/28/12 - 6/24/12 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Only Thrill, The	3/28/11 - 4/24/11</masterLabel>
+            <translation><!-- Only Thrill, The	3/28/11 - 4/24/11 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Pilgrim	7/4/11 - 7/31/11</masterLabel>
+            <translation><!-- Pilgrim	7/4/11 - 7/31/11 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Pressure Point	10/31/11 - 11/27/11</masterLabel>
+            <translation><!-- Pressure Point	10/31/11 - 11/27/11 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Proximity	11/28/11 - 12/25/11</masterLabel>
+            <translation><!-- Proximity	11/28/11 - 12/25/11 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Runner	11/28/11 - 12/25/11</masterLabel>
+            <translation><!-- Runner	11/28/11 - 12/25/11 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Sasquatch Gang 5/28/12 - 6/24/12</masterLabel>
+            <translation><!-- Sasquatch Gang 5/28/12 - 6/24/12 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>School of Life 2/27/12 - 3/25/12</masterLabel>
+            <translation><!-- School of Life 2/27/12 - 3/25/12 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Second To Die 4/2/12 - 4/29/12</masterLabel>
+            <translation><!-- Second To Die 4/2/12 - 4/29/12 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Specials, The	5/2/11 - 5/29/11</masterLabel>
+            <translation><!-- Specials, The	5/2/11 - 5/29/11 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Spinning Into Butter 1/2/12 - 1/29/12</masterLabel>
+            <translation><!-- Spinning Into Butter 1/2/12 - 1/29/12 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Street King	5/2/11 - 5/29/11</masterLabel>
+            <translation><!-- Street King	5/2/11 - 5/29/11 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Sweepers	10/3/11 - 10/30/11</masterLabel>
+            <translation><!-- Sweepers	10/3/11 - 10/30/11 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>The Base 1/2/12 - 1/29/12</masterLabel>
+            <translation><!-- The Base 1/2/12 - 1/29/12 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Tommy And The Cool Mule 2/27/12 - 3/25/12</masterLabel>
+            <translation><!-- Tommy And The Cool Mule 2/27/12 - 3/25/12 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>U.S. Seals	8/29/11 - 9/25/11</masterLabel>
+            <translation><!-- U.S. Seals	8/29/11 - 9/25/11 --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- [Dep]SS9 Titles Value --></label>
+        <name>SS9_Titles_Value__c</name>
+    </fields>
+    <fields>
+        <label><!-- [Dep]SS9 Titles --></label>
+        <name>SS9_Titles__c</name>
+        <picklistValues>
+            <masterLabel>24th Day 7/26 - 8/22</masterLabel>
+            <translation><!-- 24th Day 7/26 - 8/22 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>30 Years to Life 9/27 - 10/24</masterLabel>
+            <translation><!-- 30 Years to Life 9/27 - 10/24 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Adrift in Manhattan 8/30 - 9/26</masterLabel>
+            <translation><!-- Adrift in Manhattan 8/30 - 9/26 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Canvas 3/29 - 4/25</masterLabel>
+            <translation><!-- Canvas 3/29 - 4/25 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Chilly Dogs 2/28/11 - 3/27/11</masterLabel>
+            <translation><!-- Chilly Dogs 2/28/11 - 3/27/11 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Christmas is Here Again 11/29 -12/26</masterLabel>
+            <translation><!-- Christmas is Here Again 11/29 -12/26 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Country Remedy 6/28 - 7/25</masterLabel>
+            <translation><!-- Country Remedy 6/28 - 7/25 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Dark Matter 5/31 - 6/27</masterLabel>
+            <translation><!-- Dark Matter 5/31 - 6/27 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Disappearances 4/26 - 5/23</masterLabel>
+            <translation><!-- Disappearances 4/26 - 5/23 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Dishdogz 12/27/10 - 1/23/11</masterLabel>
+            <translation><!-- Dishdogz 12/27/10 - 1/23/11 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Equinox 4/26 - 5/24</masterLabel>
+            <translation><!-- Equinox 4/26 - 5/24 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Fishtales 11/1 - 11/28</masterLabel>
+            <translation><!-- Fishtales 11/1 - 11/28 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Honeydripper 5/30/11 - 6/26/11</masterLabel>
+            <translation><!-- Honeydripper 5/30/11 - 6/26/11 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>I Witness 5/31 - 6/27</masterLabel>
+            <translation><!-- I Witness 5/31 - 6/27 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Keep Your Distance 7/26 - 8/22</masterLabel>
+            <translation><!-- Keep Your Distance 7/26 - 8/22 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Kettle of Fish 1/31/11 - 2/27/11</masterLabel>
+            <translation><!-- Kettle of Fish 1/31/11 - 2/27/11 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Love &amp; Rage 11/1 - 11/28</masterLabel>
+            <translation><!-- Love &amp; Rage 11/1 - 11/28 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Planet Brooklyn 1/31/11 - 2/27/11</masterLabel>
+            <translation><!-- Planet Brooklyn 1/31/11 - 2/27/11 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Severed 9/27 - 10/24</masterLabel>
+            <translation><!-- Severed 9/27 - 10/24 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Silver Hawk 6/28 - 7/25</masterLabel>
+            <translation><!-- Silver Hawk 6/28 - 7/25 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Soldiers of Change 2/28/11 - 3/27/11</masterLabel>
+            <translation><!-- Soldiers of Change 2/28/11 - 3/27/11 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>The Cake Eaters 6/27/11 - 7/24/11</masterLabel>
+            <translation><!-- The Cake Eaters 6/27/11 - 7/24/11 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>The Good Student 3/29 - 4/25</masterLabel>
+            <translation><!-- The Good Student 3/29 - 4/25 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Virgin in Juarez 4/25/11 - 5/22/11</masterLabel>
+            <translation><!-- Virgin in Juarez 4/25/11 - 5/22/11 --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- [Dep]Send as NEW --></label>
+        <name>Send_as_NEW__c</name>
+    </fields>
+    <fields>
+        <label><!-- Spot Count (Sch Roll Up) --></label>
+        <name>Spot_Count__c</name>
+    </fields>
+    <fields>
+        <label><!-- Spot Data Dollars CHECK --></label>
+        <name>Spot_Data_Dollars_CHECK__c</name>
+    </fields>
+    <fields>
+        <label><!-- Spot Data Unit CHECK --></label>
+        <name>Spot_Data_Unit_CHECK__c</name>
+    </fields>
+    <fields>
+        <label><!-- Spot Total $ --></label>
+        <name>Spot_Total__c</name>
+    </fields>
+    <fields>
+        <label><!-- Start End Time --></label>
+        <name>Start_End_Time__c</name>
+    </fields>
+    <fields>
+        <label><!-- Start Time --></label>
+        <name>Start_Time__c</name>
+        <picklistValues>
+            <masterLabel>01:00A</masterLabel>
+            <translation><!-- 01:00A --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>01:00P</masterLabel>
+            <translation><!-- 01:00P --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>01:30A</masterLabel>
+            <translation><!-- 01:30A --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>01:30P</masterLabel>
+            <translation><!-- 01:30P --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>02:00A</masterLabel>
+            <translation><!-- 02:00A --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>02:00P</masterLabel>
+            <translation><!-- 02:00P --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>02:30A</masterLabel>
+            <translation><!-- 02:30A --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>02:30P</masterLabel>
+            <translation><!-- 02:30P --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>03:00A</masterLabel>
+            <translation><!-- 03:00A --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>03:00P</masterLabel>
+            <translation><!-- 03:00P --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>03:30A</masterLabel>
+            <translation><!-- 03:30A --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>03:30P</masterLabel>
+            <translation><!-- 03:30P --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>04:00A</masterLabel>
+            <translation><!-- 04:00A --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>04:00P</masterLabel>
+            <translation><!-- 04:00P --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>04:30A</masterLabel>
+            <translation><!-- 04:30A --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>04:30P</masterLabel>
+            <translation><!-- 04:30P --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>05:00A</masterLabel>
+            <translation><!-- 05:00A --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>05:00P</masterLabel>
+            <translation><!-- 05:00P --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>05:30A</masterLabel>
+            <translation><!-- 05:30A --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>05:30P</masterLabel>
+            <translation><!-- 05:30P --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>06:00A</masterLabel>
+            <translation><!-- 06:00A --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>06:00P</masterLabel>
+            <translation><!-- 06:00P --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>06:30A</masterLabel>
+            <translation><!-- 06:30A --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>06:30P</masterLabel>
+            <translation><!-- 06:30P --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>07:00A</masterLabel>
+            <translation><!-- 07:00A --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>07:00P</masterLabel>
+            <translation><!-- 07:00P --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>07:30A</masterLabel>
+            <translation><!-- 07:30A --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>07:30P</masterLabel>
+            <translation><!-- 07:30P --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>08:00A</masterLabel>
+            <translation><!-- 08:00A --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>08:00P</masterLabel>
+            <translation><!-- 08:00P --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>08:30A</masterLabel>
+            <translation><!-- 08:30A --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>08:30P</masterLabel>
+            <translation><!-- 08:30P --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>09:00A</masterLabel>
+            <translation><!-- 09:00A --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>09:00P</masterLabel>
+            <translation><!-- 09:00P --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>09:30A</masterLabel>
+            <translation><!-- 09:30A --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>09:30P</masterLabel>
+            <translation><!-- 09:30P --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>10:00A</masterLabel>
+            <translation><!-- 10:00A --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>10:00P</masterLabel>
+            <translation><!-- 10:00P --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>10:30A</masterLabel>
+            <translation><!-- 10:30A --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>10:30P</masterLabel>
+            <translation><!-- 10:30P --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>11:00A</masterLabel>
+            <translation><!-- 11:00A --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>11:00P</masterLabel>
+            <translation><!-- 11:00P --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>11:30A</masterLabel>
+            <translation><!-- 11:30A --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>11:30P</masterLabel>
+            <translation><!-- 11:30P --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>12:00A</masterLabel>
+            <translation><!-- 12:00A --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>12:00P</masterLabel>
+            <translation><!-- 12:00P --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>12:30A</masterLabel>
+            <translation><!-- 12:30A --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>12:30P</masterLabel>
+            <translation><!-- 12:30P --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Station Rate --></label>
+        <name>Station_Rate__c</name>
+    </fields>
+    <fields>
+        <label><!-- StatusDaypart --></label>
+        <name>StatusDaypart__c</name>
+    </fields>
+    <fields>
+        <label><!-- Status --></label>
+        <name>Status__c</name>
+        <picklistValues>
+            <masterLabel>Canceled</masterLabel>
+            <translation><!-- Canceled --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Sold</masterLabel>
+            <translation><!-- Sold --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Sum of Spot Equiv 30 --></label>
+        <name>Sum_Spot_Equiv_30__c</name>
+    </fields>
+    <fields>
+        <label><!-- TEST --></label>
+        <name>TEST__c</name>
+    </fields>
+    <fields>
+        <help><!-- Test field: Impact Events... placeholder formula to test some report formats... DELETE WHEN DONE --></help>
+        <label><!-- Impact Event - Beta --></label>
+        <name>Test_Impact_Event__c</name>
+    </fields>
+    <fields>
+        <label><!-- Time Period --></label>
+        <name>Time_Period__c</name>
+    </fields>
+    <fields>
+        <label><!-- Total Bundle Units --></label>
+        <name>Total_Bundle_Units__c</name>
+    </fields>
+    <fields>
+        <label><!-- Total Dollars - Live Demo --></label>
+        <name>Total_Dollars_Live_Demo__c</name>
+    </fields>
+    <fields>
+        <label><!-- Total Dollars --></label>
+        <name>Total_Dollars__c</name>
+    </fields>
+    <fields>
+        <label><!-- Total Historical Dollars --></label>
+        <name>Total_Historical_Dollars__c</name>
+    </fields>
+    <fields>
+        <label><!-- Additional Schedules --></label>
+        <name>Total_Schedules__c</name>
+        <picklistValues>
+            <masterLabel>0</masterLabel>
+            <translation><!-- 0 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>1</masterLabel>
+            <translation><!-- 1 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>10</masterLabel>
+            <translation><!-- 10 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>11</masterLabel>
+            <translation><!-- 11 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>12</masterLabel>
+            <translation><!-- 12 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>2</masterLabel>
+            <translation><!-- 2 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>3</masterLabel>
+            <translation><!-- 3 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>4</masterLabel>
+            <translation><!-- 4 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>5</masterLabel>
+            <translation><!-- 5 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>6</masterLabel>
+            <translation><!-- 6 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>7</masterLabel>
+            <translation><!-- 7 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>8</masterLabel>
+            <translation><!-- 8 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>9</masterLabel>
+            <translation><!-- 9 --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Total Time --></label>
+        <name>Total_Time__c</name>
+    </fields>
+    <fields>
+        <label><!-- Traffic CC --></label>
+        <name>Traffic_CC__c</name>
+    </fields>
+    <fields>
+        <label><!-- Traffic Contact --></label>
+        <name>Traffic_Contact__c</name>
+    </fields>
+    <fields>
+        <label><!-- Traffic --></label>
+        <name>Traffic__c</name>
+        <relationshipLabel><!-- Schedules --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Tribune Units Daypart B --></label>
+        <name>Tribune_Units_Daypart_B__c</name>
+    </fields>
+    <fields>
+        <label><!-- Tribune Units --></label>
+        <name>Tribune_Units__c</name>
+    </fields>
+    <fields>
+        <label><!-- [Dep]Unconfirmed Historical --></label>
+        <name>Unconfirmed_Historical__c</name>
+    </fields>
+    <fields>
+        <label><!-- Underperforming PIs --></label>
+        <name>Underperforming_PIs__c</name>
+    </fields>
+    <fields>
+        <label><!-- UnitLength --></label>
+        <name>UnitLength__c</name>
+    </fields>
+    <fields>
+        <help><!-- Evaluates true if Units Aired is less than or equal to the max allowable Units by Separation --></help>
+        <label><!-- Unit Sep Check --></label>
+        <name>Unit_Sep_Check__c</name>
+    </fields>
+    <fields>
+        <label><!-- Units Aired --></label>
+        <name>Units_Aired__c</name>
+    </fields>
+    <fields>
+        <label><!-- Units Available --></label>
+        <name>Units_Available__c</name>
+    </fields>
+    <fields>
+        <label><!-- Units Preempted --></label>
+        <name>Units_Preempted__c</name>
+    </fields>
+    <fields>
+        <label><!-- Max Units With Valid Separation --></label>
+        <name>Units_by_Separation__c</name>
+    </fields>
+    <fields>
+        <label><!-- Max Per Day CHECK --></label>
+        <name>Valid_Max_Per_Day__c</name>
+    </fields>
+    <fields>
+        <label><!-- WO :30 Units --></label>
+        <name>WO_30_Units__c</name>
+    </fields>
+    <fields>
+        <label><!-- WO Booked $$$ --></label>
+        <name>WO_Booked__c</name>
+    </fields>
+    <fields>
+        <label><!-- WO Dollars --></label>
+        <name>WO_Dollars__c</name>
+    </fields>
+    <fields>
+        <label><!-- WO Units --></label>
+        <name>WO_Units__c</name>
+    </fields>
+    <fields>
+        <label><!-- Week Number --></label>
+        <name>Week_Number__c</name>
+    </fields>
+    <fields>
+        <label><!-- Week --></label>
+        <name>Week__c</name>
+    </fields>
+    <fields>
+        <label><!-- Week in Month --></label>
+        <name>Week_in_Month__c</name>
+    </fields>
+    <fields>
+        <help><!-- Literally add in last week of 14 week Quarter --></help>
+        <label><!-- Week in Quarter --></label>
+        <name>Week_in_Quarter__c</name>
+    </fields>
+    <fields>
+        <label><!-- Week in Year --></label>
+        <name>Week_in_Year__c</name>
+    </fields>
+    <fields>
+        <help><!-- Counts :120s.  Built to work with MAX :120s on Program to deal with format issues in syndication. --></help>
+        <label><!-- :120s --></label>
+        <name>X120s__c</name>
+    </fields>
+    <fields>
+        <label><!-- :15s --></label>
+        <name>X15s__c</name>
+    </fields>
+    <fields>
+        <label><!-- LF Time Period - Full --></label>
+        <name>X2Calculated_Time_Period__c</name>
+    </fields>
+    <fields>
+        <help><!-- Rounds to 5% increments of filler rate.  For pricing strips. --></help>
+        <label><!-- :30 Rate Round --></label>
+        <name>X30_Rate_Round__c</name>
+    </fields>
+    <fields>
+        <label><!-- :30 Rate --></label>
+        <name>X30_Rate__c</name>
+    </fields>
+    <fields>
+        <label><!-- :30s --></label>
+        <name>X30s__c</name>
+    </fields>
+    <fields>
+        <label><!-- 800 Number --></label>
+        <name>X800_Number__c</name>
+    </fields>
+    <fields>
+        <label><!-- XML Sent --></label>
+        <name>XML_Sent__c</name>
+    </fields>
+    <fields>
+        <label><!-- Year --></label>
+        <name>Year__c</name>
+    </fields>
+    <fields>
+        <label><!-- textcheck --></label>
+        <name>textcheck__c</name>
+    </fields>
+    <layouts>
+        <layout>Admin Layout</layout>
+        <sections>
+            <label><!-- Calculated Fields --></label>
+            <section>Calculated Fields</section>
+        </sections>
+        <sections>
+            <label><!-- Client Specific --></label>
+            <section>Client Specific</section>
+        </sections>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Paid Programming</layout>
+        <sections>
+            <label><!-- Calculated Fields --></label>
+            <section>Calculated Fields</section>
+        </sections>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Error Log --></label>
+            <section>Error Log</section>
+        </sections>
+        <sections>
+            <label><!-- Intaact --></label>
+            <section>Intaact</section>
+        </sections>
+        <sections>
+            <label><!-- Performance Tracking --></label>
+            <section>Performance Tracking</section>
+        </sections>
+        <sections>
+            <label><!-- Programming Specific --></label>
+            <section>Programming Specific</section>
+        </sections>
+        <sections>
+            <label><!-- Schedule Detail --></label>
+            <section>Schedule Detail</section>
+        </sections>
+        <sections>
+            <label><!-- Traffic --></label>
+            <section>Traffic</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Schedule Layout</layout>
+        <sections>
+            <label><!-- Calculated Fields --></label>
+            <section>Calculated Fields</section>
+        </sections>
+        <sections>
+            <label><!-- Client Specific --></label>
+            <section>Client Specific</section>
+        </sections>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Short Form</layout>
+        <sections>
+            <label><!-- Bundles --></label>
+            <section>Bundles</section>
+        </sections>
+        <sections>
+            <label><!-- Client Specific --></label>
+            <section>Client Specific</section>
+        </sections>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Deal Information --></label>
+            <section>Deal Information</section>
+        </sections>
+        <sections>
+            <label><!-- Development --></label>
+            <section>Development</section>
+        </sections>
+        <sections>
+            <label><!-- Intacct --></label>
+            <section>Intacct</section>
+        </sections>
+        <sections>
+            <label><!-- Schedule Detail --></label>
+            <section>Schedule Detail</section>
+        </sections>
+        <sections>
+            <label><!-- Spot Detail --></label>
+            <section>Spot Detail</section>
+        </sections>
+        <sections>
+            <label><!-- Traffic --></label>
+            <section>Traffic</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Short Form Apricot</layout>
+        <sections>
+            <label><!-- Bundles --></label>
+            <section>Bundles</section>
+        </sections>
+        <sections>
+            <label><!-- Client Specific --></label>
+            <section>Client Specific</section>
+        </sections>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Deal Information --></label>
+            <section>Deal Information</section>
+        </sections>
+        <sections>
+            <label><!-- Development --></label>
+            <section>Development</section>
+        </sections>
+        <sections>
+            <label><!-- Intacct --></label>
+            <section>Intacct</section>
+        </sections>
+        <sections>
+            <label><!-- Schedule Detail --></label>
+            <section>Schedule Detail</section>
+        </sections>
+        <sections>
+            <label><!-- Spot Detail --></label>
+            <section>Spot Detail</section>
+        </sections>
+        <sections>
+            <label><!-- Traffic --></label>
+            <section>Traffic</section>
+        </sections>
+    </layouts>
+    <quickActions>
+        <label><!-- Create New Spot Data --></label>
+        <name>TEST_spot_Avails</name>
+    </quickActions>
+    <recordTypes>
+        <description><!-- These are long form schedules. --></description>
+        <label><!-- Paid Programming --></label>
+        <name>Paid_Programming</name>
+    </recordTypes>
+    <recordTypes>
+        <description><!-- These are short form schedules. --></description>
+        <label><!-- Short Form --></label>
+        <name>Short_Form</name>
+    </recordTypes>
+    <recordTypes>
+        <description><!-- This is a short form deal, traffic not handled by Marathon --></description>
+        <label><!-- Short Form Apricot --></label>
+        <name>Short_Form_Apricot</name>
+    </recordTypes>
+    <startsWith>Consonant</startsWith>
+    <validationRules>
+        <errorMessage><!-- ALERT: Cable networks need to have the Days Allowed, Start Time &amp; End Time fields selected. --></errorMessage>
+        <name>Cable_Needs_Start_End_Time_Days_Allo</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Bundle/Syndication schedules cannot be ghosted. --></errorMessage>
+        <name>Cannot_Ghost_Bundles_or_Syndication</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Can&apos;t update the vale of Total Schedules --></errorMessage>
+        <name>Check_Total_Schedules_update</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Network Does Not Match Deal Program --></errorMessage>
+        <name>Client_Specific_Network_Match_Program</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- &apos;daypart&apos; and &apos;days allowed&apos; need to match. or CONTACT adrianpichardo@mvmediasales.com --></errorMessage>
+        <name>Correct_Dayparts_for_Days_Allowed</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Schedules cannot be edited after invoicing.  Please consult with Finance. --></errorMessage>
+        <name>Dollars_Cannot_be_Changed_after_Invoice</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- You cannot edit the week of a schedule with prelog records attached to it. --></errorMessage>
+        <name>Editing_Weeks_w_Prelogs</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Cannot add field unless Brand = Availability --></errorMessage>
+        <name>HH_Needs_Brand_Equal_Avail</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- You are attempting to edit historical data.  Please contact your administrators for approval. --></errorMessage>
+        <name>Historical_Data_Change</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- You are attempting to edit historical traffic information.  Please contact your administrators for approval. --></errorMessage>
+        <name>Historical_Traffic_Change</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Hold placed on Advertiser. Please consult with Finance to confirm that the advertiser has been approved to book. --></errorMessage>
+        <name>Hold_placed_on_Advertiser</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Hold placed on Agency. Please consult with Finance to confirm that the Agency has been approved to book. --></errorMessage>
+        <name>Hold_placed_on_Agency</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Please select the programs associated with the block sold --></errorMessage>
+        <name>Litton_Program</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- For PAID PROGRAMMING schedule, Long Form must be selected. --></errorMessage>
+        <name>LongForm_Time_Period_Must_Be_Selected</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- For PAID PROGRAMMING schedule, Units Available can only be 1. --></errorMessage>
+        <name>LongForm_Unit_Must_Equal_1</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Broadcast Week must be a Monday --></errorMessage>
+        <name>Monday_Broadcast_Week</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Schedule requires the Units Available field to be filled in. --></errorMessage>
+        <name>Needs_Units_Available</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Only MLB, NHL, and CBS can be extended for to 2018 Q2 --></errorMessage>
+        <name>Nielsen_Calendar_Q1_2018</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- You must enter a rate --></errorMessage>
+        <name>Rate_Needed</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- The record type for the schedule must match the record type for the Deal. --></errorMessage>
+        <name>Record_Type_Validation</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Stadium Schedules Need Record Type to be set as Short Form Outsourced --></errorMessage>
+        <name>Stadium_Sch_Needs_to_be_Apricot</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- The Units Preempted field may not be greater than the Units Available. --></errorMessage>
+        <name>Unit_Preempt_Less_Than_Unit_Avail</name>
+    </validationRules>
+    <webLinks>
+        <label><!-- Clone --></label>
+        <name>Clone</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Conga_Workflow_Trigger --></label>
+        <name>Conga_Workflow_Trigger</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Create_XML_Bundle --></label>
+        <name>Create_XML_Bundle</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Discrepancy_Report --></label>
+        <name>Discrepancy_Report</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Discrepancy_Report_list --></label>
+        <name>Discrepancy_Report_list</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Find_Tapes --></label>
+        <name>Find_Tapes</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- New_Schedule --></label>
+        <name>New_Schedule</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- PI_Performance_Follow_Up_Button --></label>
+        <name>PI_Performance_Follow_Up_Button</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Request_Long_Form_Traffic --></label>
+        <name>Request_Long_Form_Traffic</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Request_Missing_Traffic --></label>
+        <name>Request_Missing_Traffic</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Request_Missing_Traffic_Current --></label>
+        <name>Request_Missing_Traffic_Current</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Request_Missing_Traffic_List_View --></label>
+        <name>Request_Missing_Traffic_List_View</name>
+    </webLinks>
+</CustomObjectTranslation>

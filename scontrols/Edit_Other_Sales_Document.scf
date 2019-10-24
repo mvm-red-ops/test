@@ -1,0 +1,1 @@
+https://www.intacct.com/ia/acct/sforcerouter.phtml?.action=VIEW_SODOCUMENT&.documentid={!Other_Sales_Document__c.Document_Number__c}&.documenttype={!Other_Sales_Document__c.Document_Type__c}&.sforcekey={!API.Session_ID}&.endpoint={!API.Partner_Server_URL_70}

@@ -1,0 +1,102 @@
+<apex:page controller="DealSearchController" title="Deal Search">
+    <script type='text/javascript'>
+        function noenter(ev)  {
+            if (window.event && window.event.keyCode == 13 || ev.which == 13) {
+                doDealSearch();
+                return false;
+            }
+            else {
+                return true;
+            }
+        }
+    </script>
+    <apex:form id="frm">
+
+        <apex:sectionHeader title="Deal Search"/>
+        <apex:pageBlock >
+            <apex:actionStatus id="status1" startText="Loading..." startStyle="font-size:20px"/>
+            <apex:actionFunction name="doDealSearch" action="{!search}" status="status1" />
+            <table>
+                <tr>
+
+                </tr>
+                <tr>
+                    <td> DEAL</td>
+                    <td>
+                        <apex:inputField value="{!schedule.Deal_Parent__c}" onkeypress="return noenter(event);" required="false"/>
+                    </td>
+                    <td> PROGRAM</td>
+                    <td>
+                        <apex:inputField value="{!deal.Program__c}" onkeypress="return noenter(event);"/>
+                    </td>
+                    <td> AGENCY</td>
+                    <td>
+                        <apex:inputField value="{!deal.Client_Account__c}" onkeypress="return noenter(event);"/>
+                    </td>
+                </tr>
+                <tr>
+                    <td> BRAND</td>
+                    <td>
+                        <apex:inputField value="{!schedule.LF_Brand__c}" onkeypress="return noenter(event);"/>
+                    </td>
+                    <td> CONTACT</td>
+                    <td>
+                        <apex:inputField value="{!deal.Contact__c}" onkeypress="return noenter(event);" required="false"/>
+                    </td>
+                    <td>Agency Deal #</td>
+                    <td>
+                        <apex:inputField value="{!deal.Agency_Deal_Number__c}" onkeypress="return noenter(event);"/>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Network Deal Number
+                    </td>
+                    <td>
+                        <apex:inputField value="{!deal.Network_Deal_Number__c}" onkeypress="return noenter(event);"/>
+                    </td>
+                </tr>
+                <tr>
+                    <th colspan="6">
+                        <div style="text-align: center;">
+                            <apex:commandButton value="Search" action="{!search}" status="status1"/>
+                        </div>
+                    </th>
+                </tr>
+            </table>
+        </apex:pageBlock>
+    </apex:form>
+    <apex:outputPanel rendered="{!NOT(hasDeals)}">
+        <apex:pageMessages />
+    </apex:outputPanel>
+    <apex:pageBlock title="DEAL" rendered="{!hasDeals}">
+        <apex:pageblockSection columns="1">
+            <apex:pageBlockTable value="{!dealList}" var="dealObj">
+                <apex:column headerValue="Deal">
+                    <a href="/{!dealObj.id}" target="_blank"><apex:outputField value="{!dealObj.Name}" style="width:20px"/></a>
+                </apex:column>
+                <apex:column headerValue="Program">
+                    <a href="/{!dealObj.Program__r.Id}" target="_blank"><apex:outputText value="{!dealObj.Program__r.Name}"/></a>
+                </apex:column>
+                <apex:column headerValue="Contact">
+                    <a href="/{!dealObj.Contact__r.Id}" target="_blank"><apex:outputText value="{!dealObj.Contact__r.Name}"/></a>
+                </apex:column>
+                <apex:column headerValue="Contact Account">
+                    <a href="/{!dealObj.Contact__r.Account.ID}" target="_blank"><apex:outputText value="{!dealObj.ContactAccount__c}"/></a>
+                </apex:column>
+                <apex:column headerValue="Brands">
+                    <a href="/{!dealObj.Brands__r.Id}" target="_blank"><apex:outputText value="{!dealObj.Brands__r.Name}"/></a>
+                </apex:column>
+                <apex:column headerValue="Week MIN Field">
+                    <apex:outputField value="{!dealObj.Week_MIN_Field__c}"/>
+                </apex:column>
+                <apex:column headerValue="Length">
+                    <apex:outputField value="{!dealObj.Length__c}"/>
+                </apex:column>
+            </apex:pageBlockTable>
+        </apex:pageblockSection>
+    </apex:pageBlock>
+
+
+
+</apex:page>

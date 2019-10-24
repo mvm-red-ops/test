@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Ratings Compiled</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Ratings Compiled</value>
+    </caseValues>
+    <fields>
+        <help><!-- Avg. Unit Rate --></help>
+        <label><!-- AUR --></label>
+        <name>AUR__c</name>
+    </fields>
+    <fields>
+        <label><!-- Adjusted Holiday Revenue --></label>
+        <name>AdjustedHolidayRevenue__c</name>
+    </fields>
+    <fields>
+        <label><!-- Budget Label --></label>
+        <name>Budget_Label__c</name>
+        <picklistValues>
+            <masterLabel>Actual</masterLabel>
+            <translation><!-- Actual --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Budget 1</masterLabel>
+            <translation><!-- Budget 1 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Budget 2</masterLabel>
+            <translation><!-- Budget 2 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Budget Label</masterLabel>
+            <translation><!-- Budget Label --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>GM Actual</masterLabel>
+            <translation><!-- GM Actual --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>GM Budget</masterLabel>
+            <translation><!-- GM Budget --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Network Budget</masterLabel>
+            <translation><!-- Network Budget --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Sales Goals</masterLabel>
+            <translation><!-- Sales Goals --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- Cost Per Impression --></help>
+        <label><!-- CPM --></label>
+        <name>CPM__c</name>
+    </fields>
+    <fields>
+        <label><!-- Current Version --></label>
+        <name>Current_Version__c</name>
+    </fields>
+    <fields>
+        <label><!-- Daypart --></label>
+        <name>Daypart__c</name>
+        <picklistValues>
+            <masterLabel>-</masterLabel>
+            <translation><!-- - --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>DA</masterLabel>
+            <translation><!-- DA --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>DA - MF</masterLabel>
+            <translation><!-- DA - MF --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>DA - SS</masterLabel>
+            <translation><!-- DA - SS --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>EF</masterLabel>
+            <translation><!-- EF --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>EM</masterLabel>
+            <translation><!-- EM --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>LF</masterLabel>
+            <translation><!-- LF --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>LN</masterLabel>
+            <translation><!-- LN --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ON</masterLabel>
+            <translation><!-- ON --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>PR</masterLabel>
+            <translation><!-- PR --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Total Day</masterLabel>
+            <translation><!-- Total Day --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>WK</masterLabel>
+            <translation><!-- WK --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>WKND</masterLabel>
+            <translation><!-- WKND --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Demographic --></label>
+        <name>Demographic__c</name>
+    </fields>
+    <fields>
+        <help><!-- Total Dollar Amount --></help>
+        <label><!-- Dollar Amount --></label>
+        <name>Dollar_Amount__c</name>
+    </fields>
+    <fields>
+        <label><!-- Holiday Adjustment --></label>
+        <name>Holiday_Adjustment__c</name>
+    </fields>
+    <fields>
+        <label><!-- Hours in Time Period --></label>
+        <name>Hours_in_Time_Period__c</name>
+    </fields>
+    <fields>
+        <help><!-- Investment --></help>
+        <label><!-- INV --></label>
+        <name>INV__c</name>
+    </fields>
+    <fields>
+        <label><!-- Impressions --></label>
+        <name>Impressions__c</name>
+    </fields>
+    <fields>
+        <label><!-- Month --></label>
+        <name>Month__c</name>
+    </fields>
+    <fields>
+        <label><!-- Playback --></label>
+        <name>Playback__c</name>
+        <picklistValues>
+            <masterLabel>LSD</masterLabel>
+            <translation><!-- LSD --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Live+SD | TV | Linear with VOD</masterLabel>
+            <translation><!-- Live+SD | TV | Linear with VOD --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>N/A</masterLabel>
+            <translation><!-- N/A --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Program --></label>
+        <name>Program__c</name>
+        <relationshipLabel><!-- Ratings Compiled --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- RC Order --></label>
+        <name>RC_Order__c</name>
+        <picklistValues>
+            <masterLabel>Client Dayparts</masterLabel>
+            <translation><!-- Client Dayparts --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Marathon Dayparts</masterLabel>
+            <translation><!-- Marathon Dayparts --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Marathon Goals</masterLabel>
+            <translation><!-- Marathon Goals --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Ratings ID --></label>
+        <name>Ratings_ID__c</name>
+    </fields>
+    <fields>
+        <label><!-- Reconciled --></label>
+        <name>Reconciled__c</name>
+    </fields>
+    <fields>
+        <label><!-- Source --></label>
+        <name>Source__c</name>
+    </fields>
+    <fields>
+        <label><!-- Type --></label>
+        <name>Type__c</name>
+        <picklistValues>
+            <masterLabel>Actual</masterLabel>
+            <translation><!-- Actual --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Budget</masterLabel>
+            <translation><!-- Budget --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Sales Goals</masterLabel>
+            <translation><!-- Sales Goals --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- US Households in Millions --></help>
+        <label><!-- US M HH --></label>
+        <name>US_M_HH__c</name>
+    </fields>
+    <fields>
+        <label><!-- Week --></label>
+        <name>Week__c</name>
+    </fields>
+    <fields>
+        <label><!-- Week in Year --></label>
+        <name>Week_in_Year__c</name>
+    </fields>
+    <fields>
+        <label><!-- Year --></label>
+        <name>Year__c</name>
+    </fields>
+    <layouts>
+        <layout>Ratings Compiled Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <startsWith>Consonant</startsWith>
+    <webLinks>
+        <label><!-- crmc_Grid --></label>
+        <name>crmc_Grid</name>
+    </webLinks>
+</CustomObjectTranslation>

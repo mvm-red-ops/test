@@ -1,0 +1,399 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>CMS</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>CMS</value>
+    </caseValues>
+    <fields>
+        <label><!-- Active --></label>
+        <name>Active__c</name>
+    </fields>
+    <fields>
+        <label><!-- Ad Supported --></label>
+        <name>Ad_Supported__c</name>
+    </fields>
+    <fields>
+        <label><!-- Application --></label>
+        <name>Application__c</name>
+        <picklistValues>
+            <masterLabel>County Road</masterLabel>
+            <translation><!-- County Road --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Nosey</masterLabel>
+            <translation><!-- Nosey --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Cue Points --></label>
+        <name>Cue_Points__c</name>
+    </fields>
+    <fields>
+        <label><!-- Data Subtype --></label>
+        <name>Data_Subtype__c</name>
+        <picklistValues>
+            <masterLabel>collection</masterLabel>
+            <translation><!-- collection --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>curated</masterLabel>
+            <translation><!-- curated --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>episode</masterLabel>
+            <translation><!-- episode --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>genre</masterLabel>
+            <translation><!-- genre --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>season</masterLabel>
+            <translation><!-- season --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>series</masterLabel>
+            <translation><!-- series --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Data Type --></label>
+        <name>Data_Type__c</name>
+        <picklistValues>
+            <masterLabel>asset</masterLabel>
+            <translation><!-- asset --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>collection</masterLabel>
+            <translation><!-- collection --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Description --></label>
+        <name>Description__c</name>
+    </fields>
+    <fields>
+        <label><!-- Display Name --></label>
+        <name>Display_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- Ends_at --></label>
+        <name>Ends_at__c</name>
+    </fields>
+    <fields>
+        <label><!-- Episode Title --></label>
+        <name>Episode_Title__c</name>
+    </fields>
+    <fields>
+        <label><!-- Episode --></label>
+        <name>Episode__c</name>
+    </fields>
+    <fields>
+        <label><!-- GeoList --></label>
+        <name>GeoList__c</name>
+        <picklistValues>
+            <masterLabel>Canada</masterLabel>
+            <translation><!-- Canada --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>US</masterLabel>
+            <translation><!-- US --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Long Description --></label>
+        <name>Long_Description__c</name>
+    </fields>
+    <fields>
+        <label><!-- Manual Playlists --></label>
+        <name>Manual_Playlists__c</name>
+        <picklistValues>
+            <masterLabel>Court</masterLabel>
+            <translation><!-- Court --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Dating</masterLabel>
+            <translation><!-- Dating --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Featured</masterLabel>
+            <translation><!-- Featured --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Hero Carousel</masterLabel>
+            <translation><!-- Hero Carousel --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Jakes Picks</masterLabel>
+            <translation><!-- Jakes Picks --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Main Navigation</masterLabel>
+            <translation><!-- Main Navigation --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Movies</masterLabel>
+            <translation><!-- Movies --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Our Favorites</masterLabel>
+            <translation><!-- Our Favorites --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Popular Shows</masterLabel>
+            <translation><!-- Popular Shows --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Specials</masterLabel>
+            <translation><!-- Specials --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Talk</masterLabel>
+            <translation><!-- Talk --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Poster URL --></label>
+        <name>Poster_URL__c</name>
+    </fields>
+    <fields>
+        <label><!-- Published --></label>
+        <name>Published__c</name>
+        <picklistValues>
+            <masterLabel>Production</masterLabel>
+            <translation><!-- Production --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Staging</masterLabel>
+            <translation><!-- Staging --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Unpublished</masterLabel>
+            <translation><!-- Unpublished --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Roku Caption File --></label>
+        <name>Roku_Caption_File__c</name>
+    </fields>
+    <fields>
+        <label><!-- Season --></label>
+        <name>Season__c</name>
+    </fields>
+    <fields>
+        <label><!-- Series --></label>
+        <name>Series__c</name>
+        <picklistValues>
+            <masterLabel>Action</masterLabel>
+            <translation><!-- Action --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>American Gladiators</masterLabel>
+            <translation><!-- American Gladiators --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Bill Cunningham Show</masterLabel>
+            <translation><!-- Bill Cunningham Show --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Bullied</masterLabel>
+            <translation><!-- Bullied --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Cheaters Amazing Confrontations</masterLabel>
+            <translation><!-- Cheaters Amazing Confrontations --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Comedy</masterLabel>
+            <translation><!-- Comedy --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Court</masterLabel>
+            <translation><!-- Court --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Court Show A</masterLabel>
+            <translation><!-- Court Show A --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Court Show B</masterLabel>
+            <translation><!-- Court Show B --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Court Show C</masterLabel>
+            <translation><!-- Court Show C --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Cristina&apos;s Court</masterLabel>
+            <translation><!-- Cristina&apos;s Court --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Dating</masterLabel>
+            <translation><!-- Dating --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Dating Show A</masterLabel>
+            <translation><!-- Dating Show A --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Dating Show B</masterLabel>
+            <translation><!-- Dating Show B --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Dating Show c</masterLabel>
+            <translation><!-- Dating Show c --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Drama</masterLabel>
+            <translation><!-- Drama --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Elimidate</masterLabel>
+            <translation><!-- Elimidate --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Featured</masterLabel>
+            <translation><!-- Featured --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Hero Carousel</masterLabel>
+            <translation><!-- Hero Carousel --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Jakes Picks</masterLabel>
+            <translation><!-- Jakes Picks --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>LAPD</masterLabel>
+            <translation><!-- LAPD --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Latest Episodes</masterLabel>
+            <translation><!-- Latest Episodes --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Movies</masterLabel>
+            <translation><!-- Movies --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>MoviesAction</masterLabel>
+            <translation><!-- MoviesAction --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>MoviesComedy</masterLabel>
+            <translation><!-- MoviesComedy --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>MoviesDrama</masterLabel>
+            <translation><!-- MoviesDrama --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>MoviesRomance</masterLabel>
+            <translation><!-- MoviesRomance --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Our Favorites</masterLabel>
+            <translation><!-- Our Favorites --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Paternity Court</masterLabel>
+            <translation><!-- Paternity Court --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Popular Shows</masterLabel>
+            <translation><!-- Popular Shows --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Romance</masterLabel>
+            <translation><!-- Romance --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Ron Hazeltons Housecalls</masterLabel>
+            <translation><!-- Ron Hazeltons Housecalls --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Sex Wars MGM</masterLabel>
+            <translation><!-- Sex Wars MGM --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Specials</masterLabel>
+            <translation><!-- Specials --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Specials A</masterLabel>
+            <translation><!-- Specials A --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Specials B</masterLabel>
+            <translation><!-- Specials B --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Specials C</masterLabel>
+            <translation><!-- Specials C --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Talk</masterLabel>
+            <translation><!-- Talk --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Talk Show A</masterLabel>
+            <translation><!-- Talk Show A --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Talk Show B</masterLabel>
+            <translation><!-- Talk Show B --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Talk Show C</masterLabel>
+            <translation><!-- Talk Show C --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Texas Justice</masterLabel>
+            <translation><!-- Texas Justice --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Sharing Tag --></label>
+        <name>Sharing_Tag__c</name>
+    </fields>
+    <fields>
+        <label><!-- Source URL --></label>
+        <name>Source_URL__c</name>
+    </fields>
+    <fields>
+        <label><!-- Starts_at --></label>
+        <name>Starts_at__c</name>
+    </fields>
+    <fields>
+        <label><!-- Tags --></label>
+        <name>Tags__c</name>
+    </fields>
+    <fields>
+        <label><!-- Thumbnail URL --></label>
+        <name>Thumbnail_URL__c</name>
+    </fields>
+    <fields>
+        <label><!-- WebVTT Captions URL --></label>
+        <name>WebVTT_Captions_URL__c</name>
+    </fields>
+    <layouts>
+        <layout>Content Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Details --></label>
+            <section>Details</section>
+        </sections>
+        <sections>
+            <label><!-- Taxonomy --></label>
+            <section>Taxonomy</section>
+        </sections>
+    </layouts>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

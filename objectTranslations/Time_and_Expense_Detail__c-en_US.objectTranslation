@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Time and Expense Detail</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Time and Expense Details</value>
+    </caseValues>
+    <fields>
+        <label><!-- Amount --></label>
+        <name>Amount__c</name>
+    </fields>
+    <fields>
+        <label><!-- Attendee 1 Agency Name --></label>
+        <name>Attendee_1_Agency_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- Attendee 1 --></label>
+        <name>Attendee_1__c</name>
+        <relationshipLabel><!-- Time and Expense Details --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Attendee 2 Agency Name --></label>
+        <name>Attendee_2_Agency_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- Attendee 2 --></label>
+        <name>Attendee_2__c</name>
+        <relationshipLabel><!-- Time and Expense Details (Attendee 2) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Attendee 3 Agency Name --></label>
+        <name>Attendee_3_Agency_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- Attendee 3 --></label>
+        <name>Attendee_3__c</name>
+        <relationshipLabel><!-- Time and Expense Details (Attendee 3) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Attendee Comments --></label>
+        <name>Attendee_Comments__c</name>
+    </fields>
+    <fields>
+        <help><!-- Expense details --></help>
+        <label><!-- Comment --></label>
+        <name>Comment__c</name>
+    </fields>
+    <fields>
+        <label><!-- Exp Type --></label>
+        <name>Exp_Type__c</name>
+        <picklistValues>
+            <masterLabel>Airfare</masterLabel>
+            <translation><!-- Airfare --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Car Milage</masterLabel>
+            <translation><!-- Car Milage --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Car Rental</masterLabel>
+            <translation><!-- Car Rental --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Car Service</masterLabel>
+            <translation><!-- Car Service --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Charitable Contributions</masterLabel>
+            <translation><!-- Charitable Contributions --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Cocktails</masterLabel>
+            <translation><!-- Cocktails --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Entertainment</masterLabel>
+            <translation><!-- Entertainment --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Gas or Tolls</masterLabel>
+            <translation><!-- Gas or Tolls --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Gifts</masterLabel>
+            <translation><!-- Gifts --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Hotel Lodging</masterLabel>
+            <translation><!-- Hotel Lodging --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>MTA Bus or Subway</masterLabel>
+            <translation><!-- MTA Bus or Subway --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Meals</masterLabel>
+            <translation><!-- Meals --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Office Exp</masterLabel>
+            <translation><!-- Office Exp --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Office Supplies</masterLabel>
+            <translation><!-- Office Supplies --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Parking</masterLabel>
+            <translation><!-- Parking --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Taxi</masterLabel>
+            <translation><!-- Taxi --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Trade Show Ent.</masterLabel>
+            <translation><!-- Trade Show Ent. --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Train</masterLabel>
+            <translation><!-- Train --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Wireless Reimbursement</masterLabel>
+            <translation><!-- Wireless Reimbursement --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Time and Expense --></label>
+        <name>Time_and_Expense__c</name>
+        <relationshipLabel><!-- Time and Expense Details --></relationshipLabel>
+    </fields>
+    <fields>
+        <help><!-- Receipt Date --></help>
+        <label><!-- Transaction Date --></label>
+        <name>Transaction_Date_del__c</name>
+    </fields>
+    <fields>
+        <label><!-- Vendor Description --></label>
+        <name>Vendor_Description__c</name>
+    </fields>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

@@ -1,0 +1,26 @@
+<template>
+    <div class="slds-backdrop"></div>
+    <div class={modalClasses}>
+        <div class="slds-modal__container">
+            <div class="slds-is-relative" style="max-height: 100%">
+                <div class="slds-modal__header">
+                    <h2 class="slds-text-heading_medium">
+                        <slot name="header"></slot>
+                    </h2>
+                    <lightning-button-icon onclick={close} variant="bare" alternative-text="close" size="large" icon-name="utility:close" class="slds-modal__close"></lightning-button-icon>
+                </div>
+                <div class="slds-modal__content slds-p-around_medium">
+                    <slot name="body"></slot>
+                </div>
+                <div class="slds-modal__footer">
+                    <slot name="footer"></slot>
+                </div>
+                <template if:true={loading}>
+                    <div style="height: 100%; transform: translateY(-100%)">
+                        <lightning-spinner alternative-text="Loading..."></lightning-spinner>
+                    </div>
+                </template>
+            </div>
+        </div>
+    </div>
+</template>

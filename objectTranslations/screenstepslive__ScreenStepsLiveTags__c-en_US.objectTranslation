@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <label><!-- brands --></label>
+        <name>ct_a07__c</name>
+    </fields>
+    <fields>
+        <label><!-- schedules --></label>
+        <name>ct_a08__c</name>
+    </fields>
+    <fields>
+        <label><!-- deals --></label>
+        <name>ct_a0A__c</name>
+    </fields>
+    <fields>
+        <label><!-- pi payouts --></label>
+        <name>ct_a2K__c</name>
+    </fields>
+    <fields>
+        <label><!-- spot data mirrors --></label>
+        <name>ct_a3U__c</name>
+    </fields>
+    <fields>
+        <label><!-- prelog data mirrors --></label>
+        <name>ct_a52__c</name>
+    </fields>
+</CustomObjectTranslation>

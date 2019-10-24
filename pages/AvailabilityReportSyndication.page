@@ -1,0 +1,50 @@
+<apex:page controller="AvailabilityReportSyndication" title="Syndication Availability Report">
+    <apex:form id="frm">
+        <apex:actionStatus id="status1" startText="Saving..." startStyle="font-size:18px"/>
+        <apex:sectionHeader title="Availability Report Syndication"/>
+        <apex:pageBlock >
+            <apex:pageBlockButtons >
+                <apex:commandButton value="Save" action="{!save}" reRender="frm" status="status1"/>
+            </apex:pageBlockButtons>
+            <table>
+                <tr>
+                    <h2><td width = "300px" bgcolor="grey"><B>Program: Program </B></td>
+                    <td width = "100px" bgcolor="grey"><B>Units Available </B></td>
+                    <td width = "100px" bgcolor="grey"><B>Schedule </B></td></h2>
+                </tr>
+            
+                <apex:repeat value="{!programTeams}" var="obj">
+                    <tr>
+                        <td colspan="3" bgcolor="{!if(obj.team == 'Blue','Sky Blue',obj.team)}"><B>Program: Team: </B>{!obj.team}<B> ({!obj.tCount} Records)</B></td>
+                        <apex:repeat value="{!obj.weeks}" var="w">
+                            <tr>
+                                <td colspan="3" bgcolor="cyan"><B>Week: </B>
+                                    <apex:outputText value="{0,date,MM/dd/yyyy}">
+                                        <apex:param value="{!w.week}"/>
+                                    </apex:outputText>
+                                    <B>({!w.wCount} Records)</B>
+                                </td>
+                                <apex:repeat value="{!w.schList}" var="s">
+                                    <tr>
+                                        <td><apex:outputField value="{!s.DealProgram__c}"/></td>
+                                        <td align="center"><apex:inputField value="{!s.Units_Available__c}" style="width:50px" /></td>
+                                        
+                                        <td align="center">
+                                            <a href="/{!s.id}" target="_blank">
+                                                <apex:outputField value="{!s.Name}"/>
+                                            </a>
+                                        </td>
+                                    </tr>
+                                </apex:repeat>
+                            </tr>
+                        </apex:repeat>
+                    </tr>
+                </apex:repeat>
+                <tr>
+                    <td colspan="3" bgcolor="grey"><B>Grand Totals ({!grand} Records)</B></td>
+                </tr>
+            </table>
+
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

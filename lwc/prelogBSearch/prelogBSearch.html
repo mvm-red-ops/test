@@ -1,0 +1,43 @@
+<template>
+    <lightning-card>
+        <lightning-button label="Search" onclick={search}></lightning-button>
+        <div class="slds-m-bottom--large slds-p-horizontal_large">
+            <div class="slds-grid slds-gutters">
+                <div class="slds-col">
+                    <div class="slds-form-element">
+                        <label class="slds-form-element__label">Field Name</label>
+                        <div class="slds-form-element__control slds-input-has-icon slds-input-has-icon_left">
+                            <input type="text" name="name" placeholder="Field" class="slds-input" onkeyup={handleFieldChange} />
+                        </div>
+                    </div>
+                </div>
+                <div class="slds-col">
+                    <div class="slds-form-element">
+                        <label class="slds-form-element__label">Operator</label>
+                        <div class="slds-form-element__control slds-input-has-icon slds-input-has-icon_left">
+                            <input type="text" name="operator" placeholder="Operator" class="slds-input" onkeyup={handleFieldChange} />
+                        </div>
+                    </div>
+                </div>
+                <div class="slds-col">
+                    <div class="slds-form-element">
+                        <label class="slds-form-element__label">Value</label>
+                        <div class="slds-form-element__control slds-input-has-icon slds-input-has-icon_left">
+                            <input type="text" name="value" placeholder="Value" class="slds-input" onkeyup={handleFieldChange} />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="slds-border--top">
+            <lightning-datatable
+                    key-field="id"
+                    data={prelogs}
+                    columns={columns}
+                    hide-checkbox-column
+                    show-row-number-column>
+            </lightning-datatable>
+        </div>
+    </lightning-card>
+</template>

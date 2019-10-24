@@ -1,0 +1,363 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Spot Data Mirror</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Spot Data Mirrors</value>
+    </caseValues>
+    <fieldSets>
+        <label><!-- SpotDataBatch --></label>
+        <name>SpotDataBatch</name>
+    </fieldSets>
+    <fields>
+        <label><!-- Air Date/Time --></label>
+        <name>Air_Date_Time__c</name>
+    </fields>
+    <fields>
+        <label><!-- Air Date YYYYMMDD --></label>
+        <name>Air_Date_YYYY__c</name>
+    </fields>
+    <fields>
+        <label><!-- Air Date --></label>
+        <name>Air_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Air Time Hour --></label>
+        <name>Air_Time_Hour__c</name>
+    </fields>
+    <fields>
+        <label><!-- Air Time --></label>
+        <name>Air_Time__c</name>
+    </fields>
+    <fields>
+        <label><!-- [Dep]Break Code --></label>
+        <name>Break_Code__c</name>
+        <picklistValues>
+            <masterLabel>CM</masterLabel>
+            <translation><!-- CM --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CML</masterLabel>
+            <translation><!-- CML --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CMN</masterLabel>
+            <translation><!-- CMN --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>LOC</masterLabel>
+            <translation><!-- LOC --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>PRO</masterLabel>
+            <translation><!-- PRO --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- [Dep]Comments --></label>
+        <name>Comments__c</name>
+    </fields>
+    <fields>
+        <label><!-- Commercial Title --></label>
+        <name>Commercial_Title__c</name>
+    </fields>
+    <fields>
+        <label><!-- Commercial Type --></label>
+        <name>Commercial_Type__c</name>
+    </fields>
+    <fields>
+        <label><!-- [Dep]Credit --></label>
+        <name>Credit__c</name>
+        <picklistValues>
+            <masterLabel>No</masterLabel>
+            <translation><!-- No --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes</masterLabel>
+            <translation><!-- Yes --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- [Dep]Error Reason --></label>
+        <name>ErrorReason__c</name>
+        <picklistValues>
+            <masterLabel>Air Date does not match</masterLabel>
+            <translation><!-- Air Date does not match --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Air Time does not match</masterLabel>
+            <translation><!-- Air Time does not match --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Network Deal number not found</masterLabel>
+            <translation><!-- Network Deal number not found --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>No Network Deal number</masterLabel>
+            <translation><!-- No Network Deal number --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Rate not found</masterLabel>
+            <translation><!-- Rate not found --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Unit Length not found</masterLabel>
+            <translation><!-- Unit Length not found --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- [Dep]Error --></label>
+        <name>Error__c</name>
+        <picklistValues>
+            <masterLabel>Deal entry error</masterLabel>
+            <translation><!-- Deal entry error --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Network - Deal Entry Error</masterLabel>
+            <translation><!-- Network - Deal Entry Error --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Network - Min Separation</masterLabel>
+            <translation><!-- Network - Min Separation --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Network - Overran Units</masterLabel>
+            <translation><!-- Network - Overran Units --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Network - Ran Out of Rotation</masterLabel>
+            <translation><!-- Network - Ran Out of Rotation --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Network - Wrong Rate</masterLabel>
+            <translation><!-- Network - Wrong Rate --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Network - Wrong Traffic</masterLabel>
+            <translation><!-- Network - Wrong Traffic --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Overran units</masterLabel>
+            <translation><!-- Overran units --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Ran out of time rotation</masterLabel>
+            <translation><!-- Ran out of time rotation --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Wrong Traffic</masterLabel>
+            <translation><!-- Wrong Traffic --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Wrong rate</masterLabel>
+            <translation><!-- Wrong rate --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- [Dep]House Number --></label>
+        <name>House_Number__c</name>
+    </fields>
+    <fields>
+        <label><!-- ISCI --></label>
+        <name>ISCI__c</name>
+    </fields>
+    <fields>
+        <label><!-- Length --></label>
+        <name>Length__c</name>
+        <picklistValues>
+            <masterLabel>10</masterLabel>
+            <translation><!-- 10 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>120</masterLabel>
+            <translation><!-- 120 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>15</masterLabel>
+            <translation><!-- 15 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>180</masterLabel>
+            <translation><!-- 180 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>30</masterLabel>
+            <translation><!-- 30 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>300</masterLabel>
+            <translation><!-- 300 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>45</masterLabel>
+            <translation><!-- 45 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>5</masterLabel>
+            <translation><!-- 5 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>60</masterLabel>
+            <translation><!-- 60 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>75</masterLabel>
+            <translation><!-- 75 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>90</masterLabel>
+            <translation><!-- 90 --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Line Number --></label>
+        <name>Line_Number__c</name>
+    </fields>
+    <fields>
+        <label><!-- [Dep]Line Type --></label>
+        <name>Line_Type__c</name>
+    </fields>
+    <fields>
+        <label><!-- [Dep]Market --></label>
+        <name>Market__c</name>
+        <relationshipLabel><!-- Spot Data --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Network Deal Number --></label>
+        <name>Network_Deal_Number__c</name>
+    </fields>
+    <fields>
+        <label><!-- Network --></label>
+        <name>Network__c</name>
+    </fields>
+    <fields>
+        <label><!-- Plot End --></label>
+        <name>Plot_End__c</name>
+    </fields>
+    <fields>
+        <label><!-- Plot Start --></label>
+        <name>Plot_Start__c</name>
+    </fields>
+    <fields>
+        <help><!-- Spot Data record was  NOT created --></help>
+        <label><!-- [Dep]Need To Reprocess --></label>
+        <name>Problem__c</name>
+    </fields>
+    <fields>
+        <label><!-- [Dep]Process Required --></label>
+        <name>ProcessRequired__c</name>
+    </fields>
+    <fields>
+        <label><!-- Product --></label>
+        <name>Product__c</name>
+    </fields>
+    <fields>
+        <label><!-- Program ID --></label>
+        <name>Program_ID__c</name>
+    </fields>
+    <fields>
+        <label><!-- [Dep]Raycom Invoice Number --></label>
+        <name>Raycom_Invoice_Number__c</name>
+    </fields>
+    <fields>
+        <label><!-- Schedule Week --></label>
+        <name>ScheduleWeek__c</name>
+    </fields>
+    <fields>
+        <label><!-- Schedule --></label>
+        <name>Schedule__c</name>
+        <relationshipLabel><!-- Spot Data --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- ScribeId --></label>
+        <name>ScribeId__c</name>
+    </fields>
+    <fields>
+        <label><!-- Spot Data --></label>
+        <name>Spot_Data__c</name>
+        <relationshipLabel><!-- Spot Data Mirrors --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Spot Equiv :30 --></label>
+        <name>Spot_Equiv_30__c</name>
+    </fields>
+    <fields>
+        <label><!-- Spot Rate --></label>
+        <name>Spot_Rate__c</name>
+    </fields>
+    <fields>
+        <label><!-- [Dep]Spot Status --></label>
+        <name>Spot_Status__c</name>
+    </fields>
+    <fields>
+        <label><!-- [Dep]Spot Type --></label>
+        <name>Spot_Type__c</name>
+    </fields>
+    <fields>
+        <label><!-- Status --></label>
+        <name>Status__c</name>
+        <picklistValues>
+            <masterLabel>Aired</masterLabel>
+            <translation><!-- Aired --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Credited</masterLabel>
+            <translation><!-- Credited --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Discrepancy</masterLabel>
+            <translation><!-- Discrepancy --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Discrepancy - Paid</masterLabel>
+            <translation><!-- Discrepancy - Paid --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Time Period --></label>
+        <name>Time_Period__c</name>
+    </fields>
+    <fields>
+        <label><!-- Week --></label>
+        <name>Week__c</name>
+    </fields>
+    <fields>
+        <label><!-- 800 # --></label>
+        <name>X800__c</name>
+    </fields>
+    <layouts>
+        <layout>Spot Data Mirror Layout</layout>
+        <sections>
+            <label><!-- Additional Fields --></label>
+            <section>Additional Fields</section>
+        </sections>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Post Log Upload Messages --></label>
+            <section>Post Log Upload Messages</section>
+        </sections>
+    </layouts>
+    <startsWith>Consonant</startsWith>
+    <validationRules>
+        <errorMessage><!-- You are missing one of the necessary fields for Spot Data Mirror: Air Date, Air Time, Network, Network Deal Number or Spot Rate. Double check your upload file. --></errorMessage>
+        <name>Needs_Air_Time</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- The schedule you have entered matches to a different week than this record.  Please find a schedule in the correct week. --></errorMessage>
+        <name>Schedule_Week_Match</name>
+    </validationRules>
+    <webLinks>
+        <label><!-- Find_Schedule --></label>
+        <name>Find_Schedule</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Reprocess_Records --></label>
+        <name>Reprocess_Records</name>
+    </webLinks>
+</CustomObjectTranslation>

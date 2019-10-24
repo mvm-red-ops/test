@@ -1,0 +1,49 @@
+<apex:page standardController="Deal__c" recordSetVar="deals" extensions="ffps_dealinv.ConvertDealToSalesInvController" action="{!preCheck}" >
+    <apex:sectionHeader title="Multiple Deals" subtitle="Create Sales Invoices" />
+    <apex:form id="mainForm">
+    <script type="text/javascript">
+    window.onload=function() {
+        focus('{!$Component.mainForm.mainPage.secButtons.secItemButtons.convertButton}');          
+    }
+    
+    function focus(id){
+        document.getElementById(id).focus();
+    }
+    </script>
+        <apex:pageBlock id="mainPage">
+            <apex:pageBlockSection columns="1">
+                <apex:pageBlockSectionItem >
+                    <apex:outputLabel value="Convert multiple deals to sales invoices. Note that you will be alerted via email when conversion has been completed."/>
+                </apex:pageBlockSectionItem>
+            </apex:pageBlockSection>
+            <apex:pageBlockSection columns="2">
+                <apex:pageBlockSectionItem >
+                    <apex:outputLabel value="Invoice date:" for="invoiceDate"/>
+                    <apex:inputField id="invoiceDate" value="{!lookup.c2g__LookupDate__c}"/>
+                </apex:pageBlockSectionItem>
+            </apex:pageBlockSection>
+            <apex:pageBlockSection columns="2">
+                <apex:pageBlockSectionItem >
+                    <apex:outputLabel value="Post invoices:" for="chkPost"/>
+                    <apex:inputCheckbox id="chkPost" value="{!postInvoices}"/>
+                </apex:pageBlockSectionItem>
+            </apex:pageBlockSection>
+            <apex:pageBlockSection columns="2" rendered="{!hasErrors}">
+                <apex:pageBlockSectionItem >
+                    <apex:outputText value=" "/>
+                    <apex:pageMessages />
+                </apex:pageBlockSectionItem>
+            </apex:pageBlockSection>
+            <apex:pageBlockSection columns="2" id="secButtons">
+                <apex:pageBlockSectionItem id="secItemButtons">
+                    <apex:outputText value=" "/>
+                    <apex:outputPanel >
+                        <apex:commandButton value="Back" action="{!cancel}"/>
+                        <apex:outputText value=" "/>
+                        <apex:commandButton value="Create Invoices" action="{!convert}" id="convertButton"/>
+                    </apex:outputPanel>
+                </apex:pageBlockSectionItem>
+            </apex:pageBlockSection>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

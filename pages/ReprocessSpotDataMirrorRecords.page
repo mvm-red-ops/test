@@ -1,0 +1,6 @@
+<apex:page standardController="SpotDataMirror__c" action="{!ReprocessSpotDataMirrorRecordsAction}" recordsetVar="SpotDataMirrors" extensions="ReprocessSpotDataMirrorRecords">
+	<apex:form >
+		<apex:pageMessages />
+		<apex:commandButton value="Go Back" action="{!GoBackButton}" />
+	</apex:form>
+</apex:page>

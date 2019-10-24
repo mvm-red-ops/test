@@ -1,0 +1,61 @@
+<apex:page controller="managementController" title="Management">
+    <apex:form >
+    <apex:actionFunction name="Search" action="{!search}"/>
+    <apex:sectionHeader title="Management Report"/>
+        <apex:pageBlock >
+            <apex:outputPanel rendered="{!missingReq}">
+                <apex:pagemessages />
+            </apex:outputPanel> 
+            <table>
+                <tr>
+                    <td> PROGRAM TEAM</td>
+                    <td>
+                        <apex:selectList size="1" value="{!selectedTeam}">
+                            <apex:selectOptions value="{!team}"/>
+                        </apex:selectList>
+                    </td>
+                </tr>
+                <tr>
+                    <td> DEAL</td>
+                    <td>
+                        <apex:inputField value="{!sch.Deal_Parent__c}" required="false" onkeypress="if(event.keyCode==13){search();}"/>
+                    </td>
+                </tr>
+                <tr>
+                    <td> PROGRAM</td>
+                    <td>
+                        <apex:inputField value="{!deal.Program__c}" onkeypress="if(event.keyCode==13){search();}"/>
+                    </td>
+                </tr>
+                <tr>
+                    <td> AGENCY</td>
+                    <td>
+                        <apex:inputField value="{!deal.Client_Account__c}" onkeypress="if(event.keyCode==13){search();}"/>
+                    </td>
+                </tr>
+                <tr>
+                    <td>BRAND</td>
+                    <td>
+                        <apex:inputField value="{!sch.LF_Brand__c}" onkeypress="if(event.keyCode==13){search();}"/>
+                    </td>
+                </tr>
+                <tr>
+                    <td>FROM</td>
+                    <td><apex:inputField value="{!sch.Week__c}" onkeypress="if(event.keyCode==13){search();}"/></td>
+                    <td>TO</td>
+                    <td><apex:inputField value="{!sch.Day__c}" onkeypress="if(event.keyCode==13){search();}"/></td>
+                </tr>
+                <tr>
+                    <td>Filler</td>
+                    <td><apex:inputCheckbox value="{!filler}"/></td>
+                </tr>
+                <tr>
+                    <td><apex:commandButton value="search" action="{!search}"/></td>
+                </tr>
+             </table>
+         </apex:pageBlock>
+         <apex:outputPanel rendered="{!(!hasRecords)}">
+             <apex:pagemessages />
+         </apex:outputPanel>
+    </apex:form>
+</apex:page>

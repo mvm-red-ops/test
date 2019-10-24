@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Prelog Data</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Prelog Data</value>
+    </caseValues>
+    <fields>
+        <label><!-- Advertiser/Product --></label>
+        <name>AdvertiserProduct__c</name>
+    </fields>
+    <fields>
+        <label><!-- Agency --></label>
+        <name>Agency__c</name>
+    </fields>
+    <fields>
+        <label><!-- Air Date --></label>
+        <name>AirDate__c</name>
+    </fields>
+    <fields>
+        <label><!-- Archived Date --></label>
+        <name>Archived_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Batch Id --></label>
+        <name>Batch_Id__c</name>
+    </fields>
+    <fields>
+        <label><!-- Break Code --></label>
+        <name>BreakCode__c</name>
+    </fields>
+    <fields>
+        <label><!-- WO Commercial Type --></label>
+        <name>Commercial_Type__c</name>
+    </fields>
+    <fields>
+        <label><!-- Current Home --></label>
+        <name>Current_Home__c</name>
+    </fields>
+    <fields>
+        <label><!-- Current Version --></label>
+        <name>Current_Version__c</name>
+    </fields>
+    <fields>
+        <label><!-- Day of Week --></label>
+        <name>Day_of_Week__c</name>
+    </fields>
+    <fields>
+        <label><!-- 800# --></label>
+        <name>Field1__c</name>
+    </fields>
+    <fields>
+        <label><!-- Hour of Day --></label>
+        <name>Hour_of_Day__c</name>
+    </fields>
+    <fields>
+        <label><!-- Material Description --></label>
+        <name>MaterialDescription__c</name>
+    </fields>
+    <fields>
+        <label><!-- Network --></label>
+        <name>Network__c</name>
+    </fields>
+    <fields>
+        <label><!-- Order Product Description --></label>
+        <name>OrderProductDescription__c</name>
+    </fields>
+    <fields>
+        <label><!-- Prelog Data Mirror Reference --></label>
+        <name>PrelogDataMirrorReference__c</name>
+    </fields>
+    <fields>
+        <label><!-- Prelog Data Mirror --></label>
+        <name>PrelogDataMirror__c</name>
+        <relationshipLabel><!-- Prelog Data --></relationshipLabel>
+    </fields>
+    <fields>
+        <help><!-- CASE(ScheduleLength__c, &quot;10&quot;,10, &quot;30&quot;, 30, &quot;45&quot;, 45, &quot;60&quot;, 60, &quot;75&quot;, 75, &quot;120&quot;, 120, &quot;240&quot;, 240, &quot;300&quot;, 300, &quot;15&quot;, 15, &quot;90&quot;, 90, &quot;180&quot;, 180, 0)/30 --></help>
+        <label><!-- Prelog Equiv :30 --></label>
+        <name>Prelog_Equiv_30__c</name>
+    </fields>
+    <fields>
+        <label><!-- Product --></label>
+        <name>Product__c</name>
+    </fields>
+    <fields>
+        <label><!-- Rate --></label>
+        <name>Rate__c</name>
+    </fields>
+    <fields>
+        <label><!-- Schedule Ad-ID --></label>
+        <name>ScheduleAdID__c</name>
+    </fields>
+    <fields>
+        <label><!-- Schedule Length --></label>
+        <name>ScheduleLength__c</name>
+    </fields>
+    <fields>
+        <label><!-- Schedule Time --></label>
+        <name>ScheduleTime__c</name>
+    </fields>
+    <fields>
+        <label><!-- Schedule --></label>
+        <name>Schedule__c</name>
+        <relationshipLabel><!-- Prelog Data --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- ScribeId --></label>
+        <name>ScribeId__c</name>
+    </fields>
+    <fields>
+        <label><!-- Time Period --></label>
+        <name>TimePeriod__c</name>
+    </fields>
+    <fields>
+        <label><!-- Version --></label>
+        <name>Version__c</name>
+    </fields>
+    <fields>
+        <label><!-- Week --></label>
+        <name>Week__c</name>
+    </fields>
+    <fields>
+        <label><!-- uniqueprelog --></label>
+        <name>uniqueprelog__c</name>
+    </fields>
+    <layouts>
+        <layout>Prelog Data Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <startsWith>Consonant</startsWith>
+    <validationRules>
+        <errorMessage><!-- Commercial Type does not match Salesforce. Please adjust Hybrid/DR label in WideOrbit. --></errorMessage>
+        <name>Hybrid_DR</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- The schedule you have entered matches to a different week than this record. Please find a schedule in the correct week. --></errorMessage>
+        <name>Weeks_Must_Match</name>
+    </validationRules>
+</CustomObjectTranslation>

@@ -1,0 +1,69 @@
+<apex:page StandardController="Tape__c" extensions="TapeScheduleFind" title="Find Schedules">
+	<apex:form >
+		<apex:pageMessages />
+		<Apex:SectionHeader title="Tape Detail" subTitle="{!TapeRecord.Name}" />
+		<apex:pageBlock >
+			<apex:pageBlockSection columns="2">
+				<apex:pageBlockSectionItem >
+					Brand
+					<apex:outputField value="{!TapeRecord.Brand__c}" />
+				</apex:pageBlockSectionItem>
+				<apex:pageBlockSectionItem >
+					ISCI
+					<apex:outputField value="{!TapeRecord.Name}" />
+				</apex:pageBlockSectionItem>
+				<apex:pageBlockSectionItem >
+					Account
+					<apex:outputField value="{!TapeRecord.Account__c}" />
+				</apex:pageBlockSectionItem>
+				<apex:pageBlockSectionItem >
+					ISCI 2
+					<apex:outputField value="{!TapeRecord.ISCI_2__c}" />
+				</apex:pageBlockSectionItem>
+				<apex:pageBlockSectionItem >
+					Program
+					<apex:outputField value="{!TapeRecord.Program__c}" />
+				</apex:pageBlockSectionItem>
+				<apex:pageBlockSectionItem >
+					ISCI 3
+					<apex:outputField value="{!TapeRecord.ISCI_3__c}" />
+				</apex:pageBlockSectionItem>
+				<apex:pageBlockSectionItem >
+					Flight Start
+					<apex:outputField value="{!TapeRecord.Flight_Start__c}" />
+				</apex:pageBlockSectionItem>
+				<apex:pageBlockSectionItem >
+					Rotation
+					<apex:outputField value="{!TapeRecord.Rotation__c}" />
+				</apex:pageBlockSectionItem>
+				<apex:pageBlockSectionItem >
+					Flight End
+					<apex:outputField value="{!TapeRecord.Flight_End__c}" />
+				</apex:pageBlockSectionItem>
+				<apex:pageBlockSectionItem >
+					800 Number
+					<apex:outputField value="{!TapeRecord.X800_Number__c}" />
+				</apex:pageBlockSectionItem>
+			</apex:pageBlockSection>
+		</apex:pageBlock>
+		<Apex:SectionHeader title="Found Schedules" />
+		<apex:pageBlock >
+			<apex:pageBlockTable value="{!ScheduleWrapperList}" var="swl">
+				<apex:column headerValue="Select" >
+					<apex:inputCheckbox value="{!swl.Selected}" />
+				</apex:column>
+				<apex:column headervalue="Schedule">
+					<apex:outputLink value="/{!swl.ScheduleRecord.Id}" target="_blank">{!swl.ScheduleRecord.Name}</apex:outputLink>
+				</apex:column>
+				<apex:column headervalue="Brand" value="{!swl.ScheduleRecord.Deal_Parent__r.Brands__c}" />
+				<apex:column headervalue="Account" value="{!swl.ScheduleRecord.Deal_Parent__r.Contact__r.AccountId}" />
+				<apex:column headervalue="Program" value="{!swl.ScheduleRecord.Deal_Parent__r.Program__c}" />
+				<apex:column headervalue="Week" value="{!swl.ScheduleRecord.Week__c}" />
+			</apex:pageBlockTable>
+			<apex:pageBlockButtons location="bottom">
+				<apex:commandButton value="Save" action="{!SaveButton}" />
+				<apex:commandButton value="Cancel" action="{!CancelButton}" />
+			</apex:pageBlockButtons>
+		</apex:pageBlock>
+	</apex:form>
+</apex:page>

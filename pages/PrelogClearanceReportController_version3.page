@@ -1,0 +1,582 @@
+<apex:page controller="PrelogClearanceReportController_version3" title="Prelog Clearance Report">
+    <apex:form id="prelogClearanceReportForm">
+       <!--
+       MG sent email to Vicky "RESOLVED VIEW STATE ERROR"  App. June 15 2016
+       <apex:includeScript value="{!$Resource.saberjueryui}"/> 
+        <apex:includeScript value="{!$Resource.saberjquery}"/> 
+        <apex:includeScript value="{!URLFOR($Resource.jquery_vfFloatingHeaders)}" />
+        <script src="{!URLFOR($Resource.jquery_vfFloatingHeaders)}"></script>-->
+        <apex:stylesheet value="{!URLFOR($Resource.JQuery2, 'css/redmond/jquery-ui-1.8.14.custom.css')}"/>
+        <style>
+            .ui-state-active
+            {
+                border: 1px solid #fbd850;
+                background: #FFFF66;
+                font-weight: bold;
+                color: #E1701D;
+            }
+            .floatingStyle 
+            { 
+                position:relative; 
+            } 
+            .day {/*width:70px;*/background-color:#86BCFF;}
+            .number {text-align:right;}
+            .grand-total-text {text-align:right;font-size:15px;font-weight:bold;}
+            label {
+                font-weight:bold;
+                margin-right:10px;
+                font-size:13px;
+            }
+        </style>
+        <!--<script type="text/javascript">
+            $(document).ready(function() 
+            {
+                $('.floatingHeaderTable').vfFloatingHeaders();
+            });
+        </script>-->
+        
+        <apex:outputText value="{!SelectedDealSet}" rendered="false"></apex:outputText>
+        
+        <apex:pageMessages />
+        <apex:sectionHeader title="Prelog Clearance Report"/>
+        <apex:pageblock id="pB">
+            <table width="50%">
+                <tr>
+                    <td style="text-align:right;">
+                        <label>Search Term</label>
+                    </td>
+                    <td>
+                        <apex:inputText value="{!Searchfield }"/>
+                    </td>
+                    <td style="text-align:right;">
+                        <label>Week</label>
+                    </td>
+                    <td>
+                        <apex:inputField value="{!tempSchedule.Week__c}"/>
+                    </td>
+                </tr>
+                <tr>
+                    <!-- <td style="text-align:right;">
+                        <label>Advertiser</label>
+                    </td>
+                    <td>
+                        <apex:inputField value="{!brand.Advertiser__c}" required="false"/>
+                    </td> -->
+                    <td style="text-align:right;">
+                        <label>Version</label>
+                    </td>
+                    <td>
+                        <apex:inputText value="{!prelogVersion}"/>
+                    </td>
+                </tr>
+                <tr style="text-align:center;">
+                    <td colspan="4">
+                        <apex:commandbutton action="{!DoSearch}" value="Search" status="pageStatus" style="margin-top:10px;margin-bottom:5px;"/> 
+                        <apex:actionStatus startText="(Loading...)" id="pageStatus"/>
+                    </td>
+                </tr>
+                <tr style="display:none;">
+                    <td>
+                        <span style="display:none;"><apex:inputCheckbox value="{!BarterCheckbox}" />&nbsp;Barter&nbsp;&nbsp;|&nbsp;&nbsp;</span>
+                        <span style="display:none;"><apex:selectList value="{!SelectedCableSynd}" size="1"><apex:selectOptions value="{!CableSyndSOList}" /></apex:selectList></span>
+                    </td>
+                    <td align="right">
+                        <table cellspacing="5">
+                            <tr>
+                                <td colspan="2"><span style="display:none;">Range&nbsp;&nbsp;<apex:selectList value="{!SelectedDateLiteral}" size="1"><apex:selectOptions value="{!DateLiteralSOList}" /><apex:actionSupport event="onchange" rerender="StartDateField,EndDateField" action="{!ReturnSOQLDateString}" /></apex:selectList></span></td>
+                            </tr>
+                            <tr>
+                                <td><span style="display:none;">From&nbsp;&nbsp;<apex:inputField value="{!WeekStartDate.Day__c}" id="StartDateField" /></span></td>
+                                <td><span style="display:none;">To&nbsp;&nbsp;<apex:inputField value="{!WeekEndDate.Day__c}" id="EndDateField" /></span></td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+                <tr>
+         <!--       <td colspan="4">
+                        <font size="2">
+                            For advanced searches please separate the keywords with a comma ','
+                        </font>
+                    </td>         -->
+                    
+                </tr>
+            </table>
+            <apex:outputPanel rendered="{!IF(Searchfield != null && Searchfield != '-', true, false)}" id="DealDisplay">
+                <apex:outputPanel styleClass="tableContainer" layout="block" style="overflow:auto;max-height:350px" >
+                    <apex:pageblocktable styleclass="floatingHeaderTable"  value="{!DealResult}" var="d">
+                        <apex:column headerValue="Select" styleClass="{!IF(contains(SelectedDealSet,left(d.Id,15)),'ui-state-active','')}">
+                            <apex:commandLink type="image/png" rendered="{!IF(contains(SelectedDealSet,left(d.Id,15)),false,true)}" action="{!updatePrelogClearanceReport}" status="pageStatus" >
+                                <apex:image value="/img/msg_icons/confirm24.png"/>
+                                <apex:param name="Dealid" value="{!d.id}" assignTo="{!DealId}"/>
+                                <apex:param name="Dealname" value="{!d.Name}" assignTo="{!DealName}"/>
+                                <apex:param name="Dealname" value="true" assignTo="{!dealSelectionOperation}"/>
+                            </apex:commandLink> 
+                        </apex:column>
+                        <apex:column headerValue="Deal Link" styleClass="{!IF(contains(SelectedDealSet,left(d.Id,15)),'ui-state-active','')}">
+                            <apex:outputLink style="color:#000000;" value="/{!d.id}" id="deallink1" target="_blank">
+                                <apex:outputField value="{!d.Name}"/> 
+                            </apex:outputLink>   
+                        </apex:column>
+                        <apex:column headerValue="Brands" styleClass="{!IF(contains(SelectedDealSet,left(d.Id,15)),'ui-state-active','')}">
+                            <apex:outputLink style="color:#000000;" value="/{!d.Brands__c}" id="brandlink" target="_blank">
+                                <apex:outputtext value="{!d.Brands__r.Name}"/>    
+                            </apex:outputLink>
+                        </apex:column>
+                        <apex:column headerValue="Advertiser" styleClass="{!IF(contains(SelectedDealSet,left(d.Id,15)),'ui-state-active','')}">
+                            <apex:outputLink style="color:#000000;" value="/{!d.Advertiser_ID__c}" id="advertiserlink" target="_blank">
+                                <apex:outputtext value="{!d.Advertiser__c}"/>    
+                            </apex:outputLink>
+                        </apex:column>
+                        <apex:column headerValue="Length" styleClass="{!IF(contains(SelectedDealSet,left(d.Id,15)),'ui-state-active','')}">
+                            <apex:outputtext value="{!d.Length__c}"/>    
+                        </apex:column>
+                        <apex:column headerValue="Agency" styleClass="{!IF(contains(SelectedDealSet,left(d.Id,15)),'ui-state-active','')}">
+                            <apex:outputLink style="color:#000000;" value="/{!d.Contact__r.Account.id}" id="agencylink" target="_blank">
+                                <apex:outputField value="{!d.ContactAccount__c}"/>
+                            </apex:outputLink>
+                        </apex:column> 
+                        <apex:column headerValue="Program" styleClass="{!IF(contains(SelectedDealSet,left(d.Id,15)),'ui-state-active','')}">
+                            <apex:outputLink style="color:#000000;" value="/{!d.Program__r.id}" id="prolink" target="_blank">
+                                <apex:outputtext value="{!d.Program__r.Name}"/>
+                            </apex:outputLink>
+                        </apex:column>
+                        <apex:column headerValue="Contact" styleClass="{!IF(contains(SelectedDealSet,left(d.Id,15)),'ui-state-active','')}"> 
+                            <apex:outputLink style="color:#000000;" value="/{!d.Contact__r.id}" id="conlink" target="_blank">
+                                <apex:outputtext value="{!d.Contact__r.Name}"/> 
+                            </apex:outputLink>
+                        </apex:column>
+                        <apex:column headerValue="Campaign" styleClass="{!IF(contains(SelectedDealSet,left(d.Id,15)),'ui-state-active','')}">
+                                <apex:outputField value="{!d.Campaign__c}"/>
+                        </apex:column>
+                        <apex:column headerValue="Network Deal Number" styleClass="{!IF(contains(SelectedDealSet,left(d.Id,15)),'ui-state-active','')}">
+                            <apex:outputField value="{!d.Network_Deal_Number__c}"/>
+                        </apex:column>
+                        <apex:column headerValue="Start Week" styleClass="{!IF(contains(SelectedDealSet,left(d.Id,15)),'ui-state-active','')}">
+                            <apex:outputField value="{!d.Week_MIN_Field__c}"/>
+                        </apex:column>
+                        <apex:column headerValue="Agency Deal Number" styleClass="{!IF(contains(SelectedDealSet,left(d.Id,15)),'ui-state-active','')}">
+                            <apex:outputField value="{!d.Agency_Deal_Number__c}"/>
+                        </apex:column>
+                        <apex:column headerValue="Units" styleClass="{!IF(contains(SelectedDealSet,left(d.Id,15)),'ui-state-active','')}">
+                            <apex:outputField value="{!d.Sum_of_Units_Available__c}"/>
+                        </apex:column>   
+                        <apex:column headerValue="Dollars" styleClass="{!IF(contains(SelectedDealSet,left(d.Id,15)),'ui-state-active','')}">
+                            <apex:outputField value="{!d.Sum_of_Total_Dollars__c}"/>
+                        </apex:column>
+                    </apex:pageblocktable>
+                </apex:outputPanel>
+            </apex:outputPanel>
+        </apex:pageBlock>
+        
+         
+         
+         
+        <apex:repeat value="{!Keys}" var="varString">
+         
+            <apex:variable value="{!DealWrapperMap[varString]}" var="DW"/>
+            
+            <!--<apex:repeat value="{!DW.weeks}" var="wk">-->
+            <apex:variable value="{!DW.Week}" var="wk"/>
+         
+            
+            <!--<apex:variable value="{!DW.CurrentDealId}{!wk}{!DW.preLogVersion}" var="varString"/>-->
+             
+            <apex:outputPanel id="detailPanel" rendered="{!contains(weekEntries,varString) && contains(DW.VersionString,wk) && DW.CurrentDealId==DW.DealRecord.Id}"><!---->
+            
+
+            <table width="100%" style="padding-top:20px;">
+                <tr>
+                    <td align="left" style="float:left;font-size:20px;font-weight:bold;">
+                        {!DW.DealRecord.ContactAccount__c} - {!DW.DealRecord.Brands__r.Name} - {!DW.DealRecord.Advertiser__c} - {!DW.DealRecord.Campaign__c} - {!DW.DealRecord.Length__c}<br/>
+                        <!-- {!thisMonday} - {!thisSunday}<br/> -->
+                        {!DW.DealRecord.Program__r.Name} - {!wk} - <apex:outputLInk value="/{!DW.DealRecord.Id}" target="_blank" > {!DW.DealRecord.Name}</apex:outputLink><br/>
+                        {!DW.prelogDateTime}
+                        <!--{!MONTH(tempSchedule.Week__c)}/{!DAY(tempSchedule.Week__c)}/{!YEAR(tempSchedule.Week__c)} -->
+                        <!--  <apex:outPutPanel rendered="{!prelogVersion == '' && currentVersion!=''}"> - Prelog Version {!currentVersion}</apex:outPutPanel>
+                          <apex:outPutPanel rendered="{!prelogVersion == '' && currentVersion==''}"> - No Prelog Data</apex:outPutPanel>      
+                        <apex:outPutPanel rendered="{!prelogVersion != ''}"> - Prelog Version {!prelogVersion}</apex:outPutPanel>-->
+                        
+                        <apex:outPutPanel style="background-color:yellow" rendered="{!DW.prelogVersion == ''}"> - No Prelog Data</apex:outPutPanel>      
+                        <apex:outPutPanel rendered="{!DW.prelogVersion != ''}"> - Prelog Version {!DW.prelogversion }</apex:outPutPanel><!--{!DW.prelogVersionMap[wk]}-->
+                        
+                    </td>
+                    <td align="right">
+                        <apex:commandLink type="image/png" action="{!RemoveDealButton}" >
+                            <apex:image value="/img/func_icons/remove12_on.gif"/>
+                            <apex:param name="RemoveDealIdCopy" value="{!varString}" assignTo="{!RemoveDealId}"/>
+                        </apex:commandLink>
+                    </td>
+                </tr>
+            </table>
+            
+            
+            <apex:variable value="{!dealMap[varString]}" var="wrapperMap"/>
+            
+            <apex:variable value="{!0}" var="mon"/>
+            <apex:variable value="{!0}" var="tues"/>
+            <apex:variable value="{!0}" var="wed"/>
+            <apex:variable value="{!0}" var="th"/>
+            <apex:variable value="{!0}" var="fri"/>
+            <apex:variable value="{!0}" var="sat"/>
+            <apex:variable value="{!0}" var="sun"/>
+            <apex:variable value="{!0}" var="total"/>
+            <apex:variable value="{!0}" var="outOfTotal"/>
+
+            <apex:variable value="{!0}" var="monUnit"/>
+            <apex:variable value="{!0}" var="tuesUnit"/>
+            <apex:variable value="{!0}" var="wedUnit"/>
+            <apex:variable value="{!0}" var="thUnit"/>
+            <apex:variable value="{!0}" var="friUnit"/>
+            <apex:variable value="{!0}" var="satUnit"/>
+            <apex:variable value="{!0}" var="sunUnit"/>
+            <apex:variable value="{!0}" var="totalUnit"/>
+            <apex:variable value="{!0}" var="outOfTotalUnit"/>
+            
+            <apex:variable value="{!0}" var="monBooked"/>
+            <apex:variable value="{!0}" var="tuesBooked"/>
+            <apex:variable value="{!0}" var="wedBooked"/>
+            <apex:variable value="{!0}" var="thBooked"/>
+            <apex:variable value="{!0}" var="friBooked"/>
+            <apex:variable value="{!0}" var="satBooked"/>
+            <apex:variable value="{!0}" var="sunBooked"/>
+            <apex:variable value="{!0}" var="totalBooked"/>
+
+            <apex:variable value="{!0}" var="monUnitTotal"/>
+            <apex:variable value="{!0}" var="tuesUnitTotal"/>
+            <apex:variable value="{!0}" var="wedUnitTotal"/>
+            <apex:variable value="{!0}" var="thUnitTotal"/>
+            <apex:variable value="{!0}" var="friUnitTotal"/>
+            <apex:variable value="{!0}" var="satUnitTotal"/>
+            <apex:variable value="{!0}" var="sunUnitTotal"/>
+            <apex:variable value="{!0}" var="totalUnitTotal"/>
+            
+            <div style="display:block;float:left;">
+                <table border="1" cellpadding="5" cellspacing="0" >
+                    <tr>
+                        <th>Start - End</th>
+                        <th>Rate</th>
+                        <th>Cap</th>
+                        <th></th>
+                        <th class="day">Mon</th>
+                        <th class="day">Tues</th>
+                        <th class="day">Wed</th>
+                        <th class="day">Th</th>
+                        <th class="day">Fri</th>
+                        <th class="day">Sat</th>
+                        <th class="day">Sun</th>
+                        <th></th>
+                        <th class="day">Total</th>
+                        <th>Clearance</th>
+                        <th></th>
+                        <th>Schedule</th>
+                        <th>Last Modified</th>
+                    </tr>
+                    <apex:repeat value="{!wrapperMap}" var="key">
+                        <apex:variable value="{!mon + wrapperMap[key].rateMap['1Mon']}" var="mon"/>
+                        <apex:variable value="{!tues + wrapperMap[key].rateMap['2Tues']}" var="tues"/>
+                        <apex:variable value="{!wed + wrapperMap[key].rateMap['3Wed']}" var="wed"/>
+                        <apex:variable value="{!th + wrapperMap[key].rateMap['4Th']}" var="th"/>
+                        <apex:variable value="{!fri + wrapperMap[key].rateMap['5Fri']}" var="fri"/>
+                        <apex:variable value="{!sat + wrapperMap[key].rateMap['6Sat']}" var="sat"/>
+                        <apex:variable value="{!sun + wrapperMap[key].rateMap['7Sun']}" var="sun"/>
+                        <apex:variable value="{!total + wrapperMap[key].rate}" var="total"/>
+                        <apex:variable value="{!outOfTotal + wrapperMap[key].totalDollars}" var="outOfTotal"/>
+
+                        <apex:variable value="{!monUnit + wrapperMap[key].unitClearanceMap['1Mon']}" var="monUnit"/>
+                        <apex:variable value="{!tuesUnit + wrapperMap[key].unitClearanceMap['2Tues']}" var="tuesUnit"/>
+                        <apex:variable value="{!wedUnit + wrapperMap[key].unitClearanceMap['3Wed']}" var="wedUnit"/>
+                        <apex:variable value="{!thUnit + wrapperMap[key].unitClearanceMap['4Th']}" var="thUnit"/>
+                        <apex:variable value="{!friUnit + wrapperMap[key].unitClearanceMap['5Fri']}" var="friUnit"/>
+                        <apex:variable value="{!satUnit + wrapperMap[key].unitClearanceMap['6Sat']}" var="satUnit"/>
+                        <apex:variable value="{!sunUnit + wrapperMap[key].unitClearanceMap['7Sun']}" var="sunUnit"/>
+                        <apex:variable value="{!totalUnit + wrapperMap[key].unitClearance}" var="totalUnit"/>
+                        <apex:variable value="{!outOfTotalUnit + wrapperMap[key].unitAired}" var="outOfTotalUnit"/>
+                        
+                        <apex:variable value="{!monBooked + wrapperMap[key].totalDollars}" var="monBooked"/>
+                        <apex:variable value="{!tuesBooked + wrapperMap[key].totalDollars}" var="tuesBooked"/>
+                        <apex:variable value="{!wedBooked + wrapperMap[key].totalDollars}" var="wedBooked"/>
+                        <apex:variable value="{!thBooked + wrapperMap[key].totalDollars}" var="thBooked"/>
+                        <apex:variable value="{!friBooked + wrapperMap[key].totalDollars}" var="friBooked"/>
+                        <apex:variable value="{!satBooked + wrapperMap[key].totalDollars}" var="satBooked"/>
+                        <apex:variable value="{!sunBooked + wrapperMap[key].totalDollars}" var="sunBooked"/>
+                        <apex:variable value="{!totalBooked + wrapperMap[key].totalDollars}" var="totalBooked"/>
+
+                        <apex:variable value="{!monUnitTotal + wrapperMap[key].unitAired}" var="monUnitTotal"/>
+                        <apex:variable value="{!tuesUnitTotal + wrapperMap[key].unitAired}" var="tuesUnitTotal"/>
+                        <apex:variable value="{!wedUnitTotal + wrapperMap[key].unitAired}" var="wedUnitTotal"/>
+                        <apex:variable value="{!thUnitTotal + wrapperMap[key].unitAired}" var="thUnitTotal"/>
+                        <apex:variable value="{!friUnitTotal + wrapperMap[key].unitAired}" var="friUnitTotal"/>
+                        <apex:variable value="{!satUnitTotal + wrapperMap[key].unitAired}" var="satUnitTotal"/>
+                        <apex:variable value="{!sunUnitTotal + wrapperMap[key].unitAired}" var="sunUnitTotal"/>
+                        <apex:variable value="{!totalUnitTotal + wrapperMap[key].unitAired}" var="totalUnitTotal"/>
+                        
+                        <tr>
+<!--                            <td>{!wrapperMap[key].prelogData.Schedule__r.Days_Allowed_Formula__c}</td>-->
+                            <td>
+                                {!wrapperMap[key].prelogData.Schedule__r.Start_Time__c} - {!wrapperMap[key].prelogData.Schedule__r.End_Time__c}
+                            </td>
+                            <td class="number"><apex:outputField value="{!wrapperMap[key].prelogData.Schedule__r.Rate__c}"/></td>
+                            <td class="percent"><apex:outputField value="{!wrapperMap[key].prelogData.Schedule__r.Cap__c}"/></td>
+                            <td class="number">
+                                Placed Dollars<br/>
+                                <!--Placed Dollars %<br/>-->
+                                Placed Units
+                                <!--Unit Clearance %-->
+                            </td>
+                            <td align="center" width="30px" class="number" style="{!IF(AND(wrapperMap[key].clearanceMap['1Mon'] != 0, NOT(CONTAINS(wrapperMap[key].prelogData.Schedule__r.Days_Allowed__c, 'Mon'))), 'background-color:crimson', IF(CONTAINS(wrapperMap[key].prelogData.Schedule__r.Days_Allowed__c, 'Mon'), '','background-color:lightgrey'))}">
+                                <apex:outputLink value="/{!wrapperMap[key].prelogData.Schedule__c}" rendered="{!wrapperMap[key].clearanceMap['1Mon'] != 0}">
+                                    <apex:outputText value="{0, number, $###,##0}">
+                                        <apex:param value="{!wrapperMap[key].rateMap['1Mon']}"/>
+                                    </apex:outputText><br/>
+                                    <apex:outputText value="{0, number, ###,##0}">
+                                        <apex:param value="{!wrapperMap[key].unitClearanceMap['1Mon']}"/>
+                                    </apex:outputText><br/>
+                                </apex:outputLink>
+                            </td>
+                            <td width="30px" class="number" style="{!IF(AND(wrapperMap[key].clearanceMap['2Tues'] != 0, NOT(CONTAINS(wrapperMap[key].prelogData.Schedule__r.Days_Allowed__c, 'Tue'))), 'background-color:crimson', IF(CONTAINS(wrapperMap[key].prelogData.Schedule__r.Days_Allowed__c, 'Tue'), '','background-color:lightgrey'))}">
+                                <apex:outputLink value="/{!wrapperMap[key].prelogData.Schedule__c}" rendered="{!wrapperMap[key].clearanceMap['2Tues'] != 0}">
+                                    <apex:outputText value="{0, number, $###,##0}">
+                                        <apex:param value="{!wrapperMap[key].rateMap['2Tues']}"/>
+                                    </apex:outputText><br/>
+                                    <apex:outputText value="{0, number, ###,##0}">
+                                        <apex:param value="{!wrapperMap[key].unitClearanceMap['2Tues']}"/>
+                                    </apex:outputText><br/>
+                                </apex:outputLink>
+                            </td>
+                            <td width="30px" class="number" style="{!IF(AND(wrapperMap[key].clearanceMap['3Wed'] != 0, NOT(CONTAINS(wrapperMap[key].prelogData.Schedule__r.Days_Allowed__c, 'Wed'))), 'background-color:crimson', IF(CONTAINS(wrapperMap[key].prelogData.Schedule__r.Days_Allowed__c, 'Wed'), '','background-color:lightgrey'))}">
+                                <apex:outputLink value="/{!wrapperMap[key].prelogData.Schedule__c}" rendered="{!wrapperMap[key].clearanceMap['3Wed'] != 0}">
+                                    <apex:outputText value="{0, number, $###,##0}">
+                                        <apex:param value="{!wrapperMap[key].rateMap['3Wed']}"/>
+                                    </apex:outputText><br/>
+                                    <apex:outputText value="{0, number, ###,##0}">
+                                        <apex:param value="{!wrapperMap[key].unitClearanceMap['3Wed']}"/>
+                                    </apex:outputText><br/>
+                                </apex:outputLink>
+                            </td>
+                            <td width="30px" class="number" style="{!IF(AND(wrapperMap[key].clearanceMap['4Th'] != 0, NOT(CONTAINS(wrapperMap[key].prelogData.Schedule__r.Days_Allowed__c, 'Thu'))), 'background-color:crimson', IF(CONTAINS(wrapperMap[key].prelogData.Schedule__r.Days_Allowed__c, 'Thu'), '','background-color:lightgrey'))}">
+                                <apex:outputLink value="/{!wrapperMap[key].prelogData.Schedule__c}" rendered="{!wrapperMap[key].clearanceMap['4Th'] != 0}">
+                                    <apex:outputText value="{0, number, $###,##0}">
+                                        <apex:param value="{!wrapperMap[key].rateMap['4Th']}"/>
+                                    </apex:outputText><br/>
+                                    <apex:outputText value="{0, number, ###,##0}">
+                                        <apex:param value="{!wrapperMap[key].unitClearanceMap['4Th']}"/>
+                                    </apex:outputText><br/>
+                                </apex:outputLink>
+                            </td>
+                            <td width="30px" class="number" style="{!IF(AND(wrapperMap[key].clearanceMap['5Fri'] != 0, NOT(CONTAINS(wrapperMap[key].prelogData.Schedule__r.Days_Allowed__c, 'Fri'))), 'background-color:crimson', IF(CONTAINS(wrapperMap[key].prelogData.Schedule__r.Days_Allowed__c, 'Fri'), '','background-color:lightgrey'))}">
+                                <apex:outputLink value="/{!wrapperMap[key].prelogData.Schedule__c}" rendered="{!wrapperMap[key].clearanceMap['5Fri'] != 0}">
+                                    <apex:outputText value="{0, number, $###,##0}">
+                                        <apex:param value="{!wrapperMap[key].rateMap['5Fri']}"/>
+                                    </apex:outputText><br/>
+                                    <apex:outputText value="{0, number, ###,##0}">
+                                        <apex:param value="{!wrapperMap[key].unitClearanceMap['5Fri']}"/>
+                                    </apex:outputText><br/>
+                                </apex:outputLink>
+                            </td>
+                            <td width="30px" class="number" style="{!IF(AND(wrapperMap[key].clearanceMap['6Sat'] != 0, NOT(CONTAINS(wrapperMap[key].prelogData.Schedule__r.Days_Allowed__c, 'Sat'))), 'background-color:crimson', IF(CONTAINS(wrapperMap[key].prelogData.Schedule__r.Days_Allowed__c, 'Sat'), '','background-color:lightgrey'))}">
+                                <apex:outputLink value="/{!wrapperMap[key].prelogData.Schedule__c}" rendered="{!wrapperMap[key].clearanceMap['6Sat'] != 0}">
+                                    <apex:outputText value="{0, number, $###,##0}">
+                                        <apex:param value="{!wrapperMap[key].rateMap['6Sat']}"/>
+                                    </apex:outputText><br/>
+                                    <apex:outputText value="{0, number, ###,##0}">
+                                        <apex:param value="{!wrapperMap[key].unitClearanceMap['6Sat']}"/>
+                                    </apex:outputText><br/>
+                                </apex:outputLink>
+                            </td>
+                            <td width="30px" class="number" style="{!IF(AND(wrapperMap[key].clearanceMap['7Sun'] != 0, NOT(CONTAINS(wrapperMap[key].prelogData.Schedule__r.Days_Allowed__c, 'Sun'))), 'background-color:crimson', IF(CONTAINS(wrapperMap[key].prelogData.Schedule__r.Days_Allowed__c, 'Sun'), '','background-color:lightgrey'))}">
+                                <apex:outputLink value="/{!wrapperMap[key].prelogData.Schedule__c}" rendered="{!wrapperMap[key].clearanceMap['7Sun'] != 0}">
+                                    <apex:outputText value="{0, number, $###,##0}">
+                                        <apex:param value="{!wrapperMap[key].rateMap['7Sun']}"/>
+                                    </apex:outputText><br/>
+                                    <apex:outputText value="{0, number, ###,##0}">
+                                        <apex:param value="{!wrapperMap[key].unitClearanceMap['7Sun']}"/>
+                                    </apex:outputText><br/>
+                                </apex:outputLink>
+                            </td>
+                            <td width="5px" ></td>
+                            <td class="number">
+<!--                                <apex:outputText rendered="{!wrapperMap[key].clearance != 0}">-->
+                                <apex:outputText rendered="{!NOT(ISBLANK(wrapperMap[key]))}">
+                                    <apex:outputText value="{0, number, $###,##0} / {1, number, $###,##0}">
+                                        <apex:param value="{!wrapperMap[key].rate}"/>
+                                        <apex:param value="{!wrapperMap[key].totalDollars}"/>
+                                    </apex:outputText><br/>
+                                    <apex:outputText value="{0, number, ###,##0} / {1, number, ###,##0}">
+                                        <apex:param value="{!wrapperMap[key].unitClearance}"/>
+                                        <apex:param value="{!wrapperMap[key].unitAired}"/>
+                                    </apex:outputText><br/>
+                                </apex:outputText>
+                            </td>
+                            <td width="5px" > 
+                                <apex:outputText rendered="{!NOT(ISBLANK(wrapperMap[key]))}">
+                                    <apex:outputText value="{0, number, ##0%}">
+                                        <apex:param value="{!wrapperMap[key].clearance}"/>
+                                    </apex:outputText><br/>
+                                    <apex:outputText value="{0, number, ##0%}" style="background-color:{!IF(wrapperMap[key].unitPlaced < 0.50, 'red', IF(wrapperMap[key].unitPlaced < 0.80, 'yellow', 'green'))}">
+                                        <apex:param value="{!wrapperMap[key].unitPlaced}"/>
+                                    </apex:outputText><br/>
+                                </apex:outputText>
+                            </td>
+                            <td width="5px" ></td>
+                            <td >
+                                <apex:outputLink value="/{!wrapperMap[key].prelogData.Schedule__r.Id}">
+                                    {!wrapperMap[key].prelogData.Schedule__r.Name}
+                                </apex:outputLink>
+                            </td>
+                            <td class="date"><apex:outputField value="{!wrapperMap[key].prelogData.Schedule__r.LastModifiedDate}"/></td>
+                        </tr>
+                    </apex:repeat>
+                    <tr>
+                        <td colspan="4" class="grand-total-text" style="vertical-align:middle;">
+                            Total Placed Dollars<br/>
+                            Dollar Clearance<br/>
+                            Total Placed Units<br/>
+                            Unit Clearance
+                        </td>
+                        <td class="number" style="vertical-align:middle;">
+                            <apex:outputText value="{0, number, $###,##0}">
+                                <apex:param value="{!mon}"/>
+                            </apex:outputText><br/>
+                            <apex:outputText value="{0, number, ##0%}">
+                                <apex:param value="{!IF(monBooked == 0, 0, mon / monBooked)}"/>
+                            </apex:outputText><br/>
+                            <apex:outputText value="{0, number, ###,##0}">
+                                <apex:param value="{!monUnit}"/>
+                            </apex:outputText><br/>
+                            <apex:outputText value="{0, number, ##0%}">
+                                <apex:param value="{!IF(totalUnitTotal == 0, 0, monUnit / totalUnitTotal)}"/>
+                            </apex:outputText>
+                        </td>
+                        <td class="number" style="vertical-align:middle;">
+                            <apex:outputText value="{0, number, $###,##0}">
+                                <apex:param value="{!tues}"/>
+                            </apex:outputText><br/>
+                            <apex:outputText value="{0, number, ##0%}">
+                                <apex:param value="{!IF(tuesBooked == 0, 0, tues / tuesBooked)}"/>
+                            </apex:outputText><br/>
+                            <apex:outputText value="{0, number, ###,##0}">
+                                <apex:param value="{!tuesUnit}"/>
+                            </apex:outputText><br/>
+                            <apex:outputText value="{0, number, ##0%}">
+                                <apex:param value="{!IF(totalUnitTotal == 0, 0, tuesUnit / totalUnitTotal)}"/>
+                            </apex:outputText>
+                        </td>
+                        <td class="number" style="vertical-align:middle;">
+                            <apex:outputText value="{0, number, $###,##0}">
+                                <apex:param value="{!wed}"/>
+                            </apex:outputText><br/>
+                            <apex:outputText value="{0, number, ##0%}">
+                                <apex:param value="{!IF(wedBooked == 0, 0, wed / wedBooked)}"/>
+                            </apex:outputText><br/>
+                            <apex:outputText value="{0, number, ###,##0}">
+                                <apex:param value="{!wedUnit}"/>
+                            </apex:outputText><br/>
+                            <apex:outputText value="{0, number, ##0%}">
+                                <apex:param value="{!IF(totalUnitTotal == 0, 0, wedUnit / totalUnitTotal)}"/>
+                            </apex:outputText>
+                        </td>
+                        <td class="number" style="vertical-align:middle;">
+                            <apex:outputText value="{0, number, $###,##0}">
+                                <apex:param value="{!th}"/>
+                            </apex:outputText><br/>
+                            <apex:outputText value="{0, number, ##0%}">
+                                <apex:param value="{!IF(thBooked == 0, 0, th / thBooked)}"/>
+                            </apex:outputText><br/>
+                            <apex:outputText value="{0, number, ###,##0}">
+                                <apex:param value="{!thUnit}"/>
+                            </apex:outputText><br/>
+                            <apex:outputText value="{0, number, ##0%}">
+                                <apex:param value="{!IF(totalUnitTotal == 0, 0, thUnit / totalUnitTotal)}"/>
+                            </apex:outputText>
+                        </td>
+                        <td class="number" style="vertical-align:middle;">
+                            <apex:outputText value="{0, number, $###,##0}">
+                                <apex:param value="{!fri}"/>
+                            </apex:outputText><br/>
+                            <apex:outputText value="{0, number, ##0%}">
+                                <apex:param value="{!IF(friBooked == 0, 0, fri / friBooked)}"/>
+                            </apex:outputText><br/>
+                            <apex:outputText value="{0, number, ###,##0}">
+                                <apex:param value="{!friUnit}"/>
+                            </apex:outputText><br/>
+                            <apex:outputText value="{0, number, ##0%}">
+                                <apex:param value="{!IF(totalUnitTotal == 0, 0, friUnit / totalUnitTotal)}"/>
+                            </apex:outputText>
+                        </td>
+                        <td class="number" style="vertical-align:middle;">
+                            <apex:outputText value="{0, number, $###,##0}">
+                                <apex:param value="{!sat}"/>
+                            </apex:outputText><br/>
+                            <apex:outputText value="{0, number, ##0%}">
+                                <apex:param value="{!IF(satBooked == 0, 0, sat / satBooked)}"/>
+                            </apex:outputText><br/>
+                            <apex:outputText value="{0, number, ###,##0}">
+                                <apex:param value="{!satUnit}"/>
+                            </apex:outputText><br/>
+                            <apex:outputText value="{0, number, ##0%}">
+                                <apex:param value="{!IF(totalUnitTotal == 0, 0, satUnit / totalUnitTotal)}"/>
+                            </apex:outputText>
+                        </td>
+                        <td class="number" style="vertical-align:middle;">
+                            <apex:outputText value="{0, number, $###,##0}">
+                                <apex:param value="{!sun}"/>
+                            </apex:outputText><br/>
+                            <apex:outputText value="{0, number, ##0%}">
+                                <apex:param value="{!IF(sunBooked == 0, 0, sun / sunBooked)}"/>
+                            </apex:outputText><br/>
+                            <apex:outputText value="{0, number, ###,##0}">
+                                <apex:param value="{!sunUnit}"/>
+                            </apex:outputText><br/>
+                            <apex:outputText value="{0, number, ##0%}">
+                                <apex:param value="{!IF(totalUnitTotal == 0, 0, sunUnit / totalUnitTotal)}"/>
+                            </apex:outputText>
+                        </td>
+                        <td></td>
+                        <td class="number" style="vertical-align:middle;">
+                            <!-- Code modified by Sanjay on 2/15/2016 -->
+                            <apex:outputText value="{0, number, $###,##0} / {1, number, $###,##0}">
+                                <apex:param value="{!total}"/>
+                                <apex:param value="{!outOfTotal}"/>
+                            </apex:outputText><br/>
+                            <apex:outputText value="{0, number, ##0%}">
+                                <apex:param value="{!IF(totalBooked == 0, 0, total / totalBooked)}"/>
+                            </apex:outputText><br/>
+                            <!-- Code modified by Sanjay on 2/15/2016 -->
+                            <apex:outputText value="{0, number, ###,##0} / {1, number, ###,##0}">
+                               <apex:param value="{!totalUnit}"/>
+                               <apex:param value="{!outOfTotalUnit}"/>
+                            </apex:outputText><br/>
+                            <apex:outputText value="{0, number, ##0%}" style="background-color:{!IF(IF(totalUnitTotal == 0, 0, totalUnit / totalUnitTotal) < 0.50, 'red', IF(IF(totalUnitTotal == 0, 0, totalUnit / totalUnitTotal) < 0.80, 'yellow', 'green'))}">
+                                <apex:param value="{!IF(totalUnitTotal == 0, 0, totalUnit / totalUnitTotal)}"/>
+                            </apex:outputText>
+                        </td>
+                        <td colspan="4"></td>
+                    </tr>
+                    <!--
+                    <tr>
+                        <td colspan="10" class="grand-total-text" style="vertical-align:middle;">Grand Total</td>
+                        <td colspan="1" class="number">
+                            Sum of Total Dollars<br/>
+                            Sum of Rate<br/>
+                            Budget Clearance %
+                        </td>
+                        <td class="number">
+                            <apex:outputText value="{0, number, $###,##0}">
+                                <apex:param value="{!grandTotalMap[DW.DealRecord.Id]['Total Dollars']}"/>
+                            </apex:outputText><br/>
+                            <apex:outputText value="{0, number, $###,##0}">
+                                <apex:param value="{!grandTotalMap[DW.DealRecord.Id]['Total Rate']}"/>
+                            </apex:outputText><br/>
+                            <apex:outputText value="{0, number, ##0%}">
+                                <apex:param value="{!grandTotalMap[DW.DealRecord.Id]['Total Clearance']}"/>
+                            </apex:outputText>
+                        </td>
+                    </tr>
+                    -->
+                </table>
+            </div>
+            </apex:outputpanel>
+        <!--</apex:repeat>-->
+        </apex:repeat>
+    </apex:form>
+</apex:page>

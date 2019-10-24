@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>SF Credit Reference</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>SF Credit References</value>
+    </caseValues>
+    <fields>
+        <label><!-- Average Days to Pay --></label>
+        <name>Average_Days_to_Pay__c</name>
+    </fields>
+    <fields>
+        <label><!-- Comments --></label>
+        <name>Comments__c</name>
+    </fields>
+    <fields>
+        <label><!-- Contact Person --></label>
+        <name>Contact_Person__c</name>
+    </fields>
+    <fields>
+        <label><!-- Credit Amount Granted --></label>
+        <name>Credit_Amount_Granted__c</name>
+    </fields>
+    <fields>
+        <label><!-- Credit Application --></label>
+        <name>Credit_Application__c</name>
+        <relationshipLabel><!-- SF Credit References --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Credit Terms --></label>
+        <name>Credit_Terms__c</name>
+        <picklistValues>
+            <masterLabel>CIA</masterLabel>
+            <translation><!-- CIA --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Due Upon Receipt</masterLabel>
+            <translation><!-- Due Upon Receipt --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Net 10</masterLabel>
+            <translation><!-- Net 10 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Net 15</masterLabel>
+            <translation><!-- Net 15 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Net 30</masterLabel>
+            <translation><!-- Net 30 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Net 45</masterLabel>
+            <translation><!-- Net 45 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Net 60</masterLabel>
+            <translation><!-- Net 60 --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Date --></label>
+        <name>Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Email --></label>
+        <name>Email__c</name>
+    </fields>
+    <fields>
+        <label><!-- High Credit --></label>
+        <name>High_Credit__c</name>
+    </fields>
+    <fields>
+        <label><!-- Length of Business --></label>
+        <name>Length_of_Business__c</name>
+    </fields>
+    <fields>
+        <label><!-- Phone Number --></label>
+        <name>Phone_Number__c</name>
+    </fields>
+    <fields>
+        <label><!-- Reference Company Website --></label>
+        <name>Reference_Company_Website__c</name>
+    </fields>
+    <fields>
+        <label><!-- Reference Company --></label>
+        <name>Reference_Company__c</name>
+    </fields>
+    <fields>
+        <label><!-- Title --></label>
+        <name>Title__c</name>
+    </fields>
+    <layouts>
+        <layout>SF Credit Reference Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Record Detail --></label>
+            <section>Record Detail</section>
+        </sections>
+        <sections>
+            <label><!-- Reference Company Info --></label>
+            <section>Reference Company Info</section>
+        </sections>
+        <sections>
+            <label><!-- Reference Credit Info --></label>
+            <section>Reference Credit Info</section>
+        </sections>
+    </layouts>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

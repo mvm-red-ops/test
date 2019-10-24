@@ -1,0 +1,226 @@
+<apex:page controller="TennisChangesController" id="pg" sidebar="false">
+<style>
+    .totals{
+        background-color:rgb(129,130,144);         
+    }
+    .data{
+        background-color:rgb(255,255,255); 
+    }
+    input{
+        width:100px;
+    }
+</style>
+
+<apex:form id="frm">
+    <apex:sectionHeader title="TENNIS CHANGES"/>    
+    <apex:pageBlock id="pb">
+        <apex:actionFunction name="check" reRender="op" status="wait" />
+        <apex:actionFunction name="checks" action="{!checkAll}" reRender="frm" status="wait" />
+        <apex:actionfunction name="saveAll" action="{!save}" rerender="frm" status="Save" />
+        <apex:actionfunction name="cancelRecord" action="{!cancel}" rerender="frm" status="wait">
+            <apex:param name="sid" value=""/>
+        </apex:actionfunction>
+        <apex:actionfunction name="searchD" action="{!applyFilter}" rerender="frm" status="status1" />
+        <apex:actionFunction name="search" action="{!searchMonth}" reRender="frm" status="status1" />
+        <apex:actionStatus id="status1" startText="Searching..."/>   
+        <apex:actionStatus id="wait" startText="Wait..."/>   
+        <apex:actionStatus id="Save" startText="Saving..."/>         
+           
+        <Table>
+            <tr>
+                <td> 
+                    Deal Account <br/>
+
+                    <apex:inputfield value="{!con.AccountID}" id="ac" onchange="searchCon(con.AccountId); return false;"/> 
+                </td>
+                <td> From <br/>
+                    <apex:inputField value="{!sDate.Week__c}"/>
+                </td>
+                <td> To <br/>
+                    <apex:inputField value="{!eDate.Week__c}"/>
+                </td>                
+                <td colspan="2" align="left" width = "70%"> <apex:commandButton onClick="searchD(); return false;" value="Search"/> </td>
+                <td width="10%"><b>Grand Total</b></td>                
+                <td>&nbsp;</td>
+                <td align ="right" width = "10%"><b>
+                    <apex:outputText value="{0, number, 0,000}" rendered="{!sumGrandTotal > 999}">
+                        $<apex:param value="{!Round(sumGrandTotal,0)}"/>
+                    </apex:outputText>
+                    <apex:outputText rendered="{!sumGrandTotal <= 999}">
+                        ${!Round(sumGrandTotal,0)}
+                    </apex:outputText>
+                </b></td>
+                <!--<td>Total Record</td>-->
+            </tr>  
+            <tr>
+                <td>&nbsp;</td>
+                <td><apex:commandButton value="Previous Week" action="{!oneWeekBack}" reRender="frm" status="status1" /></td>
+                <td><apex:commandButton value="Next Week" action="{!oneWeekLater}" reRender="frm" status="status1"/></td>
+                
+                <td colspan = "2">&nbsp;</td>                
+                <td width="10%"><b>Total Records</b></td>
+                <!--<td align ="center"><b>{!sumGrandTotal}</b></td>-->
+                <td>&nbsp;</td>
+                <td align ="right"><b>{!totalCount}</b></td>
+            </tr>
+            
+        </Table>
+    </apex:pageBlock>
+    <apex:pageMessages />
+    
+    <apex:outputPanel rendered="{!hasRecords}" id="op"> 
+        <center> <apex:commandButton value="Save" onclick="saveAll(); return false;"/> 
+        </center>
+        <table id="tbl" border="1px" BORDERCOLOR="LightGray" cellpadding="5" cellspacing="0"  style=" border-collapse:collapse; border-style:solid; border-width:1px;" >
+        
+        <tr>
+            <td style="width:100px" colspan="3">&nbsp;</td>
+            
+
+            <apex:repeat value="{!headingModels}" var="headingModel">
+                <td colspan="{!headingModel.cols}" align="center"> <b>
+                    <apex:outputText >                            
+                         <apex:outputText value="{0,date,M/d/yyyy}">
+                            <apex:param value="{!headingModel.startOfWeek}" />
+                         </apex:outputText>
+                    </apex:outputText> </b>
+                </td>
+            </apex:repeat>
+            <td rowspan="2" align="right" style="background-color:rgb(129,130,144);color:white;" > 
+                <b>Grand Total </b>
+            </td>
+        </tr>
+        <tr>
+            <td style="width:20px"> 
+
+               <apex:inputCheckbox value="{!checks}" onclick="checks();" id="allchk"/>
+            </td>
+            <td align="left"> <b> LF DAYPART </b></td>
+            <td><b>Long Form </b></td> 
+
+            <apex:repeat value="{!lstDayOfWeek}" var="dow">
+                <td><b> {!dow} </b></td>
+            </apex:repeat>
+        </tr>
+        
+        <apex:repeat value="{!fbModel}" var="fb">
+            <tr align="right">
+                <td width="5%"> 
+                     <apex:inputCheckbox value="{!fb.chkBox}" onClick="check();" />
+                </td>
+                <td align="center"> <b> {!fb.lfDayPart} </b> </td>
+                <td>
+                    <b>&nbsp; &nbsp;{!fb.key} </b>
+                </td>
+                    <apex:repeat value="{!fb.fbEntryModels }" var="fbe">   
+                        <td width="11%" class="data" valign="bottom" align="center">
+                            <table width="100%" border="0">
+                                <tr>
+                                    <td align="center">
+                                        <apex:outputText rendered="{!fbe.schedule.DealAccount__c == null}"> {!if(fbe.schedule.DealAccount__c == null, '-', fbe.schedule.DealAccount__c)}</apex:outputtext>
+                                        <a href="/{!fbe.schedule.id}" target="_blank"><apex:outputText rendered="{!NOT(fbe.schedule.DealAccount__c == null)}"> {!if(fbe.schedule.DealAccount__c == null, '-', fbe.schedule.DealAccount__c)}</apex:outputtext></a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="background-color:{!IF(fbe.rCount > 1,'orange',fbe.color)}" align="center" valign="bottom" width="10%">
+                                            <apex:outputText rendered="{!fbe.isSubTotal}">
+                                                <B>
+                                                    <apex:outputText rendered="{!fbe.schedule.Rate__c > 999}" value = "{0, number, 0,000}">
+                                                        $<apex:param value="{!Round(fbe.schedule.Rate__c, 0)}"/>
+                                                    </apex:outputText>
+                                                    <apex:outputText rendered="{!fbe.schedule.Rate__c <= 999}">
+                                                        ${!Round(fbe.schedule.Rate__c, 0)}
+                                                    </apex:outputText>
+                                                </B>
+                                            </apex:outputText>
+                                            <apex:outputText rendered="{!Not(fbe.isSubTotal)}">
+                                                <apex:outputText rendered="{!NOT(fb.chkbox && fbe.showEditable)}"/>
+                                                    <apex:outputText rendered="{!fbe.schedule.Rate__c > 999}" value = "{0, number, 0,000}">
+                                                        $<apex:param value="{!Round(fbe.schedule.Rate__c,0)}"/>
+                                                    </apex:outputText>
+                                                    <apex:outputText rendered="{!fbe.schedule.Rate__c <= 999}">
+                                                        ${!Round(fbe.schedule.Rate__c, 0)}
+                                                    </apex:outputText>
+                                                <br/>
+                                                <apex:inputtext value="{!fbe.schedule.Rate__c}" rendered="{!fb.chkbox && fbe.showEditable}" />
+                                                <br/><apex:outputText rendered="{!fbe.showEditable}">Total Records:</apex:outputText>
+                                                <apex:outputText >{!fbe.rCount}</apex:outputText>
+                                                <a href="/apex/TennisSchedule?id={!fbe.schedule.id}&lf={!fbe.schedule.Long_Form__c}&wy={!fbe.wYear}&wm={!fbe.wMonth}&wd={!fbe.wDay}&sDtY={!sDtY}&sDtM={!sDtM}&sDtD={!sDtD}&eDtY={!eDtY}&eDtM={!eDtM}&eDtD={!eDtD}&fMonth={!fMonth}&fYear={!fYear}&activeFilter={!activeFilter}">
+                                                    Replace
+                                                </a> 
+                                                &nbsp;
+                                                <apex:commandLink onClick="cancelRecord('{!fbe.schedule.id}'); return false;" rendered="{!fbe.showEditable}" >Cancel </apex:commandLink>
+
+                                            </apex:outputText>
+                                    </td>
+                                </tr>
+                            </table>
+                               
+                            
+                        </td>
+                        
+                    </apex:repeat>
+                    <td align="right" style="background-color:rgb(129,130,144); color:white;" width = "10%">
+                         <br/><b>
+                             <apex:outputText rendered="{!fb.grandTotal.sumOfRate <= 999}">
+                                 ${!Round(fb.grandTotal.sumOfRate,0)}
+                             </apex:outputText>
+                             <apex:outputText rendered="{!fb.grandTotal.sumOfRate > 999}" value = "{0, number, 0,000}">
+                                 $<apex:param value="{!Round(fb.grandTotal.sumOfRate,0)}"/>
+                             </apex:outputText>
+                         </b>
+                    </td>
+                </tr>
+        </apex:repeat>
+                <tr>
+                    <td colspan="3" style="background-color:rgb(129,130,144); color:white;"> <b> Grand Total </b> </td>
+                    <apex:repeat value="{!totals}" var="tot">
+                        <td style="background-color:rgb(129,130,144); color:white;">
+                            <apex:outputText rendered="{!tot.isSubTotal}">
+                                <b>
+                                <apex:outputText value="{0, number, 0,000}" rendered="{!tot.sumOfRate > 999}">
+                                    {!tot.recordCount}<br/> 
+                                    $<apex:param value="{!Round(tot.sumOfRate,0)}"/> 
+                                </apex:outputText>
+                                <apex:outputText rendered="{!tot.sumOfRate <= 999}">
+                                    {!tot.recordCount}<br/>
+                                    ${!Round(tot.sumOfRate,0)}  
+                                </apex:outputText>
+                                </b>
+                            </apex:outputText>
+                            <apex:outputText rendered="{!Not(tot.isSubTotal)}">
+                                <apex:outputText value="{0, number, 0,000}" rendered="{!tot.sumOfRate > 999}">
+                                    {!tot.recordCount}<br/>    
+                                    $<apex:param value="{!Round(tot.sumOfRate,0)}"/>  
+                                </apex:outputText>
+                                <apex:outputText rendered="{!tot.sumOfRate <= 999}">
+                                    {!tot.recordCount}<br/> 
+                                    ${!Round(tot.sumOfRate,0)} 
+                                </apex:outputText>
+                            </apex:outputText>
+                        </td>
+                    </apex:repeat>
+                </tr>
+        </table>
+        <center> <apex:commandButton value="Save" onclick="saveAll(); return false;"/> </center>
+    </apex:outputPanel> 
+    
+    </apex:form>  
+    
+<script>
+/*        function selectAll(flag){
+        alert(flag);
+            var allchks = document.getElementById("pg:frm:op").getElementsByTagName('input');
+            for(var i = 0; i < allchks.length;i++){
+                if(allchks[i].id != 'allchk')
+                    allchks[i].checked = flag;
+            }
+            if(flag==true)
+                checks();
+            //else 
+                //unchecks();
+        }*/
+        
+    </script>
+
+</apex:page>

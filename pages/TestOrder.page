@@ -1,0 +1,9 @@
+<apex:page controller="OrderLineNumberAssignment">
+<apex:form >
+
+    <apex:messages />
+
+    <apex:commandButton action="{!AssignOLNumber}" value="Save"/>
+    
+</apex:form>
+</apex:page>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Nielsen Brand</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Nielsen Brands</value>
+    </caseValues>
+    <fields>
+        <label><!-- Brands --></label>
+        <name>Brands__c</name>
+        <relationshipLabel><!-- Nielsen Brands --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Nielsen Brand Parent Company --></label>
+        <name>Nielsen_Brand_Parent_Company__c</name>
+    </fields>
+    <fields>
+        <label><!-- Nielsen Brand --></label>
+        <name>Nielsen_Brand__c</name>
+    </fields>
+    <fields>
+        <label><!-- Nielsen Parent Company --></label>
+        <name>Nielsen_Parent_Company__c</name>
+        <relationshipLabel><!-- Nielsen Brands --></relationshipLabel>
+    </fields>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

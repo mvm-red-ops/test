@@ -1,0 +1,2655 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <allowInChatterGroups>false</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <description>Program/Distributor</description>
+    <enableActivities>true</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableEnhancedLookup>true</enableEnhancedLookup>
+    <enableFeeds>true</enableFeeds>
+    <enableHistory>true</enableHistory>
+    <enableLicensing>false</enableLicensing>
+    <enableReports>true</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <externalSharingModel>ReadWrite</externalSharingModel>
+    <fields>
+        <fullName>Account_Exec_1__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Account Exec 1</label>
+        <referenceTo>User</referenceTo>
+        <relationshipName>Programs</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Account_Exec_2__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Account Exec 2</label>
+        <referenceTo>User</referenceTo>
+        <relationshipName>Programs1</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Assistant__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Assistant</label>
+        <referenceTo>User</referenceTo>
+        <relationshipName>Programs3</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Barter__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Barter</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Bundle_Checklist_Count__c</fullName>
+        <description>Checklist for Bundles. Clears all checkboxes after a new version is uploaded. 
+Used by Operations to check for errors in bundle uploads and correct asap.
+https://na8.salesforce.com/01QC0000000IxIW</description>
+        <externalId>false</externalId>
+        <formula>if( Bundle_Clearance_by_Length__c =True, 0,1)+if( Bundle_Missing_Orders__c =True,0,1)+if( Bundle_Missing_Stations__c =True, 0,1)+if( Bundle_Spots_without_Stations__c =True, 0,1)+if( Bundle_Over_Clearing_Station_Orders__c =True, 0,1)+if( Bundle_Low_Clearance_Levels__c =True, 0,1)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>Formula field that calculates whether all bundle upload checks have been completed.</inlineHelpText>
+        <label>Bundle Checklist Count</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Bundle_Clearance_by_Length__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Checklist for Bundles. Clears all checkboxes after a new version is uploaded. 
+Used by Operations to check for errors in bundle uploads and correct asap.
+https://na8.salesforce.com/01QC0000000IxIW</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Checks for any large discrepancies between clearances for different lengths.
+Checklist for Bundles. Clears all checkboxes after a new version is uploaded.</inlineHelpText>
+        <label>[Dep]Bundle Clearance by Length</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Bundle_Low_Clearance_Levels__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Checklist for Bundles. Clears all checkboxes after a new version is uploaded. 
+Used by Operations to check for errors in bundle uploads and correct asap. 
+https://na8.salesforce.com/01QC0000000IxIW</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Reminder to check for overall low clearance or declines in bundle clearance
+Used by Operations to check for errors in bundle uploads and correct asap.</inlineHelpText>
+        <label>[Dep]Bundle Low Clearance Levels</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Bundle_Missing_Orders__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Checklist for Bundles. Clears all checkboxes after a new version is uploaded. 
+Used by Operations to check for errors in bundle uploads and correct asap.
+https://na8.salesforce.com/01QC0000000IxIW</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Reminder to check for missing orders (orders with 0% clearance by station or overall)
+Checklist for Bundles. Clears all checkboxes after a new version is uploaded.</inlineHelpText>
+        <label>[Dep]Bundle Missing Orders</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Bundle_Missing_Stations__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Checklist for Bundles. Clears all checkboxes after a new version is uploaded. 
+Used by Operations to check for errors in bundle uploads and correct asap.
+https://na8.salesforce.com/01QC0000000IxIW</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Reminder to check for stations with 0% clearance that may no longer participate in the bundle
+Checklist for Bundles. Clears all checkboxes after a new version is uploaded.</inlineHelpText>
+        <label>[Dep]Bundle Missing Stations</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Bundle_Name__c</fullName>
+        <externalId>false</externalId>
+        <label>Bundle Name</label>
+        <length>255</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Bundle_Over_Clearing_Station_Orders__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Checklist for Bundles. Clears all checkboxes after a new version is uploaded. 
+Used by Operations to check for errors in bundle uploads and correct asap. 
+https://na8.salesforce.com/01QC0000000IxIW</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Reminder to check for Stations that may have overrun orders
+Used by Operations to check for errors in bundle uploads and correct asap.</inlineHelpText>
+        <label>[DeBundle Over Clearing Station / Orders</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Bundle_Rate__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Rollup of Active Bundle Daypart Pricing Records</inlineHelpText>
+        <label>Bundle Rate</label>
+        <summarizedField>Bundle_Pricing__c.Total__c</summarizedField>
+        <summaryFilterItems>
+            <field>Bundle_Pricing__c.Active__c</field>
+            <operation>equals</operation>
+            <value>True</value>
+        </summaryFilterItems>
+        <summaryForeignKey>Bundle_Pricing__c.Program__c</summaryForeignKey>
+        <summaryOperation>sum</summaryOperation>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Summary</type>
+    </fields>
+    <fields>
+        <fullName>Bundle_Spots_without_Stations__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Checklist for Bundles. Clears all checkboxes after a new version is uploaded. 
+Used by Operations to check for errors in bundle uploads and correct asap. 
+https://na8.salesforce.com/01QC0000000IxIW</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Reminder to check to see if any spots were uploaded that did not match to stations
+Used by Operations to check for errors in bundle uploads and correct asap.</inlineHelpText>
+        <label>[Dep]Bundle Spots without Stations</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Bundle_Tier_1_Rate__c</fullName>
+        <externalId>false</externalId>
+        <label>[Dep]Bundle Tier 1 Rate</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Bundle_Tier_1__c</fullName>
+        <externalId>false</externalId>
+        <label>Bundle Tier 1</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Bundle_Tier_2_Rate__c</fullName>
+        <externalId>false</externalId>
+        <label>[Dep]Bundle Tier 2 Rate</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Bundle_Tier_2__c</fullName>
+        <externalId>false</externalId>
+        <label>Bundle Tier 2</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Bundle_Tier_3__c</fullName>
+        <externalId>false</externalId>
+        <label>[Dep]Bundle Tier 3</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Bundle__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>[Dep]Bundle</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Cable_Synd__c</fullName>
+        <externalId>false</externalId>
+        <label>Cable/Synd/PP</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Cable</fullName>
+                    <default>false</default>
+                    <label>Cable</label>
+                </value>
+                <value>
+                    <fullName>Syndication</fullName>
+                    <default>false</default>
+                    <label>Syndication</label>
+                </value>
+                <value>
+                    <fullName>PP</fullName>
+                    <default>false</default>
+                    <label>PP</label>
+                </value>
+                <value>
+                    <fullName>Bundle</fullName>
+                    <default>false</default>
+                    <label>Bundle</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Capping_Revisions__c</fullName>
+        <externalId>false</externalId>
+        <label>Capping Revisions</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Inactive</fullName>
+                    <default>true</default>
+                    <label>Inactive</label>
+                </value>
+                <value>
+                    <fullName>Planner In Progress</fullName>
+                    <default>false</default>
+                    <label>Planner In Progress</label>
+                </value>
+                <value>
+                    <fullName>SF In Progress</fullName>
+                    <default>false</default>
+                    <label>SF In Progress</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>ClientCode__c</fullName>
+        <description>Assigned by Finance</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Assigned by Finance</inlineHelpText>
+        <label>ClientCode</label>
+        <length>3</length>
+        <required>true</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Client__c</fullName>
+        <externalId>false</externalId>
+        <label>Client</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>MGM</fullName>
+                    <default>false</default>
+                    <label>MGM</label>
+                </value>
+                <value>
+                    <fullName>NFL</fullName>
+                    <default>false</default>
+                    <label>NFL</label>
+                </value>
+                <value>
+                    <fullName>TVS</fullName>
+                    <default>false</default>
+                    <label>TVS</label>
+                </value>
+                <value>
+                    <fullName>WB</fullName>
+                    <default>false</default>
+                    <label>WB</label>
+                </value>
+                <value>
+                    <fullName>Somedia</fullName>
+                    <default>false</default>
+                    <label>Somedia</label>
+                </value>
+                <value>
+                    <fullName>FOX</fullName>
+                    <default>false</default>
+                    <label>FOX</label>
+                </value>
+                <value>
+                    <fullName>Gameday</fullName>
+                    <default>false</default>
+                    <label>Gameday</label>
+                </value>
+                <value>
+                    <fullName>Cookie Jar</fullName>
+                    <default>false</default>
+                    <label>Cookie Jar</label>
+                </value>
+                <value>
+                    <fullName>Amer Latino</fullName>
+                    <default>false</default>
+                    <label>Amer Latino</label>
+                </value>
+                <value>
+                    <fullName>Documentary</fullName>
+                    <default>false</default>
+                    <label>Documentary</label>
+                </value>
+                <value>
+                    <fullName>LAMC</fullName>
+                    <default>false</default>
+                    <label>LAMC</label>
+                </value>
+                <value>
+                    <fullName>Mustard</fullName>
+                    <default>false</default>
+                    <label>Mustard</label>
+                </value>
+                <value>
+                    <fullName>Tribune</fullName>
+                    <default>false</default>
+                    <label>Tribune</label>
+                </value>
+                <value>
+                    <fullName>CBS</fullName>
+                    <default>false</default>
+                    <label>CBS</label>
+                </value>
+                <value>
+                    <fullName>Broadway Channel</fullName>
+                    <default>false</default>
+                    <label>Broadway Channel</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Clock_Start_Time__c</fullName>
+        <externalId>false</externalId>
+        <label>Clock Start Time</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>5AM</fullName>
+                    <default>false</default>
+                    <label>5AM</label>
+                </value>
+                <value>
+                    <fullName>6AM</fullName>
+                    <default>false</default>
+                    <label>6AM</label>
+                </value>
+                <value>
+                    <fullName>4AM</fullName>
+                    <default>false</default>
+                    <label>4AM</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Competitive_Set__c</fullName>
+        <externalId>false</externalId>
+        <label>[Dep]Competitive Set</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>MultiselectPicklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>African American</fullName>
+                    <default>false</default>
+                    <label>African American</label>
+                </value>
+                <value>
+                    <fullName>Sports</fullName>
+                    <default>false</default>
+                    <label>Sports</label>
+                </value>
+                <value>
+                    <fullName>Men</fullName>
+                    <default>false</default>
+                    <label>Men</label>
+                </value>
+                <value>
+                    <fullName>Classic TV</fullName>
+                    <default>false</default>
+                    <label>Classic TV</label>
+                </value>
+                <value>
+                    <fullName>Women</fullName>
+                    <default>false</default>
+                    <label>Women</label>
+                </value>
+                <value>
+                    <fullName>Game Show</fullName>
+                    <default>false</default>
+                    <label>Game Show</label>
+                </value>
+                <value>
+                    <fullName>Upscale</fullName>
+                    <default>false</default>
+                    <label>Upscale</label>
+                </value>
+                <value>
+                    <fullName>Broadcast</fullName>
+                    <default>false</default>
+                    <label>Broadcast</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+        <visibleLines>7</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Competitive__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>[Dep]Competitive</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Conga_Log_Template__c</fullName>
+        <externalId>false</externalId>
+        <formula>if( Template__c = 0, &quot;a0B80000005ACRB&quot;, 
+
+if( Template__c  =1, &quot;a0B80000005AbZ8&quot;,
+
+if( Template__c  =2, &quot;a0B80000005AbZ9&quot;, 
+
+if( Template__c  =3, &quot;a0BC000000CBRxt&quot;, 
+
+if( Template__c  =4, &quot;a0BC000000CBRyW&quot;, 
+
+if( Template__c  =5, &quot;a0BC000000CBRyb&quot;, 
+
+if( Template__c  =6, &quot;a0BC000000Qsbd8&quot;,
+
+if( Template__c  =7, &quot;a0BC000000Jct8K&quot;,
+
+if( Template__c  =8, &quot;a0BC000000JcOlr&quot;,
+
+if( Template__c  =9, &quot;a0BC000000JcFmm&quot;,
+
+if( Template__c  =10, &quot;a0BC000000HJRhN&quot;,
+
+if(Template__c  =11, &quot;a0BC000000dCVd0&quot;,
+
+if(Template__c  =12, &quot;a0BC000000dCVdF&quot;,
+
+if(Template__c  =13, &quot;a0BC000000dCVdP&quot;,
+
+if(Template__c  =14, &quot;a0BC000000dz6Wz&quot;,
+
+if(Template__c = 15, &quot;a0BC000000dzSY2&quot;,
+
+if(Template__c = 16, &quot;a0BC000000dzSj5&quot;,
+
+if(Template__c = 17, &quot;a0BC000000eKiGv&quot;,
+
+if(Template__c = 18, &quot;a0BC000000eKqcJ&quot;,
+
+if(Template__c = 19, &quot;a0BC000000egHk1&quot;,
+
+&quot;ERROR&quot;
+))))))))))))))))))))</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Conga Log Template</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Da_Filler__c</fullName>
+        <externalId>false</externalId>
+        <label>DA Filler</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Deal_Entity__c</fullName>
+        <description>The field will be used to update all of the existing deals with the correct entity name</description>
+        <externalId>false</externalId>
+        <label>Deal Entity</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Marathon Ventures LLC</fullName>
+                    <default>true</default>
+                    <label>Marathon Ventures LLC</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>EF_Filler__c</fullName>
+        <externalId>false</externalId>
+        <label>EF Filler</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Filler_EM__c</fullName>
+        <externalId>false</externalId>
+        <label>Filler EM</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Fixed_Inventory__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Check if inventory is fixed at a certain amount each week.  9/6/2011</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Check if inventory is fixed at a certain amount each week.</inlineHelpText>
+        <label>[Dep]Fixed Inventory</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Floor_DA__c</fullName>
+        <externalId>false</externalId>
+        <label>DA Floor</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Floor_EM__c</fullName>
+        <externalId>false</externalId>
+        <label>EM Floor</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Floor_LN__c</fullName>
+        <externalId>false</externalId>
+        <label>LN Floor</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Floor_ON__c</fullName>
+        <externalId>false</externalId>
+        <label>ON Floor</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Floor_PR__c</fullName>
+        <externalId>false</externalId>
+        <label>PR Floor</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Friday_Order_Deadline__c</fullName>
+        <externalId>false</externalId>
+        <label>Friday&apos;s Logs Close At</label>
+        <length>255</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Inactive__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Select for properties that are no longer handled by Marathon; affects some budgeting and forecast reports.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Select for properties that are no longer handled by Marathon; affects some budgeting and forecast reports.</inlineHelpText>
+        <label>Inactive</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Intg_Day__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Integration Day: Mon - 0, Tues - 1, Wed - 2, Th - 3, Fri - 4</inlineHelpText>
+        <label>Intg Day</label>
+        <precision>1</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>LF_Filler__c</fullName>
+        <externalId>false</externalId>
+        <label>LF Filler</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>LN_Filler__c</fullName>
+        <externalId>false</externalId>
+        <label>LN Filler</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Launch_Week__c</fullName>
+        <externalId>false</externalId>
+        <label>Launch Week</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Lead__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Lead</label>
+        <referenceTo>User</referenceTo>
+        <relationshipName>Programs2</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Local_Minutes_Per_Hour__c</fullName>
+        <externalId>false</externalId>
+        <label>Local Minutes Per Hour</label>
+        <precision>2</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Log_Week__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Log Week:
+0 - Current
+1 - Next Week
+2 - Two Weeks Later</inlineHelpText>
+        <label>Log Week</label>
+        <precision>1</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Logs_CC__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Enter any required CC: fields for the logs separated by commas.</inlineHelpText>
+        <label>Logs CC</label>
+        <length>200</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Logs_Contact__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <inlineHelpText>Primary contact for integration instructions at client/network</inlineHelpText>
+        <label>Logs Contact</label>
+        <referenceTo>Contact</referenceTo>
+        <relationshipLabel>Programs</relationshipLabel>
+        <relationshipName>Programs</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Monday_Order_Deadline__c</fullName>
+        <externalId>false</externalId>
+        <label>Monday&apos;s Logs Close At</label>
+        <length>255</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>National_Minutes_Per_Hour__c</fullName>
+        <externalId>false</externalId>
+        <label>National Minutes Per Hour</label>
+        <precision>2</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Network_System_Entry_Back_Up__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Network System Entry Back Up</label>
+        <referenceTo>User</referenceTo>
+        <relationshipName>Programs7</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Network_System_Entry__c</fullName>
+        <externalId>false</externalId>
+        <label>Network System Entry</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetName>Network_System_Entry</valueSetName>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Network_System__c</fullName>
+        <externalId>false</externalId>
+        <label>Network System</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetName>Network_System</valueSetName>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Number_of_Stations__c</fullName>
+        <externalId>false</externalId>
+        <label>Number of Stations</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>ON_Filler__c</fullName>
+        <externalId>false</externalId>
+        <label>ON Filler</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Original_Orders_Sent__c</fullName>
+        <externalId>false</externalId>
+        <label>Original Orders Sent</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>PP_Current_Month_End__c</fullName>
+        <description>Paid Programming Only.  End Date of Current PP Month. Used in conjunction with workflows to update PP  REV # on Schedules. The workflow checks to make sure that the Schedule.Week is within the Program PP Current Month Start/End. A separate set of workflows runs if a previous month is being sold to alert planning to manually update the REV #.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>When a new month&apos;s initial PP Log is ready to be sent to a network, update this field and PP Current Start END with the first and last day of the new month PP Log to be sent.</inlineHelpText>
+        <label>PP Current Month End</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>PP_Current_Month_Start__c</fullName>
+        <description>Start Date of Current Month.  Used in conjunction with workflows to update REV # on Schedules.  The workflow checks to make sure that the Schedule.Week is within the Program PP Current Month Start/End.  A separate set of workflows runs if a previous month is being sold to alert planning to manually update the REV #.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>When a new month&apos;s initial PP Log is ready to be sent to a network, update this field and PP Current Month END with the first and last day of the new month PP Log to be sent.</inlineHelpText>
+        <label>PP Current Month Start</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>PP_Revision_1__c</fullName>
+        <externalId>false</externalId>
+        <formula>PP_Revision__c  + 1</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>PP Revision +1</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>PP_Revision__c</fullName>
+        <description>Jake PP Change Log Teset 10.26.2011</description>
+        <externalId>false</externalId>
+        <label>PP Revision</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>PR_Filler__c</fullName>
+        <externalId>false</externalId>
+        <label>PR Filler</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Package__c</fullName>
+        <externalId>false</externalId>
+        <label>Package</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>LL3</fullName>
+                    <default>false</default>
+                    <label>LL3</label>
+                </value>
+                <value>
+                    <fullName>P1</fullName>
+                    <default>false</default>
+                    <label>P1</label>
+                </value>
+                <value>
+                    <fullName>P2</fullName>
+                    <default>false</default>
+                    <label>P2</label>
+                </value>
+                <value>
+                    <fullName>P3</fullName>
+                    <default>false</default>
+                    <label>P3</label>
+                </value>
+                <value>
+                    <fullName>E1</fullName>
+                    <default>false</default>
+                    <label>E1</label>
+                </value>
+                <value>
+                    <fullName>N12</fullName>
+                    <default>false</default>
+                    <label>N12</label>
+                </value>
+                <value>
+                    <fullName>SS9</fullName>
+                    <default>false</default>
+                    <label>SS9</label>
+                </value>
+                <value>
+                    <fullName>N11</fullName>
+                    <default>false</default>
+                    <label>N11</label>
+                </value>
+                <value>
+                    <fullName>P4</fullName>
+                    <default>false</default>
+                    <label>P4</label>
+                </value>
+                <value>
+                    <fullName>P5</fullName>
+                    <default>false</default>
+                    <label>P5</label>
+                </value>
+                <value>
+                    <fullName>P6</fullName>
+                    <default>false</default>
+                    <label>P6</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Post_Log_Backup__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Post Log Backup</label>
+        <referenceTo>User</referenceTo>
+        <relationshipName>Programs9</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Post_Log__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Post Log</label>
+        <referenceTo>User</referenceTo>
+        <relationshipName>Programs8</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Prelog_Canceled_Orders_with_Clearance__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Checklist for Prelogs.  Clears all checkboxes after a new version is uploaded.
+Used by Operations to check for errors in prelogs and catch before air.
+https://na8.salesforce.com/01QC0000000RYd8</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Checklist for Prelogs.  Clears all checkboxes after a new version is uploaded.
+Used by Operations to check for errors in prelogs and catch before air.</inlineHelpText>
+        <label>[DePrelog Canceled Orders with Clearance</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Prelog_Check_Count__c</fullName>
+        <externalId>false</externalId>
+        <formula>If(Prelog_Priority_Test_less_than_100__c = true, 0,1)+If(Prelog_Canceled_Orders_with_Clearance__c=true,0,1)+If(Prelog_ghosted_Orders_with_Clearance__c=true,0,1)+If(Prelog_Overbooked_Units__c =true,0,1)+If(Prelog_High_AUR_Low_Clearance__c =true,0,1)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Prelog Check Count</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Prelog_Date_Time__c</fullName>
+        <description>Captures date and time when the prelog version field is changed.</description>
+        <externalId>false</externalId>
+        <label>Prelog Date / Time</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>Prelog_Entry_Backup__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Prelog/Entry Backup</label>
+        <referenceTo>User</referenceTo>
+        <relationshipName>Programs6</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Prelog_High_AUR_Low_Clearance__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Checklist for Prelogs.  Clears all checkboxes after a new version is uploaded.
+Used by Operations to check for errors in prelogs and catch before air.
+https://na8.salesforce.com/01QC0000000RYd8</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Checklist for Prelogs.  Clears all checkboxes after a new version is uploaded.
+Used by Operations to check for errors in prelogs and catch before air.</inlineHelpText>
+        <label>[Dep]Prelog High AUR &amp; Low Clearance</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Prelog_Overbooked_Units__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Checklist for Prelogs.  Clears all checkboxes after a new version is uploaded.
+Used by Operations to check for errors in prelogs and catch before air.
+https://na8.salesforce.com/01QC0000000RYd8</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Checklist for Prelogs.  Clears all checkboxes after a new version is uploaded.
+Used by Operations to check for errors in prelogs and catch before air.</inlineHelpText>
+        <label>[Dep]Prelog Overbooked Units</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Prelog_Priority_Test_less_than_100__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Checklist for Prelogs.  Clears all checkboxes after a new version is uploaded.
+Used by Operations to check for errors in prelogs and catch before air.
+https://na8.salesforce.com/01QC0000000RYd8</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Checklist for Prelogs.  Clears all checkboxes after a new version is uploaded.
+Used by Operations to check for errors in prelogs and catch before air.</inlineHelpText>
+        <label>[Dep]Prelog Priority/Test less than 100%</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Prelog_Version__c</fullName>
+        <externalId>false</externalId>
+        <label>Prelog Version</label>
+        <precision>2</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Prelog__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Prelog</label>
+        <referenceTo>User</referenceTo>
+        <relationshipName>Programs5</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Prelog_ghosted_Orders_with_Clearance__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Checklist for Prelogs.  Clears all checkboxes after a new version is uploaded.
+Used by Operations to check for errors in prelogs and catch before air.
+https://na8.salesforce.com/01QC0000000RYd8</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Checklist for Prelogs.  Clears all checkboxes after a new version is uploaded.
+Used by Operations to check for errors in prelogs and catch before air.</inlineHelpText>
+        <label>[DepPrelog Ghosted Orders with Clearance</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Program_Count__c</fullName>
+        <description>Defined Field value of &quot;1&quot;. To Count number of Networks/Programs in a Data Set/SF Report</description>
+        <externalId>false</externalId>
+        <formula>1</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>Defined Field value of &quot;1&quot;. To Count number of Networks/Programs in a Data Set/SF Report</inlineHelpText>
+        <label>Program Count</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Program_Number__c</fullName>
+        <description>Unique number created per Intacct request</description>
+        <displayFormat>PRGM-{000000}</displayFormat>
+        <externalId>true</externalId>
+        <label>Program Number</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>AutoNumber</type>
+    </fields>
+    <fields>
+        <fullName>RCreconciled_Week__c</fullName>
+        <externalId>false</externalId>
+        <label>RCreconciled Week</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Ratings_Reconciled__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Ratings Checkbox to create Ratings records</description>
+        <externalId>false</externalId>
+        <label>Ratings Reconciled</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Reconciled_Week__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>The last fully reconciled week in Salesforce</inlineHelpText>
+        <label>Reconciled Week</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>SF_Entry__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>SF Entry</label>
+        <referenceTo>User</referenceTo>
+        <relationshipName>Programs4</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Saturday_Order_Deadline__c</fullName>
+        <externalId>false</externalId>
+        <label>Saturday&apos;s Logs Close At</label>
+        <length>255</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Station_Call_Letter__c</fullName>
+        <externalId>false</externalId>
+        <label>Station Call Letter</label>
+        <length>4</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Sunday_Order_Deadline__c</fullName>
+        <externalId>false</externalId>
+        <label>Sunday&apos;s Logs Close At</label>
+        <length>255</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Syndication_Filler__c</fullName>
+        <externalId>false</externalId>
+        <label>Syndication Filler</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Team__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Blue, Red, Green, Orange</inlineHelpText>
+        <label>Team</label>
+        <length>25</length>
+        <required>false</required>
+        <trackFeedHistory>true</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Template__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Determines the template for integration instructions
+
+0 - Red Team Without Traffic
+1 - Red Team With Traffic
+2 - Red Team With Traffic, Without Rates
+3 - Blue Team Without Traffic
+4 - Blue Team With Traffic
+5 - Blue Team With Traffic, Without Rates</inlineHelpText>
+        <label>Template</label>
+        <precision>2</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Thursday_Order_Deadline__c</fullName>
+        <externalId>false</externalId>
+        <label>Thursday&apos;s Logs Close At</label>
+        <length>255</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Today__c</fullName>
+        <externalId>false</externalId>
+        <formula>CASE( 
+MOD( Today() - DATE(1900, 1, 7), 7), 
+0, &quot;Sun&quot;, 
+1, &quot;Mon&quot;, 
+2, &quot;Tues&quot;, 
+3, &quot;Wed&quot;, 
+4, &quot;Th&quot;, 
+5, &quot;Fri&quot;, 
+6, &quot;Sat&quot;, &quot;Error&quot;)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Today</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Today_s_Date__c</fullName>
+        <externalId>false</externalId>
+        <formula>Now()</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Today&apos;s Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>Tuesday_Order_Deadline__c</fullName>
+        <externalId>false</externalId>
+        <label>Tuesday&apos;s Logs Close At</label>
+        <length>255</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Vendor_Account__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <description>Assigned by Finance</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Assigned by Finance</inlineHelpText>
+        <label>Vendor Account</label>
+        <referenceTo>Account</referenceTo>
+        <relationshipLabel>Programs</relationshipLabel>
+        <relationshipName>Programs</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Version_Time_Stamp__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Captures Time Stamp of when Version was changed</inlineHelpText>
+        <label>Version Time Stamp</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>WC_Filler__c</fullName>
+        <externalId>false</externalId>
+        <label>WC Filler</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>WKND_DA_Filler__c</fullName>
+        <externalId>false</externalId>
+        <label>WKND DA Filler</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>WKND_ON_Filler__c</fullName>
+        <externalId>false</externalId>
+        <label>WKND ON Filler</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Wednesday_Order_Deadline__c</fullName>
+        <externalId>false</externalId>
+        <label>Wednesday&apos;s Logs Close At</label>
+        <length>255</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Week_Pending__c</fullName>
+        <externalId>false</externalId>
+        <formula>CASE(
+MOD( TODAY ()- DATE(1900, 1, 7), 7),
+0, Today ()- 6,
+1, Today (),
+2, Today ()- 1,
+3, Today ()- 2,
+4, Today ()- 3,
+5, Today ()- 4,
+6, Today ()- 5, date(2001,1,1))
++ (Log_Week__c * 7)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Week Pending</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <label>Program</label>
+    <listViews>
+        <fullName>All</fullName>
+        <columns>NAME</columns>
+        <columns>CREATED_DATE</columns>
+        <columns>Team__c</columns>
+        <columns>Cable_Synd__c</columns>
+        <columns>Clock_Start_Time__c</columns>
+        <columns>Logs_CC__c</columns>
+        <columns>Logs_Contact__c</columns>
+        <columns>Reconciled_Week__c</columns>
+        <columns>Deal_Entity__c</columns>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+    </listViews>
+    <listViews>
+        <fullName>All_With_Client_Code</fullName>
+        <columns>NAME</columns>
+        <columns>ClientCode__c</columns>
+        <columns>CREATED_DATE</columns>
+        <columns>Team__c</columns>
+        <columns>Cable_Synd__c</columns>
+        <columns>Clock_Start_Time__c</columns>
+        <columns>Logs_CC__c</columns>
+        <columns>Logs_Contact__c</columns>
+        <columns>Reconciled_Week__c</columns>
+        <columns>Deal_Entity__c</columns>
+        <filterScope>Everything</filterScope>
+        <label>All With Client Code</label>
+    </listViews>
+    <listViews>
+        <fullName>Cable_Networks</fullName>
+        <columns>NAME</columns>
+        <columns>Team__c</columns>
+        <columns>Cable_Synd__c</columns>
+        <columns>Clock_Start_Time__c</columns>
+        <columns>Launch_Week__c</columns>
+        <columns>CREATED_DATE</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Cable_Synd__c</field>
+            <operation>contains</operation>
+            <value>Synd</value>
+        </filters>
+        <label>Cable Networks</label>
+    </listViews>
+    <listViews>
+        <fullName>Competitive_Set_Networks</fullName>
+        <columns>NAME</columns>
+        <columns>Competitive_Set__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Competitive__c</field>
+            <operation>equals</operation>
+            <value>1</value>
+        </filters>
+        <label>Competitive Set Networks</label>
+    </listViews>
+    <listViews>
+        <fullName>Log_Weeks</fullName>
+        <columns>NAME</columns>
+        <columns>Week_Pending__c</columns>
+        <columns>Log_Week__c</columns>
+        <columns>Intg_Day__c</columns>
+        <columns>Cable_Synd__c</columns>
+        <columns>Fixed_Inventory__c</columns>
+        <columns>Inactive__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Barter__c</field>
+            <operation>notEqual</operation>
+            <value>1</value>
+        </filters>
+        <filters>
+            <field>Inactive__c</field>
+            <operation>equals</operation>
+            <value>0</value>
+        </filters>
+        <filters>
+            <field>Cable_Synd__c</field>
+            <operation>notEqual</operation>
+            <value>Cable,PP</value>
+        </filters>
+        <label>Log Weeks</label>
+    </listViews>
+    <listViews>
+        <fullName>MVMS_OrganizationalChart</fullName>
+        <columns>Team__c</columns>
+        <columns>NAME</columns>
+        <columns>Account_Exec_1__c</columns>
+        <columns>Account_Exec_2__c</columns>
+        <columns>Lead__c</columns>
+        <columns>Assistant__c</columns>
+        <columns>SF_Entry__c</columns>
+        <columns>Prelog__c</columns>
+        <columns>Prelog_Entry_Backup__c</columns>
+        <columns>Network_System_Entry_Back_Up__c</columns>
+        <columns>Network_System__c</columns>
+        <columns>Post_Log__c</columns>
+        <columns>Post_Log_Backup__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Inactive__c</field>
+            <operation>equals</operation>
+            <value>0</value>
+        </filters>
+        <filters>
+            <field>Account_Exec_1__c</field>
+            <operation>notEqual</operation>
+        </filters>
+        <filters>
+            <field>Lead__c</field>
+            <operation>notEqual</operation>
+        </filters>
+        <label>MVMS OrganizationalChart</label>
+        <sharedTo>
+            <group>Management</group>
+            <group>Ops_leads</group>
+            <group>Pricing_Systems</group>
+            <group>System_Admins</group>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>Paid_Programming_Revision_Prep</fullName>
+        <columns>NAME</columns>
+        <columns>PP_Current_Month_Start__c</columns>
+        <columns>PP_Current_Month_End__c</columns>
+        <columns>PP_Revision__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Cable_Synd__c</field>
+            <operation>equals</operation>
+            <value>PP</value>
+        </filters>
+        <filters>
+            <field>Inactive__c</field>
+            <operation>equals</operation>
+            <value>0</value>
+        </filters>
+        <label>Paid Programming - Revision Prep</label>
+    </listViews>
+    <listViews>
+        <fullName>Ratings_Compiled_Boxes</fullName>
+        <columns>NAME</columns>
+        <columns>Reconciled_Week__c</columns>
+        <columns>RCreconciled_Week__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Team__c</field>
+            <operation>contains</operation>
+            <value>Fire</value>
+        </filters>
+        <filters>
+            <field>NAME</field>
+            <operation>notContain</operation>
+            <value>trumpet awards,extra,hearst,plus</value>
+        </filters>
+        <filters>
+            <field>Inactive__c</field>
+            <operation>equals</operation>
+            <value>0</value>
+        </filters>
+        <label>Ratings Compiled Boxes</label>
+    </listViews>
+    <listViews>
+        <fullName>Syndication</fullName>
+        <columns>NAME</columns>
+        <columns>CREATED_DATE</columns>
+        <columns>Team__c</columns>
+        <columns>Cable_Synd__c</columns>
+        <columns>Clock_Start_Time__c</columns>
+        <columns>Logs_CC__c</columns>
+        <columns>Logs_Contact__c</columns>
+        <columns>Reconciled_Week__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Cable_Synd__c</field>
+            <operation>equals</operation>
+            <value>Syndication</value>
+        </filters>
+        <label>Syndication</label>
+    </listViews>
+    <listViews>
+        <fullName>Teams</fullName>
+        <columns>Team__c</columns>
+        <columns>NAME</columns>
+        <columns>Conga_Log_Template__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Team__c</field>
+            <operation>contains</operation>
+            <value>Blue</value>
+        </filters>
+        <label>Teams</label>
+    </listViews>
+    <listViews>
+        <fullName>Unwired_Networks</fullName>
+        <columns>NAME</columns>
+        <columns>CREATED_DATE</columns>
+        <columns>Team__c</columns>
+        <columns>Cable_Synd__c</columns>
+        <columns>Clock_Start_Time__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>NAME</field>
+            <operation>contains</operation>
+            <value>Raycom Bounce,Retro,Tribune</value>
+        </filters>
+        <label>Unwired Networks</label>
+    </listViews>
+    <nameField>
+        <label>Program</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <type>Text</type>
+    </nameField>
+    <pluralLabel>Programs</pluralLabel>
+    <searchLayouts>
+        <customTabListAdditionalFields>Client__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Barter__c</customTabListAdditionalFields>
+        <searchResultsAdditionalFields>Team__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Reconciled_Week__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Cable_Synd__c</searchResultsAdditionalFields>
+    </searchLayouts>
+    <sharingModel>ReadWrite</sharingModel>
+    <validationRules>
+        <fullName>RC_Reconciled_Week_Cannot_Run_Past_Weeks</fullName>
+        <active>true</active>
+        <errorConditionFormula>AND(RCreconciled_Week__c   &gt;   Reconciled_Week__c, ISCHANGED(RCreconciled_Week__c))</errorConditionFormula>
+        <errorMessage>Cannot run Ratings trigger for weeks before Reconcile.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>RC_Week</fullName>
+        <active>true</active>
+        <errorConditionFormula>NOT(WEEKDAY(RCreconciled_Week__c) = 2)</errorConditionFormula>
+        <errorMessage>RCreconciled_week has to be set to a Monday</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Reconciled_Future_Weeks</fullName>
+        <active>true</active>
+        <description>Reconciled Week must be set to a previous week. Exception for Syndication</description>
+        <errorConditionFormula>if(AND(NOT(ISPICKVAL(Cable_Synd__c, &quot;Syndication&quot;)), Inactive__c &lt;&gt;True), Reconciled_Week__c &gt;= Week_Pending__c ,FALSE)</errorConditionFormula>
+        <errorMessage>Reconciled Week must be set to a past week.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Reconciled_Week_Date</fullName>
+        <active>false</active>
+        <description>Unless Inactive, Reconciled Week not equal to less than 30 days</description>
+        <errorConditionFormula>if(AND(NOT(ISPICKVAL(Cable_Synd__c, &quot;PP&quot;)), Inactive__c &lt;&gt;True),  Reconciled_Week__c  &lt; TODAY()-30,FALSE)</errorConditionFormula>
+        <errorDisplayField>Reconciled_Week__c</errorDisplayField>
+        <errorMessage>The reconciled week field must fall within the last 30 days</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Reconciled_Week_Date_PP</fullName>
+        <active>true</active>
+        <description>The reconciled week field for PP must fall within the last 45 days</description>
+        <errorConditionFormula>if(and(ISPICKVAL(Cable_Synd__c, &quot;PP&quot;),Inactive__c &lt;&gt;True), Reconciled_Week__c  &lt; TODAY()-45,FALSE)</errorConditionFormula>
+        <errorDisplayField>Reconciled_Week__c</errorDisplayField>
+        <errorMessage>For paid programming, the reconciled week field must fall within the last 45 days.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Reconciled_Week_Mondays</fullName>
+        <active>true</active>
+        <description>Reconciled Week must be set to a Monday.</description>
+        <errorConditionFormula>MOD(Reconciled_Week__c - DATE(1900, 1, 7), 7)&lt;&gt;1</errorConditionFormula>
+        <errorMessage>Reconciled Week must be set to a Monday.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Station_Call_Letter</fullName>
+        <active>true</active>
+        <description>Required for electronic invoicing</description>
+        <errorConditionFormula>AND(ISPICKVAL( Cable_Synd__c ,&quot;Cable&quot;),Station_Call_Letter__c = &quot;&quot;)</errorConditionFormula>
+        <errorMessage>Please populate the &apos;Station Call Letter&apos; field. If this is an issue, please follow up with Finance.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>User_Permissions</fullName>
+        <active>true</active>
+        <description>Chang Liu and Margaret Farris, only people allowed to edit</description>
+        <errorConditionFormula>IF(ISCHANGED(RCreconciled_Week__c), AND($User.Id &lt;&gt; &quot;005C000000A0V7I&quot;, $User.Id &lt;&gt; &quot;005C000000Ar460&quot;, $User.Id &lt;&gt; &quot;005C000000A0UdX&quot;, $User.Id &lt;&gt; &quot;005C0000009qoiw&quot;) , FALSE)</errorConditionFormula>
+        <errorDisplayField>RCreconciled_Week__c</errorDisplayField>
+        <errorMessage>Not Allowed to change the Ratings Reconciled Field, Chang Liu and Margaret Farris, only user allowed</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>ZERO_Lcl_SIXTY</fullName>
+        <active>true</active>
+        <errorConditionFormula>(0 &gt;  Local_Minutes_Per_Hour__c ) || ( Local_Minutes_Per_Hour__c  &gt; 60)</errorConditionFormula>
+        <errorMessage>Local Minutes per Hour can&apos;t be less than 0 or more than 60</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>ZERO_Natl_SIXTY</fullName>
+        <active>true</active>
+        <errorConditionFormula>(0  &gt; National_Minutes_Per_Hour__c) ||  (National_Minutes_Per_Hour__c &gt; 60)</errorConditionFormula>
+        <errorDisplayField>National_Minutes_Per_Hour__c</errorDisplayField>
+        <errorMessage>Number inserted cannot be more than 60 or less than 0</errorMessage>
+    </validationRules>
+    <visibility>Public</visibility>
+    <webLinks>
+        <fullName>BLUE_TEAM_LOGS</fullName>
+        <availability>online</availability>
+        <description>Create and send integration instructions for Blue Team</description>
+        <displayType>link</displayType>
+        <encodingKey>UTF-8</encodingKey>
+        <hasMenubar>false</hasMenubar>
+        <hasScrollbars>true</hasScrollbars>
+        <hasToolbar>false</hasToolbar>
+        <height>450</height>
+        <isResizable>true</isResizable>
+        <linkType>url</linkType>
+        <masterLabel>BLUE TEAM LOGS</masterLabel>
+        <openType>newWindow</openType>
+        <position>none</position>
+        <protected>false</protected>
+        <showsLocation>false</showsLocation>
+        <showsStatus>false</showsStatus>
+        <url>https://composer.congamerge.com
+?sessionId={!API.Session_ID}
+&amp;serverUrl={!API.Partner_Server_URL_290}
+&amp;id={!Programs__c.Id}
+&amp;TemplateId={!Programs__c.Conga_Log_Template__c}
+&amp;Reportid=00O80000003jbgE?pv0={!Programs__c.Name}~pv1={!Programs__c.Week_Pending__c},
+00O80000003jbgD?pv0={!Programs__c.Logs_ContactId__c},00O800000040pmn?pv0={!Programs__c.Name}~pv1={!Programs__c.Week_Pending__c}
+&amp;AttachmentParentId={!Programs__c.Id}
+&amp;OFN=MVMS:+{!Programs__c.Name}+-+{!Programs__c.Week_Pending__c}
+&amp;EmailTemplateid=00XC0000001WVO4
+&amp;EmailToid={!Programs__c.Logs_ContactId__c}
+&amp;EmailSubject=MVMS: Logs for +{!Programs__c.Name} +Week of +{!Programs__c.Week_Pending__c}
+&amp;EmailRelatedToId={!Programs__c.Id}
+&amp;Defaultpdf=1
+&amp;lg3=1
+&amp;lg4=1
+&amp;EmailCC={!Programs__c.Logs_CC__c}
+&amp;Emailbcc=logsfile@mvmediasales.com
+&amp;MFTS0=Reconciled_Week__c
+&amp;MFTSValue0={!SUBSTITUTE(   TEXT(Programs__c.Week_Pending__c ), &quot;/&quot;, &quot;%2F&quot;) }
+&amp;ESContactId={!Programs__c.Logs_ContactId__c}
+&amp;ESCopyTo={!Programs__c.Logs_CC__c}
+&amp;ESVisible=1
+&amp;ESAgreementName=MVMS:+Logs+for+{!Programs__c.Name}+Week+of+{!Programs__c.Week_Pending__c}
+&amp;ESPreview=1
+&amp;ESSignatureType=2
+&amp;ESMessage=Attached+please+find+logs+for+{!Programs__c.Name}+-+Week+of+{!Programs__c.Week_Pending__c}.
++
+Please+call+or email+with+questions.
++
+Thanks,
++
+Emily Isaac
+Sales Assistant 
+Marathon Ventures 
+EmilyIsaac@mvmediasales.com
+Phone: 646-448-7094
+Fax: 646-480-4482</url>
+        <width>625</width>
+    </webLinks>
+    <webLinks>
+        <fullName>BlueHighways_Traffic_Grid</fullName>
+        <availability>online</availability>
+        <displayType>link</displayType>
+        <encodingKey>UTF-8</encodingKey>
+        <hasMenubar>false</hasMenubar>
+        <hasScrollbars>true</hasScrollbars>
+        <hasToolbar>false</hasToolbar>
+        <height>700</height>
+        <isResizable>true</isResizable>
+        <linkType>url</linkType>
+        <masterLabel>BlueHighways Traffic Grid</masterLabel>
+        <openType>newWindow</openType>
+        <position>none</position>
+        <protected>false</protected>
+        <showsLocation>false</showsLocation>
+        <showsStatus>false</showsStatus>
+        <url>https://composer.congamerge.com
+?sessionId={!API.Session_ID}
+&amp;serverUrl={!API.Partner_Server_URL_290}
+&amp;id={!Programs__c.Id}
+&amp;Reportid=00OC0000006Gkxa?pv0={!Programs__c.Week_Pending__c},00OC0000004o72n
+&amp;TemplateId=a0BC000000dS111
+&amp;AttachmentParentId={!Programs__c.Id}
+&amp;EmailRelatedToId={!Programs__c.Id}
+&amp;EmailTemplateid=00XC0000002Bt3U
+&amp;EmailToid={!Programs__c.Logs_ContactId__c}
+&amp;EmailCC={!Programs__c.Logs_CC__c}
+&amp;OFN={!Programs__c.Name}+Traffic+Grid+{!Programs__c.Week_Pending__c}+(V{!Programs__c.PP_Revision__c})
+&amp;lg3=1
+&amp;lg4=1
+&amp;mfts0=PP_Revision__c
+&amp;mftsvalue0={!Programs__c.PP_Revision_1__c}</url>
+        <width>500</width>
+    </webLinks>
+    <webLinks>
+        <fullName>Create_XML_Bundle</fullName>
+        <availability>online</availability>
+        <displayType>button</displayType>
+        <linkType>javascript</linkType>
+        <masterLabel>Create XML Bundle</masterLabel>
+        <openType>onClickJavaScript</openType>
+        <protected>false</protected>
+        <url>window.location = &apos;apex/XMLBundleProgram?id={!Programs__c.Id}&apos;;</url>
+    </webLinks>
+    <webLinks>
+        <fullName>FBN_Change_Log</fullName>
+        <availability>online</availability>
+        <description>FB PP Change Log</description>
+        <displayType>link</displayType>
+        <encodingKey>UTF-8</encodingKey>
+        <hasMenubar>false</hasMenubar>
+        <hasScrollbars>true</hasScrollbars>
+        <hasToolbar>false</hasToolbar>
+        <height>450</height>
+        <isResizable>true</isResizable>
+        <linkType>url</linkType>
+        <masterLabel>FBN Change Log</masterLabel>
+        <openType>newWindow</openType>
+        <position>none</position>
+        <protected>false</protected>
+        <showsLocation>false</showsLocation>
+        <showsStatus>false</showsStatus>
+        <url>https://composer.congamerge.com
+?sessionId={!API.Session_ID}
+&amp;serverUrl={!API.Partner_Server_URL_290}
+&amp;id={!Programs__c.Id}
+&amp;Reportid=00OC0000004o6ZW?pv0={!Programs__c.Name},00OC0000004o72n?pv0={!Programs__c.Name}
+&amp;TemplateId=a0BC000000HIRUK
+&amp;AttachmentParentId={!Programs__c.Id}
+&amp;EmailRelatedToId={!Programs__c.Id}
+&amp;EmailTemplateid=00XC0000001Wnq9
+&amp;EmailToid={!Programs__c.Logs_ContactId__c}
+&amp;EmailCC={!Programs__c.Logs_CC__c}
+&amp;OFN={!Programs__c.Name}+Change+Log+(R{!Programs__c.PP_Revision_1__c})
+&amp;lg3=1
+&amp;lg4=1
+&amp;mfts0=PP_Revision__c
+&amp;mftsvalue0={!Programs__c.PP_Revision_1__c}</url>
+        <width>625</width>
+    </webLinks>
+    <webLinks>
+        <fullName>ONYX_TEAM_LOGS</fullName>
+        <availability>online</availability>
+        <displayType>link</displayType>
+        <encodingKey>UTF-8</encodingKey>
+        <hasMenubar>false</hasMenubar>
+        <hasScrollbars>true</hasScrollbars>
+        <hasToolbar>false</hasToolbar>
+        <height>600</height>
+        <isResizable>true</isResizable>
+        <linkType>url</linkType>
+        <masterLabel>ONYX TEAM LOGS</masterLabel>
+        <openType>newWindow</openType>
+        <position>none</position>
+        <protected>false</protected>
+        <showsLocation>false</showsLocation>
+        <showsStatus>false</showsStatus>
+        <url>https://composer.congamerge.com?sessionId={!API.Session_ID} 
+&amp;serverUrl={!API.Partner_Server_URL_290} 
+&amp;id={!Programs__c.Id} 
+&amp;TemplateId={!Programs__c.Conga_Log_Template__c} 
+&amp;Reportid=00O80000003jbgE?pv0={!Programs__c.Name}~pv1={!Programs__c.Week_Pending__c}, 
+00O80000003jbgD?pv0={!Programs__c.Logs_ContactId__c},00O800000040pmn?pv0={!Programs__c.Name}~pv1={!Programs__c.Week_Pending__c} 
+&amp;AttachmentParentId={!Programs__c.Id} 
+&amp;OFN=MVMS:+{!Programs__c.Name}+-+{!Programs__c.Week_Pending__c} 
+&amp;EmailTemplateid=00XC0000001wbjW
+&amp;EmailToid={!Programs__c.Logs_ContactId__c} 
+&amp;EmailSubject=MVMS: Logs for +{!Programs__c.Name} +Week of +{!Programs__c.Week_Pending__c} 
+&amp;EmailRelatedToId={!Programs__c.Id} 
+&amp;Defaultpdf=0 
+&amp;lg3=1 
+&amp;lg4=1 
+&amp;EmailCC={!Programs__c.Logs_CC__c} 
+&amp;Emailbcc=logsfile@mvmediasales.com 
+&amp;MFTS0=Reconciled_Week__c 
+&amp;MFTSValue0={!SUBSTITUTE( TEXT(Programs__c.Week_Pending__c ), &quot;/&quot;, &quot;%2F&quot;) }
++
+Feel+free+to+call+or email+with+questions.</url>
+    </webLinks>
+    <webLinks>
+        <fullName>PP_Bid_Sheet</fullName>
+        <availability>online</availability>
+        <displayType>link</displayType>
+        <encodingKey>UTF-8</encodingKey>
+        <hasMenubar>false</hasMenubar>
+        <hasScrollbars>true</hasScrollbars>
+        <hasToolbar>false</hasToolbar>
+        <height>625</height>
+        <isResizable>true</isResizable>
+        <linkType>url</linkType>
+        <masterLabel>PP Bid Sheet</masterLabel>
+        <openType>newWindow</openType>
+        <position>none</position>
+        <protected>false</protected>
+        <showsLocation>false</showsLocation>
+        <showsStatus>false</showsStatus>
+        <url>https://composer.congamerge.com
+?sessionId={!API.Session_ID}
+&amp;serverUrl={!API.Partner_Server_URL_290}
+&amp;id={!Programs__c.Id}
+&amp;TemplateId=a1pC0000002uvwz
+&amp;OFN=MVMS:+{!Programs__c.Name}+Bid+Sheet+-+{!Programs__c.Week_Pending__c} 
+&amp;Reportid=00OC0000005r24l,00OC0000005r2Rp,00OC0000005r2zD?pv0={!Programs__c.Id}</url>
+        <width>450</width>
+    </webLinks>
+    <webLinks>
+        <fullName>PP_Change_Log</fullName>
+        <availability>online</availability>
+        <displayType>link</displayType>
+        <encodingKey>UTF-8</encodingKey>
+        <hasMenubar>false</hasMenubar>
+        <hasScrollbars>true</hasScrollbars>
+        <hasToolbar>false</hasToolbar>
+        <height>500</height>
+        <isResizable>true</isResizable>
+        <linkType>url</linkType>
+        <masterLabel>PP Change Log</masterLabel>
+        <openType>newWindow</openType>
+        <position>none</position>
+        <protected>false</protected>
+        <showsLocation>false</showsLocation>
+        <showsStatus>false</showsStatus>
+        <url>https://composer.congamerge.com
+?sessionId={!API.Session_ID}
+&amp;serverUrl={!API.Partner_Server_URL_290} 
+&amp;id={!Programs__c.Id} 
+&amp;Reportid=00OC0000004o6ZW?pv0={!Programs__c.Name},00OC0000004o72n?pv0={!Programs__c.Name} 
+&amp;QueryID=[LFOrderLine]a1nC0000000TCyJ
+&amp;TemplateId=a0BC000000HIRUK
+&amp;AttachmentParentId={!Programs__c.Id}
+&amp;EmailRelatedToId={!Programs__c.Id}
+&amp;EmailTemplateid=00XC0000001Wnq9
+&amp;EmailToid={!Programs__c.Logs_ContactId__c}
+&amp;EmailAdditionalTo=
+&amp;EmailBCC=billing@mvmediasales.com 
+&amp;OFN={!Programs__c.Name}+Change+Log+(R{!Programs__c.PP_Revision_1__c}) 
+&amp;lg3=1 
+&amp;lg4=1 
+&amp;mfts0=PP_Revision__c 
+&amp;mftsvalue0={!Programs__c.PP_Revision_1__c}</url>
+        <width>700</width>
+    </webLinks>
+    <webLinks>
+        <fullName>Red_Team_Logs</fullName>
+        <availability>online</availability>
+        <displayType>link</displayType>
+        <encodingKey>UTF-8</encodingKey>
+        <hasMenubar>false</hasMenubar>
+        <hasScrollbars>true</hasScrollbars>
+        <hasToolbar>false</hasToolbar>
+        <height>450</height>
+        <isResizable>true</isResizable>
+        <linkType>url</linkType>
+        <masterLabel>FIRE TEAM LOGS</masterLabel>
+        <openType>newWindow</openType>
+        <position>none</position>
+        <protected>false</protected>
+        <showsLocation>false</showsLocation>
+        <showsStatus>false</showsStatus>
+        <url>https://composer.congamerge.com?sessionId={!API.Session_ID} 
+&amp;serverUrl={!API.Partner_Server_URL_290} 
+&amp;id={!Programs__c.Id} 
+&amp;TemplateId={!Programs__c.Conga_Log_Template__c} 
+&amp;Reportid=00O80000003jbgE?pv0={!Programs__c.Name}~pv1={!Programs__c.Week_Pending__c}, 
+00O80000003jbgD?pv0={!Programs__c.Logs_ContactId__c},00O800000040pmn?pv0={!Programs__c.Name}~pv1={!Programs__c.Week_Pending__c} 
+&amp;AttachmentParentId={!Programs__c.Id} 
+&amp;OFN=MVMS:+{!Programs__c.Name}+-+{!Programs__c.Week_Pending__c} 
+&amp;EmailTemplateid=00XC0000001kZQj 
+&amp;EmailToid={!Programs__c.Logs_ContactId__c} 
+&amp;EmailSubject=MVMS: Logs for +{!Programs__c.Name} +Week of +{!Programs__c.Week_Pending__c} 
+&amp;EmailRelatedToId={!Programs__c.Id} 
+&amp;Defaultpdf=0 
+&amp;lg3=1 
+&amp;lg4=1 
+&amp;EmailCC={!Programs__c.Logs_CC__c} 
+&amp;Emailbcc=logsfile@mvmediasales.com 
+&amp;MFTS0=Reconciled_Week__c 
+&amp;MFTSValue0={!SUBSTITUTE( TEXT(Programs__c.Week_Pending__c ), &quot;/&quot;, &quot;%2F&quot;) }.
++
+Feel+free+to+call+or email+with+questions.</url>
+        <width>625</width>
+    </webLinks>
+    <webLinks>
+        <fullName>Stadium_Order_NW</fullName>
+        <availability>online</availability>
+        <description>Used to send Stadium traffic to OSI week-by-week.</description>
+        <displayType>link</displayType>
+        <encodingKey>UTF-8</encodingKey>
+        <hasMenubar>false</hasMenubar>
+        <hasScrollbars>true</hasScrollbars>
+        <hasToolbar>false</hasToolbar>
+        <height>700</height>
+        <isResizable>true</isResizable>
+        <linkType>url</linkType>
+        <masterLabel>Stadium Order NW</masterLabel>
+        <openType>newWindow</openType>
+        <position>none</position>
+        <protected>false</protected>
+        <showsLocation>false</showsLocation>
+        <showsStatus>false</showsStatus>
+        <url>https://composer.congamerge.com
+?sessionId={!API.Session_ID}
+&amp;serverUrl={!API.Partner_Server_URL_290}
+&amp;id={!Programs__c.Id}
+&amp;Reportid=00OC0000007A9US?pv4={!Programs__c.Week_Pending__c}
+&amp;TemplateId=a0BC000000fXy7A
+&amp;AttachmentParentId={!Programs__c.Id}
+&amp;EmailRelatedToId={!Programs__c.Id}
+&amp;EmailTemplateid=00XC0000002CU76
+&amp;EmailToid={!Programs__c.Logs_ContactId__c}
+&amp;EmailCC={!Programs__c.Logs_CC__c}
+&amp;OFN=Stadium+Network+Order+For+{!Programs__c.Week_Pending__c}
+&amp;lg3=1
+&amp;lg4=1</url>
+        <width>500</width>
+    </webLinks>
+    <webLinks>
+        <fullName>Stadium_PI_Revisions</fullName>
+        <availability>online</availability>
+        <displayType>link</displayType>
+        <encodingKey>UTF-8</encodingKey>
+        <hasMenubar>false</hasMenubar>
+        <hasScrollbars>true</hasScrollbars>
+        <hasToolbar>false</hasToolbar>
+        <height>700</height>
+        <isResizable>true</isResizable>
+        <linkType>url</linkType>
+        <masterLabel>Stadium PI Revisions</masterLabel>
+        <openType>newWindow</openType>
+        <position>none</position>
+        <protected>false</protected>
+        <showsLocation>false</showsLocation>
+        <showsStatus>false</showsStatus>
+        <url>https://composer.congamerge.com
+?sessionId={!API.Session_ID}
+&amp;serverUrl={!API.Partner_Server_URL_290}
+&amp;id={!Programs__c.Id}
+&amp;Reportid=00OC0000007AFbG?pv4={!Programs__c.Week_Pending__c},00OC0000007A9UQ?pv1,00OC0000007A9UN?pv1,00OC0000007A9UP?pv1,00OC0000007A9UL?pv1,00OC0000007A9UM?pv1,00OC0000007A9UO?pv1,00OC0000007A9UK?pv1,00OC0000007A9Vq?pv3={!Programs__c.Week_Pending__c}
+&amp;TemplateId=a0BC000000fu0WM
+&amp;AttachmentParentId={!Programs__c.Id}
+&amp;EmailRelatedToId={!Programs__c.Id}
+&amp;EmailTemplateid=00XC0000002CU76
+&amp;EmailToid={!Programs__c.Logs_ContactId__c}
+&amp;EmailCC={!Programs__c.Logs_CC__c}
+&amp;OFN={!Programs__c.Name}+{!Programs__c.Week_Pending__c}
+&amp;lg3=1
+&amp;lg4=1</url>
+        <width>500</width>
+    </webLinks>
+    <webLinks>
+        <fullName>Stadium_PIs</fullName>
+        <availability>online</availability>
+        <displayType>link</displayType>
+        <encodingKey>UTF-8</encodingKey>
+        <hasMenubar>false</hasMenubar>
+        <hasScrollbars>true</hasScrollbars>
+        <hasToolbar>false</hasToolbar>
+        <height>700</height>
+        <isResizable>true</isResizable>
+        <linkType>url</linkType>
+        <masterLabel>Stadium PIs</masterLabel>
+        <openType>newWindow</openType>
+        <position>none</position>
+        <protected>false</protected>
+        <showsLocation>false</showsLocation>
+        <showsStatus>false</showsStatus>
+        <url>https://composer.congamerge.com
+?sessionId={!API.Session_ID}
+&amp;serverUrl={!API.Partner_Server_URL_290}
+&amp;id={!Programs__c.Id}
+&amp;Reportid=00OC0000007AFZt?pv5={!Programs__c.Week_Pending__c}
+&amp;TemplateId=a0BC000000fu0Vs
+&amp;AttachmentParentId={!Programs__c.Id}
+&amp;EmailRelatedToId={!Programs__c.Id}
+&amp;EmailTemplateid=00XC0000002CU76
+&amp;EmailToid={!Programs__c.Logs_ContactId__c}
+&amp;EmailCC={!Programs__c.Logs_CC__c}
+&amp;OFN=Stadium+Network+Order+For+{!Programs__c.Week_Pending__c}
+&amp;lg3=1 
+&amp;lg4=1</url>
+        <width>500</width>
+    </webLinks>
+    <webLinks>
+        <fullName>Stadium_PP_Traffic_Grid</fullName>
+        <availability>online</availability>
+        <displayType>link</displayType>
+        <encodingKey>UTF-8</encodingKey>
+        <hasMenubar>false</hasMenubar>
+        <hasScrollbars>true</hasScrollbars>
+        <hasToolbar>false</hasToolbar>
+        <height>700</height>
+        <isResizable>true</isResizable>
+        <linkType>url</linkType>
+        <masterLabel>Stadium PP Traffic Grid</masterLabel>
+        <openType>newWindow</openType>
+        <position>none</position>
+        <protected>false</protected>
+        <showsLocation>false</showsLocation>
+        <showsStatus>false</showsStatus>
+        <url>https://composer.congamerge.com
+?sessionId={!API.Session_ID}
+&amp;serverUrl={!API.Partner_Server_URL_290}
+&amp;id={!Programs__c.Id}
+&amp;Reportid=00OC0000007AARa?pv0={!Programs__c.Week_Pending__c},00OC0000004o72n
+&amp;TemplateId=a0BC000000fY7zg
+&amp;AttachmentParentId={!Programs__c.Id}
+&amp;EmailRelatedToId={!Programs__c.Id}
+&amp;EmailTemplateid=00XC0000002Bt3U
+&amp;EmailToid={!Programs__c.Logs_ContactId__c}
+&amp;EmailCC={!Programs__c.Logs_CC__c}
+&amp;OFN={!Programs__c.Name}+Traffic+Grid+{!Programs__c.Week_Pending__c}+(V{!Programs__c.PP_Revision__c})
+&amp;lg3=1
+&amp;lg4=1
+&amp;mfts0=PP_Revision__c
+&amp;mftsvalue0={!Programs__c.PP_Revision_1__c}</url>
+        <width>500</width>
+    </webLinks>
+    <webLinks>
+        <fullName>Stadium_Revisions</fullName>
+        <availability>online</availability>
+        <description>Used to send Stadium Revisions to OSI week-by-week.</description>
+        <displayType>link</displayType>
+        <encodingKey>UTF-8</encodingKey>
+        <hasMenubar>false</hasMenubar>
+        <hasScrollbars>true</hasScrollbars>
+        <hasToolbar>false</hasToolbar>
+        <height>700</height>
+        <isResizable>true</isResizable>
+        <linkType>url</linkType>
+        <masterLabel>Stadium Revisions</masterLabel>
+        <openType>newWindow</openType>
+        <position>none</position>
+        <protected>false</protected>
+        <showsLocation>false</showsLocation>
+        <showsStatus>false</showsStatus>
+        <url>https://composer.congamerge.com
+?sessionId={!API.Session_ID}
+&amp;serverUrl={!API.Partner_Server_URL_290}
+&amp;id={!Programs__c.Id}
+&amp;Reportid=00OC0000007A9UR?pv4={!Programs__c.Week_Pending__c}~pv7={!Programs__c.Original_Orders_Sent__c}~pv8={!Programs__c.Original_Orders_Sent__c},00OC0000007A9UQ?pv1,00OC0000007A9UN?pv1,00OC0000007A9UP?pv1,00OC0000007A9UL?pv1,00OC0000007A9UM?pv1,00OC0000007A9UO?pv1,00OC0000007A9UK?pv1,00OC0000007A9Vq?pv3={!Programs__c.Week_Pending__c}~pv5={!Programs__c.Original_Orders_Sent__c},00OC0000007AFZt?pv5={!Programs__c.Week_Pending__c},00OC0000007ANPd?pv4={!Programs__c.Original_Orders_Sent__c}~pv5={!Programs__c.Week_Pending__c}
+&amp;TemplateId=a0BC000000fXy6M
+&amp;AttachmentParentId={!Programs__c.Id}
+&amp;EmailRelatedToId={!Programs__c.Id}
+&amp;EmailTemplateid=00XC0000002CU76
+&amp;EmailToid={!Programs__c.Logs_ContactId__c}
+&amp;EmailCC={!Programs__c.Logs_CC__c}
+&amp;OFN={!Programs__c.Name}+{!Programs__c.Week_Pending__c}
+&amp;lg3=1
+&amp;lg4=1</url>
+        <width>500</width>
+    </webLinks>
+    <webLinks>
+        <fullName>Stadium_Syndication</fullName>
+        <availability>online</availability>
+        <displayType>link</displayType>
+        <encodingKey>UTF-8</encodingKey>
+        <hasMenubar>false</hasMenubar>
+        <hasScrollbars>true</hasScrollbars>
+        <hasToolbar>false</hasToolbar>
+        <height>700</height>
+        <isResizable>true</isResizable>
+        <linkType>url</linkType>
+        <masterLabel>Stadium Syndication</masterLabel>
+        <openType>newWindow</openType>
+        <position>none</position>
+        <protected>false</protected>
+        <showsLocation>false</showsLocation>
+        <showsStatus>false</showsStatus>
+        <url>https://composer.congamerge.com
+?sessionId={!API.Session_ID}
+&amp;serverUrl={!API.Partner_Server_URL_290}
+&amp;id={!Programs__c.Id}
+&amp;Reportid=00OC0000007AC7r?pv0={!Programs__c.Week_Pending__c}
+&amp;TemplateId=a0BC000000fvZv4
+&amp;AttachmentParentId={!Programs__c.Id}
+&amp;EmailRelatedToId={!Programs__c.Id}
+&amp;EmailTemplateid=00XC0000002CU76
+&amp;EmailToid={!Programs__c.Logs_ContactId__c}
+&amp;EmailCC={!Programs__c.Logs_CC__c}
+&amp;OFN=Stadium+Network+Order+For+{!Programs__c.Week_Pending__c}
+&amp;lg3=1
+&amp;lg4=1</url>
+        <width>500</width>
+    </webLinks>
+    <webLinks>
+        <fullName>TVG_PP_Traffic_Grid</fullName>
+        <availability>online</availability>
+        <displayType>link</displayType>
+        <encodingKey>UTF-8</encodingKey>
+        <hasMenubar>false</hasMenubar>
+        <hasScrollbars>true</hasScrollbars>
+        <hasToolbar>false</hasToolbar>
+        <height>700</height>
+        <isResizable>true</isResizable>
+        <linkType>url</linkType>
+        <masterLabel>TVG PP Traffic Grid</masterLabel>
+        <openType>newWindow</openType>
+        <position>none</position>
+        <protected>false</protected>
+        <showsLocation>false</showsLocation>
+        <showsStatus>false</showsStatus>
+        <url>https://composer.congamerge.com
+?sessionId={!API.Session_ID}
+&amp;serverUrl={!API.Partner_Server_URL_290}
+&amp;id={!Programs__c.Id}
+&amp;Reportid=00OC0000006CHhX?pv0={!Programs__c.Week_Pending__c},00OC0000004o72n
+&amp;TemplateId=a0BC000000e45jZ
+&amp;AttachmentParentId={!Programs__c.Id}
+&amp;EmailRelatedToId={!Programs__c.Id}
+&amp;EmailTemplateid=00XC00000023pmh
+&amp;EmailToid={!Programs__c.Logs_ContactId__c}
+&amp;EmailCC={!Programs__c.Logs_CC__c}
+&amp;OFN={!Programs__c.Name}+Traffic+Grid+{!Programs__c.Week_Pending__c}+(V{!Programs__c.PP_Revision__c})
+&amp;lg3=1
+&amp;lg4=1
+&amp;mfts0=PP_Revision__c
+&amp;mftsvalue0={!Programs__c.PP_Revision_1__c}</url>
+        <width>500</width>
+    </webLinks>
+    <webLinks>
+        <fullName>Tennis_Traffic_Grid</fullName>
+        <availability>online</availability>
+        <displayType>link</displayType>
+        <encodingKey>UTF-8</encodingKey>
+        <hasMenubar>false</hasMenubar>
+        <hasScrollbars>true</hasScrollbars>
+        <hasToolbar>false</hasToolbar>
+        <height>500</height>
+        <isResizable>true</isResizable>
+        <linkType>url</linkType>
+        <masterLabel>Tennis Traffic Grid</masterLabel>
+        <openType>newWindow</openType>
+        <position>none</position>
+        <protected>false</protected>
+        <showsLocation>false</showsLocation>
+        <showsStatus>false</showsStatus>
+        <url>https://composer.congamerge.com
+?sessionId={!API.Session_ID}
+&amp;serverUrl={!API.Partner_Server_URL_290}
+&amp;id={!Programs__c.Id}
+&amp;Reportid=00O800000040xWY?pv0={!Programs__c.Week_Pending__c},00OC0000004o72n
+&amp;TemplateId=a0BC000000UBMqz
+&amp;AttachmentParentId={!Programs__c.Id}
+&amp;EmailRelatedToId={!Programs__c.Id}
+&amp;EmailTemplateid=00XC0000001YlCI
+&amp;EmailToid={!Programs__c.Logs_ContactId__c}
+&amp;EmailCC={!Programs__c.Logs_CC__c}
+&amp;OFN={!Programs__c.Name}+Traffic+Grid+{!Programs__c.Week_Pending__c}+(V{!Programs__c.PP_Revision__c})
+&amp;lg3=1
+&amp;lg4=1
+&amp;mfts0=PP_Revision__c
+&amp;mftsvalue0={!Programs__c.PP_Revision_1__c}</url>
+        <width>700</width>
+    </webLinks>
+    <webLinks>
+        <fullName>WOLF_TEAM_LOGS</fullName>
+        <availability>online</availability>
+        <displayType>link</displayType>
+        <encodingKey>UTF-8</encodingKey>
+        <hasMenubar>false</hasMenubar>
+        <hasScrollbars>true</hasScrollbars>
+        <hasToolbar>false</hasToolbar>
+        <height>600</height>
+        <isResizable>true</isResizable>
+        <linkType>url</linkType>
+        <masterLabel>WOLF TEAM LOGS</masterLabel>
+        <openType>newWindow</openType>
+        <position>none</position>
+        <protected>false</protected>
+        <showsLocation>false</showsLocation>
+        <showsStatus>false</showsStatus>
+        <url>https://composer.congamerge.com?sessionId={!API.Session_ID} 
+&amp;serverUrl={!API.Partner_Server_URL_290} 
+&amp;id={!Programs__c.Id} 
+&amp;TemplateId={!Programs__c.Conga_Log_Template__c} 
+&amp;Reportid=00O80000003jbgE?pv0={!Programs__c.Name}~pv1={!Programs__c.Week_Pending__c}, 
+00O80000003jbgD?pv0={!Programs__c.Logs_ContactId__c},00O800000040pmn?pv0={!Programs__c.Name}~pv1={!Programs__c.Week_Pending__c} 
+&amp;AttachmentParentId={!Programs__c.Id} 
+&amp;OFN=MVMS:+{!Programs__c.Name}+-+{!Programs__c.Week_Pending__c} 
+&amp;EmailTemplateid=00X0R000000ukns 
+&amp;EmailToid={!Programs__c.Logs_ContactId__c} 
+&amp;EmailSubject=MVMS: Logs for +{!Programs__c.Name} +Week of +{!Programs__c.Week_Pending__c} 
+&amp;EmailRelatedToId={!Programs__c.Id} 
+&amp;Defaultpdf=0 
+&amp;lg3=1 
+&amp;lg4=1 
+&amp;EmailCC={!Programs__c.Logs_CC__c} 
+&amp;Emailbcc=logsfile@mvmediasales.com 
+&amp;MFTS0=Reconciled_Week__c 
+&amp;MFTSValue0={!SUBSTITUTE( TEXT(Programs__c.Week_Pending__c ), &quot;/&quot;, &quot;%2F&quot;) } 
++ 
+Feel+free+to+call+or email+with+questions.</url>
+    </webLinks>
+    <webLinks>
+        <fullName>YELLOW_TEAM_LOGS</fullName>
+        <availability>online</availability>
+        <displayType>link</displayType>
+        <encodingKey>UTF-8</encodingKey>
+        <hasMenubar>false</hasMenubar>
+        <hasScrollbars>true</hasScrollbars>
+        <hasToolbar>false</hasToolbar>
+        <height>450</height>
+        <isResizable>true</isResizable>
+        <linkType>url</linkType>
+        <masterLabel>YELLOW TEAM LOGS</masterLabel>
+        <openType>newWindow</openType>
+        <position>none</position>
+        <protected>false</protected>
+        <showsLocation>false</showsLocation>
+        <showsStatus>false</showsStatus>
+        <url>https://composer.congamerge.com?sessionId={!API.Session_ID} 
+&amp;serverUrl={!API.Partner_Server_URL_290} 
+&amp;id={!Programs__c.Id} 
+&amp;TemplateId={!Programs__c.Conga_Log_Template__c} 
+&amp;Reportid=00O80000003jbgE?pv0={!Programs__c.Name}~pv1={!Programs__c.Week_Pending__c}, 
+00O80000003jbgD?pv0={!Programs__c.Logs_ContactId__c},00O800000040pmn?pv0={!Programs__c.Name}~pv1={!Programs__c.Week_Pending__c} 
+&amp;AttachmentParentId={!Programs__c.Id} 
+&amp;OFN=MVMS:+{!Programs__c.Name}+-+{!Programs__c.Week_Pending__c} 
+&amp;EmailTemplateid=00X80000001IQH1
+&amp;EmailToid={!Programs__c.Logs_ContactId__c} 
+&amp;EmailSubject=MVMS: Logs for +{!Programs__c.Name} +Week of +{!Programs__c.Week_Pending__c} 
+&amp;EmailRelatedToId={!Programs__c.Id} 
+&amp;Defaultpdf=0 
+&amp;lg3=1 
+&amp;lg4=1 
+&amp;EmailCC={!Programs__c.Logs_CC__c} 
+&amp;Emailbcc=logsfile@mvmediasales.com 
+&amp;MFTS0=Reconciled_Week__c 
+&amp;MFTSValue0={!SUBSTITUTE( TEXT(Programs__c.Week_Pending__c ), &quot;/&quot;, &quot;%2F&quot;) }
++
+Feel+free+to+call+or+email+with+questions+.</url>
+        <width>625</width>
+    </webLinks>
+</CustomObject>

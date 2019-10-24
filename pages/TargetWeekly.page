@@ -1,0 +1,225 @@
+<apex:page controller="TargetWeeklyController" >
+    <script>
+        function setFocusOnLoad() {}
+    </script>
+   <!-- <apex:actionStatus id="status1" startText="Loading..." startStyle="font-size:15px"/>
+    <apex:actionStatus id="status2" startText="Saving..." startStyle="font-size:15px"/>
+    <apex:sectionheader Title="Target" subtitle="Weekly"/>
+    <apex:form id="frm">
+        <table>
+            <tr>
+                <td>Start Date</td>
+                <td><apex:inputField value="{!schedule.Week__c}"/></td>
+                <td>Program</td>
+                <td><apex:inputfield value="{!deal.Program__c}"/></td>
+                <td>Agency</td>
+                <td><apex:inputfield value="{!deal.Client_Account__c}"/></td>
+                <td>Contact</td>
+                <td><apex:inputfield value="{!deal.Contact__c}"/></td>
+            </tr>
+            <tr>
+                <td>End Date</td>
+                <td><apex:inputField value="{!schedule.Day__c}"/></td>
+                <td>Brand</td>
+                <td><apex:inputfield value="{!deal.Brands__c}"/></td>
+                <td>Deal Owner</td>
+                <td><apex:inputfield value="{!deal.OwnerId}" required="false"/></td>
+                <td>TEAM</td>
+                <td>
+                    <apex:selectList size="1" value="{!selectedTeam}">
+                        <apex:selectOptions value="{!team}"/>
+                    </apex:selectList>
+                </td>
+                <td>Test</td>
+                <td><apex:inputfield value="{!schedule.TEST__c}"/></td>
+            </tr>
+            
+            <tr>
+                <td><apex:commandbutton value="Search" action="{!showReport}" rerender="frm" status="status1"/></td>
+                <td><apex:commandbutton value="Save" action="{!save}" rerender="frm" status="status2"/></td>
+            </tr>
+        </table>
+        <apex:pageblock rendered="true" title="NEW DEALS">
+            <apex:pageblocktable value="{!dealList}" var="dList">
+                <apex:column headerValue="Week Min Field">
+                    <apex:outputfield value="{!dList.Week_MIN_Field__c}"/>
+                </apex:column>
+                <apex:column headerValue="Program">
+                    <apex:outputfield value="{!dList.Program__c}"/>
+                </apex:column>
+                <apex:column headerValue="ContactAccount">
+                    <apex:outputfield value="{!dList.ContactAccount__c}"/>
+                </apex:column>
+                <apex:column headerValue="Brand">
+                    <apex:outputfield value="{!dList.Brands__c}"/>
+                </apex:column>
+                <apex:column headerValue="Target Status">
+                    <apex:inputfield value="{!dList.Target__r.Status__c}"/>
+                </apex:column>
+                <apex:column headerValue="Target Status Detail">
+                    <apex:inputfield value="{!dList.Target__r.Status_Detail__c}"/>
+                </apex:column>
+                <apex:column headerValue="To Do">
+                    <apex:inputfield value="{!dList.Target__r.To_Do__c}"/>
+                </apex:column>
+                <apex:column headerValue="Target Comments">
+                    <apex:inputfield value="{!dList.Target__r.Comments__c}"/>
+                </apex:column>
+                <apex:column headerValue="AE LC">
+                    <apex:inputfield value="{!dList.Target__r.AE_LC__c}"/>
+                </apex:column>
+                <apex:column headerValue="AE Status">
+                    <apex:inputfield value="{!dList.Target__r.AE_Status__c}"/>
+                </apex:column>
+                <apex:column headerValue="Sumof Total Dollars">
+                    <apex:outputfield Value="{!dList.Sum_of_Total_Dollars__c}"/>
+                </apex:column>
+                <apex:column headerValue="Sum  of Units Available">
+                    <apex:outputfield Value="{!dList.Sum_of_Units_Available__c}"/>
+                </apex:column>
+                <apex:column headerValue="Deal Length">
+                    <apex:outputfield value="{!dList.Length__c}"/>
+                </apex:column>
+                
+                <apex:column headerValue="Target-Last Modified Date">
+                    <apex:outputfield value="{!dList.Target__r.LastModifiedDate}"/>
+                </apex:column>
+                <apex:column headerValue="Target-Last Modified By">
+                    <apex:outputfield value="{!dList.Target__r.LastModifiedById}"/>
+                </apex:column>
+                <apex:column headerValue="Deal">
+                    <a href="/{!dList.id}" target="_blank">
+                        <apex:outputfield value="{!dList.Name}"/>
+                    </a>
+                </apex:column>
+                <apex:column headerValue="Target Name">
+                    <a href="/{!dList.Target__r.id}" target="_blank">
+                        <apex:outputfield Value="{!dList.Target__r.Name}"/>
+                    </a>
+                </apex:column>
+            </apex:pageblocktable>
+        </apex:pageblock>
+        
+        <apex:pageblock rendered="true" title="CANCELED">
+            <apex:pageblocktable value="{!dealList2}" var="dList">
+                <apex:column headerValue="Week Min Field">
+                    <apex:outputfield value="{!dList.Week_MIN_Field__c}"/>
+                </apex:column>
+                <apex:column headerValue="Program">
+                    <apex:outputfield value="{!dList.Program__c}"/>
+                </apex:column>
+                <apex:column headerValue="ContactAccount">
+                    <apex:outputfield value="{!dList.ContactAccount__c}"/>
+                </apex:column>
+                <apex:column headerValue="Brand">
+                    <apex:outputfield value="{!dList.Brands__c}"/>
+                </apex:column>
+                <apex:column headerValue="Target Status">
+                    <apex:inputfield value="{!dList.Target__r.Status__c}"/>
+                </apex:column>
+                <apex:column headerValue="Target Status Detail">
+                    <apex:inputfield value="{!dList.Target__r.Status_Detail__c}"/>
+                </apex:column>
+                <apex:column headerValue="To Do">
+                    <apex:inputfield value="{!dList.Target__r.To_Do__c}"/>
+                </apex:column>
+                <apex:column headerValue="Target Comments">
+                    <apex:inputfield value="{!dList.Target__r.Comments__c}"/>
+                </apex:column>
+                <apex:column headerValue="AE LC">
+                    <apex:inputfield value="{!dList.Target__r.AE_LC__c}"/>
+                </apex:column>
+                <apex:column headerValue="AE Status">
+                    <apex:inputfield value="{!dList.Target__r.AE_Status__c}"/>
+                </apex:column>
+                <apex:column headerValue="Sumof Total Dollars">
+                    <apex:outputfield Value="{!dList.Sum_of_Total_Dollars__c}"/>
+                </apex:column>
+                <apex:column headerValue="Sum  of Units Available">
+                    <apex:outputfield Value="{!dList.Sum_of_Units_Available__c}"/>
+                </apex:column>
+                <apex:column headerValue="Deal Length">
+                    <apex:outputfield value="{!dList.Length__c}"/>
+                </apex:column>
+                
+                <apex:column headerValue="Target-Last Modified Date">
+                    <apex:outputfield value="{!dList.Target__r.LastModifiedDate}"/>
+                </apex:column>
+                <apex:column headerValue="Target-Last Modified By">
+                    <apex:outputfield value="{!dList.Target__r.LastModifiedById}"/>
+                </apex:column>
+                <apex:column headerValue="Deal">
+                    <a href="/{!dList.id}" target="_blank">
+                        <apex:outputfield value="{!dList.Name}"/>
+                    </a>
+                </apex:column>
+                <apex:column headerValue="Target Name">
+                    <a href="/{!dList.Target__r.id}" target="_blank">
+                        <apex:outputfield Value="{!dList.Target__r.Name}"/>
+                    </a>
+                </apex:column>
+            </apex:pageblocktable>
+        </apex:pageblock>
+        
+        <apex:pageblock rendered="true" title="TEST FOLLOW UP">
+            <apex:pageblocktable value="{!dealList3}" var="dList">
+                <apex:column headerValue="Week Min Field">
+                    <apex:outputfield value="{!dList.Week_MIN_Field__c}"/>
+                </apex:column>
+                <apex:column headerValue="Program">
+                    <apex:outputfield value="{!dList.Program__c}"/>
+                </apex:column>
+                <apex:column headerValue="ContactAccount">
+                    <apex:outputfield value="{!dList.ContactAccount__c}"/>
+                </apex:column>
+                <apex:column headerValue="Brand">
+                    <apex:outputfield value="{!dList.Brands__c}"/>
+                </apex:column>
+                <apex:column headerValue="Target Status">
+                    <apex:inputfield value="{!dList.Target__r.Status__c}"/>
+                </apex:column>
+                <apex:column headerValue="Target Status Detail">
+                    <apex:inputfield value="{!dList.Target__r.Status_Detail__c}"/>
+                </apex:column>
+                <apex:column headerValue="To Do">
+                    <apex:inputfield value="{!dList.Target__r.To_Do__c}"/>
+                </apex:column>
+                <apex:column headerValue="Target Comments">
+                    <apex:inputfield value="{!dList.Target__r.Comments__c}"/>
+                </apex:column>
+                <apex:column headerValue="AE LC">
+                    <apex:inputfield value="{!dList.Target__r.AE_LC__c}"/>
+                </apex:column>
+                <apex:column headerValue="AE Status">
+                    <apex:inputfield value="{!dList.Target__r.AE_Status__c}"/>
+                </apex:column>
+                <apex:column headerValue="Sumof Total Dollars">
+                    <apex:outputfield Value="{!dList.Sum_of_Total_Dollars__c}"/>
+                </apex:column>
+                <apex:column headerValue="Sum  of Units Available">
+                    <apex:outputfield Value="{!dList.Sum_of_Units_Available__c}"/>
+                </apex:column>
+                <apex:column headerValue="Deal Length">
+                    <apex:outputfield value="{!dList.Length__c}"/>
+                </apex:column>
+                
+                <apex:column headerValue="Target-Last Modified Date">
+                    <apex:outputfield value="{!dList.Target__r.LastModifiedDate}"/>
+                </apex:column>
+                <apex:column headerValue="Target-Last Modified By">
+                    <apex:outputfield value="{!dList.Target__r.LastModifiedById}"/>
+                </apex:column>
+                <apex:column headerValue="Deal">
+                    <a href="/{!dList.id}" target="_blank">
+                        <apex:outputfield value="{!dList.Name}"/>
+                    </a>
+                </apex:column>
+                <apex:column headerValue="Target Name">
+                    <a href="/{!dList.Target__r.id}" target="_blank">
+                        <apex:outputfield Value="{!dList.Target__r.Name}"/>
+                    </a>
+                </apex:column>
+            </apex:pageblocktable>
+        </apex:pageblock>
+    </apex:form>-->
+</apex:page>

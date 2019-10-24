@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Ad Views</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Ad Views</value>
+    </caseValues>
+    <fields>
+        <label><!-- Advertiser --></label>
+        <name>Advertiser__c</name>
+    </fields>
+    <fields>
+        <label><!-- Equiv :30 --></label>
+        <name>Equiv_30__c</name>
+    </fields>
+    <fields>
+        <label><!-- Nielsen Brand Name --></label>
+        <name>Nielsen_Brand_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- Nielsen Brand --></label>
+        <name>Nielsen_Brand__c</name>
+        <relationshipLabel><!-- Ad Views --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Nielsen Parent Company Name --></label>
+        <name>Nielsen_Parent_Company_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- Program --></label>
+        <name>Program__c</name>
+        <relationshipLabel><!-- Ad Views --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Week --></label>
+        <name>Week__c</name>
+    </fields>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

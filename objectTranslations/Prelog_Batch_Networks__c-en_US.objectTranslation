@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Prelog Batch Networks</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Prelog Batch Networks</value>
+    </caseValues>
+    <fields>
+        <label><!-- isProcessingSpot --></label>
+        <name>isProcessingSpot__c</name>
+    </fields>
+    <fields>
+        <label><!-- isProcessing --></label>
+        <name>isProcessing__c</name>
+    </fields>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

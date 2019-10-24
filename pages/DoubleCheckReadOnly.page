@@ -1,0 +1,195 @@
+<apex:page controller="DoubleCheckReadOnly" title="Read-Only Double Check Report" >
+    <apex:form id="form">
+        <apex:includeScript value="{!$Resource.saberjueryui}"/> 
+        <apex:includeScript value="{!$Resource.saberjquery}"/> 
+        <apex:includeScript value="{!URLFOR($Resource.jquery_vfFloatingHeaders)}" />
+        <script src="{!URLFOR($Resource.jquery_vfFloatingHeaders)}"></script>
+        <apex:stylesheet value="{!URLFOR($Resource.JQuery2, 'css/redmond/jquery-ui-1.8.14.custom.css')}"/>
+        <style>
+            .ui-state-active
+            {
+                border: 1px solid #fbd850;
+                background: #FFFF66;
+                font-weight: bold;
+                color: #E1701D;
+            }
+            .floatingStyle 
+            { 
+                position:relative; 
+            } 
+            
+        </style>
+        <script type="text/javascript">
+            $(document).ready(function() 
+            {
+                $('.floatingHeaderTable').vfFloatingHeaders();
+            });
+        </script>
+        <apex:pageMessages />
+        <apex:sectionHeader title="AE - Read Only"/>
+        <apex:pageblock title="Search">
+            <table width="100%">   
+                <tr>  
+                    <td align="left">
+                        <apex:inputText value="{!Searchfield }"/>  
+                        <apex:commandbutton action="{!DoSearch}" value="Search" status="pageStatus" /> <apex:actionStatus startText="(Loading...)" id="pageStatus"/>&nbsp;&nbsp;|&nbsp;&nbsp;
+                        <apex:inputCheckbox value="{!BarterCheckbox}" />&nbsp;Barter&nbsp;&nbsp;|&nbsp;&nbsp;
+                        <apex:selectList value="{!SelectedCableSynd}" size="1"><apex:selectOptions value="{!CableSyndSOList}" /></apex:selectList>
+                    </td>
+                    <td align="right">
+                        <table cellspacing="5">
+                            <tr>
+                                <td colspan="2">Range&nbsp;&nbsp;<apex:selectList value="{!SelectedDateLiteral}" size="1"><apex:selectOptions value="{!DateLiteralSOList}" /><apex:actionSupport event="onchange" rerender="StartDateField,EndDateField" action="{!ReturnSOQLDateString}" /></apex:selectList></td>
+                            </tr>
+                            <tr>
+                                <td>From&nbsp;&nbsp;<apex:inputField value="{!WeekStartDate.Week__c}" id="StartDateField" /></td>
+                                <td>To&nbsp;&nbsp;<apex:inputField value="{!WeekEndDate.Week__c}" id="EndDateField" /></td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>  
+                <tr>
+                    <td>
+                        <font size="1">
+                            For advanced searches please separate the keywords with a comma ','
+                        </font>
+                    </td>
+                </tr>
+            </table>
+            <apex:outputPanel rendered="{!IF(Searchfield != null && Searchfield != '-', true, false)}" id="DealDisplay">
+                <apex:outputPanel styleClass="tableContainer" layout="block" style="overflow:auto;max-height:350px" >
+                    <apex:pageblocktable styleclass="floatingHeaderTable"  value="{!DealResultList}" var="d">
+                        <apex:column headerValue="Select" styleClass="{!IF(contains(SelectedDealSet,left(d.Id,15)),'ui-state-active','')}">
+                            <apex:commandLink type="image/png" action="{!AddMoreToDeal}" status="pageStatus" >
+                                <apex:image value="/img/msg_icons/confirm24.png"/>
+                                <apex:param name="Dealid" value="{!d.id}" assignTo="{!DealId}"/>
+                                <apex:param name="Dealname" value="{!d.Name}" assignTo="{!DealName}"/>
+                            </apex:commandLink> 
+                        </apex:column>
+                        <apex:column headerValue="Deal Link" styleClass="{!IF(contains(SelectedDealSet,left(d.Id,15)),'ui-state-active','')}">
+                            <apex:outputLink style="color:#000000;" value="/{!d.id}" id="deallink1" target="_blank">
+                                <apex:outputField value="{!d.Name}"/> 
+                            </apex:outputLink>   
+                        </apex:column>
+                        <apex:column headerValue="Brands" styleClass="{!IF(contains(SelectedDealSet,left(d.Id,15)),'ui-state-active','')}">
+                            <apex:outputLink style="color:#000000;" value="/{!d.Brands__c}" id="brandlink" target="_blank">
+                                <apex:outputtext value="{!d.Brands__r.Name}"/>    
+                            </apex:outputLink>
+                        </apex:column>
+                        <apex:column headerValue="Length" styleClass="{!IF(contains(SelectedDealSet,left(d.Id,15)),'ui-state-active','')}">
+                            <apex:outputtext value="{!d.Length__c}"/>    
+                        </apex:column>
+                        <apex:column headerValue="Agency" styleClass="{!IF(contains(SelectedDealSet,left(d.Id,15)),'ui-state-active','')}">
+                            <apex:outputLink style="color:#000000;" value="/{!d.Contact__r.Account.id}" id="agencylink" target="_blank">
+                                <apex:outputField value="{!d.ContactAccount__c}"/>
+                            </apex:outputLink>
+                        </apex:column> 
+                        <apex:column headerValue="Program" styleClass="{!IF(contains(SelectedDealSet,left(d.Id,15)),'ui-state-active','')}">
+                            <apex:outputLink style="color:#000000;" value="/{!d.Program__r.id}" id="prolink" target="_blank">
+                                <apex:outputtext value="{!d.Program__r.Name}"/>
+                            </apex:outputLink>
+                        </apex:column>
+                        <apex:column headerValue="Contact" styleClass="{!IF(contains(SelectedDealSet,left(d.Id,15)),'ui-state-active','')}"> 
+                            <apex:outputLink style="color:#000000;" value="/{!d.Contact__r.id}" id="conlink" target="_blank">
+                                <apex:outputtext value="{!d.Contact__r.Name}"/> 
+                            </apex:outputLink>
+                        </apex:column>
+                        <apex:column headerValue="Campaign" styleClass="{!IF(contains(SelectedDealSet,left(d.Id,15)),'ui-state-active','')}">
+                                <apex:outputField value="{!d.Campaign__c}"/>
+                        </apex:column>
+                        <apex:column headerValue="Network Deal Number" styleClass="{!IF(contains(SelectedDealSet,left(d.Id,15)),'ui-state-active','')}">
+                            <apex:outputField value="{!d.Network_Deal_Number__c}"/>
+                        </apex:column>
+                        <apex:column headerValue="Start Week" styleClass="{!IF(contains(SelectedDealSet,left(d.Id,15)),'ui-state-active','')}">
+                            <apex:outputField value="{!d.Week_MIN_Field__c}"/>
+                        </apex:column>
+                        <apex:column headerValue="Agency Deal Number" styleClass="{!IF(contains(SelectedDealSet,left(d.Id,15)),'ui-state-active','')}">
+                            <apex:outputField value="{!d.Agency_Deal_Number__c}"/>
+                        </apex:column>
+                        <apex:column headerValue="Units" styleClass="{!IF(contains(SelectedDealSet,left(d.Id,15)),'ui-state-active','')}">
+                            <apex:outputField value="{!d.Sum_of_Units_Available__c}"/>
+                        </apex:column>   
+                        <apex:column headerValue="Dollars" styleClass="{!IF(contains(SelectedDealSet,left(d.Id,15)),'ui-state-active','')}">
+                            <apex:outputField value="{!d.Sum_of_Total_Dollars__c}"/>
+                        </apex:column>
+                    </apex:pageblocktable>
+                </apex:outputPanel>
+            </apex:outputPanel>
+        </apex:pageBlock>  
+        <apex:outputPanel id="ScheduleDisplay">
+            <apex:repeat value="{!DealWrapperList}" var="DWL">
+                <apex:pageblock >
+                    <table width="100%">
+                        <tr>
+                            <td align="left" style="font-size:20px;font-weight:bold;">
+                                {!DWL.DealRecord.ContactAccount__c} - {!DWL.DealRecord.Brands__r.Name} - {!DWL.DealRecord.Length__c} - {!DWL.DealRecord.Program__r.Name} - <apex:outputLink value="/{!DWL.DealRecord.Id}" target="_blank" > {!DWL.DealRecord.Name} </apex:outputLink> - {!DWL.DealREcord.SF_Deal_ID__c}
+                            </td>
+                            <td align="right">
+                                <apex:commandLink type="image/png" action="{!RemoveDealButton}" >
+                                    <apex:image value="/img/func_icons/remove12_on.gif"/>
+                                    <apex:param name="RemoveDealIdCopy" value="{!DWL.DealREcord.Id}" assignTo="{!RemoveDealId}"/>
+                                </apex:commandLink> 
+                            </td>
+                        </tr>
+                    </table>
+                    <table border="1" cellpadding="5" cellspacing="0" >
+                        <tr>
+                            <td style="width:80px;"><B>Days&nbsp;Allowed</B></td>
+                            <td style="width:100px;"><B>Start&nbsp;-&nbsp;End</B></td>
+                            <td style="width:80px;"><B>Rate</B></td>
+                            <apex:repeat value="{!DWL.HeadingList}" var="headingModel">
+                                <td style="background-color:{!headingModel.bgcolor};"> 
+                                    <b>
+                                        <apex:outputText >                            
+                                            <apex:outputText value="{0,date,M/d}">
+                                               <apex:param value="{!headingModel.startOfWeek}" />
+                                            </apex:outputText>
+                                        </apex:outputText>
+                                    </b> 
+                                </td>
+                            </apex:repeat>
+                        </tr>
+                        <apex:repeat value="{!DWL.LineItemModelList}" var="rt">
+                            <tr>
+                                <td style="text-align:center;">
+                                    <apex:outputText value="{!rt.DaysAllowed}" style="width:5px"/>
+                                </td>
+                                <td style="text-align:center;white-space:nowrap;">
+                                    <apex:outputText value="{!rt.SETime}" style="width:10px"/>
+                                </td>
+                                <td style="text-align:center;">
+                                    <apex:outputText value="{0, number,$###,###,##0}"><apex:param value="{!rt.rate}" /></apex:outputText>
+                                </td>
+                                <apex:repeat value="{!rt.weeks}" var="wk">
+                                    <td style="background-color:{!wk.schObj.BGColor__c};text-align:center;" valign="bottom" class="LTCavailable" CellId="{!wk.schObj.id}"  HasValues="{!wk.CellAvailable}" CanceledStatus="{!wk.schobj.Status__c}" RateforCell="{!wk.schObj.rate__c}" CellName="{!wk.schObj.name}">
+                                        <apex:outputPanel rendered="{!AND ( NOT ( ISBLANK ( wk.schObj.Units_Aired__c ) ) , NOT ( ISBLANK ( wk.schObj.Units_Available__c ) ) ) }" >
+                                            <apex:outputLink value="/{!wk.schObj.id}" id="eventlink" target="_blank">
+                                                <apex:outputText value="{0, number, 0}"><apex:param value="{!wk.schObj.Units_Aired__c}" /></apex:outputText>/<apex:outputText value="{0, number,0}"><apex:param value="{!wk.schObj.Units_Available__c}" /></apex:outputText>
+                                            </apex:outputLink>
+                                        </apex:outputPanel>
+                                    </td>
+                                </apex:repeat>
+                            </tr>
+                        </apex:repeat>
+                        <tr>
+                            <td colspan="3"></td>
+                            <apex:repeat value="{!DWL.WeekDollarsList}" var="WeekPrice">
+                                <td>
+                                    <apex:outputText value="{!WeekPrice}"/>
+                                </td>
+                            </apex:repeat>
+                        </tr>
+                    </table> 
+                    <table>
+                        <tr>
+                            <td style="padding-right:20px;"><b>Dollars Booked: <apex:outputText value="{0, number, $###,###,##0}"><apex:param value="{!DWL.DealRecord.Sum_of_Total_Dollars__c}"/></apex:outputText></b></td>
+                            <td style="padding-left:20px;padding-right:20px;"><b>Units Booked: <apex:outputText value="{0, number, 0}"><apex:param value="{!DWL.DealRecord.Sum_of_Units_Available__c}"/></apex:outputText></b></td>
+                            <td style="padding-left:20px;padding-right:20px;"><b>Dollar Clearance: <apex:outputText value="{0, number, $###,###,##0}"><apex:param value="{!DWL.TotalDollars}"/></apex:outputText>/<apex:outputText value="{0, number,$###,###,##0}"><apex:param value="{!DWL.TotalDollarsBooked}"/></apex:outputText> = <apex:outputText value="{0, number, 0}%"><apex:param value="{!DWL.DollarClearancePercentage}"/></apex:outputText></b></td>
+                            <td style="padding-left:20px;padding-right:20px;"><b>Unit Clearance: <apex:outputText value="{0, number, 0}"><apex:param value="{!DWL.UnitsAired}"/></apex:outputText>/<apex:outputText value="{0, number,0}"><apex:param value="{!DWL.UnitsAvailable}"/></apex:outputText> = <apex:outputText value="{0, number, 0}%"><apex:param value="{!DWL.ClearancePercentage}"/></apex:outputText></b></td>
+                        </tr>
+                    </table>
+                </apex:pageblock>
+            </apex:repeat>
+        </apex:outputPanel>
+    </apex:form>
+</apex:page>

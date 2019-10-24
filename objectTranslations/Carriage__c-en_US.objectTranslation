@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Carriage</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Carriages</value>
+    </caseValues>
+    <fields>
+        <label><!-- Affiliate --></label>
+        <name>Affiliate__c</name>
+        <relationshipLabel><!-- Carriages --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Carrier Systems --></label>
+        <name>Carrier_Systems__c</name>
+        <relationshipLabel><!-- Carriages --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Launch Date --></label>
+        <name>Launch_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Off Air Date --></label>
+        <name>Off_Air_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Station --></label>
+        <name>Station__c</name>
+        <relationshipLabel><!-- Carriages --></relationshipLabel>
+    </fields>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

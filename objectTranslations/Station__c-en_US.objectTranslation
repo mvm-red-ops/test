@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Station</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Stations</value>
+    </caseValues>
+    <fields>
+        <label><!-- AA HH% --></label>
+        <name>AA_HH__c</name>
+    </fields>
+    <fields>
+        <label><!-- Affiliate Owner --></label>
+        <name>Affiliate_Owner__c</name>
+        <picklistValues>
+            <masterLabel>Gannett</masterLabel>
+            <translation><!-- Gannett --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Hearst</masterLabel>
+            <translation><!-- Hearst --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Media General</masterLabel>
+            <translation><!-- Media General --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>PMCM TV, LLC</masterLabel>
+            <translation><!-- PMCM TV, LLC --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Raycom</masterLabel>
+            <translation><!-- Raycom --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Tribune</masterLabel>
+            <translation><!-- Tribune --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Affiliate --></label>
+        <name>Affiliate__c</name>
+    </fields>
+    <fields>
+        <label><!-- Bundle --></label>
+        <name>Bundle__c</name>
+        <picklistValues>
+            <masterLabel>Bounce Raycom</masterLabel>
+            <translation><!-- Bounce Raycom --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Entertainment Raycom</masterLabel>
+            <translation><!-- Entertainment Raycom --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Hearst Unwired</masterLabel>
+            <translation><!-- Hearst Unwired --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Media General Connect</masterLabel>
+            <translation><!-- Media General Connect --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Tribune Unwired</masterLabel>
+            <translation><!-- Tribune Unwired --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Call Letters --></label>
+        <name>Call_Letters__c</name>
+    </fields>
+    <fields>
+        <label><!-- Channel Position --></label>
+        <name>Channel_Position__c</name>
+        <picklistValues>
+            <masterLabel>0</masterLabel>
+            <translation><!-- 0 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>0.1</masterLabel>
+            <translation><!-- 0.1 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>0.2</masterLabel>
+            <translation><!-- 0.2 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>0.3</masterLabel>
+            <translation><!-- 0.3 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>0.4</masterLabel>
+            <translation><!-- 0.4 --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Market Rank --></label>
+        <name>Market_Rank__c</name>
+    </fields>
+    <fields>
+        <label><!-- Market --></label>
+        <name>Market__c</name>
+        <relationshipLabel><!-- Stations --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Network --></label>
+        <name>Network__c</name>
+        <picklistValues>
+            <masterLabel>AccuWeather</masterLabel>
+            <translation><!-- AccuWeather --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AntennaTV</masterLabel>
+            <translation><!-- AntennaTV --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>BounceTV</masterLabel>
+            <translation><!-- BounceTV --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>COZI</masterLabel>
+            <translation><!-- COZI --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CW</masterLabel>
+            <translation><!-- CW --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CW+</masterLabel>
+            <translation><!-- CW+ --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>FOX</masterLabel>
+            <translation><!-- FOX --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Live Well</masterLabel>
+            <translation><!-- Live Well --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>MeTV</masterLabel>
+            <translation><!-- MeTV --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Movies</masterLabel>
+            <translation><!-- Movies --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>MyNetwork</masterLabel>
+            <translation><!-- MyNetwork --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Other</masterLabel>
+            <translation><!-- Other --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ThisTV</masterLabel>
+            <translation><!-- ThisTV --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>WxNow</masterLabel>
+            <translation><!-- WxNow --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- [Dep]Primary Station Call Letters --></label>
+        <name>Primary_Station_Call_Letters__c</name>
+    </fields>
+    <fields>
+        <label><!-- [Dep]Primary Station --></label>
+        <name>Primary_Station__c</name>
+        <relationshipLabel><!-- Stations --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Rank --></label>
+        <name>Rank__c</name>
+    </fields>
+    <fields>
+        <help><!-- Station Count Field used for calculations --></help>
+        <label><!-- Station Count --></label>
+        <name>Station_Count__c</name>
+    </fields>
+    <fields>
+        <label><!-- Tier --></label>
+        <name>Tribune_Tier__c</name>
+        <picklistValues>
+            <masterLabel>Tier 1</masterLabel>
+            <translation><!-- Tier 1 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Tier 2</masterLabel>
+            <translation><!-- Tier 2 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Tier 3</masterLabel>
+            <translation><!-- Tier 3 --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- US HH% --></label>
+        <name>US_HH__c</name>
+    </fields>
+    <layouts>
+        <layout>Station Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

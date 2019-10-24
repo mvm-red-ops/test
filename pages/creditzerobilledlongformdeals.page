@@ -1,0 +1,33 @@
+<apex:page standardController="Deal__c" extensions="ffps_dealinv.DealController" recordSetVar="deals" action="{!initZB}">
+    <apex:sectionHeader subtitle="Credit Zero Billed Long Form Deals" />
+    <apex:form >
+        <apex:pageBlock >
+            <apex:pageBlockSection columns="1">
+                <apex:pageBlockSectionItem >
+                    <apex:pageMessages />
+                </apex:pageBlockSectionItem>
+            </apex:pageBlockSection>
+            <apex:pageBlockSection columns="2" rendered="{!NOT(done)}">
+                <apex:pageBlockSectionItem >
+                    <apex:outputLabel value="From date:" for="fromDate"/>
+                    <apex:inputField id="fromDate" value="{!lookup1.c2g__LookupDate__c}"/>
+                </apex:pageBlockSectionItem>
+            </apex:pageBlockSection>
+            <apex:pageBlockSection columns="2" rendered="{!NOT(done)}">
+                <apex:pageBlockSectionItem >
+                    <apex:outputLabel value="To date:" for="toDate"/>
+                    <apex:inputField id="toDate" value="{!lookup2.c2g__LookupDate__c}"/>
+                </apex:pageBlockSectionItem>
+            </apex:pageBlockSection>
+            <apex:pageBlockSection columns="1">
+                <apex:pageBlockSectionItem >
+                    <apex:outputPanel >
+                        <apex:commandButton value="Back" action="{!cancel}"/>
+                        <apex:outputText value=" " rendered="{!NOT(done)}"/>
+                        <apex:commandButton value="Initiate" action="{!initiateZeroBilledLongForms}" rendered="{!NOT(done)}"/>
+                    </apex:outputPanel>
+                </apex:pageBlockSectionItem>
+            </apex:pageBlockSection>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

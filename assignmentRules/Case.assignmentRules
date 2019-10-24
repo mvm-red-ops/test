@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AssignmentRules xmlns="http://soap.sforce.com/2006/04/metadata">
+    <assignmentRule>
+        <fullName>Administrators</fullName>
+        <active>true</active>
+        <ruleEntry>
+            <assignedTo>Administrators</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <formula>ISNEW()=TRUE</formula>
+            <template>unfiled$public/New_Case_Created</template>
+        </ruleEntry>
+    </assignmentRule>
+</AssignmentRules>

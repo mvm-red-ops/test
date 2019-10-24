@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Credit Reference OLD</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Credit References OLD</value>
+    </caseValues>
+    <fields>
+        <label><!-- Additional Comments --></label>
+        <name>Additional_Comments__c</name>
+    </fields>
+    <fields>
+        <label><!-- Advertiser --></label>
+        <name>Advertiser__c</name>
+        <relationshipLabel><!-- Credit References OLD --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Average Days to Pay --></label>
+        <name>Average_Days_to_Pay__c</name>
+    </fields>
+    <fields>
+        <label><!-- Booking Agency --></label>
+        <name>Booking_Agency__c</name>
+        <relationshipLabel><!-- Credit References OLD --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Brands --></label>
+        <name>Brand__c</name>
+        <relationshipLabel><!-- Credit References OLD --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Comments --></label>
+        <name>Comments__c</name>
+    </fields>
+    <fields>
+        <label><!-- Contact Person --></label>
+        <name>Contact_Person__c</name>
+    </fields>
+    <fields>
+        <help><!-- Use drop down to identify primary party for this credit app --></help>
+        <label><!-- Credit App Type --></label>
+        <name>Credit_App_Type__c</name>
+        <picklistValues>
+            <masterLabel>Advertiser</masterLabel>
+            <translation><!-- Advertiser --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Agency</masterLabel>
+            <translation><!-- Agency --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Brand</masterLabel>
+            <translation><!-- Brand --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Credit Terms Comments --></label>
+        <name>Credit_Terms_Comments__c</name>
+    </fields>
+    <fields>
+        <label><!-- Credit Terms --></label>
+        <name>Credit_Terms__c</name>
+        <picklistValues>
+            <masterLabel>CIA</masterLabel>
+            <translation><!-- CIA --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Due on Receipt</masterLabel>
+            <translation><!-- Due on Receipt --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Net 10</masterLabel>
+            <translation><!-- Net 10 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Net 15</masterLabel>
+            <translation><!-- Net 15 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Net 30</masterLabel>
+            <translation><!-- Net 30 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Net 45</masterLabel>
+            <translation><!-- Net 45 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Net 60</masterLabel>
+            <translation><!-- Net 60 --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Date Sent --></label>
+        <name>Date_Sent__c</name>
+    </fields>
+    <fields>
+        <label><!-- Email --></label>
+        <name>Email__c</name>
+    </fields>
+    <fields>
+        <label><!-- Fax Number --></label>
+        <name>Fax_Number__c</name>
+    </fields>
+    <fields>
+        <label><!-- Length of Business --></label>
+        <name>Length_of_Business__c</name>
+        <picklistValues>
+            <masterLabel>1 Year</masterLabel>
+            <translation><!-- 1 Year --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>2 Years</masterLabel>
+            <translation><!-- 2 Years --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>3-5 Years</masterLabel>
+            <translation><!-- 3-5 Years --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>5-10 Years</masterLabel>
+            <translation><!-- 5-10 Years --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Greater than 10 Years</masterLabel>
+            <translation><!-- Greater than 10 Years --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Less than 1 Year</masterLabel>
+            <translation><!-- Less than 1 Year --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Max Amount of Credit Given --></label>
+        <name>Max_Amount_of_Credit__c</name>
+    </fields>
+    <fields>
+        <label><!-- Max Owed --></label>
+        <name>Max_Owed__c</name>
+    </fields>
+    <fields>
+        <label><!-- Mode Sent --></label>
+        <name>Mode_Sent__c</name>
+    </fields>
+    <fields>
+        <label><!-- Phone Number --></label>
+        <name>Phone_Number__c</name>
+    </fields>
+    <fields>
+        <label><!-- Reference Company --></label>
+        <name>Reference_Company__c</name>
+    </fields>
+    <fields>
+        <label><!-- SF Reference ID --></label>
+        <name>SF_Reference_ID__c</name>
+    </fields>
+    <fields>
+        <label><!-- Title --></label>
+        <name>Title__c</name>
+    </fields>
+    <layouts>
+        <layout>Credit Reference Layout</layout>
+        <sections>
+            <label><!-- Credit Info --></label>
+            <section>Credit Info</section>
+        </sections>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- System Info --></label>
+            <section>System Info</section>
+        </sections>
+    </layouts>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

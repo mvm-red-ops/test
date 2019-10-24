@@ -1,0 +1,786 @@
+<apex:page controller="DoubleCheckReportControllerV5" title="Double Check Report" >
+    <apex:form id="form">
+    
+    	<apex:includeScript value="{!$Resource.saberjueryui}"/> 
+        <apex:includeScript value="{!$Resource.saberjquery}"/> 
+        <apex:includeScript value="{!URLFOR($Resource.jquery_vfFloatingHeaders)}" />
+       	<script src="{!URLFOR($Resource.jquery_vfFloatingHeaders)}"></script>
+		<apex:stylesheet value="{!URLFOR($Resource.JQuery2, 'css/redmond/jquery-ui-1.8.14.custom.css')}"/>
+        <apex:includeScript value="{!$Resource.blockui}"/> 
+        <apex:includeScript value="{!$Resource.blockuijson}"/>
+        <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" />
+        <style>
+	        .tableContainer
+	        {
+	            height:290px; 
+	            width: 100%;
+	            overflow: auto;
+	        }       
+	        .floatingStyle 
+	        { 
+	            position:relative; 
+	        } 
+			.ui-state-active
+			{
+				border: 1px solid #fbd850;
+				background: #FFFF66;
+				font-weight: bold;
+				color: #E1701D;
+			}
+			a { color: #000000; }
+			a:visited 
+			{
+		    	color: #000000;
+		    }
+	    </style>
+        <script type="text/javascript">
+        	
+            $(document).ready(function() 
+            { 
+            
+                $('#tabs-3').on('dblclick','td.unitavailable', function() 
+                { 
+                	if ($(this).attr('HasValues') == 'true')
+                	{
+	                    document.getElementById('{!$Component.hiddenCellid}').value = $(this).attr('CellId') ;
+	                    $('#loginForm').find('#ratevalue').val($(this).attr('RateforCell'));
+	                    $.blockUI({ message: $('#loginForm') , css: { height:'15%', width:'15%'} }); 
+	                }
+                });
+                $('#tabs-2').on('dblclick','td.filleravailable', function() 
+                { 
+                	if ($(this).attr('HasValues') == 'true')
+                	{
+	                    document.getElementById('{!$Component.hiddenCellid}').value = $(this).attr('CellId') ;
+	                    if ($(this).attr('RateforCell') == "true")
+	                    {
+	                    	$('#FillerForm').find('#fillersvalue').prop('checked', true);
+	                    }
+	                    else
+	                    {
+	                   		$('#FillerForm').find('#fillersvalue').prop('checked', false);
+	                    }
+	                    //$('#FillerForm').find('#fillersvalue').val($(this).attr('RateforCell'));
+	                    $.blockUI({ message: $('#FillerForm') , css: { height:'15%', width:'15%'} }); 
+	                }
+                });
+                $('#tabs-5').on('dblclick','td.availablelist', function() 
+                { 
+                	if ($(this).attr('HasValues') == 'true')
+                	{
+	                    document.getElementById('{!$Component.hiddenCellid}').value = $(this).attr('CellId') ;
+	                    $('#UnitsForm').find('#unitsvalue').val($(this).attr('RateforCell'));
+	                    $.blockUI({ message: $('#UnitsForm') , css: { height:'15%', width:'15%'} }); 
+	                }
+                });
+                $('#tabs-1').on('dblclick','td.LTCavailable', function() 
+                { 
+                	if ($(this).attr('HasValues') == 'true')
+                	{
+                		if ($(this).attr('CanceledStatus') == 'Canceled')
+                		{
+                			$('#LTCForm').find('#ltcbuttonid').val('Uncancel Schedule');
+                		}
+                		else
+                		{
+                			$('#LTCForm').find('#ltcbuttonid').val('Cancel Schedule');
+                		}
+	                    document.getElementById('{!$Component.hiddenCellid}').value = $(this).attr('CellId') ;
+	                    $.blockUI({ message: $('#LTCForm') , css: { height:'8%', width:'18%'} }); 
+	                }
+                });
+                $('#tabs-4').on('dblclick','td.Extavailable', function() 
+                { 
+                	if ($(this).attr('HasValues') == 'true')
+                	{
+                		document.getElementById('{!$Component.hiddenExtensionDate}').value = $(this).attr('ExtensionDate') ;
+	                    document.getElementById('{!$Component.hiddenOrderLineNumber}').value = $(this).attr('OrderLineExt') ;
+	                    $.blockUI({ message: $('#ExtForm') , css: { height:'8%', width:'15%'} }); 
+	                }
+                });
+                $('.floatingHeaderTable').vfFloatingHeaders();
+                $( "#tabs" ).tabs();
+            }); 
+            function checkAll(cb,cbid)
+            {
+                if ($(cb).attr('checked'))
+                {
+                    $('input[id$="' + cbid+ '"]:enabled').attr('checked',true);
+                }
+                else
+                {
+                    $('input[id$="' + cbid+ '"]:enabled').attr('checked',false);
+                }
+            } 
+            function DummyDate(cb,cbid)
+            {
+                $('input[id$="' + cbid+ '"]:enabled').val($(cb).val());
+            }  
+            function rateset()
+            {
+                console.log(  $('#ratevalue').val()  );
+                document.getElementById('{!$Component.hiddencellrate}').value = $('#ratevalue').val();
+                Testcellrate();  
+            }
+            function unitsset()
+            {
+                console.log(  $('#unitsvalue').val()  );
+                document.getElementById('{!$Component.hiddenCellUnits}').value = $('#unitsvalue').val();
+                Testcellunits();  
+            }
+            function fillersset()
+            {
+                console.log(  $('#fillersvalue').val()  );
+                if ($('#fillersvalue').is(':checked'))
+                {
+                	document.getElementById('{!$Component.selectedfillerinput}').value = "true";
+                }
+                else
+                {
+                	document.getElementById('{!$Component.selectedfillerinput}').value = "false";
+                }
+                //document.getElementById('{!$Component.selectedfillerinput}').value = $('#fillersvalue').val();
+                Testcellfiller();  
+            }
+        </script> 
+        <!-- block pop up values to VF-->
+        <apex:inputhidden value="{!CellId}" id="hiddenCellid"/>
+        <apex:inputhidden value="{!cellrate}" id="hiddencellrate"/>
+        <apex:inputhidden value="{!SelectedExtensionDate}" id="hiddenExtensionDate"/>
+        <apex:inputhidden value="{!SelectedOrderLineNumber}" id="hiddenOrderLineNumber"/>
+        <apex:inputHidden value="{!cellUnits}" id="hiddenCellUnits" />
+        <apex:inputHidden value="{!SelectedFiller}" id="selectedfillerinput" />
+        <apex:sectionHeader title="Double Check Report"/>
+        <apex:pageblock title="Search">
+            <table width="100%">   
+                <tr>  
+                    <td align="left">
+                        <apex:inputText value="{!Searchfield }"/>  
+                        <apex:commandbutton action="{!DoSearch}" value="Search" status="pageStatus" /> <apex:actionStatus startText="(Loading...)" id="pageStatus"/>
+                        <apex:inputCheckbox value="{!BarterCheckbox}" />&nbsp;Barter&nbsp;&nbsp;|&nbsp;&nbsp;
+                        <apex:selectList value="{!SelectedCableSynd}" size="1"><apex:selectOptions value="{!CableSyndSOList}" /></apex:selectList>
+                    </td>
+                    <td align="right">
+                    	<table cellspacing="5">
+                    		<tr>
+                    			<td colspan="2">Range&nbsp;&nbsp;<apex:selectList value="{!SelectedDateLiteral}" size="1"><apex:selectOptions value="{!DateLiteralSOList}" /><apex:actionSupport event="onchange" rerender="StartDateField,EndDateField" action="{!ReturnSOQLDateString}" /></apex:selectList></td>
+                    		</tr>
+                    		<tr>
+                    			<td>From&nbsp;&nbsp;<apex:inputField value="{!WeekStartDate.Day__c}" id="StartDateField" /></td>
+                    			<td>To&nbsp;&nbsp;<apex:inputField value="{!WeekEndDate.Day__c}" id="EndDateField" /></td>
+                    		</tr>
+                    	</table>
+                    </td>
+                </tr>  
+                <tr>
+                    <td>
+                        <font size="1">
+                            For advanced searches please separate the keywords with a comma ','
+                        </font>
+                    </td>
+                </tr>
+            </table>
+        </apex:pageblock>
+        <apex:outputPanel rendered="{!IF(Searchfield != null && Searchfield != '-', true, false)}" id="DealDisplay">
+            <apex:pageBlock title="DEAL" >
+                <apex:outputPanel styleClass="tableContainer" layout="block" style="overflow:auto;max-height:350px" >
+                    <apex:pageblocktable styleclass="floatingHeaderTable"  value="{!DealResultList}" var="d">
+                        <apex:column headerValue="Select" styleClass="{!IF(LEFT(DealId, 15) == LEFT(d.Id, 15),'ui-state-active','')}">
+                       	    <apex:commandLink type="image/png" action="{!SearchforSchedules}" status="pageStatus" >
+                                <apex:image value="/img/msg_icons/confirm24.png"/>
+                                <apex:param name="Dealid" value="{!d.id}" assignTo="{!DealId}"/>
+                                <apex:param name="Dealname" value="{!d.Name}" assignTo="{!DealName}"/>
+                            </apex:commandLink> 
+	                    </apex:column>
+                        <apex:column headerValue="Deal Link" styleClass="{!IF(LEFT(DealId, 15) == LEFT(d.Id, 15),'ui-state-active','')}">
+                            <apex:outputLink style="color:#000000;" value="/{!d.id}" id="deallink1" target="_blank">
+                                <apex:outputField value="{!d.Name}"/> 
+                            </apex:outputLink>   
+	                    </apex:column>
+                        <apex:column headerValue="Brands" styleClass="{!IF(LEFT(DealId, 15) == LEFT(d.Id, 15),'ui-state-active','')}">
+                            <apex:outputLink style="color:#000000;" value="/{!d.Brands__c}" id="brandlink" target="_blank">
+                                <apex:outputtext value="{!d.Brands__r.Name}"/>    
+                            </apex:outputLink>
+                        </apex:column>
+                        <apex:column headerValue="Agency" styleClass="{!IF(LEFT(DealId, 15) == LEFT(d.Id, 15),'ui-state-active','')}">
+                            <apex:outputLink style="color:#000000;" value="/{!d.Contact__r.Account.id}" id="agencylink" target="_blank">
+                                <apex:outputField value="{!d.ContactAccount__c}"/>
+                            </apex:outputLink>
+                        </apex:column> 
+                        <apex:column headerValue="Program" styleClass="{!IF(LEFT(DealId, 15) == LEFT(d.Id, 15),'ui-state-active','')}">
+                            <apex:outputLink style="color:#000000;" value="/{!d.Program__r.id}" id="prolink" target="_blank">
+                                <apex:outputtext value="{!d.Program__r.Name}"/>
+                            </apex:outputLink>
+                        </apex:column>
+                        <apex:column headerValue="Contact" styleClass="{!IF(LEFT(DealId, 15) == LEFT(d.Id, 15),'ui-state-active','')}"> 
+                            <apex:outputLink style="color:#000000;" value="/{!d.Contact__r.id}" id="conlink" target="_blank">
+                                <apex:outputtext value="{!d.Contact__r.Name}"/> 
+                            </apex:outputLink>
+                        </apex:column>
+                        <apex:column headerValue="Campaign" styleClass="{!IF(LEFT(DealId, 15) == LEFT(d.Id, 15),'ui-state-active','')}">
+                                <apex:outputField value="{!d.Campaign__c}"/>
+                        </apex:column>
+                        <apex:column headerValue="Network Deal Number" styleClass="{!IF(LEFT(DealId, 15) == LEFT(d.Id, 15),'ui-state-active','')}">
+                            <apex:outputField value="{!d.Network_Deal_Number__c}"/>
+                        </apex:column>
+                        <apex:column headerValue="Week MIN" styleClass="{!IF(LEFT(DealId, 15) == LEFT(d.Id, 15),'ui-state-active','')}">
+                            <apex:outputField value="{!d.Week_MIN_Field__c}"/>
+                        </apex:column>
+                        <apex:column headerValue="Agency Deal Number" styleClass="{!IF(LEFT(DealId, 15) == LEFT(d.Id, 15),'ui-state-active','')}">
+                            <apex:outputField value="{!d.Agency_Deal_Number__c}"/>
+                        </apex:column>
+                        <apex:column headerValue="Units Available" styleClass="{!IF(LEFT(DealId, 15) == LEFT(d.Id, 15),'ui-state-active','')}">
+                            <apex:outputField value="{!d.Sum_of_Units_Available__c}"/>
+                        </apex:column>   
+                        <apex:column headerValue="Total Dollars" styleClass="{!IF(LEFT(DealId, 15) == LEFT(d.Id, 15),'ui-state-active','')}">
+                            <apex:outputField value="{!d.Sum_of_Total_Dollars__c}"/>
+                        </apex:column>
+                    </apex:pageblocktable>
+                </apex:OutputPanel>
+			</apex:pageBlock>  
+        </apex:outputPanel>
+        <apex:pageMessages id="message"></apex:pageMessages>
+        <apex:outputPanel rendered="{!IF(DealId!= null && DealId!= '-', true, false)}" id="ScheduleDisplay"> 
+            <apex:outputpanel rendered="{!IF(schedulemessage = true, true, false)}" >
+                <apex:pageblock title="{!DealName}">    
+                    No Schedules to Display
+                </apex:pageblock>
+            </apex:outputpanel>
+            <apex:outputPanel rendered="{!IF(showtable = true, true, false)}">    
+                <div id="tabs">
+                    <ul>
+                        <li><a href="#tabs-2">Filler</a></li>
+                        <li><a href="#tabs-1">LTC</a></li>
+                        <li><a href="#tabs-3">Rate</a></li>
+                        <li><a href="#tabs-4">Extend</a></li>
+                        <li><a href="#tabs-5">Frequency</a></li>
+                    </ul>
+                    <div id="tabs-1"> 
+                        <apex:outputPanel id="LTCPanel">
+                            <apex:pageblock >
+                            	<h2>{!SelectedDeal.Name} - {!SelectedDeal.Program__r.Name} - {!SelectedDeal.Brands__r.Name}</h2><hr />
+                            	<table cellpadding="5" border="0">
+                            		<tr>
+                            			<td><b>Total Units</b></td>
+                            			<td><apex:outputField value="{!SelectedDeal.Sum_of_Units_Available__c}" /></td>
+                            		</tr>
+                            		<tr>
+                            			<td><b>Total Dollars</b></td>
+                            			<td><apex:outputField value="{!SelectedDeal.Sum_of_Total_Dollars__c}" /></td>
+                            		</tr>
+                            	</table>
+                                <apex:commandbutton action="{!ScheduleChange}" value="Update" rerender="ExtensionPanel,message,LTCPanel,FillerPanel,RatePanel,UnitsAvailablePanel" /> 
+                                <table border="1" cellpadding="5" cellspacing="0" >
+                                    <tr>
+                                        <td style="background-color:#FF0000; width:20px;">
+                                            <apex:inputcheckbox id="LTC" value="{!selectAll}" onclick="checkAll(this,'LTCtablecheckbox')"/> 
+                                        </td>
+                                        <td style="background-color:#FF0000; width:80px;"><apex:inputField value="{!DummySchedule1.Day__c}" onchange="DummyDate(this,'LTCDateField')" /></td>
+                                        <td style="background-color:#FF0000; width:80px;"><B>Days&nbsp;Allowed</B></td>
+                                        <td style="background-color:#FF0000; width:100px;"><B>Start&nbsp;-&nbsp;End</B></td>
+                                        <td style="background-color:#FF0000; width:80px;"><B>Length</B></td>
+                                        <td style="background-color:#FF0000; width:80px;"><B>Rate</B></td>
+                                        <td style="background-color:#FF0000; width:30px;"><B>Filler</B></td>
+                                        <apex:repeat value="{!headingModels}" var="headingModel">
+                                            <td style="background-color:#FF0000;"> 
+                                                <b>
+                                                    <apex:outputText >                            
+                                                        <apex:outputText value="{0,date,M/d}">
+                                                           <apex:param value="{!headingModel.startOfWeek}" />
+                                                        </apex:outputText>
+                                                    </apex:outputText>
+                                                </b> 
+                                            </td>
+                                        </apex:repeat>
+                                    </tr>
+                                    <apex:repeat value="{!LTClist}" var="rt">
+                                        <tr>
+                                            <td style="text-align:center;">
+                                                <apex:inputcheckbox id="LTCtablecheckbox" value="{!rt.ischecked}" />
+                                            </td>
+                                            <td style="text-align:center;">
+                                                <apex:inputfield id="LTCDateField" value="{!rt.Scheduleobj.Day__c}" style="width:60px"/> 
+                                            </td>
+                                            <td style="text-align:center;">
+                                                <apex:outputText value="{!rt.DaysAllowed}" style="width:5px"/>
+                                            </td>
+                                            <td style="text-align:center;white-space:nowrap;">
+                                                <apex:outputText value="{!rt.SETime}" style="width:10px"/>
+                                            </td>
+                                            <td style="text-align:center;">
+                                                <apex:outputText value="{!rt.UnitLength}" style="width:5px"/>
+                                            </td>
+                                            <td style="text-align:center;">
+                                                <apex:inputText value="{!rt.Rate}" style="width:100px;" disabled="true" />
+                                            </td>
+                                            <td style="text-align:center;">
+                                                <apex:inputcheckbox value="{!rt.Filler}"  disabled="true"/>
+                                            </td>
+                                            <apex:repeat value="{!rt.weeks}" var="wk">
+                                                <td style="text-align:center;{!IF(wk.multipleschedules == true,'background:#ffff66;','')}" valign="bottom" class="LTCavailable" CellId="{!wk.schObj.id}"  HasValues="{!wk.CellAvailable}" CanceledStatus="{!wk.schobj.Status__c}" RateforCell="{!wk.schObj.rate__c}" CellName="{!wk.schObj.name}">
+                                                    <apex:outputLink value="/{!wk.schObj.id}" id="eventlink" target="_blank">
+                                                        <apex:outputPanel rendered="{!wk.schObj.Status__c == 'Canceled'}" >
+                                                        	<apex:outputText value="0" style="color:{!wk.color}" />
+                                                        </apex:outputPanel>
+                                                        <apex:outputPanel rendered="{!wk.schobj.Status__c != 'Canceled'}" >
+                                                    		<apex:outputtext value="{!wk.schObj.Units_Available__c}" style="color:{!wk.color}"/>    	
+                                                        </apex:outputPanel>   
+                                                    </apex:outputLink>
+                                                </td>
+                                            </apex:repeat>
+                                        </tr>
+                                    </apex:repeat>
+                                    <tr>
+			                        	<td colspan="7"></td>
+			                        	<apex:repeat value="{!WeekDollarsList}" var="WeekPrice">
+			                        		<td>
+			                        			<apex:outputText value="{!WeekPrice}"/>
+			                        		</td>
+			                        	</apex:repeat>
+			                        </tr>
+                                </table> 
+                            </apex:pageblock>    
+                        </apex:outputPanel> 
+                    </div>
+                    <div id="tabs-2">
+                        <apex:outputPanel id="FillerPanel">
+                            <apex:pageblock >
+                                <h2>{!SelectedDeal.Name} - {!SelectedDeal.Program__r.Name} - {!SelectedDeal.Brands__r.Name}</h2><hr />
+                            	<table cellpadding="5" border="0">
+                            		<tr>
+                            			<td><b>Total Units</b></td>
+                            			<td><apex:outputField value="{!SelectedDeal.Sum_of_Units_Available__c}" /></td>
+                            		</tr>
+                            		<tr>
+                            			<td><b>Total Dollars</b></td>
+                            			<td><apex:outputField value="{!SelectedDeal.Sum_of_Total_Dollars__c}" /></td>
+                            		</tr>
+                            	</table>
+                                <apex:commandbutton action="{!FillerUpdate}" value="Update" reRender="ExtensionPanel,message,LTCPanel,FillerPanel,RatePanel,UnitsAvailablePanel"/> 
+                                <table border="1" cellpadding="5" cellspacing="0" >
+                                    <tr>
+                                        <td style="background-color:#0099FF; width:20px;">
+                                            <apex:inputcheckbox id="filler" value="{!selectAll}" onclick="checkAll(this,'fillertablecheckbox')"/> 
+                                        </td>
+                                        <td style="background-color:#0099FF; width:80px;"><apex:inputField value="{!DummySchedule1.Day__c}" onchange="DummyDate(this,'FillerDateField')" /></td>
+                                        <td style="background-color:#0099FF; width:80px;"><B>Days&nbsp;Allowed</B></td>
+                                        <td style="background-color:#0099FF; width:100px;"><B>Start&nbsp;-&nbsp;End</B></td>
+                                        <td style="background-color:#0099FF; width:80px;"><B>Length</B></td>
+                                        <td style="background-color:#0099FF; width:80px;"><B>Rate</B></td>
+                                        <td style="background-color:#0099FF; width:30px;"><B>Filler</B></td>
+                                        <apex:repeat value="{!headingModels}" var="headingModel">
+                                            <td style="background-color:#0099FF;"> 
+                                                <b>
+                                                    <apex:outputText >                            
+                                                        <apex:outputText value="{0,date,M/d}">
+                                                           <apex:param value="{!headingModel.startOfWeek}" />
+                                                        </apex:outputText>
+                                                    </apex:outputText>
+                                                </b> 
+                                            </td>
+                                        </apex:repeat>
+                                    </tr>
+                                    <apex:repeat value="{!FillerList }" var="rt">
+                                        <tr>
+                                            <td style="text-align:center;">
+                                                <apex:inputcheckbox id="fillertablecheckbox" value="{!rt.ischecked}" />
+                                            </td>
+                                            <td style="text-align:center;">
+                                                <apex:inputfield id="FillerDateField" value="{!rt.Scheduleobj.Day__c}" style="width:60px"/> 
+                                            </td>
+                                            <td style="text-align:center;">
+                                                <apex:outputText value="{!rt.DaysAllowed}" style="width:5px"/>
+                                            </td>
+                                            
+                                            <td style="text-align:center;white-space:nowrap;">
+                                                <apex:outputText value="{!rt.SETime}" style="width:10px"/>
+                                            </td>
+                                            <td style="text-align:center;">
+                                                <apex:outputText value="{!rt.UnitLength}" style="width:5px"/>
+                                            </td>
+                                            <td style="text-align:center;">
+                                                <apex:inputText value="{!rt.Rate}" style="width:100px;" disabled="true" />
+                                            </td>
+                                            <td style="text-align:center;">
+                                                <apex:inputcheckbox value="{!rt.Filler}"  disabled="true"/>
+                                            </td>
+                                            <apex:repeat value="{!rt.weeks}" var="wk">
+                                                <td style="text-align:center;{!IF(wk.multipleschedules == true,'background:#ffff66;','')}" valign="bottom" class="filleravailable" CellId="{!wk.schObj.id}"  HasValues="{!wk.CellAvailable}" RateforCell="{!wk.schObj.filler__c}" CellName="{!wk.schObj.name}">
+                                                    <apex:outputLink value="/{!wk.schObj.id}" id="eventlink" target="_blank">
+                                                        <apex:outputPanel rendered="{!wk.schObj.Status__c == 'Canceled'}" >
+                                                        	<apex:outputText value="0" style="color:{!wk.color}" />
+                                                        </apex:outputPanel>
+                                                        <apex:outputPanel rendered="{!wk.schobj.Status__c != 'Canceled'}" >
+                                                    		<apex:outputtext value="{!wk.schObj.Units_Available__c}" style="color:{!wk.color}"/>    	
+                                                        </apex:outputPanel>   
+                                                    </apex:outputLink>
+                                                </td>
+                                            </apex:repeat> 
+                                        </tr>
+                                    </apex:repeat>
+                                    <tr>
+			                        	<td colspan="7"></td>
+			                        	<apex:repeat value="{!WeekDollarsList}" var="WeekPrice">
+			                        		<td>
+			                        			<apex:outputText value="{!WeekPrice}"/>
+			                        		</td>
+			                        	</apex:repeat>
+			                        </tr>
+                                </table> 
+                            </apex:pageblock>
+                        </apex:outputPanel>   
+                    </div>
+                    <div id="tabs-3">
+                        <apex:outputPanel id="RatePanel">
+                            <apex:pageblock >
+                                <h2>{!SelectedDeal.Name} - {!SelectedDeal.Program__r.Name} - {!SelectedDeal.Brands__r.Name}</h2><hr />
+                            	<table cellpadding="5" border="0">
+                            		<tr>
+                            			<td><b>Total Units</b></td>
+                            			<td><apex:outputField value="{!SelectedDeal.Sum_of_Units_Available__c}" /></td>
+                            		</tr>
+                            		<tr>
+                            			<td><b>Total Dollars</b></td>
+                            			<td><apex:outputField value="{!SelectedDeal.Sum_of_Total_Dollars__c}" /></td>
+                            		</tr>
+                            	</table>
+                                <apex:commandbutton action="{!RateUpdate}" value="Update" rerender="ExtensionPanel,message,LTCPanel,FillerPanel,RatePanel,UnitsAvailablePanel" />  
+                                <table border="1" cellpadding="5" cellspacing="0" >
+                                    <tr>
+                                        <td style="background-color:#FFFF66; width:20px;">
+                                            <apex:inputcheckbox id="rate" value="{!selectAll}" onclick="checkAll(this,'ratetablecheckbox')"/> 
+                                        </td>
+                                        <td style="background-color:#FFFF66; width:80px;"><apex:inputField value="{!DummySchedule1.Day__c}" onchange="DummyDate(this,'RateDateField')" /></td>
+                                        <td style="background-color:#FFFF66; width:80px;"><B>Days&nbsp;Allowed</B></td>
+                                        <td style="background-color:#FFFF66; width:100px;"><B>Start&nbsp;-&nbsp;End</B></td>
+                                        <td style="background-color:#FFFF66; width:80px;"><B>Length</B></td>
+                                        <td style="background-color:#FFFF66; width:80px;"><B>Rate</B></td>
+                                        <td style="background-color:#FFFF66; width:30px;"><B>Filler</B></td>
+                                        <apex:repeat value="{!headingModels}" var="headingModel">
+                                            <td style="background-color:#FFFF66;"> 
+                                                <b>
+                                                    <apex:outputText >                            
+                                                        <apex:outputText value="{0,date,M/d}">
+                                                           <apex:param value="{!headingModel.startOfWeek}" />
+                                                        </apex:outputText>
+                                                    </apex:outputText>
+                                                </b> 
+                                            </td>
+                                        </apex:repeat>
+                                    </tr>
+                                    <apex:repeat value="{!ratelist}" var="rt">
+                                        <tr>
+                                            <td style="text-align:center;">
+                                                <apex:inputcheckbox id="ratetablecheckbox" value="{!rt.ischecked}" />
+                                            </td>
+                                            <td style="text-align:center;">
+                                                <apex:inputfield id="RateDateField" value="{!rt.Scheduleobj.Day__c }" style="width:60px" /> 
+                                            </td>
+                                            <td style="text-align:center;">
+                                                <apex:outputText value="{!rt.DaysAllowed}" style="width:5px"/>
+                                            </td>
+                                            <td style="text-align:center;white-space:nowrap;">
+                                                <apex:outputText value="{!rt.SETime}" style="width:10px"/>
+                                            </td>
+                                            <td style="text-align:center;">
+                                                <apex:outputText value="{!rt.UnitLength}" style="width:5px"/>
+                                            </td>
+                                            <td style="text-align:center;">
+                                                <apex:inputText value="{!rt.Rate}" style="width:100px;" />
+                                            </td>
+                                            <td style="text-align:center;">
+                                                <apex:inputcheckbox value="{!rt.Filler}"  disabled="true"/>
+                                            </td>
+                                            <apex:repeat value="{!rt.weeks}" var="wk">
+                                                <td style="text-align:center;{!IF(wk.multipleschedules == true,'background:#ffff66;','')}" valign="bottom" class="unitavailable" CellId="{!wk.schObj.id}"  HasValues="{!wk.CellAvailable}" RateforCell="{!wk.schObj.rate__c}" CellName="{!wk.schObj.name}">
+                                                    <apex:outputLink value="/{!wk.schObj.id}" id="eventlink" target="_blank">
+                                                        <apex:outputPanel rendered="{!wk.schObj.Status__c == 'Canceled'}" >
+                                                        	<apex:outputText value="0" style="color:{!wk.color}" />
+                                                        </apex:outputPanel>
+                                                        <apex:outputPanel rendered="{!wk.schobj.Status__c != 'Canceled'}" >
+                                                    		<apex:outputtext value="{!wk.schObj.Units_Available__c}" style="color:{!wk.color}"/>    	
+                                                        </apex:outputPanel>
+                                                    </apex:outputLink>
+                                                </td>
+                                            </apex:repeat> 
+                                        </tr>
+                                    </apex:repeat>
+                                    <tr>
+			                        	<td colspan="7"></td>
+			                        	<apex:repeat value="{!WeekDollarsList}" var="WeekPrice">
+			                        		<td>
+			                        			<apex:outputText value="{!WeekPrice}"/>
+			                        		</td>
+			                        	</apex:repeat>
+			                        </tr>
+                                </table> 
+                            </apex:pageblock> 
+                        </apex:outputPanel>
+                    </div>
+                    <div id="tabs-4">
+                        <apex:outputPanel id="ExtensionPanel">
+                            <apex:pageblock >
+                                <h2>{!SelectedDeal.Name} - {!SelectedDeal.Program__r.Name} - {!SelectedDeal.Brands__r.Name}</h2><hr />
+                            	<table cellpadding="5" border="0">
+                            		<tr>
+                            			<td><b>Total Units</b></td>
+                            			<td><apex:outputField value="{!SelectedDeal.Sum_of_Units_Available__c}" /></td>
+                            		</tr>
+                            		<tr>
+                            			<td><b>Total Dollars</b></td>
+                            			<td><apex:outputField value="{!SelectedDeal.Sum_of_Total_Dollars__c}" /></td>
+                            		</tr>
+                            	</table>
+                                <apex:commandbutton action="{!ExtensionUpdate}" value="Update" rerender="ExtensionPanel,message,LTCPanel,FillerPanel,RatePanel,UnitsAvailablePanel" />  
+                                <table border="1" cellpadding="5" cellspacing="0" >
+                                    <tr>
+                                        <td style="background-color:#7B68EE; width:20px;">
+                                            <apex:inputcheckbox id="rate" value="{!selectAll}" onclick="checkAll(this,'extensioncheckbox')"/> 
+                                        </td>
+                                        <td style="background-color:#7B68EE; width:80px;"><apex:inputField value="{!DummySchedule1.Day__c}" onchange="DummyDate(this,'RateDateField')" /></td>
+                                        <td style="background-color:#7B68EE; width:80px;"><B>Days&nbsp;Allowed</B></td>
+                                        <td style="background-color:#7B68EE; width:100px;"><B>Start&nbsp;-&nbsp;End</B></td>
+                                        <td style="background-color:#7B68EE; width:80px;"><B>Length</B></td>
+                                        <td style="background-color:#7B68EE; width:80px;"><B>Rate</B></td>
+                                        <td style="background-color:#7B68EE; width:30px;"><B>Filler</B></td>
+                                        <apex:repeat value="{!headingModels}" var="headingModel">
+                                            <td style="background-color:#7B68EE;"> 
+                                                <b>
+                                                    <apex:outputText >                            
+                                                        <apex:outputText value="{0,date,M/d}">
+                                                           <apex:param value="{!headingModel.startOfWeek}" />
+                                                        </apex:outputText>
+                                                    </apex:outputText>
+                                                </b> 
+                                            </td>
+                                        </apex:repeat>
+                                    </tr>
+                                    <apex:repeat value="{!Extensionlist}" var="rt">
+                                        <tr>
+                                            <td style="text-align:center;">
+                                                <apex:inputcheckbox id="extensioncheckbox" value="{!rt.ischecked}" />
+                                            </td>
+                                            <td style="text-align:center;">
+                                                <apex:inputfield id="RateDateField" value="{!rt.Scheduleobj.Day__c }" style="width:60px" /> 
+                                            </td>
+                                            <td style="text-align:center;">
+                                                <apex:outputText value="{!rt.DaysAllowed}" style="width:5px"/>
+                                            </td>
+                                            <td style="text-align:center;white-space:nowrap;">
+                                                <apex:outputText value="{!rt.SETime}" style="width:10px"/>
+                                            </td>
+                                            <td style="text-align:center;">
+                                                <apex:outputText value="{!rt.UnitLength}" style="width:5px"/>
+                                            </td>
+                                            <td style="text-align:center;">
+                                                <apex:inputText value="{!rt.Rate}"  style="width:100px;" disabled="true" />
+                                            </td>
+                                            <td style="text-align:center;">
+                                                <apex:inputcheckbox value="{!rt.Filler}"  disabled="true"/>
+                                            </td>
+                                            <apex:repeat value="{!rt.weeks}" var="wk">
+                                                <td style="text-align:center;{!IF(wk.multipleschedules == true,'background:#ffff66;','')}" valign="bottom" class="Extavailable" CellId="{!wk.schObj.id}" ExtensionDate="{!wk.ExtensionDate}" HasValues="{!wk.ExtensionAvailable}" OrderLineExt="{!wk.OrderLineNumber}" CellName="{!wk.schObj.name}">
+                                                    <apex:outputLink value="/{!wk.schObj.id}" id="eventlink" target="_blank">
+                                                        <apex:outputPanel rendered="{!wk.schObj.Status__c == 'Canceled'}" >
+                                                        	<apex:outputText value="0" style="color:{!wk.color}" />
+                                                        </apex:outputPanel>
+                                                        <apex:outputPanel rendered="{!wk.schobj.Status__c != 'Canceled'}" >
+                                                    		<apex:outputtext value="{!wk.schObj.Units_Available__c}" style="color:{!wk.color}"/>    	
+                                                        </apex:outputPanel>
+                                                    </apex:outputLink>
+                                                </td>
+                                            </apex:repeat> 
+                                        </tr>
+                                    </apex:repeat>
+                                    <tr>
+			                        	<td colspan="7"></td>
+			                        	<apex:repeat value="{!WeekDollarsList}" var="WeekPrice">
+			                        		<td>
+			                        			<apex:outputText value="{!WeekPrice}"/>
+			                        		</td>
+			                        	</apex:repeat>
+			                        </tr>
+                                </table> 
+                            </apex:pageblock> 
+                        </apex:outputPanel>
+                    </div>
+                    <div id="tabs-5">
+                        <apex:outputPanel id="UnitsAvailablePanel">
+                            <apex:pageblock >
+                                <h2>{!SelectedDeal.Name} - {!SelectedDeal.Program__r.Name} - {!SelectedDeal.Brands__r.Name}</h2><hr />
+                            	<table cellpadding="5" border="0">
+                            		<tr>
+                            			<td><b>Total Units</b></td>
+                            			<td><apex:outputField value="{!SelectedDeal.Sum_of_Units_Available__c}" /></td>
+                            		</tr>
+                            		<tr>
+                            			<td><b>Total Dollars</b></td>
+                            			<td><apex:outputField value="{!SelectedDeal.Sum_of_Total_Dollars__c}" /></td>
+                            		</tr>
+                            	</table>
+                                <apex:commandbutton action="{!UnitsAvailableUpdate}" value="Update" rerender="ExtensionPanel,message,LTCPanel,FillerPanel,RatePanel,UnitsAvailablePanel" />  
+                                <table border="1" cellpadding="5" cellspacing="0" >
+                                    <tr>
+                                        <td style="background-color:#66CCCC; width:20px;">
+                                            <apex:inputcheckbox id="rate" value="{!selectAll}" onclick="checkAll(this,'unitscheckbox')"/> 
+                                        </td>
+                                        <td style="background-color:#66CCCC; width:80px;"><apex:inputField value="{!DummySchedule1.Day__c}" onchange="DummyDate(this,'RateDateField')" /></td>
+                                        <td style="background-color:#66CCCC; width:80px;"><B>Days&nbsp;Allowed</B></td>
+                                        <td style="background-color:#66CCCC; width:100px;"><B>Start&nbsp;-&nbsp;End</B></td>
+                                        <td style="background-color:#66CCCC; width:80px;"><B>Length</B></td>
+                                        <td style="background-color:#66CCCC; width:80px;"><B>Rate</B></td>
+                                        <td style="background-color:#66CCCC; width:80px;"><B>Units Available</B></td>
+                                        <td style="background-color:#66CCCC; width:30px;"><B>Filler</B></td>
+                                        <apex:repeat value="{!headingModels}" var="headingModel">
+                                            <td style="background-color:#66CCCC;"> 
+                                                <b>
+                                                    <apex:outputText >                            
+                                                        <apex:outputText value="{0,date,M/d}">
+                                                           <apex:param value="{!headingModel.startOfWeek}" />
+                                                        </apex:outputText>
+                                                    </apex:outputText>
+                                                </b> 
+                                            </td>
+                                        </apex:repeat>
+                                    </tr>
+                                    <apex:repeat value="{!unitsavailablelist}" var="rt">
+                                        <tr>
+                                            <td style="text-align:center;">
+                                                <apex:inputcheckbox id="unitscheckbox" value="{!rt.ischecked}" />
+                                            </td>
+                                            <td style="text-align:center;">
+                                                <apex:inputfield id="RateDateField" value="{!rt.Scheduleobj.Day__c }" style="width:60px" /> 
+                                            </td>
+                                            <td style="text-align:center;">
+                                                <apex:outputText value="{!rt.DaysAllowed}" style="width:5px"/>
+                                            </td>
+                                            <td style="text-align:center;white-space:nowrap;">
+                                                <apex:outputText value="{!rt.SETime}" style="width:10px"/>
+                                            </td>
+                                            <td style="text-align:center;">
+                                                <apex:outputText value="{!rt.UnitLength}" style="width:5px"/>
+                                            </td>
+                                            <td style="text-align:center;">
+                                                <apex:inputText value="{!rt.Rate}" style="width:100px;" disabled="true"/>
+                                            </td>
+                                            <td style="text-align:center;">
+                                                <apex:inputText value="{!rt.UnitsAvailable}" style="width:100px;"/>
+                                            </td>
+                                            <td style="text-align:center;">
+                                                <apex:inputcheckbox value="{!rt.Filler}"  disabled="true"/>
+                                            </td>
+                                            <apex:repeat value="{!rt.weeks}" var="wk">
+                                                <td style="text-align:center;{!IF(wk.multipleschedules == true,'background:#ffff66;','')}" valign="bottom" class="availablelist" CellId="{!wk.schObj.id}"  HasValues="{!wk.CellAvailable}" RateforCell="{!wk.schObj.Units_Available__c}" CellName="{!wk.schObj.name}">
+                                                    <apex:outputLink value="/{!wk.schObj.id}" id="eventlink" target="_blank">
+                                                        <apex:outputPanel rendered="{!wk.schObj.Status__c == 'Canceled'}" >
+                                                        	<apex:outputText value="0" style="color:{!wk.color}" />
+                                                        </apex:outputPanel>
+                                                        <apex:outputPanel rendered="{!wk.schobj.Status__c != 'Canceled'}" >
+                                                    		<apex:outputtext value="{!wk.schObj.Units_Available__c}" style="color:{!wk.color}"/>    	
+                                                        </apex:outputPanel>
+                                                    </apex:outputLink>
+                                                </td>
+                                            </apex:repeat> 
+                                        </tr>
+                                    </apex:repeat>
+                                    <tr>
+			                        	<td colspan="8"></td>
+			                        	<apex:repeat value="{!WeekDollarsList}" var="WeekPrice">
+			                        		<td>
+			                        			<apex:outputText value="{!WeekPrice}"/>
+			                        		</td>
+			                        	</apex:repeat>
+			                        </tr>
+                                </table> 
+                            </apex:pageblock> 
+                        </apex:outputPanel>
+                    </div>
+                </div>
+            </apex:outputPanel>
+        </apex:outputPanel> 
+        <!-- block pop up structure -->
+        <apex:actionfunction action="{!cellsave}" name="Testcellrate" oncomplete="$.unblockUI();"  rerender="ExtensionPanel,message,LTCPanel,FillerPanel,RatePanel,UnitsAvailablePanel"/>
+        <apex:actionfunction action="{!LTCsave}" name="LTCset" oncomplete="$.unblockUI();"  rerender="ExtensionPanel,message,LTCPanel,FillerPanel,RatePanel,UnitsAvailablePanel"/>
+        <apex:actionfunction action="{!ExtensionSave}" name="Extset"  oncomplete="$.unblockUI();" rerender="ExtensionPanel,message,LTCPanel,FillerPanel,RatePanel,UnitsAvailablePanel"/>
+        <apex:actionfunction action="{!UnitsAvailableSave}" oncomplete="$.unblockUI();" name="Testcellunits"  rerender="ExtensionPanel,message,LTCPanel,FillerPanel,RatePanel,UnitsAvailablePanel" />
+        <apex:actionfunction action="{!FillerChecksave}" oncomplete="$.unblockUI();" name="Testcellfiller"  rerender="ExtensionPanel,message,LTCPanel,FillerPanel,RatePanel,UnitsAvailablePanel" />
+        <div id="loginForm" style="display:none">
+            <table cellpadding="10" align="center" valign="middle">
+                <tr>    
+                    <td>Rate:</td>
+                    <td>
+                        <input type="text" name="j_id0:form:j_id96" value="" id="ratevalue" size="5"> </input> 
+                    </td>
+                </tr>
+                <tr >  
+                    <td>
+                        <input type="submit" name="j_id0:form:j_id97" value="Save" onclick ="rateset()" class="btn"> </input>              
+                    </td> 
+                    <td>
+                        <apex:commandbutton oncomplete="$.unblockUI();" value="Cancel" />
+                    </td> 
+                </tr>
+            </table>
+        </div>
+        <div id="UnitsForm" style="display:none">
+            <table cellpadding="10" align="center" valign="middle">
+                <tr>    
+                    <td>Units Available:</td>
+                    <td>
+                        <input type="text" name="j_id0:form:j_id100" value="" id="unitsvalue" size="5"> </input> 
+                    </td>
+                </tr>
+                <tr >  
+                    <td>
+                        <input type="submit" name="j_id0:form:j_id101" value="Save" onclick ="unitsset()" class="btn"> </input>              
+                    </td> 
+                    <td>
+                        <apex:commandbutton oncomplete="$.unblockUI();" value="Cancel" />
+                    </td> 
+                </tr>
+            </table>
+        </div>
+        <div id="FillerForm" style="display:none">
+            <table cellpadding="10" align="center" valign="middle">
+                <tr>    
+                    <td>Filler:</td>
+                    <td>
+                        <input type="checkbox" name="j_id0:form:j_id102" value="" id="fillersvalue" > </input> 
+                    </td>
+                </tr>
+                <tr >  
+                    <td>
+                        <input type="submit" name="j_id0:form:j_id103" value="Save" onclick ="fillersset()" class="btn"> </input>              
+                    </td> 
+                    <td>
+                        <apex:commandbutton oncomplete="$.unblockUI();" value="Cancel" />
+                    </td> 
+                </tr>
+            </table>
+        </div>
+        <div id="LTCForm" style="display:none">
+            <table cellpadding="10" align="center" valign="middle" width="100%" height="100%">
+                <tr >  
+                    <td style="vertical-align:middle;">
+                        <input type="submit" id="ltcbuttonid" name="j_id0:form:j_id98" value="Cancel Schedule" onclick ="LTCset()" class="btn"> </input>              
+                    </td> 
+                    <td style="vertical-align:middle;">
+                        <apex:commandbutton oncomplete="$.unblockUI();" value="Cancel" />
+                    </td> 
+                </tr>
+            </table>
+        </div>
+        <div id="ExtForm" style="display:none">
+            <table cellpadding="10" align="center" valign="middle">
+                <tr >  
+                    <td>
+                        <input type="submit" name="j_id0:form:j_id99" value="Create Schedule" onclick ="Extset()" class="btn"> </input>              
+                    </td> 
+                    <td>
+                        <apex:commandbutton oncomplete="$.unblockUI();" value="Cancel" />
+                    </td> 
+                </tr>
+            </table>
+        </div>
+    </apex:form>
+</apex:page>

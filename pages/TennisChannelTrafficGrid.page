@@ -1,0 +1,183 @@
+<apex:page controller="TennisChannelTrafficGridController" sidebar="false" id="pg">
+  <apex:form id="frm">  
+  
+  <apex:actionFunction name="search" action="{!search}" reRender="frm" status="status1" />
+  <apex:actionFunction name="filter" action="{!filterCheck}" reRender="frm" status="status1" />
+      <apex:sectionHeader subtitle="Tennis Channel Traffic Grid"/>
+      
+      <!-- Filter Block -->
+      <apex:pageBlock >
+      <apex:actionStatus id="status1" startText="Loading..."/>
+      <apex:actionStatus id="save" startText="Saving..."/>
+      <apex:actionStatus id="send" startText="Sending Emails..."/>
+      <apex:actionStatus id="editsch" startText="Editing Schedules..."/>
+
+        <table width = "75%">
+              <tr>
+                  <td>Deal Account</td>
+                  <!--<td>Month </td>-->
+                  <td style="width:300px;">Missing Traffic</td>
+                  <td style="width:300px;">Show Pre-Empted</td>
+                  <td>&nbsp;</td>
+                  <td>From</td>
+                  <td colspan="2">To</td>
+              </tr>
+              <tr>
+                  <td><apex:inputField value="{!con.AccountId}" id="ac" onchange="search(con.AccountId); return false;"/></td>
+                  <!--<td>
+                      <apex:selectList size="1" String no = 'N';value="{!months}" onchange="search() ; return false;">
+                        <apex:selectOptions value="{!items}"/>
+                      </apex:selectList>
+                  </td>-->
+                  
+                  <td style="width:300px;"> <apex:inputCheckbox value="{!missingTraffic}" onchange="search() ; return false;"/></td>
+                  <td style="width:300px;"> <apex:inputCheckbox value="{!unitsPreEmpted}" onchange="search() ; return false;"/></td>
+                  
+                  <td><apex:inputField value="{!schedulesFrm.Week__c}"/></td>
+                  <td><apex:inputField value="{!schedulesTo.Week__c}"/></td>
+                  <td style="width:800px;"><apex:commandButton value="Search" onclick="search() ; return false;"/></td>
+                  <!--<td align="right"><apex:commandButton value="Search" action="{!search}" /></td>-->
+              </tr>
+              <tr>
+              <td colspan="3">&nbsp;</td>
+                <td><apex:commandButton value="Previous Week" action="{!oneWeekBack}" reRender="frm" status="status1" /></td>
+                <td><apex:commandButton value="Next Week" action="{!oneWeekLater}" reRender="frm" status="status1"/></td>
+              </tr>  
+              
+          </table>
+      </apex:pageblock>
+        <!-- List Block -->
+       <apex:pageBlock rendered="{!hasRecords}" id="pb">
+       <center>
+           <apex:commandButton value="Request Traffic" action="{!requestTraffic}" reRender="frm" status="send"/>
+           <apex:commandButton value="Request Traffic For Week" action="{!requestTrafficWeek}" reRender="frm" status="send"/>
+           <apex:commandButton value="Multi Edit" onclick="editSchedules(); return false;" reRender="frm"/>
+           <apex:commandButton value="Save" action="{!Save}" reRender="frm" status="save"/>
+       </center>
+        <div id="divSec">
+        <apex:pageBlockSection >
+          <apex:pageBlockTable value="{!scheduleModelList}" var="s">
+          
+              <apex:column headerValue="Edit/Select">
+                  <apex:facet name="header">
+                      <APEX:OUTPutPanel >
+                          <input type="checkbox" onClick="selectAll(this.checked);return true;" name="allchk" />
+                      </APEX:OUTPutPanel>
+                  </apex:facet>
+              <input type="checkbox" value="{!s.sech.Id}" name="chk_{!s.SrNo}" id="chk_{!s.SrNo}" />
+              </apex:column>
+          
+              <apex:column headerValue="Deal Program" ><apex:outputField value="{!s.sech.DealProgram__c}"/></apex:column>
+              <apex:column headerValue="Week"><apex:inputField value="{!s.sech.Week__c}"/></apex:column>
+              <apex:column headerValue="Day of Week"><apex:outputField value="{!s.sech.Day_of_Week__c}"/></apex:column>
+              <apex:column headerValue="Long Form"><apex:inputField value="{!s.sech.Long_Form__c}"/></apex:column>
+              <apex:column headerValue="Deal Account"><apex:outputField value="{!s.sech.DealAccount__c}"/></apex:column>
+              <!--<apex:column headerValue="Units Aired"><apex:outputField value="{!s.Units_Aired__c}"/></apex:column>-->
+              <apex:column headerValue="Rate"><apex:inputField value="{!s.sech.Rate__c}"/></apex:column>
+              <!--<apex:column headerValue="Total Dollars"><apex:outputField value="{!s.Total_Dollars__c}"/></apex:column>-->
+              <apex:column headerValue="LF Brand"><apex:inputField value="{!s.sech.LF_Brand__c}"/></apex:column>
+              <apex:column headerValue="800 Number"><apex:inputField value="{!s.sech.X800_Number__c}"/></apex:column>
+              <apex:column headerValue="Units Preempted"><apex:inputField value="{!s.sech.Units_Preempted__c}"/></apex:column>
+              <apex:column headerValue="Deal: Deal Name"><apex:outputField value="{!s.sech.Deal_Parent__c}"/></apex:column>
+              <apex:column headerValue="Schedule: Schedule Name"><a href="/{!s.sech.id}"><apex:outputField value="{!s.sech.name}"/></a></apex:column>              
+          </apex:pageBlockTable>
+        </apex:pageBlockSection>
+        </div>
+        <table width = "100%" style ="Padding-left:5px" bgcolor="#aaaacc">
+            <tr>
+                <td colspan="2"><font size = "3"><b>Grand Totals {!total}</b></font></td>                
+            </tr>
+            <tr >
+                <td width ="20%" align="right" style = "padding-right:90px"><b>
+                    <apex:outputText rendered="{!totalRate > 999}" value="{0, number, 0,000.00}">
+                        $<apex:param value="{!totalRate}"/>
+                    </apex:outputText>
+                    <apex:outputText rendered="{!totalRate <= 999}">
+                        ${!totalRate}
+                    </apex:outputText> 
+                </b></td>                
+                <td width ="20%" style ="padding-left:10px"></td>
+               
+            </tr>
+        </table>    
+      </apex:pageBlock>
+      <apex:outputPanel rendered="{!NOT(hasRecords)}">
+          <apex:pagemessages />
+      </apex:outputPanel>
+  </apex:form>
+  <script>
+      function editSchedules(){
+          
+          /*var accountId = "{!con.AccountId}";
+          var month = "{!months}";
+          var dateFrom = "{!schedulesFrm.Week__c}";
+          var dateTo = "{!schedulesTo.Week__c}";
+          var flag = "{!SearchFlag}";
+        
+          if(accountId  != null || accountId != ''){
+              url += '?accid='+accountId ;
+              ampFlag = true;
+          }
+          
+          if(month != null || month != ''){
+              if(ampFlag == false){
+                  url += '?months='+month;
+              }else{
+                  url += '&months='+month;
+              }
+          }
+          
+          if(dateFrom != ''){
+              if(ampFlag == false){
+                  url += '?from='+dateFrom;
+              }else{
+                  url += '&from='+dateFrom;
+              }
+          }
+          
+          if(dateTo != ''){
+              if(ampFlag == false){
+                  url += '?to='+dateTo;
+              }else{
+                  url += '&to='+dateTo;
+              }
+          }
+          url += '&flag = '+flag;*/
+          
+            var url = '/apex/EditSchedule?';
+            var amp = "";
+            
+            
+            var allchks = document.getElementById("divSec").getElementsByTagName('input')
+            var j = 0;
+            for(var i = 1; i < allchks.length;i++){
+                
+                if(allchks[i].type == 'checkbox' && allchks[i].checked && allchks[i].id != 'allchk'){
+                    //allchks[i].checked = flag;
+                    url+=amp + "id_" + j++ +'='+ allchks[i].value;                
+                    amp = "&";
+                }
+            }          
+          //alert(url);
+          window.open(url ,'Edit Schedule','menubar=0,resizable=0,width=800,height=300,screenX=150,left=450,screenY=150,top=300,status=yes,scrollbars=no');
+    }
+    function checkFilter(){        
+        filter();
+        
+    }
+    
+    function selectAll(flag){
+            //var allchks = document.getElementById("j_id0:frm:j_id18:j_id24:j_id25").getElementsByTagName('input')
+            var allchks = document.getElementById("divSec").getElementsByTagName('input')
+            for(var i = 0; i < allchks.length;i++){
+                if(allchks[i].id != 'allchk'){
+                    allchks[i].checked = flag;
+                }
+            }
+            /*if(flag==true)
+                checks();
+            else 
+                unchecks();*/
+    }
+  </script>
+</apex:page>

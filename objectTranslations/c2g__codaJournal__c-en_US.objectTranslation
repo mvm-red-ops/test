@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <webLinks>
+        <label><!-- Post_ALL_In_Progress_Journals --></label>
+        <name>Post_ALL_In_Progress_Journals</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Post_Selected_Journals --></label>
+        <name>Post_Selected_Journals</name>
+    </webLinks>
+</CustomObjectTranslation>

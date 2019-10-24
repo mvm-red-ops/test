@@ -1,0 +1,63 @@
+<apex:page controller="DoubleCheckReportController" title="Double check-Syndication">
+    <apex:form id="frm">
+    
+    <apex:sectionHeader title="Double Check - Syndication Report"/>
+        <apex:outputtext ><B>Please enter either the DEAL NAME or AGENCY and PROGRAM.</B></apex:outputText>
+        
+        <apex:pageBlock >
+            <apex:outputPanel rendered="{!missingReq}">
+                <apex:pagemessages />
+            </apex:outputPanel> 
+            <table>
+                <tr>
+                    <td> DEAL</td>
+                    <td>
+                        <apex:inputField value="{!schedule.Deal_Parent__c}" required="false"/>    <!--sch.Deal_Parent__r.Program__c-->
+                    </td>
+                </tr>
+                <tr>
+                    <td> PROGRAM</td>
+                    <td>
+                        <apex:inputField value="{!deal.Program__c}"/>    <!--sch.Deal_Parent__r.Program__c-->
+                    </td>
+                </tr>
+                <tr>
+                    <td> AGENCY</td>
+                    <td>
+                        <apex:inputField value="{!deal.Client_Account__c}" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>BRAND</td>
+                    <td>
+                        <apex:inputField value="{!schedule.LF_Brand__c}"/>
+                    </td>
+                </tr>
+                <td> Filler</td>
+                <td>
+                      <apex:inputCheckbox value="{!filler}"/>
+                </td>
+                <tr>
+                    <td><apex:commandButton value="search" action="{!showDetail}"/></td>
+                </tr>
+             </table>
+         </apex:pageBlock>
+         <apex:outputPanel rendered="{!showErr}">
+             <apex:pageMessages />
+         </apex:outputPanel>
+         <apex:pageBlock title="Select Deal" rendered="{!showDealList}">
+             <apex:pageBlockSection columns="3">
+                 <apex:pageBlockTable value="{!dealList}" var="dl">
+                     <apex:column headerValue="Deal">
+                         <apex:commandLink value="{!dl.Name}" action="{!searchByDeal}">
+                             <apex:param value="{!dl.id}" name="arg1" assignTo="{!did}" />
+                         </apex:commandLink>
+                     </apex:column>
+                     <apex:column value="{!dl.Program__c}"/>
+                     <apex:column value="{!dl.Client_Account__c}"/>
+                     <apex:column value="{!dl.Brands__c}"/>
+                 </apex:pageBlockTable>
+             </apex:pageBlockSection>
+         </apex:pageBlock>
+    </apex:form>
+</apex:page>

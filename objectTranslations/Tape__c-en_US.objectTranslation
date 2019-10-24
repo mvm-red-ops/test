@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Traffic</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Traffic</value>
+    </caseValues>
+    <fields>
+        <label><!-- Account --></label>
+        <name>Account__c</name>
+        <relationshipLabel><!-- Traffic --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Advertiser --></label>
+        <name>Advertiser__c</name>
+    </fields>
+    <fields>
+        <label><!-- Brand --></label>
+        <name>Brand__c</name>
+        <relationshipLabel><!-- Traffic --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Flight End --></label>
+        <name>Flight_End__c</name>
+    </fields>
+    <fields>
+        <label><!-- Flight Start --></label>
+        <name>Flight_Start__c</name>
+    </fields>
+    <fields>
+        <label><!-- ISCI 2 --></label>
+        <name>ISCI_2__c</name>
+    </fields>
+    <fields>
+        <label><!-- ISCI 3 --></label>
+        <name>ISCI_3__c</name>
+    </fields>
+    <fields>
+        <label><!-- ISCI --></label>
+        <name>ISCI__c</name>
+    </fields>
+    <fields>
+        <label><!-- Length --></label>
+        <name>Length__c</name>
+        <picklistValues>
+            <masterLabel>05</masterLabel>
+            <translation><!-- 05 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>10</masterLabel>
+            <translation><!-- 10 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>120</masterLabel>
+            <translation><!-- 120 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>15</masterLabel>
+            <translation><!-- 15 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>1710</masterLabel>
+            <translation><!-- 1710 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>180</masterLabel>
+            <translation><!-- 180 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>240</masterLabel>
+            <translation><!-- 240 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>30</masterLabel>
+            <translation><!-- 30 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>300</masterLabel>
+            <translation><!-- 300 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>45</masterLabel>
+            <translation><!-- 45 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>60</masterLabel>
+            <translation><!-- 60 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>75</masterLabel>
+            <translation><!-- 75 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>90</masterLabel>
+            <translation><!-- 90 --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Program --></label>
+        <name>Program__c</name>
+        <relationshipLabel><!-- Traffic --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Rotation --></label>
+        <name>Rotation__c</name>
+        <picklistValues>
+            <masterLabel>50-50 Split</masterLabel>
+            <translation><!-- 50-50 Split --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Limited Ratio</masterLabel>
+            <translation><!-- Limited Ratio --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Pattern</masterLabel>
+            <translation><!-- Pattern --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Spot</masterLabel>
+            <translation><!-- Spot --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- 800 Number --></label>
+        <name>X800_Number__c</name>
+    </fields>
+    <layouts>
+        <layout>Tape Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <startsWith>Consonant</startsWith>
+    <validationRules>
+        <errorMessage><!-- Must select a Length, Flight Start and Flight End date to save the record --></errorMessage>
+        <name>Must_Enter_Start_End_Length</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Cannot change the flight start date after record is created. --></errorMessage>
+        <name>Prevent_Changes_in_Start_Date</name>
+    </validationRules>
+    <webLinks>
+        <label><!-- Find_Schedules --></label>
+        <name>Find_Schedules</name>
+    </webLinks>
+</CustomObjectTranslation>

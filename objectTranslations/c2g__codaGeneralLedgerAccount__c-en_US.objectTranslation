@@ -1,0 +1,528 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <label><!-- Gross Margin --></label>
+        <name>Gross_Margin__c</name>
+        <picklistValues>
+            <masterLabel>BounceTV</masterLabel>
+            <translation><!-- BounceTV --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Cheaters</masterLabel>
+            <translation><!-- Cheaters --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CoolTV</masterLabel>
+            <translation><!-- CoolTV --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Documentary</masterLabel>
+            <translation><!-- Documentary --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>JLTV</masterLabel>
+            <translation><!-- JLTV --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>MGM</masterLabel>
+            <translation><!-- MGM --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>NFL</masterLabel>
+            <translation><!-- NFL --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>New Dominion</masterLabel>
+            <translation><!-- New Dominion --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Outdoor PP</masterLabel>
+            <translation><!-- Outdoor PP --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Ron Hazelton</masterLabel>
+            <translation><!-- Ron Hazelton --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Screenscape</masterLabel>
+            <translation><!-- Screenscape --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>THIS TV</masterLabel>
+            <translation><!-- THIS TV --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>TVSCO</masterLabel>
+            <translation><!-- TVSCO --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Teen Kids News</masterLabel>
+            <translation><!-- Teen Kids News --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Tennis</masterLabel>
+            <translation><!-- Tennis --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Tennis PP</masterLabel>
+            <translation><!-- Tennis PP --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Wild America</masterLabel>
+            <translation><!-- Wild America --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Will &amp; Grace</masterLabel>
+            <translation><!-- Will &amp; Grace --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Legacy Account Type --></label>
+        <name>Legacy_Account_Type__c</name>
+        <picklistValues>
+            <masterLabel>Accounts Payable</masterLabel>
+            <translation><!-- Accounts Payable --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Accounts Receivable</masterLabel>
+            <translation><!-- Accounts Receivable --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Bank</masterLabel>
+            <translation><!-- Bank --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Cost of Goods Sold</masterLabel>
+            <translation><!-- Cost of Goods Sold --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Credit Card</masterLabel>
+            <translation><!-- Credit Card --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Equity</masterLabel>
+            <translation><!-- Equity --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Expense</masterLabel>
+            <translation><!-- Expense --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Fixed Asset</masterLabel>
+            <translation><!-- Fixed Asset --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Income</masterLabel>
+            <translation><!-- Income --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Other Current Asset</masterLabel>
+            <translation><!-- Other Current Asset --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Other Current Liability</masterLabel>
+            <translation><!-- Other Current Liability --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Other Expense</masterLabel>
+            <translation><!-- Other Expense --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Other Income</masterLabel>
+            <translation><!-- Other Income --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- MV Hierarchy 0 --></label>
+        <name>MV_Hierarchy_0__c</name>
+        <picklistValues>
+            <masterLabel>Assets</masterLabel>
+            <translation><!-- Assets --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Liabilities &amp; Equity &amp; NI</masterLabel>
+            <translation><!-- Liabilities &amp; Equity &amp; NI --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- MV Hierarchy 1 --></label>
+        <name>MV_Hierarchy_1__c</name>
+        <picklistValues>
+            <masterLabel>Assets</masterLabel>
+            <translation><!-- Assets --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Liabilities &amp; Equity</masterLabel>
+            <translation><!-- Liabilities &amp; Equity --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Net Income</masterLabel>
+            <translation><!-- Net Income --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- MV Hierarchy 2 --></label>
+        <name>MV_Hierarchy_2__c</name>
+        <picklistValues>
+            <masterLabel>Current Assets</masterLabel>
+            <translation><!-- Current Assets --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Equity</masterLabel>
+            <translation><!-- Equity --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Fixed Assets</masterLabel>
+            <translation><!-- Fixed Assets --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Liabilities</masterLabel>
+            <translation><!-- Liabilities --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Ordinary Income/Expense</masterLabel>
+            <translation><!-- Ordinary Income/Expense --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Other Income / Expense</masterLabel>
+            <translation><!-- Other Income / Expense --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- MV Hierarchy 3 --></label>
+        <name>MV_Hierarchy_3__c</name>
+        <picklistValues>
+            <masterLabel>Current Assets</masterLabel>
+            <translation><!-- Current Assets --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Current Liabilities</masterLabel>
+            <translation><!-- Current Liabilities --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Equity</masterLabel>
+            <translation><!-- Equity --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Expense</masterLabel>
+            <translation><!-- Expense --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Fixed Assets</masterLabel>
+            <translation><!-- Fixed Assets --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Gross Profit</masterLabel>
+            <translation><!-- Gross Profit --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Other Expense</masterLabel>
+            <translation><!-- Other Expense --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Other Income</masterLabel>
+            <translation><!-- Other Income --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- MV Hierarchy 4 --></label>
+        <name>MV_Hierarchy_4__c</name>
+        <picklistValues>
+            <masterLabel>Accounts Payable</masterLabel>
+            <translation><!-- Accounts Payable --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Accounts Receivable</masterLabel>
+            <translation><!-- Accounts Receivable --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Automobile Expense</masterLabel>
+            <translation><!-- Automobile Expense --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Checking/Savings</masterLabel>
+            <translation><!-- Checking/Savings --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Cost of Goods Sold</masterLabel>
+            <translation><!-- Cost of Goods Sold --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Credit Cards</masterLabel>
+            <translation><!-- Credit Cards --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Equity</masterLabel>
+            <translation><!-- Equity --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Expense</masterLabel>
+            <translation><!-- Expense --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Income</masterLabel>
+            <translation><!-- Income --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Insurance Expense</masterLabel>
+            <translation><!-- Insurance Expense --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Interest Expense</masterLabel>
+            <translation><!-- Interest Expense --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Other Current Assets</masterLabel>
+            <translation><!-- Other Current Assets --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Other Current Liabilities</masterLabel>
+            <translation><!-- Other Current Liabilities --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Other Expense</masterLabel>
+            <translation><!-- Other Expense --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Other Income</masterLabel>
+            <translation><!-- Other Income --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Payroll Expenses</masterLabel>
+            <translation><!-- Payroll Expenses --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Professional Fees</masterLabel>
+            <translation><!-- Professional Fees --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Property Plant and Equipment</masterLabel>
+            <translation><!-- Property Plant and Equipment --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Rent Expense</masterLabel>
+            <translation><!-- Rent Expense --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Telephone Expense</masterLabel>
+            <translation><!-- Telephone Expense --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Travel &amp; Entertainment</masterLabel>
+            <translation><!-- Travel &amp; Entertainment --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- MV Hierarchy 5 --></label>
+        <name>MV_Hierarchy_5__c</name>
+        <picklistValues>
+            <masterLabel>Advertising Sales Main</masterLabel>
+            <translation><!-- Advertising Sales Main --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Automobile Expense</masterLabel>
+            <translation><!-- Automobile Expense --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Cost of Goods</masterLabel>
+            <translation><!-- Cost of Goods --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Expense</masterLabel>
+            <translation><!-- Expense --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Income</masterLabel>
+            <translation><!-- Income --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Insurance Expense</masterLabel>
+            <translation><!-- Insurance Expense --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Interest Expense</masterLabel>
+            <translation><!-- Interest Expense --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Other Expense</masterLabel>
+            <translation><!-- Other Expense --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Other Income</masterLabel>
+            <translation><!-- Other Income --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Payroll Expenses</masterLabel>
+            <translation><!-- Payroll Expenses --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Professional Fees</masterLabel>
+            <translation><!-- Professional Fees --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Rent Expense</masterLabel>
+            <translation><!-- Rent Expense --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Telephone Expense</masterLabel>
+            <translation><!-- Telephone Expense --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Travel &amp; Entertainment</masterLabel>
+            <translation><!-- Travel &amp; Entertainment --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- This option will reverse the signs for this General Ledger Accounts on balances shown in reports. --></help>
+        <label><!-- Reporting Signs --></label>
+        <name>Reporting_Signs__c</name>
+        <picklistValues>
+            <masterLabel>Credit</masterLabel>
+            <translation><!-- Credit --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Debit</masterLabel>
+            <translation><!-- Debit --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Reverse</masterLabel>
+            <translation><!-- Reverse --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Trial Balance 5 --></label>
+        <name>TrialBalance5__c</name>
+        <picklistValues>
+            <masterLabel>Ad Sales Cheaters</masterLabel>
+            <translation><!-- Ad Sales Cheaters --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Ad Sales Cookie Jar</masterLabel>
+            <translation><!-- Ad Sales Cookie Jar --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Ad Sales CoolTV</masterLabel>
+            <translation><!-- Ad Sales CoolTV --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Ad Sales Documentary</masterLabel>
+            <translation><!-- Ad Sales Documentary --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Ad Sales Dos y Dos</masterLabel>
+            <translation><!-- Ad Sales Dos y Dos --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Ad Sales Dr Anna Marie</masterLabel>
+            <translation><!-- Ad Sales Dr Anna Marie --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Ad Sales For Your Home</masterLabel>
+            <translation><!-- Ad Sales For Your Home --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Ad Sales GameDay</masterLabel>
+            <translation><!-- Ad Sales GameDay --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Ad Sales Grand Prix</masterLabel>
+            <translation><!-- Ad Sales Grand Prix --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Ad Sales JLTV</masterLabel>
+            <translation><!-- Ad Sales JLTV --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Ad Sales LATV</masterLabel>
+            <translation><!-- Ad Sales LATV --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Ad Sales LATV PP</masterLabel>
+            <translation><!-- Ad Sales LATV PP --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Ad Sales LatiNation</masterLabel>
+            <translation><!-- Ad Sales LatiNation --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Ad Sales MGM</masterLabel>
+            <translation><!-- Ad Sales MGM --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Ad Sales Main</masterLabel>
+            <translation><!-- Ad Sales Main --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Ad Sales Mustard Pancakes</masterLabel>
+            <translation><!-- Ad Sales Mustard Pancakes --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Ad Sales NFL</masterLabel>
+            <translation><!-- Ad Sales NFL --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Ad Sales New Dominion</masterLabel>
+            <translation><!-- Ad Sales New Dominion --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Ad Sales Ninth Period</masterLabel>
+            <translation><!-- Ad Sales Ninth Period --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Ad Sales Outside TV</masterLabel>
+            <translation><!-- Ad Sales Outside TV --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Ad Sales PMI</masterLabel>
+            <translation><!-- Ad Sales PMI --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Ad Sales Ron Hazelton</masterLabel>
+            <translation><!-- Ad Sales Ron Hazelton --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Ad Sales Screenscape</masterLabel>
+            <translation><!-- Ad Sales Screenscape --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Ad Sales THIS TV</masterLabel>
+            <translation><!-- Ad Sales THIS TV --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Ad Sales TVSCO</masterLabel>
+            <translation><!-- Ad Sales TVSCO --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Ad Sales TargetVision</masterLabel>
+            <translation><!-- Ad Sales TargetVision --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Ad Sales Teen Kids News</masterLabel>
+            <translation><!-- Ad Sales Teen Kids News --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Ad Sales Tennis</masterLabel>
+            <translation><!-- Ad Sales Tennis --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Ad Sales Tennis PP</masterLabel>
+            <translation><!-- Ad Sales Tennis PP --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Ad Sales Wild America</masterLabel>
+            <translation><!-- Ad Sales Wild America --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Ad Sales Will &amp; Grace</masterLabel>
+            <translation><!-- Ad Sales Will &amp; Grace --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Advertising Sales</masterLabel>
+            <translation><!-- Advertising Sales --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Agency Commission</masterLabel>
+            <translation><!-- Agency Commission --></translation>
+        </picklistValues>
+    </fields>
+</CustomObjectTranslation>

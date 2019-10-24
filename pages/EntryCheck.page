@@ -1,0 +1,27 @@
+<apex:page controller="EntryCheckController" title="PP Entry Check">
+    <apex:form id="frm">
+        <apex:sectionHeader title="Entry Check"/>
+        <apex:outputPanel rendered="{!missingProgram}">
+            <apex:pageMessages />
+        </apex:outputPanel>
+        <apex:pageBlock >
+            <table>
+                <tr>
+                    <td>DEAL PROGRAM</td>
+                    <td><apex:inputfield value="{!deal.Program__c}"/></td>
+                </tr>
+                <tr>
+                    <td>DEAL ACCOUNT</td>
+                    <td><apex:inputfield value="{!con.AccountID}"/></td>
+                </tr>
+                <tr>
+                    <td>WEEK OF</td>
+                    <td><apex:inputfield value="{!sDate.Week__c}"/></td>
+                </tr>
+                <tr>
+                    <td><apex:commandButton value="Search" action="{!search}"/></td>
+                </tr>
+            </table>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

@@ -1,0 +1,401 @@
+<template>
+    <div class="slds-grid slds-grid_align-center container">
+        <div class="slds-card deal-search slds-is-relative">
+            <div class="slds-card__header slds-grid">
+                <header class="slds-media slds-media_center slds-has-flexi-truncate slds-grid slds-grid_vertical">
+                    <div class="slds-grid slds-grid_vertical-align-center slds-size_1-of-1">
+                        <div class="slds-media__figure">
+                            <lightning-icon icon-name="standard:partners"></lightning-icon>
+                        </div>
+                        <div class="slds-media__body">
+                            <h2 class="slds-card__header-title">
+                                <a class="slds-card__header-link slds-truncate">
+                                    <span>Deal Search</span>
+                                </a>
+                            </h2>
+                        </div>
+                        <div class="slds-grid slds-grid_vertical-align-center search-container">
+                            <div class="slds-size_1-of-1 slds-is-relative">
+                                <span style="color: rgba(0,0,0,0.54)">
+                                    <lightning-icon icon-name="utility:search" size="xx-small" class="slds-current-color"></lightning-icon>
+                                </span>
+                                <input class="slds-input slds-p-left_x-large" placeholder="Search" oninput={search}>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="filters slds-size_1-of-1 slds-p-top_small">
+                        <form autocomplete="off">
+                            <div class="slds-grid slds-gutters slds-size_1-of-1 slds-wrap">
+                                <input autocomplete="off" hidden>
+                                <div class="slds-col">
+                                    <lightning-combobox data-name="range" label="Range" options={SelectOptions.ranges} onchange={updateRange}></lightning-combobox>
+                                </div>
+                                <div class="slds-col">
+                                    <lightning-input data-name="from" type="date" label="From" onchange={search} disabled={rangeSelected}></lightning-input>
+                                </div>
+                                <div class="slds-col">
+                                    <lightning-input data-name="to" type="date" label="To" onchange={search} disabled={rangeSelected}></lightning-input>
+                                </div>
+                                <div class="slds-col">
+                                    <lightning-combobox data-name="team" label="Team" options={SelectOptions.teams} onchange={search}></lightning-combobox>
+                                </div>
+                                <div class="slds-col">
+                                    <lightning-combobox data-name="syndication" label="Cable Syndication" options={SelectOptions.cableSyndications} onchange={search}></lightning-combobox>
+                                </div>
+                                <div class="slds-col">
+                                    <lightning-combobox data-name="barter" label="Barter" options={SelectOptions.boolean} onchange={search}></lightning-combobox>
+                                </div>
+                                <div class="slds-col">
+                                    <lightning-combobox data-name="reconciled" label="Hide Reconciled Weeks" options={SelectOptions.boolean} onchange={search}></lightning-combobox>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </header>
+            </div>
+            <div class="slds-card__body slds-is-relative">
+                <template if:true={loading}>
+                    <lightning-spinner></lightning-spinner>
+                </template>
+                <table class="slds-table slds-is-relative">
+                    <thead>
+                    <tr>
+                        <th>
+                            <!-- Edit Button -->
+                        </th>
+                        <template for:each={fields} for:item="field">
+                            <th key={field.name}>
+                                {field.label}
+                            </th>
+                        </template>
+                    </tr>
+                    </thead>
+                    <tbody>
+                        <template if:false={deals}>
+                            <tr class="table-text">
+                                <td colspan={colcount}>
+                                    <div>
+                                        Search for deals to begin
+                                    </div>
+                                </td>
+                            </tr>
+                        </template>
+                        <template if:true={deals}>
+                            <template if:false={deals.length}>
+                                <tr class="table-text">
+                                    <td colspan={colcount}>
+                                        <div>
+                                            No deals found...
+                                        </div>
+                                    </td>
+                                </tr>
+                            </template>
+                            <template if:true={deals.length} for:each={deals} for:item="deal">
+                                <tr key={deal.Id}>
+                                    <td data-id={deal.Id}>
+                                        <lightning-button-icon-stateful icon-name={rowIconName} variant="bare" size="small" alternative-text="Select" onclick={selectRow}></lightning-button-icon-stateful>
+                                    </td>
+                                    <template for:each={deal.fields} for:item="field">
+                                        <td key={field.value} class={field.class}>
+                                            <template if:true={field.link}>
+                                                <a href={field.link}>
+                                                    {field.value}
+                                                </a>
+                                            </template>
+                                            <template if:false={field.link}>
+                                                <span>
+                                                    {field.value}
+                                                </span>
+                                            </template>
+                                        </td>
+                                    </template>
+                                </tr>
+                            </template>
+                        </template>
+                    </tbody>
+                </table>
+            </div>
+            <div class="count-text slds-grid slds-grid_vertical">
+                <template if:true={paginationText}>
+                    <div style="border-top: 1px solid rgba(0,0,0,0.15)"></div>
+                </template>
+                <div class="slds-grid slds-grid_align-end slds-size_1-of-1 slds-p-around_x-small">
+                    <div class="slds-m-right_small">
+                        {paginationText}
+                    </div>
+                    <template if:true={paginationText}>
+                        <div class="slds-m-right_small">
+                            <lightning-button-icon icon-name="utility:chevronleft" variant="bare" alternative-text="Previous Page" disabled={noPreviousPage} onclick={previousPage}></lightning-button-icon>
+                        </div>
+                        <div>
+                            <lightning-button-icon icon-name="utility:chevronright" variant="bare" alternative-text="Next Page" disabled={noNextPage} onclick={nextPage}></lightning-button-icon>
+                        </div>
+                    </template>
+                </div>
+            </div>
+        </div>
+    </div>
+    <c-modal size="large" onclose={deselectRow}>
+        <div slot="header" class="slds-grid slds-grid_vertical-align-center slds-grid_align-center">
+            <lightning-icon icon-name="standard:partners"></lightning-icon>
+            <span class="slds-m-left_small" style="transform: translateY(1px)">
+                <template if:true={readonly}>
+                    Review Deal
+                </template>
+                <template if:false={readonly}>
+                    Revise Deal
+                </template>
+            </span>
+        </div>
+        <div slot="body">
+            <!-- This uses _selectedDeal instead of selectedDeal because there's some bug where
+                 selectedDeal never updates in the UI even though the value is changed and it's @api -->
+            <template if:true={_selectedDeal}>
+                <div class="slds-card deal-card">
+                    <div class="slds-card__header slds-grid">
+                        <header class="slds-media slds-media_center slds-has-flexi-truncate slds-grid slds-grid_align-spread slds-p-right_medium">
+                            <div class="slds-grid slds-grid_vertical-align-center slds-size_1-of-1">
+                                <div class="slds-media__figure">
+                                    <lightning-icon icon-name="standard:partners"></lightning-icon>
+                                </div>
+                                <div class="slds-media__body">
+                                    <h2 class="slds-card__header-title">
+                                        <span class="slds-card__header-link slds-truncate">
+                                            <span>Deal </span>
+                                            <a href={_selectedDeal.link}>
+                                                {_selectedDeal.Name}
+                                            </a>
+                                        </span>
+                                    </h2>
+                                </div>
+                            </div>
+                        </header>
+                    </div>
+                    <div class="slds-card__body slds-p-around_medium">
+                        <div class="slds-grid slds-wrap slds-gutters" style="margin-top: -0.75rem">
+                            <template for:each={_selectedDeal.fields} for:item="field">
+                                <div class="slds-col slds-grow-none slds-m-top_small" key={field.label} if:true={field.value}>
+                                    <div class="nowrap slds-text-title_caps">
+                                        {field.label}
+                                    </div>
+                                    <div class="nowrap">
+                                        <a if:true={field.link} href={field.link}>{field.value}</a>
+                                        <span if:false={field.link}>{field.value}</span>
+                                    </div>
+                                </div>
+                            </template>
+                        </div>
+                    </div>
+                </div>
+                <div class="slds-card schedules-card slds-is-relative">
+                    <template if:true={schedulesLoading}>
+                        <lightning-spinner></lightning-spinner>
+                    </template>
+                    <div class="slds-card__header slds-grid">
+                        <header class="slds-media slds-media_center slds-has-flexi-truncate slds-grid">
+                            <div class="slds-grid slds-grid_vertical-align-center slds-size_1-of-1">
+                                <div class="slds-media__figure">
+                                    <lightning-icon icon-name="standard:event"></lightning-icon>
+                                </div>
+                                <div class="slds-media__body slds-grid slds-grid_align-spread">
+                                    <h2 class="slds-card__header-title">
+                                        <span class="slds-card__header-link slds-truncate">
+                                            <span>Schedules</span>
+                                        </span>
+                                    </h2>
+                                </div>
+                            </div>
+                        </header>
+                    </div>
+                    <div class="slds-card__body">
+                        <div if:true={schedulesLoading} style="min-height: 50px"></div>
+                        <div if:false={schedulesLoading}>
+                            <div class="slds-tabs_default">
+                                <div class="slds-tabs_default__nav">
+                                    <template for:each={scheduleTabs} for:item="tab">
+                                        <div key={tab.label} data-color={tab.color} data-label={tab.label} class="schedule-tab slds-is-relative" onmousedown={selectScheduleTab}>
+                                            <div class="slds-tabs_default__item">
+                                                <a class="slds-tabs_default__link">
+                                                    {tab.label}
+                                                </a>
+                                            </div>
+                                            <div class="color"></div>
+                                        </div>
+                                    </template>
+                                </div>
+                            </div>
+
+                            <template if:true={activeScheduleTab.hiatus}>
+                                <table class="slds-table">
+                                    <thead>
+                                    <tr>
+                                        <th>Start Date (required)</th>
+                                        <th>End Date</th>
+                                        <th>Start Time</th>
+                                        <th>End Time</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                        <template if:true={activeScheduleTab.hiatus}>
+                                            <td class="hiatus-start">
+                                                <lightning-input type="date" label="date" variant="label-hidden"></lightning-input>
+                                            </td>
+                                            <td class="hiatus-end">
+                                                <lightning-input type="date" label="date" variant="label-hidden"></lightning-input>
+                                            </td>
+                                            <td class="hiatus-td">
+                                                <lightning-combobox variant="label-hidden"
+                                                                    placeholder=""
+                                                                    class="input"
+                                                                    label="Start Time"
+                                                                    options={hiatusTimeOptions}
+                                                                    value={hiatusStartTime}
+                                                ></lightning-combobox>
+                                            </td>
+                                            <td class="hiatus-td">
+                                                <lightning-combobox variant="label-hidden"
+                                                                    placeholder=""
+                                                                    class="input"
+                                                                    label="End Time"
+                                                                    options={hiatusTimeOptions}
+                                                                    value={hiatusEndTime}
+                                                ></lightning-combobox>
+                                            </td>
+                                        </template>
+                                    </tbody>
+                                </table>
+                            </template>
+
+                            <table class="slds-table">
+                                <thead>
+                                    <tr>
+                                        <template if:false={activeScheduleTab.hiatus}>
+                                            <th style="padding-left: 22px">
+                                                <div class="slds-grid slds-grid_align-center">
+                                                    <input type="checkbox" name="selectAll" onchange={selectAllGroups}>
+                                                </div>
+                                            </th>
+                                            <th>
+                                                <lightning-input type="date" label="date" variant="label-hidden" onchange={updateAllDateInputs}></lightning-input>
+                                            </th>
+                                        </template>
+                                        <th if:true={activeScheduleTab.hiatus}></th>
+
+                                        <th>Days Allowed</th>
+                                        <th>Start Time</th>
+                                        <th>End Time</th>
+                                        <th>Rate</th>
+
+                                        <!-- Custom Fields -->
+                                        <template if:true={activeScheduleTab}>
+                                            <template if:true={activeScheduleTab.column}>
+                                                <th data-field={activeScheduleTab.column.field}>{activeScheduleTab.column.label}</th>
+                                            </template>
+                                        </template>
+
+                                        <template for:each={scheduleWeeks} for:item="week">
+                                            <th key={week}>{week}</th>
+                                        </template>
+                                    </tr>
+                                </thead>
+                                <tbody class="schedule-editor">
+                                    <template for:each={_selectedDeal.groups} for:item="group">
+                                        <tr class="edit-group" data-index={group.index} key={group.index}>
+                                            <td style="width: 1%">
+                                                <input type="checkbox" name="select" data-index={group.index}>
+                                            </td>
+
+                                            <template if:false={activeScheduleTab.hiatus}>
+                                                <td class="date-cell" if:false={activeScheduleTab.hiatus}>
+                                                    <lightning-input type="date" label="date" variant="label-hidden"></lightning-input>
+                                                </td>
+                                            </template>
+
+                                            <td class="days-allowed">
+                                                <template for:each={group.days} for:item="day">
+                                                    <div data-index={group.index} data-day={day.label} key={day.label} if:true={day.selected} class="day selected" onclick={updateDaysAllowed}>{day.label}</div>
+                                                    <div data-index={group.index} data-day={day.label} key={day.label} if:false={day.selected} class="day" onclick={updateDaysAllowed}>{day.label}</div>
+                                                </template>
+                                            </td>
+                                            <td class="input-td">
+                                                <lightning-combobox variant="label-hidden"
+                                                                    placeholder=""
+                                                                    class="input"
+                                                                    label="Start Time"
+                                                                    options={startOptions}
+                                                                    value={group.startTime}
+                                                                    data-index={group.index}
+                                                                    data-field="startTime"
+                                                                    onchange={updateField}
+                                                ></lightning-combobox>
+                                            </td>
+                                            <td class="input-td">
+                                                <lightning-combobox variant="label-hidden"
+                                                                    placeholder=""
+                                                                    class="input"
+                                                                    label="End Time"
+                                                                    options={endOptions}
+                                                                    value={group.endTime}
+                                                                    data-index={group.index}
+                                                                    data-field="endTime"
+                                                                    onchange={updateField}
+                                                ></lightning-combobox>
+                                            </td>
+                                            <td class="input-td">
+                                                <lightning-input variant="label-hidden"
+                                                                 type="number"
+                                                                 label="rate"
+                                                                 formatter="currency"
+                                                                 step="0.01"
+                                                                 value={group.rate}
+                                                                 data-index={group.index}
+                                                                 data-field="rate"
+                                                                 onchange={updateField}
+                                                ></lightning-input>
+                                            </td>
+
+                                            <!-- Custom Fields -->
+                                            <template if:true={activeScheduleTab.units}>
+                                                <td class="input-td" data-field={activeScheduleTab.column.field} data-type={activeScheduleTab.column.type}>
+                                                    <lightning-input class="input" label={activeScheduleTab.column.field} variant="label-hidden" type={activeScheduleTab.column.type} value={group.units}></lightning-input>
+                                                </td>
+                                            </template>
+                                            <template if:true={activeScheduleTab.test}>
+                                                <td data-field={activeScheduleTab.column.field} data-type={activeScheduleTab.column.type}>
+                                                    <lightning-input class="input" label={activeScheduleTab.column.field} variant="label-hidden" type={activeScheduleTab.column.type} checked={group.test}></lightning-input>
+                                                </td>
+                                            </template>
+                                            <template if:true={activeScheduleTab.cap}>
+                                                <td class="input-td" data-field={activeScheduleTab.column.field} data-type={activeScheduleTab.column.type}>
+                                                    <lightning-combobox class="input" label={activeScheduleTab.column.field} variant="label-hidden" options={capOptions} placeholder="" value={group.cap}></lightning-combobox>
+                                                </td>
+                                            </template>
+                                            <template if:true={activeScheduleTab.maxperday}>
+                                                <td class="input-td" data-field={activeScheduleTab.column.field} data-type={activeScheduleTab.column.type}>
+                                                    <lightning-input class="input" label={activeScheduleTab.column.field} variant="label-hidden" type={activeScheduleTab.column.type} value={group.maxPerDay}></lightning-input>
+                                                </td>
+                                            </template>
+
+                                            <template for:each={group.schedules} for:item="schedule">
+                                                <td key={schedule.Id}>
+                                                    <template if:false={schedule.empty}>
+                                                        <a href={schedule.link}>
+                                                            {schedule.Units_Available__c}
+                                                        </a>
+                                                    </template>
+                                                </td>
+                                            </template>
+                                        </tr>
+                                    </template>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </template>
+        </div>
+        <div slot="footer">
+            <lightning-button variant="brand" label="Update Schedules" icon-name="utility:record_update" onclick={updateSchedules}></lightning-button>
+        </div>
+    </c-modal>
+</template>

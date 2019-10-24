@@ -1,0 +1,268 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>SF Credit Memo</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>SF Credit Memos</value>
+    </caseValues>
+    <fields>
+        <label><!-- Account --></label>
+        <name>Account__c</name>
+    </fields>
+    <fields>
+        <label><!-- Advertiser --></label>
+        <name>Advertiser__c</name>
+    </fields>
+    <fields>
+        <label><!-- At Fault --></label>
+        <name>At_Fault__c</name>
+        <relationshipLabel><!-- SF Credit Memos (At Fault) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Brand --></label>
+        <name>Brand__c</name>
+    </fields>
+    <fields>
+        <label><!-- Comments --></label>
+        <name>Comments__c</name>
+    </fields>
+    <fields>
+        <label><!-- Complete --></label>
+        <name>Complete__c</name>
+    </fields>
+    <fields>
+        <label><!-- Deal --></label>
+        <name>Deal__c</name>
+        <relationshipLabel><!-- SF Credit Memos --></relationshipLabel>
+    </fields>
+    <fields>
+        <help><!-- Double check was missed by the user linked to this field --></help>
+        <label><!-- Double Check --></label>
+        <name>Double_Check__c</name>
+        <relationshipLabel><!-- SF Credit Memos (Double Check) --></relationshipLabel>
+    </fields>
+    <fields>
+        <help><!-- Populate this field if the SFCM was created due to MVMS error. --></help>
+        <label><!-- ERROR REASON --></label>
+        <name>ERROR_REASON__c</name>
+        <picklistValues>
+            <masterLabel>Aired in restricted programming</masterLabel>
+            <translation><!-- Aired in restricted programming --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Booked with no Order</masterLabel>
+            <translation><!-- Booked with no Order --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Cancellation not Entered</masterLabel>
+            <translation><!-- Cancellation not Entered --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Hiatus Missed</masterLabel>
+            <translation><!-- Hiatus Missed --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Incorrect Amount of Units</masterLabel>
+            <translation><!-- Incorrect Amount of Units --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Incorrect Break Entered</masterLabel>
+            <translation><!-- Incorrect Break Entered --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Incorrect Cable Day-part</masterLabel>
+            <translation><!-- Incorrect Cable Day-part --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Incorrect Days Allowed Selected</masterLabel>
+            <translation><!-- Incorrect Days Allowed Selected --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Incorrect LTC (Add&apos;t Units Ran)</masterLabel>
+            <translation><!-- Incorrect LTC (Add&apos;t Units Ran) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Incorrect Spot Separation</masterLabel>
+            <translation><!-- Incorrect Spot Separation --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Incorrect Times Selected</masterLabel>
+            <translation><!-- Incorrect Times Selected --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>NOT MVMS Fault - Approved by Management to absorb</masterLabel>
+            <translation><!-- NOT MVMS Fault - Approved by Management to absorb --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Order Entered Incorrectly</masterLabel>
+            <translation><!-- Order Entered Incorrectly --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Post Log Error</masterLabel>
+            <translation><!-- Post Log Error --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Pre Log Error</masterLabel>
+            <translation><!-- Pre Log Error --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Ran Out of Rotation</masterLabel>
+            <translation><!-- Ran Out of Rotation --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Revision Missed (Not Entered)</masterLabel>
+            <translation><!-- Revision Missed (Not Entered) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Weekly Recon Processed Incorrectly</masterLabel>
+            <translation><!-- Weekly Recon Processed Incorrectly --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Wrong ISCI Code / 800#</masterLabel>
+            <translation><!-- Wrong ISCI Code / 800# --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Wrong Length</masterLabel>
+            <translation><!-- Wrong Length --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Wrong Rate</masterLabel>
+            <translation><!-- Wrong Rate --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Wrong Traffic (incl. Incorrect Traffic Instructions)</masterLabel>
+            <translation><!-- Wrong Traffic (incl. Incorrect Traffic Instructions) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Wrong Units Available</masterLabel>
+            <translation><!-- Wrong Units Available --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Wrong Week Selected</masterLabel>
+            <translation><!-- Wrong Week Selected --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Error Caused By --></label>
+        <name>Error_Caused_By__c</name>
+        <picklistValues>
+            <masterLabel>Agency</masterLabel>
+            <translation><!-- Agency --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Marathon Ventures</masterLabel>
+            <translation><!-- Marathon Ventures --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Network</masterLabel>
+            <translation><!-- Network --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Finance Comments --></label>
+        <name>Finance_Comments__c</name>
+    </fields>
+    <fields>
+        <label><!-- Intacct CM --></label>
+        <name>Intacct_CM__c</name>
+    </fields>
+    <fields>
+        <label><!-- Program --></label>
+        <name>Program__c</name>
+    </fields>
+    <fields>
+        <label><!-- Request Assistance Comments --></label>
+        <name>Request_Assistance_Comments__c</name>
+    </fields>
+    <fields>
+        <label><!-- Request Assistance --></label>
+        <name>Request_Assistance__c</name>
+    </fields>
+    <fields>
+        <label><!-- SF Credit Memo Total --></label>
+        <name>SF_Credit_Memo_Total__c</name>
+    </fields>
+    <fields>
+        <label><!-- Status --></label>
+        <name>Status__c</name>
+        <picklistValues>
+            <masterLabel>Approved by Finance</masterLabel>
+            <translation><!-- Approved by Finance --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Approved by Op&apos;s Task Force</masterLabel>
+            <translation><!-- Approved by Op&apos;s Task Force --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Approved by Partner</masterLabel>
+            <translation><!-- Approved by Partner --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Approved by Upper Management</masterLabel>
+            <translation><!-- Approved by Upper Management --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Pending</masterLabel>
+            <translation><!-- Pending --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Task Force Comments --></label>
+        <name>Task_Force_Comments__c</name>
+    </fields>
+    <fields>
+        <label><!-- Type --></label>
+        <name>Type__c</name>
+        <picklistValues>
+            <masterLabel>Agency Discount</masterLabel>
+            <translation><!-- Agency Discount --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Agency Discount - Approved by Network</masterLabel>
+            <translation><!-- Agency Discount - Approved by Network --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Credit</masterLabel>
+            <translation><!-- Credit --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Credit - Approved by Network</masterLabel>
+            <translation><!-- Credit - Approved by Network --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Network Error</masterLabel>
+            <translation><!-- Network Error --></translation>
+        </picklistValues>
+    </fields>
+    <layouts>
+        <layout>SF Credit Memo Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Marathon Team Members --></label>
+            <section>Marathon Team Members</section>
+        </sections>
+    </layouts>
+    <startsWith>Consonant</startsWith>
+    <validationRules>
+        <errorMessage><!-- If SFCM Type = Credit, Please populate the &apos;Error Caused By&apos; field. --></errorMessage>
+        <name>At_Fault_Review</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Please populate Double Check field with appropriate MVMS Team Member. --></errorMessage>
+        <name>Double_Check</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Please add an explanation. --></errorMessage>
+        <name>Must_Enter_Comments</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- This SFCM has been processed and marked off as complete by Finance. Please consult with Finance before making any changes. All changes must be approved by Finance. --></errorMessage>
+        <name>SFCM_Complete</name>
+    </validationRules>
+</CustomObjectTranslation>

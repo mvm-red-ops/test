@@ -1,0 +1,28 @@
+<apex:page standardController="Schedules__c" action="{!processScheduleTapeRecordsMethod}" recordsetVar="Schedules" extensions="ProcessScheduleTapeRecords">
+	<apex:form >
+		<apex:pageMessages />
+		<apex:sectionHeader title="Found Tapes and Schedules" />
+		<apex:pageBlock >
+			<apex:pageBlocktable value="{!wrapperList}" var="WL">
+				<apex:column headerValue="Schedule" >
+					<apex:outputLink value="/{!WL.schRecord.Id}" target="_blank">{!WL.schRecord.Name}</apex:outputLink>
+				</apex:column>
+				<apex:column value="{!WL.schRecord.Week__c}" />
+				<apex:column value="{!WL.schRecord.Deal_Parent__r.Program__c}" />
+				<apex:column value="{!WL.schRecord.Deal_Parent__r.Brands__c}" />
+				<apex:column value="{!WL.schRecord.Deal_Parent__r.Contact__r.AccountId}" />
+				<apex:column value="{!WL.schRecord.UnitLength__c}" />
+				<apex:column headervalue="Status" value="{!WL.Status}" />
+				<apex:Column headerValue="Tapes">
+					<apex:repeat value="{!WL.MatchingTapes}" var="MT">
+						<apex:outputLink value="/{!MT.Id}" target="_blank">{!MT.Name}</apex:outputLink><br />
+					</apex:repeat>
+				</apex:Column>
+			</apex:pageBlocktable>
+			<apex:pageBlockButtons location="bottom">
+				<apex:commandButton value="Go Back" action="{!goBackButton}" />
+			</apex:pageBlockButtons>
+		</apex:pageBlock>
+	</apex:form>
+	
+</apex:page>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomTab xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>SS live documentation</description>
+    <frameHeight>800</frameHeight>
+    <hasSidebar>false</hasSidebar>
+    <label>Marathon Help</label>
+    <motif>Custom55: Books</motif>
+    <url>https://marathonventures.screenstepslive.com/s/10906?login=myusers&amp;password=mypassword</url>
+    <urlEncodingKey>UTF-8</urlEncodingKey>
+</CustomTab>

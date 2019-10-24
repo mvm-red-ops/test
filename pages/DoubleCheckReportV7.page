@@ -1,0 +1,1458 @@
+<apex:page controller="DoubleCheckReportControllerV7" title="Deal Revisions" docType="html-5.0" >
+    <apex:form id="form">
+        <!--<apex:inputField value="{!testSch.MGM_HD_Daypart__c}"/>
+        <apex:inputField value="{!testSch.Networks__c}"/>
+        <apex:inputField value="{!testSch.Start_Time__c}"/>
+        <apex:inputField value="{!testSch.End_Time__c}"/>
+        <apex:inputField value="{!testSch.Days_Allowed__c}"/>-->
+        <apex:includeScript value="{!$Resource.saberjueryui}"/>
+        <apex:includeScript value="{!$Resource.saberjquery}"/>
+        <apex:includeScript value="{!URLFOR($Resource.jquery_vfFloatingHeaders)}" />
+        <script src="{!URLFOR($Resource.jquery_vfFloatingHeaders)}"></script>
+        <apex:stylesheet value="{!URLFOR($Resource.JQuery2, 'css/redmond/jquery-ui-1.8.14.custom.css')}"/>
+        <apex:includeScript value="{!$Resource.blockui}"/>
+        <apex:includeScript value="{!$Resource.blockuijson}"/>
+        <!--<link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" />-->
+        <style>
+            .tableContainer
+            {
+                height:290px;
+                width: 100%;
+                overflow: auto;
+            }
+            .floatingStyle
+            {
+                position:relative;
+            }
+            .ui-state-active
+            {
+                border: 1px solid #fbd850;
+                background: #FFFF66;
+                font-weight: bold;
+                color: #E1701D;
+            }
+            a { color: #000000; }
+            a:visited
+            {
+                color: #000000;
+            }
+            .label {min-width:110px;font-weight:bold;display:inline-block;}
+            .field {display:inline;}
+        </style>
+        <script type="text/javascript">
+            /*function setDaysAllowedSelections() {
+                $(".days-allowed-select").each(function(i, obj) {
+                    var days = $(this).prev().text();
+                    var selectedDays = days.split(';');
+                    $(this).val(selectedDays);
+                });
+            }*/
+
+            $(document).ready(function()
+            {
+                //setDaysAllowedSelections();
+
+                $('#tabs-3').on('dblclick','td.unitavailable', function()
+                {
+                    if ($(this).attr('HasValues') == 'true')
+                    {
+                        document.getElementById('{!$Component.hiddenCellid}').value = $(this).attr('CellId') ;
+                        $('#loginForm').find('#ratevalue').val($(this).attr('RateforCell'));
+                        $.blockUI({ message: $('#loginForm') , css: { height:'15%', width:'15%'} });
+                    }
+                });
+                $('#test-tab').on('dblclick','td.testavailable', function()
+                {
+                    if ($(this).attr('HasValues') == 'true')
+                    {
+                        document.getElementById('{!$Component.hiddenCellid}').value = $(this).attr('CellId') ;
+                        if ($(this).attr('RateforCell') == "true")
+                        {
+                            $('#TestForm').find('#testvalue').prop('checked', true);
+                        }
+                        else
+                        {
+                            $('#TestForm').find('#testvalue').prop('checked', false);
+                        }
+                        $.blockUI({ message: $('#TestForm') , css: { height:'15%', width:'15%'} });
+                    }
+                });
+                $('#test-tab').on('dblclick','td.testavailable', function()
+                {
+                    if ($(this).attr('HasValues') == 'true')
+                    {
+                        document.getElementById('{!$Component.hiddenCellid}').value = $(this).attr('CellId') ;
+                        if ($(this).attr('RateforCell') == "true")
+                        {
+                            $('#TestForm').find('#testvalue').prop('checked', true);
+                        }
+                        else
+                        {
+                            $('#TestForm').find('#testvalue').prop('checked', false);
+                        }
+                        $.blockUI({ message: $('#TestForm') , css: { height:'15%', width:'15%'} });
+                    }
+                });
+                $('#ghost-tab').on('dblclick','td.ghostavailable', function()
+                {
+                    if ($(this).attr('HasValues') == 'true')
+                    {
+                        document.getElementById('{!$Component.hiddenCellid}').value = $(this).attr('CellId') ;
+                        if ($(this).attr('RateforCell') == "true")
+                        {
+                            $('#GhostForm').find('#ghostvalue').prop('checked', true);
+                        }
+                        else
+                        {
+                            $('#GhostForm').find('#ghostvalue').prop('checked', false);
+                        }
+                        $.blockUI({ message: $('#GhostForm') , css: { height:'15%', width:'15%'} });
+                    }
+                });
+                $('#tabs-5').on('dblclick','td.availablelist', function()
+                {
+                    if ($(this).attr('HasValues') == 'true')
+                    {
+                        document.getElementById('{!$Component.hiddenCellid}').value = $(this).attr('CellId') ;
+                        $('#UnitsForm').find('#unitsvalue').val($(this).attr('RateforCell'));
+                        $.blockUI({ message: $('#UnitsForm') , css: { height:'15%', width:'15%'} });
+                    }
+                });
+                $('#tabs-1').on('dblclick','td.LTCavailable', function()
+                {
+                    if ($(this).attr('HasValues') == 'true')
+                    {
+                        if ($(this).attr('CanceledStatus') == 'Canceled')
+                        {
+                            $('#LTCForm').find('#ltcbuttonid').val('Uncancel Schedule');
+                        }
+                        else
+                        {
+                            $('#LTCForm').find('#ltcbuttonid').val('Cancel Schedule');
+                        }
+                        document.getElementById('{!$Component.hiddenCellid}').value = $(this).attr('CellId') ;
+                        $.blockUI({ message: $('#LTCForm') , css: { height:'8%', width:'18%'} });
+                    }
+                });
+                $('#tabs-4').on('dblclick','td.Extavailable', function()
+                {
+                    if ($(this).attr('HasValues') == 'true')
+                    {
+                        document.getElementById('{!$Component.hiddenExtensionDate}').value = $(this).attr('ExtensionDate') ;
+                        document.getElementById('{!$Component.hiddenOrderLineNumber}').value = $(this).attr('OrderLineExt') ;
+                        $.blockUI({ message: $('#ExtForm') , css: { height:'8%', width:'15%'} });
+                    }
+                });
+                $('.floatingHeaderTable').vfFloatingHeaders();
+                $( "#tabs" ).tabs();
+
+                $('#tabs').on('tabsbeforeactivate', function(event, ui) {
+                    if($('#tabs input:checked:not(.testTabCheckbox):not(.checkAllCheckbox)').length) {
+                        if(window.confirm('There are unsaved changes. Are you sure you want to change tabs?')) {
+                            uncheckAll();
+                        } else {
+                            event.preventDefault();
+                        }
+                    }
+                });
+            });
+            function checkAll(cb,cbid)
+            {
+                if ($(cb).attr('checked'))
+                {
+                    $('input[id$="' + cbid+ '"]:enabled').attr('checked',true);
+                    $('input[id$="' + cbid+ '"]:enabled').parent().parent().css('background-color', '#FFFF66');
+                }
+                else
+                {
+                    $('input[id$="' + cbid+ '"]:enabled').attr('checked',false);
+                    $('input[id$="' + cbid+ '"]:enabled').parent().parent().css('background-color', '');
+                }
+            }
+            function uncheckAll() {
+                $('#tabs input:checked').each(function() {
+                    $(this).attr('checked', false);
+                    $(this).parent().parent().css('background-color', '');
+                });
+            }
+            function highlightRow(cb) {
+                if ($(cb).is(':checked')) {
+                    $(cb).parent().parent().css('background-color', '#FFFF66');
+                } else {
+                    $(cb).parent().parent().css('background-color', '');
+                }
+            }
+            function DummyDate(cb,cbid)
+            {
+                $('input[id$="' + cbid+ '"]:enabled').val($(cb).val());
+            }
+            function rateset()
+            {
+                console.log(  $('#ratevalue').val()  );
+                document.getElementById('{!$Component.hiddencellrate}').value = $('#ratevalue').val();
+                Testcellrate();
+            }
+            function unitsset()
+            {
+                console.log(  $('#unitsvalue').val()  );
+                document.getElementById('{!$Component.hiddenCellUnits}').value = $('#unitsvalue').val();
+                Testcellunits();
+            }
+            function testset()
+            {
+                console.log(  $('#testvalue').val()  );
+                if ($('#testvalue').is(':checked'))
+                {
+                    document.getElementById('{!$Component.selectedtestinput}').value = "true";
+                }
+                else
+                {
+                    document.getElementById('{!$Component.selectedtestinput}').value = "false";
+                }
+                Testcelltest();
+            }
+            function ghostset()
+            {
+                console.log(  $('#ghostvalue').val()  );
+                if ($('#ghostvalue').is(':checked'))
+                {
+                    document.getElementById('{!$Component.selectedghostinput}').value = "true";
+                }
+                else
+                {
+                    document.getElementById('{!$Component.selectedghostinput}').value = "false";
+                }
+                Testcellghost();
+            }
+
+            function goToPageEnter(event)  {
+                if (window.event && window.event.keyCode == 13 || event.which == 13) {
+                    event.preventDefault();
+                    $(event.target).trigger('change');
+                }
+            }
+
+            function hiatusEndDateChanged(item) {
+                if($(item).val()) {
+                    $('.hiatusTime').prop('disabled', true);
+                    $('.hiatusTime').val('');
+                } else {
+                    $('.hiatusTime').prop('disabled', false);
+                }
+            }
+
+            function hiatusTimeBeforeChanged(item) {
+                if($(item).val()) {
+                    $('.hiatusEndDate').prop('disabled', true);
+                    $('.hiatusEndDate').val('');
+                    $('.hiatusTimeAfter').prop('disabled', true);
+                    $('.hiatusTimeAfter').val('');
+                } else {
+                    $('.hiatusEndDate').prop('disabled', false);
+                    $('.hiatusTimeAfter').prop('disabled', false);
+                }
+            }
+
+            function hiatusTimeAfterChanged(item) {
+                if($(item).val()) {
+                    $('.hiatusEndDate').prop('disabled', true);
+                    $('.hiatusEndDate').val('');
+                    $('.hiatusTimeBefore').prop('disabled', true);
+                    $('.hiatusTimeBefore').val('');
+                } else {
+                    $('.hiatusEndDate').prop('disabled', false);
+                    $('.hiatusTimeBefore').prop('disabled', false);
+                }
+            }
+        </script>
+        <!-- block pop up values to VF-->
+        <apex:inputhidden value="{!CellId}" id="hiddenCellid"/>
+        <apex:inputhidden value="{!cellrate}" id="hiddencellrate"/>
+        <apex:inputhidden value="{!SelectedExtensionDate}" id="hiddenExtensionDate"/>
+        <apex:inputhidden value="{!SelectedOrderLineNumber}" id="hiddenOrderLineNumber"/>
+        <apex:inputHidden value="{!cellUnits}" id="hiddenCellUnits" />
+        <apex:inputHidden value="{!SelectedTest}" id="selectedtestinput" />
+        <apex:inputHidden value="{!SelectedGhost}" id="selectedghostinput" />
+        <apex:sectionHeader title="Deal Revisions"/>
+        <apex:pageblock title="Search">
+            <table width="100%">
+                <tr>
+                    <td align="left">
+                        <apex:inputText value="{!Searchfield }"/>
+                        <apex:commandbutton action="{!DoSearch}" value="Search" status="pageStatus" /> <apex:actionStatus startText="(Loading...)" id="pageStatus"/>
+                        <apex:inputCheckbox value="{!BarterCheckbox}" />&nbsp;Barter&nbsp;&nbsp;|&nbsp;&nbsp;
+                        <apex:selectList value="{!SelectedCableSynd}" size="1"><apex:selectOptions value="{!CableSyndSOList}" /></apex:selectList>
+                        <apex:selectList value="{!programTeam}" size="1"><apex:selectOptions value="{!programTeamOptions}"/></apex:selectList>&nbsp;&nbsp;|&nbsp;
+                        <apex:inputCheckbox value="{!filterReconciledWeeks}" />&nbsp;Hide reconciled weeks&nbsp;&nbsp;
+                    </td>
+                    <td align="right">
+                        <table cellspacing="5">
+                            <tr>
+                                <td colspan="2">Range&nbsp;&nbsp;<apex:selectList value="{!SelectedDateLiteral}" size="1"><apex:selectOptions value="{!DateLiteralSOList}" /><apex:actionSupport event="onchange" rerender="StartDateField,EndDateField" action="{!ReturnSOQLDateString}" /></apex:selectList></td>
+                            </tr>
+                            <tr>
+                                <td>From&nbsp;&nbsp;<apex:inputField value="{!WeekStartDate.Week__c}" id="StartDateField" /></td>
+                                <td>To&nbsp;&nbsp;<apex:inputField value="{!WeekEndDate.Week__c}" id="EndDateField" /></td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <font size="1">
+                            For advanced searches please separate the keywords with a comma ','
+                        </font>
+                    </td>
+                </tr>
+            </table>
+        </apex:pageblock>
+        <apex:outputPanel rendered="{!IF(Searchfield != null && Searchfield != '-', true, false)}" id="DealDisplay">
+            <apex:pageBlock title="DEAL" >
+                <apex:outputPanel styleClass="tableContainer" layout="block" style="overflow:auto;max-height:125px" >
+                    <apex:pageblocktable styleclass="floatingHeaderTable"  value="{!DealResultList}" var="d">
+                        <apex:column headerValue="Select" styleClass="{!IF(LEFT(DealId, 15) == LEFT(d.Id, 15),'ui-state-active','')}">
+                            <apex:commandLink type="image/png" action="{!SearchforSchedules}" status="pageStatus">
+                                <apex:image value="/img/msg_icons/confirm24.png"/>
+                                <apex:param name="Dealid" value="{!d.id}" assignTo="{!DealId}"/>
+                                <apex:param name="Dealname" value="{!d.Name}" assignTo="{!DealName}"/>
+                            </apex:commandLink>
+                        </apex:column>
+                        <apex:column headerValue="Deal Link" styleClass="{!IF(LEFT(DealId, 15) == LEFT(d.Id, 15),'ui-state-active','')}">
+                            <apex:outputLink style="color:#000000;" value="/{!d.id}" id="deallink1" target="_blank">
+                                <apex:outputField value="{!d.Name}"/>
+                            </apex:outputLink>
+                        </apex:column>
+                        <apex:column headerValue="Brands" styleClass="{!IF(LEFT(DealId, 15) == LEFT(d.Id, 15),'ui-state-active','')}">
+                            <apex:outputLink style="color:#000000;" value="/{!d.Brands__c}" id="brandlink" target="_blank">
+                                <apex:outputtext value="{!d.Brands__r.Name}"/>
+                            </apex:outputLink>
+                        </apex:column>
+                        <apex:column headerValue="Agency" styleClass="{!IF(LEFT(DealId, 15) == LEFT(d.Id, 15),'ui-state-active','')}">
+                            <apex:outputLink style="color:#000000;" value="/{!d.Contact__r.Account.id}" id="agencylink" target="_blank">
+                                <apex:outputField value="{!d.ContactAccount__c}"/>
+                            </apex:outputLink>
+                        </apex:column>
+                        <apex:column headerValue="Program" styleClass="{!IF(LEFT(DealId, 15) == LEFT(d.Id, 15),'ui-state-active','')}">
+                            <apex:outputLink style="color:#000000;" value="/{!d.Program__r.id}" id="prolink" target="_blank">
+                                <apex:outputtext value="{!d.Program__r.Name}"/>
+                            </apex:outputLink>
+                        </apex:column>
+                        <apex:column headerValue="Contact" styleClass="{!IF(LEFT(DealId, 15) == LEFT(d.Id, 15),'ui-state-active','')}">
+                            <apex:outputLink style="color:#000000;" value="/{!d.Contact__r.id}" id="conlink" target="_blank">
+                                <apex:outputtext value="{!d.Contact__r.Name}"/>
+                            </apex:outputLink>
+                        </apex:column>
+                        <apex:column headerValue="Campaign" styleClass="{!IF(LEFT(DealId, 15) == LEFT(d.Id, 15),'ui-state-active','')}">
+                            <apex:outputField value="{!d.Campaign__c}"/>
+                        </apex:column>
+                        <apex:column headerValue="Network Deal Number" styleClass="{!IF(LEFT(DealId, 15) == LEFT(d.Id, 15),'ui-state-active','')}">
+                            <apex:outputField value="{!d.Network_Deal_Number__c}"/>
+                        </apex:column>
+                        <apex:column headerValue="Week MIN" styleClass="{!IF(LEFT(DealId, 15) == LEFT(d.Id, 15),'ui-state-active','')}">
+                            <apex:outputField value="{!d.Week_MIN_Field__c}"/>
+                        </apex:column>
+                        <apex:column headerValue="Agency Deal Number" styleClass="{!IF(LEFT(DealId, 15) == LEFT(d.Id, 15),'ui-state-active','')}">
+                            <apex:outputField value="{!d.Agency_Deal_Number__c}"/>
+                        </apex:column>
+                        <apex:column headerValue="Units Available" styleClass="{!IF(LEFT(DealId, 15) == LEFT(d.Id, 15),'ui-state-active','')}">
+                            <apex:outputField value="{!d.Sum_of_Units_Available__c}"/>
+                        </apex:column>
+                        <apex:column headerValue="Total Dollars" styleClass="{!IF(LEFT(DealId, 15) == LEFT(d.Id, 15),'ui-state-active','')}">
+                            <apex:outputField value="{!d.Sum_of_Total_Dollars__c}"/>
+                        </apex:column>
+                    </apex:pageblocktable>
+                </apex:OutputPanel>
+            </apex:pageBlock>
+        </apex:outputPanel>
+        <apex:pageMessages id="message"></apex:pageMessages>
+
+        <apex:outputPanel rendered="{!IF(DealId!= null && DealId!= '-', true, false)}" id="ScheduleDisplay">
+            <apex:outputpanel rendered="{!IF(schedulemessage = true, true, false)}" >
+                <apex:pageblock title="{!DealName}">
+                    No Schedules to Display
+                </apex:pageblock>
+            </apex:outputpanel>
+            <apex:outputPanel rendered="{!IF(showtable = true, true, false)}">
+                <div id="tabs">
+                    <ul>
+                        <li><a href="#tabs-1">LTC</a></li>
+                        <li><a href="#tabs-3">Rate</a></li>
+                        <li><a href="#tabs-4">Extend</a></li>
+                        <li><a href="#tabs-5">Frequency</a></li>
+                        <li><a href="#test-tab">Test</a></li>
+                        <!-- <li><a href="#ghost-tab">Ghost</a></li> -->
+                        <li><a href="#cap-tab">Cap</a></li>
+                        <li><a href="#daypart-tab">Daypart</a></li>
+                        <li><a href="#hiatus-tab">Hiatus</a></li>
+                        <li><a href="#max-tab">Max Per Day</a></li>
+                    </ul>
+                    <div id="tabs-1">
+                        <apex:outputPanel id="LTCPanel">
+                            <apex:pageblock >
+                                <h2><a href="/{!SelectedDeal.Id}">{!SelectedDeal.Name}</a> - {!SelectedDeal.Program__r.Name} - {!SelectedDeal.Brands__r.Name} - {!SelectedDeal.Advertiser__c} - {!SelectedDeal.Campaign__c} - {!SelectedDeal.Network_Deal_Number__c} - {!SelectedDeal.Agency_Deal_Number__c}</h2><hr />
+                                <table cellpadding="5" border="0">
+                                    <tr>
+                                        <td>
+                                            <apex:commandbutton action="{!ScheduleChange}" value="Update" status="ltcUpdateStatus" rerender="ExtensionPanel,message,LTCPanel,RatePanel,UnitsAvailablePanel,TestTabPanel,GhostTabPanel,DaypartTabPanel,CapTabPanel,HiatusPanel,MaxTabPanel" />
+                                            <apex:actionStatus id="ltcUpdateStatus"><apex:facet name="start"><apex:image value="{!$Resource.ajax_loader}"/></apex:facet></apex:actionStatus>
+                                        </td>
+                                        <td style="vertical-align: middle;"><b>Length: </b> {!SelectedDeal.Length__c}</td>
+                                        <td style="vertical-align: middle;"><b>Total Booked Units:</b></td>
+                                        <td style="vertical-align: middle;">
+                                            <apex:outputText value="{0, number, #}">
+                                                <apex:param value="{!SelectedDeal.Sum_of_Units_Available__c}" />
+                                            </apex:outputText>
+                                        </td>
+                                        <td style="vertical-align: middle;"><b>Total Booked Dollars:</b></td>
+                                        <td style="vertical-align: middle;"><apex:outputField value="{!SelectedDeal.Sum_of_Total_Dollars__c}"/></td>
+                                    </tr>
+                                </table>
+                                <table border="1" cellpadding="5" cellspacing="0" >
+                                    <tr>
+                                        <td style="background-color:#FF0000; width:20px;">
+                                            <apex:inputcheckbox id="LTC" value="{!selectAll}" onclick="checkAll(this,'LTCtablecheckbox')" styleClass="checkAllCheckbox" />
+                                        </td>
+                                        <td style="background-color:#FF0000; width:80px;"><apex:inputField value="{!DummySchedule1.Week__c}" onchange="DummyDate(this,'LTCDateField')" /></td>
+                                        <td style="background-color:#FF0000; width:80px;"><B>Days&nbsp;Allowed</B></td>
+                                        <td style="background-color:#FF0000; width:100px;"><B>Start&nbsp;-&nbsp;End</B></td>
+                                        <td style="background-color:#FF0000; width:80px;"><B>Rate</B></td>
+                                        <apex:repeat value="{!headingModels}" var="headingModel">
+                                            <td style="background-color:#FF0000;">
+                                                <b>
+                                                    <apex:outputText >
+                                                        <apex:outputText value="{0,date,M/d}">
+                                                            <apex:param value="{!headingModel.startOfWeek}" />
+                                                        </apex:outputText>
+                                                    </apex:outputText>
+                                                </b>
+                                            </td>
+                                        </apex:repeat>
+                                    </tr>
+                                    <apex:repeat value="{!LTClist}" var="rt">
+                                        <tr>
+                                            <td style="text-align:center;">
+                                                <apex:inputcheckbox id="LTCtablecheckbox" value="{!rt.ischecked}" onchange="highlightRow(this)" />
+                                            </td>
+                                            <td style="text-align:center;">
+                                                <apex:inputfield id="LTCDateField" value="{!rt.Scheduleobj.Week__c}" style="width:60px"/>
+                                            </td>
+                                            <td style="text-align:center;">
+                                                <apex:outputText value="{!rt.DaysAllowed}" style="width:5px"/>
+                                            </td>
+                                            <td style="text-align:center;white-space:nowrap;">
+                                                <apex:outputText value="{!rt.SETime}" style="width:10px"/>
+                                            </td>
+                                            <td style="text-align:center;">
+                                                <apex:inputText value="{!rt.Rate}" style="width:100px;" disabled="true" />
+                                            </td>
+                                            <apex:repeat value="{!rt.weeks}" var="wk">
+                                                <td style="text-align:center;{!IF(wk.multipleschedules == true,'background:#ffff66;','')}" valign="bottom" class="LTCavailable" CellId="{!wk.schObj.id}"  HasValues="{!wk.CellAvailable}" CanceledStatus="{!wk.schobj.Status__c}" RateforCell="{!wk.schObj.rate__c}" CellName="{!wk.schObj.name}">
+                                                    <apex:outputLink value="/{!wk.schObj.id}" id="eventlink" target="_blank">
+                                                        <apex:outputPanel rendered="{!wk.schObj.Status__c == 'Canceled'}" >
+                                                            <apex:outputText value="0" style="color:{!wk.color}" />
+                                                        </apex:outputPanel>
+                                                        <apex:outputPanel rendered="{!wk.schobj.Status__c != 'Canceled'}" >
+                                                            <apex:outputText value="{0, number, #}" style="color:{!wk.color}">
+                                                                <apex:param value="{!wk.schObj.Units_Available__c}" />
+                                                            </apex:outputText>
+                                                        </apex:outputPanel>
+                                                    </apex:outputLink>
+                                                </td>
+                                            </apex:repeat>
+                                        </tr>
+                                    </apex:repeat>
+                                    <tr>
+                                        <td colspan="5"></td>
+                                        <apex:repeat value="{!WeekDollarsList}" var="WeekPrice">
+                                            <td>
+                                                <apex:outputText value="{!WeekPrice}"/>
+                                            </td>
+                                        </apex:repeat>
+                                    </tr>
+                                </table>
+                                <table cellpadding="5" border="0">
+                                    <tr>
+                                        <td><apex:commandbutton action="{!loadPrevPage}" value="Previous Page" status="loadingPage" rendered="{!prevPage}" rerender="ExtensionPanel,message,LTCPanel,RatePanel,UnitsAvailablePanel,TestTabPanel,GhostTabPanel,DaypartTabPanel,CapTabPanel,HiatusPanel,MaxTabPanel" /></td>
+                                        <td style="vertical-align: middle;">Page&nbsp;<apex:inputText value="{!currentPage}" maxlength="4" onchange="goToPageLTC(this.value);" onkeypress="goToPageEnter(event);" style="width: 2em;" />&nbsp;of {!pageCount}</td>
+                                        <td><apex:commandbutton action="{!loadNextPage}" value="Next Page" status="loadingPage" rendered="{!nextPage}" rerender="ExtensionPanel,message,LTCPanel,RatePanel,UnitsAvailablePanel,TestTabPanel,GhostTabPanel,DaypartTabPanel,CapTabPanel,HiatusPanel,MaxTabPanel" /></td>
+                                        <td style="vertical-align: middle;"><apex:actionStatus id="loadingPage"><apex:facet name="start"><apex:image value="{!$Resource.ajax_loader}"/></apex:facet></apex:actionStatus></td>
+                                    </tr>
+                                </table>
+                                <apex:actionFunction action="{!goToPage}" name="goToPageLTC" status="loadingPage" reRender="ExtensionPanel,message,LTCPanel,RatePanel,UnitsAvailablePanel,TestTabPanel,GhostTabPanel,DaypartTabPanel,CapTabPanel,HiatusPanel,MaxTabPanel">
+                                    <apex:param name="selectedPage" value=""/>
+                                </apex:actionFunction>
+                            </apex:pageblock>
+                        </apex:outputPanel>
+                    </div>
+                    <div id="tabs-3">
+                        <apex:outputPanel id="RatePanel">
+                            <apex:pageblock >
+                                <h2><a href="/{!SelectedDeal.Id}">{!SelectedDeal.Name}</a> - {!SelectedDeal.Program__r.Name} - {!SelectedDeal.Brands__r.Name} - {!SelectedDeal.Advertiser__c} - {!SelectedDeal.Campaign__c} - {!SelectedDeal.Network_Deal_Number__c} - {!SelectedDeal.Agency_Deal_Number__c}</h2><hr />
+                                <table cellpadding="5" border="0">
+                                    <tr>
+                                        <td>
+                                            <apex:commandbutton action="{!RateUpdate}" value="Update" status="rateUpdateStatus" rerender="ExtensionPanel,message,LTCPanel,RatePanel,UnitsAvailablePanel,TestTabPanel,GhostTabPanel,DaypartTabPanel,CapTabPanel,HiatusPanel,MaxTabPanel" />
+                                            <apex:actionStatus id="rateUpdateStatus"><apex:facet name="start"><apex:image value="{!$Resource.ajax_loader}"/></apex:facet></apex:actionStatus>
+                                        </td>
+                                        <td style="vertical-align: middle;"><b>Length: </b> {!SelectedDeal.Length__c}</td>
+                                        <td style="vertical-align: middle;"><b>Total Booked Units:</b></td>
+                                        <td style="vertical-align: middle;">
+                                            <apex:outputText value="{0, number, #}">
+                                                <apex:param value="{!SelectedDeal.Sum_of_Units_Available__c}" />
+                                            </apex:outputText>
+                                        </td>
+                                        <td style="vertical-align: middle;"><b>Total Booked Dollars:</b></td>
+                                        <td style="vertical-align: middle;"><apex:outputField value="{!SelectedDeal.Sum_of_Total_Dollars__c}"/></td>
+                                    </tr>
+                                </table>
+                                <table border="1" cellpadding="5" cellspacing="0" >
+                                    <tr>
+                                        <td style="background-color:#FFFF66; width:20px;"></td>
+                                        <td style="background-color:#FFFF66; width:80px;"><b>Date</b></td>
+                                        <td style="background-color:#FFFF66; width:80px;"><B>Days&nbsp;Allowed</B></td>
+                                        <td style="background-color:#FFFF66; width:100px;"><B>Start&nbsp;-&nbsp;End</B></td>
+                                        <td style="background-color:#FFFF66; width:80px;"><B>Rate</B></td>
+                                        <apex:repeat value="{!headingModels}" var="headingModel">
+                                            <td style="background-color:#FFFF66;">
+                                                <b>
+                                                    <apex:outputText >
+                                                        <apex:outputText value="{0,date,M/d}">
+                                                            <apex:param value="{!headingModel.startOfWeek}" />
+                                                        </apex:outputText>
+                                                    </apex:outputText>
+                                                </b>
+                                            </td>
+                                        </apex:repeat>
+                                    </tr>
+                                    <apex:repeat value="{!ratelist}" var="rt">
+                                        <tr>
+                                            <td style="text-align:center;">
+                                                <apex:inputcheckbox id="ratetablecheckbox" value="{!rt.ischecked}" onchange="highlightRow(this)" />
+                                            </td>
+                                            <td style="text-align:center;">
+                                                <apex:inputfield id="RateDateField" value="{!rt.Scheduleobj.Week__c }" style="width:60px" />
+                                            </td>
+                                            <td style="text-align:center;">
+                                                <apex:outputText value="{!rt.DaysAllowed}" style="width:5px"/>
+                                            </td>
+                                            <td style="text-align:center;white-space:nowrap;">
+                                                <apex:outputText value="{!rt.SETime}" style="width:10px"/>
+                                            </td>
+                                            <td style="text-align:center;">
+                                                <apex:inputText value="{!rt.Rate}" style="width:100px;" />
+                                            </td>
+                                            <apex:repeat value="{!rt.weeks}" var="wk">
+                                                <td style="text-align:center;{!IF(wk.multipleschedules == true,'background:#ffff66;','')}" valign="bottom" class="unitavailable" CellId="{!wk.schObj.id}"  HasValues="{!wk.CellAvailable}" RateforCell="{!wk.schObj.rate__c}" CellName="{!wk.schObj.name}">
+                                                    <apex:outputLink value="/{!wk.schObj.id}" id="eventlink" target="_blank">
+                                                        <apex:outputPanel rendered="{!wk.schObj.Status__c == 'Canceled'}" >
+                                                            <apex:outputText value="0" style="color:{!wk.color}" />
+                                                        </apex:outputPanel>
+                                                        <apex:outputPanel rendered="{!wk.schobj.Status__c != 'Canceled'}" >
+                                                            <apex:outputText value="{0, number, #}" style="color:{!wk.color}">
+                                                                <apex:param value="{!wk.schObj.Units_Available__c}" />
+                                                            </apex:outputText>
+                                                        </apex:outputPanel>
+                                                    </apex:outputLink>
+                                                </td>
+                                            </apex:repeat>
+                                        </tr>
+                                    </apex:repeat>
+                                    <tr>
+                                        <td colspan="5"></td>
+                                        <apex:repeat value="{!WeekDollarsList}" var="WeekPrice">
+                                            <td>
+                                                <apex:outputText value="{!WeekPrice}"/>
+                                            </td>
+                                        </apex:repeat>
+                                    </tr>
+                                </table>
+                                <table cellpadding="5" border="0">
+                                    <tr>
+                                        <td><apex:commandbutton action="{!loadPrevPage}" value="Previous Page" status="loadingPage" rendered="{!prevPage}" rerender="ExtensionPanel,message,LTCPanel,RatePanel,UnitsAvailablePanel,TestTabPanel,GhostTabPanel,DaypartTabPanel,CapTabPanel,HiatusPanel,MaxTabPanel" /></td>
+                                        <td style="vertical-align: middle;">Page&nbsp;<apex:inputText value="{!currentPage}" maxlength="4" onchange="goToPageRate(this.value);" onkeypress="goToPageEnter(event);" style="width: 2em;" />&nbsp;of {!pageCount}</td>
+                                        <td><apex:commandbutton action="{!loadNextPage}" value="Next Page" status="loadingPage" rendered="{!nextPage}" rerender="ExtensionPanel,message,LTCPanel,RatePanel,UnitsAvailablePanel,TestTabPanel,GhostTabPanel,DaypartTabPanel,CapTabPanel,HiatusPanel,MaxTabPanel" /></td>
+                                        <td style="vertical-align: middle;"><apex:actionStatus id="loadingPage"><apex:facet name="start"><apex:image value="{!$Resource.ajax_loader}"/></apex:facet></apex:actionStatus></td>
+                                    </tr>
+                                </table>
+                                <apex:actionFunction action="{!goToPage}" name="goToPageRate" status="loadingPage" reRender="ExtensionPanel,message,LTCPanel,RatePanel,UnitsAvailablePanel,TestTabPanel,GhostTabPanel,DaypartTabPanel,CapTabPanel,HiatusPanel,MaxTabPanel">
+                                    <apex:param name="selectedPage" value=""/>
+                                </apex:actionFunction>
+                            </apex:pageblock>
+                        </apex:outputPanel>
+                    </div>
+                    <div id="tabs-4">
+                        <apex:outputPanel id="ExtensionPanel">
+                            <apex:pageblock >
+                                <h2><a href="/{!SelectedDeal.Id}">{!SelectedDeal.Name}</a> - {!SelectedDeal.Program__r.Name} - {!SelectedDeal.Brands__r.Name} - {!SelectedDeal.Advertiser__c} - {!SelectedDeal.Campaign__c} - {!SelectedDeal.Network_Deal_Number__c} - {!SelectedDeal.Agency_Deal_Number__c}</h2><hr />
+                                <table cellpadding="5" border="0">
+                                    <tr>
+                                        <td>
+                                            <apex:commandbutton action="{!ExtensionUpdate}" value="Update" status="extensionUpdateStatus" rerender="ExtensionPanel,message,LTCPanel,RatePanel,UnitsAvailablePanel,TestTabPanel,GhostTabPanel,DaypartTabPanel,CapTabPanel,HiatusPanel,MaxTabPanel" />
+                                            <apex:actionStatus id="extensionUpdateStatus"><apex:facet name="start"><apex:image value="{!$Resource.ajax_loader}"/></apex:facet></apex:actionStatus>
+                                        </td>
+                                        <td style="vertical-align: middle;"><b>Length: </b> {!SelectedDeal.Length__c}</td>
+                                        <td style="vertical-align: middle;"><b>Total Booked Units:</b></td>
+                                        <td style="vertical-align: middle;">
+                                            <apex:outputText value="{0, number, #}">
+                                                <apex:param value="{!SelectedDeal.Sum_of_Units_Available__c}" />
+                                            </apex:outputText>
+                                        </td>
+                                        <td style="vertical-align: middle;"><b>Total Booked Dollars:</b></td>
+                                        <td style="vertical-align: middle;"><apex:outputField value="{!SelectedDeal.Sum_of_Total_Dollars__c}"/></td>
+                                    </tr>
+                                </table>
+                                <table border="1" cellpadding="5" cellspacing="0" >
+                                    <tr>
+                                        <td style="background-color:#7B68EE; width:20px;">
+                                            <apex:inputcheckbox id="rate" value="{!selectAll}" onclick="checkAll(this,'extensioncheckbox')" styleClass="checkAllCheckbox" />
+                                        </td>
+                                        <td style="background-color:#7B68EE; width:80px;"><apex:inputField value="{!DummySchedule1.Week__c}" onchange="DummyDate(this,'RateDateField')" /></td>
+                                        <td style="background-color:#7B68EE; width:80px;"><B>Days&nbsp;Allowed</B></td>
+                                        <td style="background-color:#7B68EE; width:100px;"><B>Start&nbsp;-&nbsp;End</B></td>
+                                        <td style="background-color:#7B68EE; width:80px;"><B>Rate</B></td>
+                                        <apex:repeat value="{!headingModels}" var="headingModel">
+                                            <td style="background-color:#7B68EE;">
+                                                <b>
+                                                    <apex:outputText >
+                                                        <apex:outputText value="{0,date,M/d}">
+                                                            <apex:param value="{!headingModel.startOfWeek}" />
+                                                        </apex:outputText>
+                                                    </apex:outputText>
+                                                </b>
+                                            </td>
+                                        </apex:repeat>
+                                    </tr>
+                                    <apex:repeat value="{!Extensionlist}" var="rt">
+                                        <tr>
+                                            <td style="text-align:center;">
+                                                <apex:inputcheckbox id="extensioncheckbox" value="{!rt.ischecked}" onchange="highlightRow(this)" />
+                                            </td>
+                                            <td style="text-align:center;">
+                                                <apex:inputfield id="RateDateField" value="{!rt.Scheduleobj.Week__c }" style="width:60px" />
+                                            </td>
+                                            <td style="text-align:center;">
+                                                <apex:outputText value="{!rt.DaysAllowed}" style="width:5px"/>
+                                            </td>
+                                            <td style="text-align:center;white-space:nowrap;">
+                                                <apex:outputText value="{!rt.SETime}" style="width:10px"/>
+                                            </td>
+                                            <td style="text-align:center;">
+                                                <apex:inputText value="{!rt.Rate}"  style="width:100px;" disabled="true" />
+                                            </td>
+                                            <apex:repeat value="{!rt.weeks}" var="wk">
+                                                <td style="text-align:center;{!IF(wk.multipleschedules == true,'background:#ffff66;','')}" valign="bottom" class="Extavailable" CellId="{!wk.schObj.id}" ExtensionDate="{!wk.ExtensionDate}" HasValues="{!wk.ExtensionAvailable}" OrderLineExt="{!wk.OrderLineNumber}" CellName="{!wk.schObj.name}">
+                                                    <apex:outputLink value="/{!wk.schObj.id}" id="eventlink" target="_blank">
+                                                        <apex:outputPanel rendered="{!wk.schObj.Status__c == 'Canceled'}" >
+                                                            <apex:outputText value="0" style="color:{!wk.color}" />
+                                                        </apex:outputPanel>
+                                                        <apex:outputPanel rendered="{!wk.schobj.Status__c != 'Canceled'}" >
+                                                            <apex:outputText value="{0, number, #}" style="color:{!wk.color}">
+                                                                <apex:param value="{!wk.schObj.Units_Available__c}" />
+                                                            </apex:outputText>
+                                                        </apex:outputPanel>
+                                                    </apex:outputLink>
+                                                </td>
+                                            </apex:repeat>
+                                        </tr>
+                                    </apex:repeat>
+                                    <tr>
+                                        <td colspan="5"></td>
+                                        <apex:repeat value="{!WeekDollarsList}" var="WeekPrice">
+                                            <td>
+                                                <apex:outputText value="{!WeekPrice}"/>
+                                            </td>
+                                        </apex:repeat>
+                                    </tr>
+                                </table>
+                                <table cellpadding="5" border="0">
+                                    <tr>
+                                        <td><apex:commandbutton action="{!loadPrevPage}" value="Previous Page" status="loadingPage" rendered="{!prevPage}" rerender="ExtensionPanel,message,LTCPanel,RatePanel,UnitsAvailablePanel,TestTabPanel,GhostTabPanel,DaypartTabPanel,CapTabPanel,HiatusPanel,MaxTabPanel" /></td>
+                                        <td style="vertical-align: middle;">Page&nbsp;<apex:inputText value="{!currentPage}" maxlength="4" onchange="goToPageExtension(this.value);" onkeypress="goToPageEnter(event);" style="width: 2em;" />&nbsp;of {!pageCount}</td>
+                                        <td><apex:commandbutton action="{!loadNextPage}" value="Next Page" status="loadingPage" rendered="{!nextPage}" rerender="ExtensionPanel,message,LTCPanel,RatePanel,UnitsAvailablePanel,TestTabPanel,GhostTabPanel,DaypartTabPanel,CapTabPanel,HiatusPanel,MaxTabPanel" /></td>
+                                        <td style="vertical-align: middle;"><apex:actionStatus id="loadingPage"><apex:facet name="start"><apex:image value="{!$Resource.ajax_loader}"/></apex:facet></apex:actionStatus></td>
+                                    </tr>
+                                </table>
+                                <apex:actionFunction action="{!goToPage}" name="goToPageExtension" status="loadingPage" reRender="ExtensionPanel,message,LTCPanel,RatePanel,UnitsAvailablePanel,TestTabPanel,GhostTabPanel,DaypartTabPanel,CapTabPanel,HiatusPanel,MaxTabPanel">
+                                    <apex:param name="selectedPage" value=""/>
+                                </apex:actionFunction>
+                            </apex:pageblock>
+                        </apex:outputPanel>
+                    </div>
+                    <div id="tabs-5">
+                        <apex:outputPanel id="UnitsAvailablePanel">
+                            <apex:pageblock >
+                                <h2><a href="/{!SelectedDeal.Id}">{!SelectedDeal.Name}</a> - {!SelectedDeal.Program__r.Name} - {!SelectedDeal.Brands__r.Name} - {!SelectedDeal.Advertiser__c} - {!SelectedDeal.Campaign__c} - {!SelectedDeal.Network_Deal_Number__c} - {!SelectedDeal.Agency_Deal_Number__c}</h2><hr />
+                                <table cellpadding="5" border="0">
+                                    <tr>
+                                        <td>
+                                            <apex:commandbutton action="{!UnitsAvailableUpdate}" value="Update" status="unitsAvailableUpdateStatus" rerender="ExtensionPanel,message,LTCPanel,RatePanel,UnitsAvailablePanel,TestTabPanel,CapTabPanel,HiatusPanel,MaxTabPanel" />
+                                            <apex:actionStatus id="unitsAvailableUpdateStatus"><apex:facet name="start"><apex:image value="{!$Resource.ajax_loader}"/></apex:facet></apex:actionStatus>
+                                        </td>
+                                        <td style="vertical-align: middle;"><b>Length: </b> {!SelectedDeal.Length__c}</td>
+                                        <td style="vertical-align: middle;"><b>Total Booked Units:</b></td>
+                                        <td style="vertical-align: middle;">
+                                            <apex:outputText value="{0, number, #}">
+                                                <apex:param value="{!SelectedDeal.Sum_of_Units_Available__c}" />
+                                            </apex:outputText>
+                                        </td>
+                                        <td style="vertical-align: middle;"><b>Total Booked Dollars:</b></td>
+                                        <td style="vertical-align: middle;"><apex:outputField value="{!SelectedDeal.Sum_of_Total_Dollars__c}"/></td>
+                                    </tr>
+                                </table>
+                                <table border="1" cellpadding="5" cellspacing="0" >
+                                    <tr>
+                                        <td style="background-color:#66CCCC; width:20px;">
+                                            <apex:inputcheckbox id="rate" value="{!selectAll}" onclick="checkAll(this,'unitscheckbox')" styleClass="checkAllCheckbox" />
+                                        </td>
+                                        <td style="background-color:#66CCCC; width:80px;"><apex:inputField value="{!DummySchedule1.Week__c}" onchange="DummyDate(this,'RateDateField')" /></td>
+                                        <td style="background-color:#66CCCC; width:80px;"><B>Days&nbsp;Allowed</B></td>
+                                        <td style="background-color:#66CCCC; width:100px;"><B>Start&nbsp;-&nbsp;End</B></td>
+                                        <td style="background-color:#66CCCC; width:80px;"><B>Rate</B></td>
+                                        <td style="background-color:#66CCCC; width:80px;"><B>Units Available</B></td>
+                                        <apex:repeat value="{!headingModels}" var="headingModel">
+                                            <td style="background-color:#66CCCC;">
+                                                <b>
+                                                    <apex:outputText >
+                                                        <apex:outputText value="{0,date,M/d}">
+                                                            <apex:param value="{!headingModel.startOfWeek}" />
+                                                        </apex:outputText>
+                                                    </apex:outputText>
+                                                </b>
+                                            </td>
+                                        </apex:repeat>
+                                    </tr>
+                                    <apex:repeat value="{!unitsavailablelist}" var="rt">
+                                        <tr>
+                                            <td style="text-align:center;">
+                                                <apex:inputcheckbox id="unitscheckbox" value="{!rt.ischecked}" onchange="highlightRow(this)" />
+                                            </td>
+                                            <td style="text-align:center;">
+                                                <apex:inputfield id="RateDateField" value="{!rt.Scheduleobj.Week__c }" style="width:60px" />
+                                            </td>
+                                            <td style="text-align:center;">
+                                                <apex:outputText value="{!rt.DaysAllowed}" style="width:5px"/>
+                                            </td>
+                                            <td style="text-align:center;white-space:nowrap;">
+                                                <apex:outputText value="{!rt.SETime}" style="width:10px"/>
+                                            </td>
+                                            <td style="text-align:center;">
+                                                <apex:inputText value="{!rt.Rate}" style="width:100px;" disabled="true"/>
+                                            </td>
+                                            <td style="text-align:center;">
+                                                <apex:inputText value="{!rt.UnitsAvailable}" style="width:100px;"/>
+                                            </td>
+                                            <apex:repeat value="{!rt.weeks}" var="wk">
+                                                <td style="text-align:center;{!IF(wk.multipleschedules == true,'background:#ffff66;','')}" valign="bottom" class="availablelist" CellId="{!wk.schObj.id}"  HasValues="{!wk.CellAvailable}" RateforCell="{!wk.schObj.Units_Available__c}" CellName="{!wk.schObj.name}">
+                                                    <apex:outputLink value="/{!wk.schObj.id}" id="eventlink" target="_blank">
+                                                        <apex:outputPanel rendered="{!wk.schObj.Status__c == 'Canceled'}" >
+                                                            <apex:outputText value="0" style="color:{!wk.color}" />
+                                                        </apex:outputPanel>
+                                                        <apex:outputPanel rendered="{!wk.schobj.Status__c != 'Canceled'}" >
+                                                            <apex:outputText value="{0, number, #}" style="color:{!wk.color}">
+                                                                <apex:param value="{!wk.schObj.Units_Available__c}" />
+                                                            </apex:outputText>
+                                                        </apex:outputPanel>
+                                                    </apex:outputLink>
+                                                </td>
+                                            </apex:repeat>
+                                        </tr>
+                                    </apex:repeat>
+                                    <tr>
+                                        <td colspan="6"></td>
+                                        <apex:repeat value="{!WeekDollarsList}" var="WeekPrice">
+                                            <td>
+                                                <apex:outputText value="{!WeekPrice}"/>
+                                            </td>
+                                        </apex:repeat>
+                                    </tr>
+                                </table>
+                                <table cellpadding="5" border="0">
+                                    <tr>
+                                        <td><apex:commandbutton action="{!loadPrevPage}" value="Previous Page" status="loadingPage" rendered="{!prevPage}" rerender="ExtensionPanel,message,LTCPanel,RatePanel,UnitsAvailablePanel,TestTabPanel,GhostTabPanel,DaypartTabPanel,CapTabPanel,HiatusPanel,MaxTabPanel" /></td>
+                                        <td style="vertical-align: middle;">Page&nbsp;<apex:inputText value="{!currentPage}" maxlength="4" onchange="goToPageUnitsAvailable(this.value);" onkeypress="goToPageEnter(event);" style="width: 2em;" />&nbsp;of {!pageCount}</td>
+                                        <td><apex:commandbutton action="{!loadNextPage}" value="Next Page" status="loadingPage" rendered="{!nextPage}" rerender="ExtensionPanel,message,LTCPanel,RatePanel,UnitsAvailablePanel,TestTabPanel,GhostTabPanel,DaypartTabPanel,CapTabPanel,HiatusPanel,MaxTabPanel" /></td>
+                                        <td style="vertical-align: middle;"><apex:actionStatus id="loadingPage"><apex:facet name="start"><apex:image value="{!$Resource.ajax_loader}"/></apex:facet></apex:actionStatus></td>
+                                    </tr>
+                                </table>
+                                <apex:actionFunction action="{!goToPage}" name="goToPageUnitsAvailable" status="loadingPage" reRender="ExtensionPanel,message,LTCPanel,RatePanel,UnitsAvailablePanel,TestTabPanel,GhostTabPanel,DaypartTabPanel,CapTabPanel,HiatusPanel,MaxTabPanel">
+                                    <apex:param name="selectedPage" value=""/>
+                                </apex:actionFunction>
+                            </apex:pageblock>
+                        </apex:outputPanel>
+                    </div>
+
+                    <div id="test-tab">
+                        <apex:outputPanel id="TestTabPanel">
+                            <apex:pageblock >
+                                <h2><a href="/{!SelectedDeal.Id}">{!SelectedDeal.Name}</a> - {!SelectedDeal.Program__r.Name} - {!SelectedDeal.Brands__r.Name} - {!SelectedDeal.Advertiser__c} - {!SelectedDeal.Campaign__c} - {!SelectedDeal.Network_Deal_Number__c} - {!SelectedDeal.Agency_Deal_Number__c}</h2><hr />
+                                <table cellpadding="5" border="0">
+                                    <tr>
+                                        <td>
+                                            <apex:commandbutton action="{!TestTabUpdate}" value="Update" reRender="ExtensionPanel,message,LTCPanel,RatePanel,UnitsAvailablePanel,TestTabPanel,GhostTabPanel,DaypartTabPanel,CapTabPanel,HiatusPanel,MaxTabPanel" status="testTabUpdateStatus"/>
+                                            <apex:actionStatus id="testTabUpdateStatus"><apex:facet name="start"><apex:image value="{!$Resource.ajax_loader}"/></apex:facet></apex:actionStatus>
+                                        </td>
+                                        <td style="vertical-align: middle;"><b>Length: </b> {!SelectedDeal.Length__c}</td>
+                                        <td style="vertical-align: middle;"><b>Total Booked Units:</b></td>
+                                        <td style="vertical-align: middle;">
+                                            <apex:outputText value="{0, number, #}">
+                                                <apex:param value="{!SelectedDeal.Sum_of_Units_Available__c}" />
+                                            </apex:outputText>
+                                        </td>
+                                        <td style="vertical-align: middle;"><b>Total Booked Dollars:</b></td>
+                                        <td style="vertical-align: middle;"><apex:outputField value="{!SelectedDeal.Sum_of_Total_Dollars__c}"/></td>
+                                    </tr>
+                                </table>
+                                <table border="1" cellpadding="5" cellspacing="0" >
+                                    <tr>
+                                        <td style="background-color:#0099FF; width:20px;">
+                                            <apex:inputcheckbox id="testcheckbox" value="{!selectAll}" onclick="checkAll(this,'testcheckbox')" styleClass="checkAllCheckbox" />
+                                        </td>
+                                        <td style="background-color:#0099FF; width:80px;"><apex:inputField value="{!DummySchedule1.Week__c}" onchange="DummyDate(this,'TestDateField')" /></td>
+                                        <td style="background-color:#0099FF; width:80px;"><B>Days&nbsp;Allowed</B></td>
+                                        <td style="background-color:#0099FF; width:100px;"><B>Start&nbsp;-&nbsp;End</B></td>
+                                        <td style="background-color:#0099FF; width:80px;"><B>Rate</B></td>
+                                        <td style="background-color:#0099FF; width:30px;"><B>Test</B></td>
+                                        <apex:repeat value="{!headingModels}" var="headingModel">
+                                            <td style="background-color:#0099FF;">
+                                                <b>
+                                                    <apex:outputText >
+                                                        <apex:outputText value="{0,date,M/d}">
+                                                            <apex:param value="{!headingModel.startOfWeek}" />
+                                                        </apex:outputText>
+                                                    </apex:outputText>
+                                                </b>
+                                            </td>
+                                        </apex:repeat>
+                                    </tr>
+                                    <apex:repeat value="{!testTabList }" var="rt">
+                                        <tr>
+                                            <td style="text-align:center;">
+                                                <apex:inputcheckbox id="testcheckbox" value="{!rt.ischecked}" onchange="highlightRow(this)" />
+                                            </td>
+                                            <td style="text-align:center;">
+                                                <apex:inputfield id="TestDateField" value="{!rt.Scheduleobj.Week__c}" style="width:60px"/>
+                                            </td>
+                                            <td style="text-align:center;">
+                                                <apex:outputText value="{!rt.DaysAllowed}" style="width:5px"/>
+                                            </td>
+
+                                            <td style="text-align:center;white-space:nowrap;">
+                                                <apex:outputText value="{!rt.SETime}" style="width:10px"/>
+                                            </td>
+                                            <td style="text-align:center;">
+                                                <apex:inputText value="{!rt.Rate}" style="width:100px;" disabled="true" />
+                                            </td>
+                                            <td style="text-align:center;">
+                                                <apex:inputcheckbox value="{!rt.Test}"  disabled="true" styleClass="testTabCheckbox"/>
+                                            </td>
+                                            <apex:repeat value="{!rt.weeks}" var="wk">
+                                                <td style="text-align:center;{!IF(wk.multipleschedules == true,'background:#ffff66;','')}" valign="bottom" class="testavailable" CellId="{!wk.schObj.id}"  HasValues="{!wk.CellAvailable}" RateforCell="{!wk.schObj.Test__c}" CellName="{!wk.schObj.name}">
+                                                    <apex:outputLink value="/{!wk.schObj.id}" id="eventlink" target="_blank">
+                                                        <apex:outputPanel rendered="{!wk.schObj.Status__c == 'Canceled'}" >
+                                                            <apex:outputText value="0" style="color:{!wk.color}" />
+                                                        </apex:outputPanel>
+                                                        <apex:outputPanel rendered="{!wk.schobj.Status__c != 'Canceled'}" >
+                                                            <apex:outputText value="{0, number, #}" style="color:{!wk.color}">
+                                                                <apex:param value="{!wk.schObj.Units_Available__c}" />
+                                                            </apex:outputText>
+                                                        </apex:outputPanel>
+                                                    </apex:outputLink>
+                                                </td>
+                                            </apex:repeat>
+                                        </tr>
+                                    </apex:repeat>
+                                    <tr>
+                                        <td colspan="6"></td>
+                                        <apex:repeat value="{!WeekDollarsList}" var="WeekPrice">
+                                            <td>
+                                                <apex:outputText value="{!WeekPrice}"/>
+                                            </td>
+                                        </apex:repeat>
+                                    </tr>
+                                </table>
+                                <table cellpadding="5" border="0">
+                                    <tr>
+                                        <td><apex:commandbutton action="{!loadPrevPage}" value="Previous Page" status="loadingPage" rendered="{!prevPage}" rerender="ExtensionPanel,message,LTCPanel,RatePanel,UnitsAvailablePanel,TestTabPanel,GhostTabPanel,DaypartTabPanel,CapTabPanel,HiatusPanel,MaxTabPanel" /></td>
+                                        <td style="vertical-align: middle;">Page&nbsp;<apex:inputText value="{!currentPage}" maxlength="4" onchange="goToPageTest(this.value);" onkeypress="goToPageEnter(event);" style="width: 2em;" />&nbsp;of {!pageCount}</td>
+                                        <td><apex:commandbutton action="{!loadNextPage}" value="Next Page" status="loadingPage" rendered="{!nextPage}" rerender="ExtensionPanel,message,LTCPanel,RatePanel,UnitsAvailablePanel,TestTabPanel,GhostTabPanel,DaypartTabPanel,CapTabPanel,HiatusPanel,MaxTabPanel" /></td>
+                                        <td style="vertical-align: middle;"><apex:actionStatus id="loadingPage"><apex:facet name="start"><apex:image value="{!$Resource.ajax_loader}"/></apex:facet></apex:actionStatus></td>
+                                    </tr>
+                                </table>
+                                <apex:actionFunction action="{!goToPage}" name="goToPageTest" status="loadingPage" reRender="ExtensionPanel,message,LTCPanel,RatePanel,UnitsAvailablePanel,TestTabPanel,GhostTabPanel,DaypartTabPanel,CapTabPanel,HiatusPanel,MaxTabPanel">
+                                    <apex:param name="selectedPage" value=""/>
+                                </apex:actionFunction>
+                            </apex:pageblock>
+                        </apex:outputPanel>
+                    </div>
+                    <div id="cap-tab">
+                        <apex:outputPanel id="CapTabPanel">
+                            <apex:pageblock >
+                                <h2><a href="/{!SelectedDeal.Id}">{!SelectedDeal.Name}</a> - {!SelectedDeal.Program__r.Name} - {!SelectedDeal.Brands__r.Name} - {!SelectedDeal.Advertiser__c} - {!SelectedDeal.Campaign__c} - {!SelectedDeal.Network_Deal_Number__c} - {!SelectedDeal.Agency_Deal_Number__c}</h2><hr />
+                                <table cellpadding="5" border="0">
+                                    <tr>
+                                        <td>
+                                            <apex:commandbutton action="{!capTabUpdate}" value="Update" reRender="ExtensionPanel,message,LTCPanel,RatePanel,UnitsAvailablePanel,TestTabPanel,GhostTabPanel,DaypartTabPanel,CapTabPanel,HiatusPanel,MaxTabPanel" status="capTabUpdateStatus"/>
+                                            <apex:actionStatus id="capTabUpdateStatus"><apex:facet name="start"><apex:image value="{!$Resource.ajax_loader}"/></apex:facet></apex:actionStatus>
+                                        </td>
+                                        <td style="vertical-align: middle;"><b>Length: </b> {!SelectedDeal.Length__c}</td>
+                                        <td style="vertical-align: middle;"><b>Total Booked Units:</b></td>
+                                        <td style="vertical-align: middle;">
+                                            <apex:outputText value="{0, number, #}">
+                                                <apex:param value="{!SelectedDeal.Sum_of_Units_Available__c}" />
+                                            </apex:outputText>
+                                        </td>
+                                        <td style="vertical-align: middle;"><b>Total Booked Dollars:</b></td>
+                                        <td style="vertical-align: middle;"><apex:outputField value="{!SelectedDeal.Sum_of_Total_Dollars__c}"/></td>
+                                    </tr>
+                                </table>
+                                <table border="1" cellpadding="5" cellspacing="0" >
+                                    <tr>
+                                        <td style="background-color:#AAAAAA; width:20px;">
+                                            <apex:inputcheckbox id="capcheckbox" value="{!selectAll}" onclick="checkAll(this,'capcheckbox')" styleClass="checkAllCheckbox" />
+                                        </td>
+                                        <td style="background-color:#AAAAAA; width:80px;"><apex:inputField value="{!DummySchedule1.Week__c}" onchange="DummyDate(this,'CapDateField')" /></td>
+                                        <td style="background-color:#AAAAAA; width:80px;"><B>Days&nbsp;Allowed</B></td>
+                                        <td style="background-color:#AAAAAA; width:100px;"><B>Start&nbsp;-&nbsp;End</B></td>
+                                        <td style="background-color:#AAAAAA; width:80px;"><B>Rate</B></td>
+                                        <td style="background-color:#AAAAAA; width:30px;"><B>Cap</B></td>
+                                        <apex:repeat value="{!headingModels}" var="headingModel">
+                                            <td style="background-color:#AAAAAA;">
+                                                <b>
+                                                    <apex:outputText >
+                                                        <apex:outputText value="{0,date,M/d}">
+                                                            <apex:param value="{!headingModel.startOfWeek}" />
+                                                        </apex:outputText>
+                                                    </apex:outputText>
+                                                </b>
+                                            </td>
+                                        </apex:repeat>
+                                    </tr>
+                                    <apex:repeat value="{!capTabList }" var="rt">
+                                        <tr>
+                                            <td style="text-align:center;">
+                                                <apex:inputcheckbox id="capcheckbox" value="{!rt.ischecked}" onchange="highlightRow(this)" />
+                                            </td>
+                                            <td style="text-align:center;">
+                                                <apex:inputfield id="CapDateField" value="{!rt.Scheduleobj.Week__c}" style="width:60px"/>
+                                            </td>
+                                            <td style="text-align:center;">
+                                                <apex:outputText value="{!rt.DaysAllowed}" style="width:5px"/>
+                                            </td>
+
+                                            <td style="text-align:center;white-space:nowrap;">
+                                                <apex:outputText value="{!rt.SETime}" style="width:10px"/>
+                                            </td>
+                                            <td style="text-align:center;">
+                                                <apex:inputText value="{!rt.Rate}" style="width:100px;" disabled="true" />
+                                            </td>
+                                            <td style="text-align:center;">
+                                                <apex:inputField value="{!rt.Scheduleobj.Cap__c}"/>
+                                            </td>
+                                            <apex:repeat value="{!rt.weeks}" var="wk">
+                                                <td style="text-align:center;{!IF(wk.multipleschedules == true,'background:#ffff66;','')}" valign="bottom" class="ghostavailable" CellId="{!wk.schObj.id}"  HasValues="{!wk.CellAvailable}" RateforCell="{!wk.schObj.Cap__c}" CellName="{!wk.schObj.name}">
+                                                    <apex:outputLink value="/{!wk.schObj.id}" id="eventlink" target="_blank">
+                                                        <apex:outputPanel rendered="{!wk.schObj.Status__c == 'Canceled'}" >
+                                                            <apex:outputText value="0" style="color:{!wk.ghostColor}" />
+                                                        </apex:outputPanel>
+                                                        <apex:outputPanel rendered="{!wk.schobj.Status__c != 'Canceled'}" >
+                                                            <apex:outputText value="{0, number, #}" style="color:{!wk.color}">
+                                                                <apex:param value="{!wk.schObj.Units_Available__c}" />
+                                                            </apex:outputText>
+                                                        </apex:outputPanel>
+                                                    </apex:outputLink>
+                                                </td>
+                                            </apex:repeat>
+                                        </tr>
+                                    </apex:repeat>
+                                    <tr>
+                                        <td colspan="6"></td>
+                                        <apex:repeat value="{!WeekDollarsList}" var="WeekPrice">
+                                            <td>
+                                                <apex:outputText value="{!WeekPrice}"/>
+                                            </td>
+                                        </apex:repeat>
+                                    </tr>
+                                </table>
+                                <table cellpadding="5" border="0">
+                                    <tr>
+                                        <td><apex:commandbutton action="{!loadPrevPageCap}" value="Previous Page" status="loadingPage" rendered="{!prevPageCap}" rerender="ExtensionPanel,message,LTCPanel,RatePanel,UnitsAvailablePanel,TestTabPanel,GhostTabPanel,DaypartTabPanel,CapTabPanel,HiatusPanel,MaxTabPanel" /></td>
+                                        <td style="vertical-align: middle;">Page&nbsp;<apex:inputText value="{!currentPageCap}" maxlength="4" onchange="goToPageCap(this.value);" onkeypress="goToPageEnter(event);" style="width: 2em;" />&nbsp;of {!pageCountCap}</td>
+                                        <td><apex:commandbutton action="{!loadNextPageCap}" value="Next Page" status="loadingPage" rendered="{!nextPageCap}" rerender="ExtensionPanel,message,LTCPanel,RatePanel,UnitsAvailablePanel,TestTabPanel,GhostTabPanel,DaypartTabPanel,CapTabPanel,HiatusPanel,MaxTabPanel" /></td>
+                                        <td style="vertical-align: middle;"><apex:actionStatus id="loadingPage"><apex:facet name="start"><apex:image value="{!$Resource.ajax_loader}"/></apex:facet></apex:actionStatus></td>
+                                    </tr>
+                                </table>
+                                <apex:actionFunction action="{!goToPageCap}" name="goToPageCap" status="loadingPage" reRender="ExtensionPanel,message,LTCPanel,RatePanel,UnitsAvailablePanel,TestTabPanel,GhostTabPanel,DaypartTabPanel,CapTabPanel,HiatusPanel,MaxTabPanel">
+                                    <apex:param name="selectedPageCap" value=""/>
+                                </apex:actionFunction>
+                            </apex:pageblock>
+                        </apex:outputPanel>
+                    </div>
+
+                    <div id="daypart-tab">
+                        <apex:outputPanel id="DaypartTabPanel">
+                            <apex:pageblock >
+                                <h2><a href="/{!SelectedDeal.Id}">{!SelectedDeal.Name}</a> - {!SelectedDeal.Program__r.Name} - {!SelectedDeal.Brands__r.Name} - {!SelectedDeal.Advertiser__c} - {!SelectedDeal.Campaign__c} - {!SelectedDeal.Network_Deal_Number__c} - {!SelectedDeal.Agency_Deal_Number__c}</h2><hr />
+                                <table cellpadding="5" border="0">
+                                    <tr>
+                                        <td>
+                                            <apex:commandbutton action="{!dayPartTabUpdate}" value="Update" reRender="ExtensionPanel,message,LTCPanel,RatePanel,UnitsAvailablePanel,TestTabPanel,GhostTabPanel,DaypartTabPanel,CapTabPanel,HiatusPanel,MaxTabPanel" status="dayPartTabUpdateStatus"/>
+                                            <apex:actionStatus id="dayPartTabUpdateStatus"><apex:facet name="start"><apex:image value="{!$Resource.ajax_loader}"/></apex:facet></apex:actionStatus>
+                                        </td>
+                                        <td style="vertical-align: middle;"><b>Length: </b> {!SelectedDeal.Length__c}</td>
+                                        <td style="vertical-align: middle;"><b>Total Booked Units:</b></td>
+                                        <td style="vertical-align: middle;">
+                                            <apex:outputText value="{0, number, #}">
+                                                <apex:param value="{!SelectedDeal.Sum_of_Units_Available__c}" />
+                                            </apex:outputText>
+                                        </td>
+                                        <td style="vertical-align: middle;"><b>Total Booked Dollars:</b></td>
+                                        <td style="vertical-align: middle;"><apex:outputField value="{!SelectedDeal.Sum_of_Total_Dollars__c}"/></td>
+                                    </tr>
+                                </table>
+                                <apex:outputPanel id="dayPartTabTable">
+                                    <table border="1" cellpadding="5" cellspacing="0" >
+                                        <tr>
+                                            <td style="background-color:#FF851B; width:20px;"></td>
+                                            <td style="background-color:#FF851B; width:80px;"><b>Date</b></td>
+                                            <td style="background-color:#FF851B; width:80px;"><B>Days&nbsp;Allowed</B></td>
+                                            <td style="background-color:#FF851B; width:100px;"><B>Start&nbsp;-&nbsp;End</B></td>
+                                            <td style="background-color:#FF851B; width:80px;"><B>Rate</B></td>
+                                            <apex:repeat value="{!headingModels}" var="headingModel">
+                                                <td style="background-color:#FF851B;">
+                                                    <b>
+                                                        <apex:outputText >
+                                                            <apex:outputText value="{0,date,M/d}">
+                                                                <apex:param value="{!headingModel.startOfWeek}" />
+                                                            </apex:outputText>
+                                                        </apex:outputText>
+                                                    </b>
+                                                </td>
+                                            </apex:repeat>
+                                        </tr>
+                                        <apex:inputHidden value="{!currentRateModelIndex}" html-class="current-rate-model-index"/>
+                                        <apex:inputHidden value="{!currentScheduleId}" html-class="schedule-id"/>
+                                        <apex:variable value="{!0}" var="rateModelIndex"/>
+                                        <apex:repeat value="{!dayPartTabList}" var="rt">
+                                            <tr>
+                                                <td style="text-align:center;">
+                                                    <apex:inputcheckbox id="daypartcheckbox" value="{!rt.ischecked}" onchange="highlightRow(this)" />
+                                                </td>
+                                                <td style="text-align:center;">
+                                                    <apex:inputfield id="DayPartDateField" value="{!rt.Scheduleobj.Week__c}" style="width:60px"/>
+                                                </td>
+                                                <td style="text-align:center;" class="days-allowed">
+                                                    <apex:outputText value="{!rt.DaysAllowed}" style="width:5px"/>
+                                                    <div class="schedule-modal" style="display:none;">
+                                                        <span style="display:none;"><apex:inputField value="{!rt.ScheduleObj.Networks__c}"/></span>
+                                                        <span class="label">Cable Dayparts </span><apex:inputField value="{!rt.ScheduleObj.MGM_HD_Daypart__c}" /><br/><br/>
+                                                        <span class="label">Start Time </span><apex:inputField value="{!rt.ScheduleObj.Start_Time__c}" /><br/><br/>
+                                                        <span class="label">End Time </span><apex:inputField value="{!rt.ScheduleObj.End_Time__c}" /><br/><br/>
+                                                        <span class="label">Days Allowed</span><apex:inputField value="{!rt.ScheduleObj.Days_Allowed__c}" /><br/><br/>
+                                                        <span style="float:right;">
+                                                            <button type="button" onclick="closeDialog()">Close</button>
+                                                        </span>
+                                                    </div>
+                                                </td>
+
+                                                <td style="text-align:center;white-space:nowrap;">
+                                                    <apex:outputText value="{!rt.SETime}" style="width:10px"/>
+                                                </td>
+                                                <td style="text-align:center;">
+                                                    <apex:inputText value="{!rt.Rate}" style="width:100px;" disabled="true" />
+                                                </td>
+                                                <apex:repeat value="{!rt.weeks}" var="wk">
+                                                    <td style="text-align:center;{!IF(wk.multipleschedules == true,'background:#ffff66;','')}" valign="bottom" class="days-allowed" CellId="{!wk.schObj.id}"  HasValues="{!wk.CellAvailable}" RateforCell="{!wk.schObj.rate__c}" CellName="{!wk.schObj.name}">
+                                                        <apex:outputLink value="/{!wk.schObj.id}" id="eventlink" target="_blank">
+                                                            <apex:outputPanel rendered="{!wk.schObj.Status__c == 'Canceled'}" >
+                                                                <apex:outputText value="0" style="color:{!wk.color}" />
+                                                            </apex:outputPanel>
+                                                            <apex:outputPanel rendered="{!wk.schobj.Status__c != 'Canceled'}" >
+                                                                <apex:outputText value="{0, number, #}" style="color:{!wk.color}">
+                                                                    <apex:param value="{!wk.schObj.Units_Available__c}" />
+                                                                </apex:outputText>
+                                                            </apex:outputPanel>
+                                                        </apex:outputLink>
+                                                        <div class="schedule-modal" style="display:none;">
+                                                            <span style="display:none;"><apex:inputField value="{!wk.schobj.Networks__c}"/></span>
+                                                            <span class="label">Cable Dayparts </span><apex:inputField value="{!wk.schobj.MGM_HD_Daypart__c}" /><br/><br/>
+                                                            <span class="label">Start Time </span><apex:inputField value="{!wk.schobj.Start_Time__c}" /><br/><br/>
+                                                            <span class="label">End Time </span><apex:inputField value="{!wk.schobj.End_Time__c}" /><br/><br/>
+                                                            <span class="label">Days Allowed </span><apex:inputField value="{!wk.schobj.Days_Allowed__c}" /><br/><br/>
+                                                            <span style="float:right;padding-top:20px;">
+                                                                <apex:commandButton action="{!updateSchedule}"
+                                                                                    value="Update"
+                                                                                    onclick="putScheduleId('{!wk.schobj.Id}');closeDialog()"
+                                                                                    reRender="">
+                                                                </apex:commandButton>
+                                                            </span>
+                                                        </div>
+                                                    </td>
+                                                </apex:repeat>
+                                            </tr>
+                                            <apex:variable value="{!rateModelIndex + 1}" var="rateModelIndex"/>
+                                        </apex:repeat>
+                                        <tr>
+                                            <td colspan="5"></td>
+                                            <apex:repeat value="{!WeekDollarsList}" var="WeekPrice">
+                                                <td>
+                                                    <apex:outputText value="{!WeekPrice}"/>
+                                                </td>
+                                            </apex:repeat>
+                                        </tr>
+                                    </table>
+                                </apex:outputPanel>
+                                <table cellpadding="5" border="0">
+                                    <tr>
+                                        <td><apex:commandbutton action="{!loadPrevPage}" value="Previous Page" status="loadingPage" rendered="{!prevPage}" rerender="ExtensionPanel,message,LTCPanel,RatePanel,UnitsAvailablePanel,TestTabPanel,GhostTabPanel,DaypartTabPanel,CapTabPanel,HiatusPanel,MaxTabPanel" /></td>
+                                        <td style="vertical-align: middle;">Page&nbsp;<apex:inputText value="{!currentPage}" maxlength="4" onchange="goToPageDaypart(this.value);" onkeypress="goToPageEnter(event);" style="width: 2em;" />&nbsp;of {!pageCount}</td>
+                                        <td><apex:commandbutton action="{!loadNextPage}" value="Next Page" status="loadingPage" rendered="{!nextPage}" rerender="ExtensionPanel,message,LTCPanel,RatePanel,UnitsAvailablePanel,TestTabPanel,GhostTabPanel,DaypartTabPanel,CapTabPanel,HiatusPanel,MaxTabPanel" /></td>
+                                        <td style="vertical-align: middle;"><apex:actionStatus id="loadingPage"><apex:facet name="start"><apex:image value="{!$Resource.ajax_loader}"/></apex:facet></apex:actionStatus></td>
+                                    </tr>
+                                </table>
+                                <apex:actionFunction action="{!goToPage}" name="goToPageDaypart" status="loadingPage" reRender="ExtensionPanel,message,LTCPanel,RatePanel,UnitsAvailablePanel,TestTabPanel,GhostTabPanel,DaypartTabPanel,CapTabPanel,HiatusPanel,MaxTabPanel">
+                                    <apex:param name="selectedPage" value=""/>
+                                </apex:actionFunction>
+                            </apex:pageblock>
+                        </apex:outputPanel>
+                    </div>
+                    <div id="hiatus-tab">
+                        <apex:outputPanel id="HiatusPanel">
+                            <apex:pageblock >
+                                <h2><a href="/{!SelectedDeal.Id}">{!SelectedDeal.Name}</a> - {!SelectedDeal.Program__r.Name} - {!SelectedDeal.Brands__r.Name} - {!SelectedDeal.Advertiser__c} - {!SelectedDeal.Campaign__c} - {!SelectedDeal.Network_Deal_Number__c} - {!SelectedDeal.Agency_Deal_Number__c}</h2><hr />
+                                <table cellpadding="5" border="0">
+                                    <tr>
+                                        <td style="vertical-align: middle;"><b>Length: </b> {!SelectedDeal.Length__c}</td>
+                                        <td style="vertical-align: middle;"><b>Total Booked Units:</b></td>
+                                        <td style="vertical-align: middle;">
+                                            <apex:outputText value="{0, number, #}">
+                                                <apex:param value="{!SelectedDeal.Sum_of_Units_Available__c}" />
+                                            </apex:outputText>
+                                        </td>
+                                        <td style="vertical-align: middle;"><b>Total Booked Dollars:</b></td>
+                                        <td style="vertical-align: middle;"><apex:outputField value="{!SelectedDeal.Sum_of_Total_Dollars__c}"/></td>
+                                    </tr>
+                                </table>
+                                <table cellpadding="5" border="0">
+                                    <tr>
+                                        <td style="vertical-align: middle;"><b>Start Date (required): </b><apex:inputField value="{!hiatusTempScheduleStart.Week__c}" id="hiatusStartDate" /></td>
+                                        <td style="vertical-align: middle;"><b>End Date: </b><apex:inputField value="{!hiatusTempScheduleEnd.Week__c}" id="hiatusEndDate" styleClass="hiatusEndDate" onchange="hiatusEndDateChanged(this);"/></td>
+                                        <td style="vertical-align: middle;"><b>Hiatus Time Before: </b><apex:selectList value="{!hiatusTimeBefore}" size="1" id="hiatusTimeBefore" styleClass="hiatusTime hiatusTimeBefore" onchange="hiatusTimeBeforeChanged(this);"><apex:selectOptions value="{!hiatusTimeOptions}" /></apex:selectList></td>
+                                        <td style="vertical-align: middle;"><b>Hiatus Time After: </b><apex:selectList value="{!hiatusTimeAfter}" size="1" id="hiatusTimeAfter" styleClass="hiatusTime hiatusTimeAfter" onchange="hiatusTimeAfterChanged(this);"><apex:selectOptions value="{!hiatusTimeOptions}" /></apex:selectList></td>
+                                        <td>
+                                            <apex:commandbutton action="{!HiatusUpdate}" value="Update" status="hiatusUpdateStatus" rerender="ExtensionPanel,message,LTCPanel,RatePanel,UnitsAvailablePanel,TestTabPanel,GhostTabPanel,DaypartTabPanel,CapTabPanel,HiatusPanel,MaxTabPanel" />
+                                            <apex:actionStatus id="hiatusUpdateStatus"><apex:facet name="start"><apex:image value="{!$Resource.ajax_loader}"/></apex:facet></apex:actionStatus>
+                                        </td>
+                                    </tr>
+                                </table>
+                                <table border="1" cellpadding="5" cellspacing="0" >
+                                    <tr>
+                                        <td style="background-color:#FF0000; width:80px;"><B>Days&nbsp;Allowed</B></td>
+                                        <td style="background-color:#FF0000; width:100px;"><B>Start&nbsp;-&nbsp;End</B></td>
+                                        <td style="background-color:#FF0000; width:80px;"><B>Rate</B></td>
+                                        <apex:repeat value="{!headingModels}" var="headingModel">
+                                            <td style="background-color:#FF0000;">
+                                                <b>
+                                                    <apex:outputText >
+                                                        <apex:outputText value="{0,date,M/d}">
+                                                            <apex:param value="{!headingModel.startOfWeek}" />
+                                                        </apex:outputText>
+                                                    </apex:outputText>
+                                                </b>
+                                            </td>
+                                        </apex:repeat>
+                                    </tr>
+                                    <apex:repeat value="{!hiatusList}" var="rt">
+                                        <tr>
+                                            <td style="text-align:center;">
+                                                <apex:outputText value="{!rt.DaysAllowed}" style="width:5px"/>
+                                            </td>
+                                            <td style="text-align:center;white-space:nowrap;">
+                                                <apex:outputText value="{!rt.SETime}" style="width:10px"/>
+                                            </td>
+                                            <td style="text-align:center;">
+                                                <apex:inputText value="{!rt.Rate}" style="width:100px;" disabled="true" />
+                                            </td>
+                                            <apex:repeat value="{!rt.weeks}" var="wk">
+                                                <td style="text-align:center;{!IF(wk.multipleschedules == true,'background:#ffff66;','')}" valign="bottom" class="LTCavailable" CellId="{!wk.schObj.id}"  HasValues="{!wk.CellAvailable}" CanceledStatus="{!wk.schobj.Status__c}" RateforCell="{!wk.schObj.rate__c}" CellName="{!wk.schObj.name}">
+                                                    <apex:outputLink value="/{!wk.schObj.id}" id="eventlink" target="_blank">
+                                                        <apex:outputPanel rendered="{!wk.schObj.Status__c == 'Canceled'}" >
+                                                            <apex:outputText value="0" style="color:{!wk.color}" />
+                                                        </apex:outputPanel>
+                                                        <apex:outputPanel rendered="{!wk.schobj.Status__c != 'Canceled'}" >
+                                                            <apex:outputText value="{0, number, #}" style="color:{!wk.color}">
+                                                                <apex:param value="{!wk.schObj.Units_Available__c}" />
+                                                            </apex:outputText>
+                                                        </apex:outputPanel>
+                                                    </apex:outputLink>
+                                                </td>
+                                            </apex:repeat>
+                                        </tr>
+                                    </apex:repeat>
+                                    <tr>
+                                        <td colspan="3"></td>
+                                        <apex:repeat value="{!WeekDollarsList}" var="WeekPrice">
+                                            <td>
+                                                <apex:outputText value="{!WeekPrice}"/>
+                                            </td>
+                                        </apex:repeat>
+                                    </tr>
+                                </table>
+                                <table cellpadding="5" border="0">
+                                    <tr>
+                                        <td><apex:commandbutton action="{!loadPrevPage}" value="Previous Page" status="loadingPage" rendered="{!prevPage}" rerender="ExtensionPanel,message,LTCPanel,RatePanel,UnitsAvailablePanel,TestTabPanel,GhostTabPanel,DaypartTabPanel,CapTabPanel,HiatusPanel,MaxTabPanel" /></td>
+                                        <td style="vertical-align: middle;">Page&nbsp;<apex:inputText value="{!currentPage}" maxlength="4" onchange="goToPageHiatus(this.value);" onkeypress="goToPageEnter(event);" style="width: 2em;" />&nbsp;of {!pageCount}</td>
+                                        <td><apex:commandbutton action="{!loadNextPage}" value="Next Page" status="loadingPage" rendered="{!nextPage}" rerender="ExtensionPanel,message,LTCPanel,RatePanel,UnitsAvailablePanel,TestTabPanel,GhostTabPanel,DaypartTabPanel,CapTabPanel,HiatusPanel,MaxTabPanel" /></td>
+                                        <td style="vertical-align: middle;"><apex:actionStatus id="loadingPage"><apex:facet name="start"><apex:image value="{!$Resource.ajax_loader}"/></apex:facet></apex:actionStatus></td>
+                                    </tr>
+                                </table>
+                                <apex:actionFunction action="{!goToPage}" name="goToPageHiatus" status="loadingPage" reRender="ExtensionPanel,message,LTCPanel,RatePanel,UnitsAvailablePanel,TestTabPanel,GhostTabPanel,DaypartTabPanel,CapTabPanel,HiatusPanel,MaxTabPanel">
+                                    <apex:param name="selectedPage" value=""/>
+                                </apex:actionFunction>
+                            </apex:pageblock>
+                        </apex:outputPanel>
+                    </div>
+
+                    <div id="max-tab">
+                        <apex:outputPanel id="MaxTabPanel">
+                            <apex:pageblock >
+                                <h2><a href="/{!SelectedDeal.Id}">{!SelectedDeal.Name}</a> - {!SelectedDeal.Program__r.Name} - {!SelectedDeal.Brands__r.Name} - {!SelectedDeal.Advertiser__c} - {!SelectedDeal.Campaign__c} - {!SelectedDeal.Network_Deal_Number__c} - {!SelectedDeal.Agency_Deal_Number__c}</h2><hr />
+                                <table cellpadding="5" border="0">
+                                    <tr>
+                                        <td>
+                                            <apex:commandbutton action="{!maxTabUpdate}" value="Update" reRender="ExtensionPanel,message,LTCPanel,RatePanel,UnitsAvailablePanel,TestTabPanel,GhostTabPanel,DaypartTabPanel,CapTabPanel,HiatusPanel,MaxTabPanel,MaxTabPanel" status="maxTabUpdateStatus"/>
+                                            <apex:actionStatus id="maxTabUpdateStatus"><apex:facet name="start"><apex:image value="{!$Resource.ajax_loader}"/></apex:facet></apex:actionStatus>
+                                        </td>
+                                        <td style="vertical-align: middle;"><b>Length: </b> {!SelectedDeal.Length__c}</td>
+                                        <td style="vertical-align: middle;"><b>Total Booked Units:</b></td>
+                                        <td style="vertical-align: middle;">
+                                            <apex:outputText value="{0, number, #}">
+                                                <apex:param value="{!SelectedDeal.Sum_of_Units_Available__c}" />
+                                            </apex:outputText>
+                                        </td>
+                                        <td style="vertical-align: middle;"><b>Total Booked Dollars:</b></td>
+                                        <td style="vertical-align: middle;"><apex:outputField value="{!SelectedDeal.Sum_of_Total_Dollars__c}"/></td>
+                                    </tr>
+                                </table>
+                                <table border="1" cellpadding="5" cellspacing="0" >
+                                    <tr>
+                                        <td style="background-color:#AAAAAA; width:20px;">
+                                            <apex:inputcheckbox id="maxcheckbox" value="{!selectAll}" onclick="checkAll(this,'maxcheckbox')" styleClass="checkAllCheckbox" />
+                                        </td>
+                                        <td style="background-color:#AAAAAA; width:80px;"><apex:inputField value="{!DummySchedule1.Week__c}" onchange="DummyDate(this,'MaxDateField')" /></td>
+                                        <td style="background-color:#AAAAAA; width:80px;"><B>Days&nbsp;Allowed</B></td>
+                                        <td style="background-color:#AAAAAA; width:100px;"><B>Start&nbsp;-&nbsp;End</B></td>
+                                        <td style="background-color:#AAAAAA; width:80px;"><B>Rate</B></td>
+                                        <td style="background-color:#AAAAAA; width:30px;"><B>Max Per Day</B></td>
+                                        <apex:repeat value="{!headingModels}" var="headingModel">
+                                            <td style="background-color:#AAAAAA;">
+                                                <b>
+                                                    <apex:outputText >
+                                                        <apex:outputText value="{0,date,M/d}">
+                                                            <apex:param value="{!headingModel.startOfWeek}" />
+                                                        </apex:outputText>
+                                                    </apex:outputText>
+                                                </b>
+                                            </td>
+                                        </apex:repeat>
+                                    </tr>
+                                    <apex:repeat value="{!maxTabList}" var="rt">
+                                        <tr>
+                                            <td style="text-align:center;">
+                                                <apex:inputcheckbox id="maxcheckbox" value="{!rt.ischecked}" onchange="highlightRow(this)" />
+                                            </td>
+                                            <td style="text-align:center;">
+                                                <apex:inputfield id="MaxDateField" value="{!rt.Scheduleobj.Week__c}" style="width:60px"/>
+                                            </td>
+                                            <td style="text-align:center;">
+                                                <apex:outputText value="{!rt.DaysAllowed}" style="width:5px"/>
+                                            </td>
+
+                                            <td style="text-align:center;white-space:nowrap;">
+                                                <apex:outputText value="{!rt.SETime}" style="width:10px"/>
+                                            </td>
+                                            <td style="text-align:center;">
+                                                <apex:inputText value="{!rt.Rate}" style="width:100px;" disabled="true" />
+                                            </td>
+                                            <td style="text-align:center;">
+                                                <apex:inputField value="{!rt.Scheduleobj.Max_Per_Day__c}"/>
+                                            </td>
+                                            <apex:repeat value="{!rt.weeks}" var="wk">
+                                                <td style="text-align:center;{!IF(wk.multipleschedules == true,'background:#ffff66;','')}" valign="bottom" class="ghostavailable" CellId="{!wk.schObj.id}"  HasValues="{!wk.CellAvailable}" RateforCell="{!wk.schObj.Max_Per_Day__c}" CellName="{!wk.schObj.name}">
+                                                    <apex:outputLink value="/{!wk.schObj.id}" id="eventlink" target="_blank">
+                                                        <apex:outputPanel rendered="{!wk.schObj.Status__c == 'Canceled'}" >
+                                                            <apex:outputText value="0" style="color:{!wk.ghostColor}" />
+                                                        </apex:outputPanel>
+                                                        <apex:outputPanel rendered="{!wk.schobj.Status__c != 'Canceled'}" >
+                                                            <apex:outputText value="{0, number, #}" style="color:{!wk.color}">
+                                                                <apex:param value="{!wk.schObj.Units_Available__c}" />
+                                                            </apex:outputText>
+                                                        </apex:outputPanel>
+                                                    </apex:outputLink>
+                                                </td>
+                                            </apex:repeat>
+                                        </tr>
+                                    </apex:repeat>
+                                    <tr>
+                                        <td colspan="6"></td>
+                                        <apex:repeat value="{!WeekDollarsList}" var="WeekPrice">
+                                            <td>
+                                                <apex:outputText value="{!WeekPrice}"/>
+                                            </td>
+                                        </apex:repeat>
+                                    </tr>
+                                </table>
+                                <table cellpadding="5" border="0">
+                                    <tr>
+                                        <td><apex:commandbutton action="{!loadPrevPageMax}" value="Previous Page" status="loadingPage" rendered="{!prevPageMax}" rerender="ExtensionPanel,message,LTCPanel,RatePanel,UnitsAvailablePanel,TestTabPanel,GhostTabPanel,DaypartTabPanel,CapTabPanel,HiatusPanel,MaxTabPanel" /></td>
+                                        <td style="vertical-align: middle;">Page&nbsp;<apex:inputText value="{!currentPageMax}" maxlength="4" onchange="goToPageMax(this.value);" onkeypress="goToPageEnter(event);" style="width: 2em;" />&nbsp;of {!pageCountMax}</td>
+                                        <td><apex:commandbutton action="{!loadNextPageMax}" value="Next Page" status="loadingPage" rendered="{!nextPageMax}" rerender="ExtensionPanel,message,LTCPanel,RatePanel,UnitsAvailablePanel,TestTabPanel,GhostTabPanel,DaypartTabPanel,CapTabPanel,HiatusPanel,MaxTabPanel" /></td>
+                                        <td style="vertical-align: middle;"><apex:actionStatus id="loadingPage"><apex:facet name="start"><apex:image value="{!$Resource.ajax_loader}"/></apex:facet></apex:actionStatus></td>
+                                    </tr>
+                                </table>
+                                <apex:actionFunction action="{!goToPageMax}" name="goToPageMax" status="loadingPage" reRender="ExtensionPanel,message,LTCPanel,RatePanel,UnitsAvailablePanel,TestTabPanel,GhostTabPanel,DaypartTabPanel,CapTabPanel,HiatusPanel,MaxTabPanel">
+                                    <apex:param name="selectedPageMax" value=""/>
+                                </apex:actionFunction>
+                            </apex:pageblock>
+                        </apex:outputPanel>
+                    </div>
+                </div>
+            </apex:outputPanel>
+        </apex:outputPanel>
+        <apex:outputPanel id="empty"></apex:outputPanel>
+
+        <!-- block pop up structure -->
+        <apex:actionfunction action="{!cellsave}" name="Testcellrate" oncomplete="$.unblockUI();"  reRender="ExtensionPanel,message,LTCPanel,RatePanel,UnitsAvailablePanel,TestTabPanel,GhostTabPanel,DaypartTabPanel,HiatusPanel"/>
+        <apex:actionfunction action="{!LTCsave}" name="LTCset" oncomplete="$.unblockUI();"  rerender="ExtensionPanel,message,LTCPanel,RatePanel,UnitsAvailablePanel,TestTabPanel,GhostTabPanel,DaypartTabPanel,HiatusPanel"/>
+        <apex:actionfunction action="{!ExtensionSave}" name="Extset"  oncomplete="$.unblockUI();" rerender="ExtensionPanel,message,LTCPanel,RatePanel,UnitsAvailablePanel,TestTabPanel,GhostTabPanel,DaypartTabPanel,HiatusPanel"/>
+        <apex:actionfunction action="{!UnitsAvailableSave}" oncomplete="$.unblockUI();" name="Testcellunits"  rerender="ExtensionPanel,message,LTCPanel,RatePanel,UnitsAvailablePanel,TestTabPanel,GhostTabPanel,DaypartTabPanel,HiatusPanel" />
+        <apex:actionFunction action="{!Testchecksave}" oncomplete="$.unblockUI();" name="Testcelltest" rerender="ExtensionPanel,message,LTCPanel,RatePanel,UnitsAvailablePanel,TestTabPanel,GhostTabPanel,DaypartTabPanel,HiatusPanel" />
+        <apex:actionFunction action="{!Ghostchecksave}" oncomplete="$.unblockUI();" name="Testcellghost" rerender="ExtensionPanel,message,LTCPanel,RatePanel,UnitsAvailablePanel,TestTabPanel,GhostTabPanel,DaypartTabPanel,HiatusPanel" />
+        <div id="loginForm" style="display:none">
+            <table cellpadding="10" align="center" valign="middle">
+                <tr>
+                    <td>Rate:</td>
+                    <td>
+                        <input type="text" name="j_id0:form:j_id96" value="" id="ratevalue" size="5"> </input>
+                    </td>
+                </tr>
+                <tr >
+                    <td>
+                        <input type="submit" name="j_id0:form:j_id97" value="Save" onclick ="rateset()" class="btn"> </input>
+                    </td>
+                    <td>
+                        <apex:commandbutton oncomplete="$.unblockUI();" value="Cancel" />
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div id="UnitsForm" style="display:none">
+            <table cellpadding="10" align="center" valign="middle">
+                <tr>
+                    <td>Units Available:</td>
+                    <td>
+                        <input type="text" name="j_id0:form:j_id100" value="" id="unitsvalue" size="5"> </input>
+                    </td>
+                </tr>
+                <tr >
+                    <td>
+                        <input type="submit" name="j_id0:form:j_id101" value="Save" onclick ="unitsset()" class="btn"> </input>
+                    </td>
+                    <td>
+                        <apex:commandbutton oncomplete="$.unblockUI();" value="Cancel" />
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div id="TestForm" style="display:none;">
+            <table cellpadding="10" align="center" valign="middle">
+                <tr>
+                    <td>Test:</td>
+                    <td>
+                        <input type="checkbox" name="j_id0:form:j_id202" value="" id="testvalue" > </input>
+                    </td>
+                </tr>
+                <tr >
+                    <td>
+                        <input type="submit" name="j_id0:form:j_id203" value="Save" onclick ="testset()" class="btn"> </input>
+                    </td>
+                    <td>
+                        <apex:commandbutton oncomplete="$.unblockUI();" value="Cancel" />
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div id="GhostForm" style="display:none;">
+            <table cellpadding="10" align="center" valign="middle">
+                <tr>
+                    <td>Ghost:</td>
+                    <td>
+                        <input type="checkbox" name="j_id0:form:j_id204" value="" id="ghostvalue" > </input>
+                    </td>
+                </tr>
+                <tr >
+                    <td>
+                        <input type="submit" name="j_id0:form:j_id205" value="Save" onclick ="ghostset()" class="btn"> </input>
+                    </td>
+                    <td>
+                        <apex:commandbutton oncomplete="$.unblockUI();" value="Cancel" />
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div id="LTCForm" style="display:none">
+            <table cellpadding="10" align="center" valign="middle" width="100%" height="100%">
+                <tr >
+                    <td style="vertical-align:middle;">
+                        <input type="submit" id="ltcbuttonid" name="j_id0:form:j_id98" value="Cancel Schedule" onclick ="LTCset()" class="btn"> </input>
+                    </td>
+                    <td style="vertical-align:middle;">
+                        <apex:commandbutton oncomplete="$.unblockUI();" value="Cancel" />
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div id="ExtForm" style="display:none">
+            <table cellpadding="10" align="center" valign="middle">
+                <tr >
+                    <td>
+                        <input type="submit" name="j_id0:form:j_id99" value="Create Schedule" onclick ="Extset()" class="btn"> </input>
+                    </td>
+                    <td>
+                        <apex:commandbutton oncomplete="$.unblockUI();" value="Cancel" />
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </apex:form>
+
+    <!-- Dialog scripts for DayPart tab -->
+    <script>
+        function putRateModelIndex(rateModelIndex) {
+            $(".current-rate-model-index").val(rateModelIndex);
+        }
+
+        function putScheduleId(scheduleId) {
+            $(".schedule-id").val(scheduleId);
+        }
+
+        var dialog = null;
+
+        $("body").on("dblclick", ".days-allowed", function() {
+            dialog = $(this).find(".schedule-modal").dialog({
+                height: 375,
+                width: 300,
+                title: "Schedule",
+                modal: true,
+                autoOpen: false,
+                close: function(event, ui) {
+                    $(this).dialog("destroy");
+                }
+            });
+            dialog.dialog("open");
+        });
+
+        function closeDialog() {
+            dialog.dialog("close");
+        }
+    </script>
+</apex:page>

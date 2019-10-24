@@ -1,0 +1,195 @@
+.container {
+    max-height: 100%;
+    max-height: -moz-available;
+    max-height: -webkit-fill-available;
+    max-height: fill-available;
+}
+
+.slds-card.deal-search {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.deal-search .slds-card__header {
+    border-bottom: 1px solid rgba(0,0,0,0.15);
+    padding: 0.75rem 1rem;
+    margin-bottom: 0;
+}
+
+.deal-search .slds-card__body {
+    overflow-y: auto;
+    padding-bottom: calc(1rem + 20px);
+}
+
+.slds-card__body {
+    margin: 0;
+}
+
+.count-text {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    font-size: 13px;
+    background-color: rgb(243, 242, 242);
+    z-index: 2;
+}
+
+.search-container {
+    flex-grow: 2;
+}
+
+.search-container lightning-icon {
+    position: absolute;
+    left: 11px;
+    top: calc(50% - 9px);
+}
+
+.search-container lightning-button-icon {
+    margin-left: 1rem;
+}
+
+td, th {
+    white-space: normal;
+    word-break: break-word;
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
+}
+
+td:first-child:not(.edit-group-edit-button) {
+    padding-left: 1.25rem;
+}
+
+th {
+    position: sticky;
+    top: 0;
+    padding: 0.5rem;
+    z-index: 1;
+    word-break: keep-all;
+}
+
+.schedules-card th {
+    top: -16px;
+}
+
+.table-text div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 200px;
+    font-style: italic;
+}
+
+.table-text:hover td {
+    background-color: transparent;
+}
+
+.nowrap {
+    white-space: nowrap;
+}
+
+.deal-card, .schedules-card {
+    border: 1px solid rgb(221, 219, 218);
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.10);
+}
+
+.deal-card .slds-card__header {
+    cursor: pointer;
+}
+
+.deal-card .slds-card__body, .schedules-card .slds-card__body {
+    border-top: 1px solid rgba(0,0,0,0.15);
+}
+
+.schedules-card {
+    margin-top: 1.5rem;
+}
+
+.day.selected {
+    background-color: rgb(27, 82, 151);
+    color: white;
+    border-right: 0;
+    /*border-left: 0;*/
+}
+
+.day {
+    background-color: white;
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    border-right: 0;
+    padding: 4px;
+    min-width: 25px;
+    display: inline-block;
+    text-align: center;
+    user-select: none;
+}
+
+.day:first-child {
+    border-radius: 4px 0 0 4px;
+    border-left: 1px solid rgba(0,0,0,0.15);
+}
+
+.day:last-child {
+    border-radius: 0 4px 4px 0;
+    border-right: 1px solid rgba(0,0,0,0.15);
+}
+
+td.edit-group-edit-button {
+    padding-left: 1rem;
+    padding-right: 0;
+}
+
+.schedules-card thead tr:first-child th {
+    padding-top: 0.5rem;
+}
+
+.schedule-tab {
+    margin: 0 2px;
+}
+
+.color {
+    width: 100%;
+    height: 0;
+    position: absolute;
+    bottom: 0;
+    transition: height 200ms;
+    border-radius: 6px 6px 0 0;
+}
+
+.schedule-tab:hover .color, .schedule-tab.active .color {
+    height: .45rem;
+}
+
+.slds-tabs_default__item:after, .slds-tabs--default__item:after {
+    display: none;
+}
+
+.slds-tabs_default__nav {
+    border-bottom: 2px solid rgb(221, 219, 218);
+}
+
+.row-number {
+    text-align: center;
+    padding: 5px;
+    height: 28px;
+    width: 28px;
+    border-radius: 100%;
+}
+
+.days-allowed {
+    width: 1%;
+    white-space: nowrap;
+}
+
+.date-cell {
+    width: 15rem;
+}
+
+.input-td {
+    width: 10rem;
+ }
+
+.hiatus-td,
+.hiatus-start,
+.hiatus-end {
+    width: 25%;
+}

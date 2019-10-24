@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Markett</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Marketts</value>
+    </caseValues>
+    <fields>
+        <label><!-- AA DMA Rank --></label>
+        <name>AA_DMA_Rank__c</name>
+    </fields>
+    <fields>
+        <label><!-- AA TV Homes --></label>
+        <name>AA_TV_Homes__c</name>
+    </fields>
+    <fields>
+        <label><!-- AA % Homes --></label>
+        <name>AA__c</name>
+    </fields>
+    <fields>
+        <label><!-- Asian DMA Rank --></label>
+        <name>Asian_DMA_Rank__c</name>
+    </fields>
+    <fields>
+        <label><!-- Asian % Homes --></label>
+        <name>Asian_Homes__c</name>
+    </fields>
+    <fields>
+        <label><!-- Asian TV Homes --></label>
+        <name>Asian_TV_Homes__c</name>
+    </fields>
+    <fields>
+        <label><!-- DMA Rank --></label>
+        <name>DMA_Rank__c</name>
+    </fields>
+    <fields>
+        <label><!-- Hispanic or Latinx DMA Rank --></label>
+        <name>Hispanic_or_Latinx_DMA_Rank__c</name>
+    </fields>
+    <fields>
+        <label><!-- Hispanic or Latinx % Homes --></label>
+        <name>Hispanic_or_Latinx_Homes__c</name>
+    </fields>
+    <fields>
+        <label><!-- Hispanic or Latinx TV Homes --></label>
+        <name>Hispanic_or_Latinx_TV_Homes__c</name>
+    </fields>
+    <fields>
+        <label><!-- % Homes --></label>
+        <name>Homes__c</name>
+    </fields>
+    <fields>
+        <label><!-- TV Homes --></label>
+        <name>TV_Homes__c</name>
+    </fields>
+    <layouts>
+        <layout>Markett Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- New Section --></label>
+            <section>New Section</section>
+        </sections>
+    </layouts>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

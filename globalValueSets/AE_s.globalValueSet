@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>Andrew &amp; Jameson</fullName>
+        <default>false</default>
+        <label>Andrew &amp; Jameson</label>
+    </customValue>
+    <customValue>
+        <fullName>Sarah &amp; Theo</fullName>
+        <default>false</default>
+        <label>Sarah &amp; Theo</label>
+    </customValue>
+    <customValue>
+        <fullName>Krystina &amp; Gina</fullName>
+        <default>false</default>
+        <label>Krystina &amp; Gina</label>
+    </customValue>
+    <customValue>
+        <fullName>Tom &amp; Casey</fullName>
+        <default>false</default>
+        <label>Tom &amp; Casey</label>
+    </customValue>
+    <customValue>
+        <fullName>Casey</fullName>
+        <default>false</default>
+        <label>Casey</label>
+    </customValue>
+    <customValue>
+        <fullName>Eve</fullName>
+        <default>false</default>
+        <label>Eve</label>
+    </customValue>
+    <description>AE&apos;s for different Programs</description>
+    <masterLabel>AE&apos;s</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

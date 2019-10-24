@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Prelog Data Mirror</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Prelog Data Mirrors</value>
+    </caseValues>
+    <fieldSets>
+        <label><!-- PrelogBatch --></label>
+        <name>PrelogBatch</name>
+    </fieldSets>
+    <fields>
+        <label><!-- Advertiser/Product --></label>
+        <name>AdvertiserProduct__c</name>
+    </fields>
+    <fields>
+        <label><!-- Agency --></label>
+        <name>Agency__c</name>
+    </fields>
+    <fields>
+        <label><!-- Air Date --></label>
+        <name>AirDate__c</name>
+    </fields>
+    <fields>
+        <label><!-- Batch Id --></label>
+        <name>Batch_Id__c</name>
+    </fields>
+    <fields>
+        <label><!-- Break Code --></label>
+        <name>BreakCode__c</name>
+    </fields>
+    <fields>
+        <label><!-- Commercial Type --></label>
+        <name>Commercial_Type__c</name>
+    </fields>
+    <fields>
+        <label><!-- Current Home --></label>
+        <name>Current_Home__c</name>
+    </fields>
+    <fields>
+        <label><!-- Deal --></label>
+        <name>Deal__c</name>
+        <relationshipLabel><!-- Prelog Data Mirrors --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Error Reason --></label>
+        <name>ErrorReason__c</name>
+        <picklistValues>
+            <masterLabel>Air Date does not match</masterLabel>
+            <translation><!-- Air Date does not match --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Air Time does not match</masterLabel>
+            <translation><!-- Air Time does not match --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Network Deal number not found</masterLabel>
+            <translation><!-- Network Deal number not found --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>No Network Deal number</masterLabel>
+            <translation><!-- No Network Deal number --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Rate not found</masterLabel>
+            <translation><!-- Rate not found --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Unit Length not found</masterLabel>
+            <translation><!-- Unit Length not found --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- 800# --></label>
+        <name>Field1__c</name>
+    </fields>
+    <fields>
+        <label><!-- Material Description --></label>
+        <name>MaterialDescription__c</name>
+    </fields>
+    <fields>
+        <label><!-- Network Deal Number --></label>
+        <name>NetworkDealNumber__c</name>
+    </fields>
+    <fields>
+        <label><!-- Network --></label>
+        <name>Network__c</name>
+    </fields>
+    <fields>
+        <label><!-- Order Product Description --></label>
+        <name>OrderProductDescription__c</name>
+    </fields>
+    <fields>
+        <label><!-- Prelog Data --></label>
+        <name>PrelogData__c</name>
+        <relationshipLabel><!-- Prelog Data Mirrors --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- [Dep]Problem --></label>
+        <name>Problem__c</name>
+    </fields>
+    <fields>
+        <label><!-- [Dep]Process Required --></label>
+        <name>ProcessRequired__c</name>
+    </fields>
+    <fields>
+        <label><!-- Product --></label>
+        <name>Product__c</name>
+    </fields>
+    <fields>
+        <label><!-- Rate --></label>
+        <name>Rate__c</name>
+    </fields>
+    <fields>
+        <label><!-- Schedule Ad-ID --></label>
+        <name>ScheduleAdID__c</name>
+    </fields>
+    <fields>
+        <label><!-- Schedule Length --></label>
+        <name>ScheduleLength__c</name>
+    </fields>
+    <fields>
+        <label><!-- Schedule Time --></label>
+        <name>ScheduleTime__c</name>
+    </fields>
+    <fields>
+        <label><!-- Schedule --></label>
+        <name>Schedule__c</name>
+        <relationshipLabel><!-- Prelog Data Mirrors --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- ScribeId --></label>
+        <name>ScribeId__c</name>
+    </fields>
+    <fields>
+        <label><!-- TEST Scribe GUID --></label>
+        <name>TEST_Scribe_GUID__c</name>
+    </fields>
+    <fields>
+        <label><!-- Time Period --></label>
+        <name>TimePeriod__c</name>
+    </fields>
+    <fields>
+        <label><!-- Version --></label>
+        <name>Version__c</name>
+    </fields>
+    <fields>
+        <label><!-- Week --></label>
+        <name>Week__c</name>
+    </fields>
+    <layouts>
+        <layout>Prelog Data Mirror Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <startsWith>Consonant</startsWith>
+    <validationRules>
+        <errorMessage><!-- You are missing one of the necessary fields for Prelog Data Mirror: Version, Air Date, Air Time, Network, Network Deal Number or Length.  Double check your upload file. --></errorMessage>
+        <name>Prelog_Missing_Fields</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- The schedule you have entered matches to a different week than this record. Please find a schedule in the correct week. --></errorMessage>
+        <name>Weeks_Must_Match</name>
+    </validationRules>
+    <webLinks>
+        <label><!-- Find_Duplicate --></label>
+        <name>Find_Duplicate</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Reprocess_Records --></label>
+        <name>Reprocess_Records</name>
+    </webLinks>
+</CustomObjectTranslation>

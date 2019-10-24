@@ -1,0 +1,4 @@
+.slds-modal__content {
+    max-height: calc(100% - 66px);
+    overflow-y: auto;
+}

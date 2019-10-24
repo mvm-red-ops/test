@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>Bounce</fullName>
+        <default>false</default>
+        <label>Bounce</label>
+    </customValue>
+    <customValue>
+        <fullName>Bounce (Local)</fullName>
+        <default>false</default>
+        <label>Bounce (Local)</label>
+    </customValue>
+    <customValue>
+        <fullName>EscapeTV</fullName>
+        <default>false</default>
+        <label>EscapeTV</label>
+    </customValue>
+    <customValue>
+        <fullName>Laff</fullName>
+        <default>false</default>
+        <label>Laff</label>
+    </customValue>
+    <customValue>
+        <fullName>GritTV</fullName>
+        <default>false</default>
+        <label>GritTV</label>
+    </customValue>
+    <customValue>
+        <fullName>AntennaTV</fullName>
+        <default>false</default>
+        <label>AntennaTV</label>
+    </customValue>
+    <customValue>
+        <fullName>AntennaTV (Local)</fullName>
+        <default>false</default>
+        <label>AntennaTV (Local)</label>
+    </customValue>
+    <customValue>
+        <fullName>Justice</fullName>
+        <default>false</default>
+        <label>Justice</label>
+    </customValue>
+    <customValue>
+        <fullName>ThisTV</fullName>
+        <default>false</default>
+        <label>ThisTV</label>
+    </customValue>
+    <customValue>
+        <fullName>ThisTV (Local)</fullName>
+        <default>false</default>
+        <label>ThisTV (Local)</label>
+    </customValue>
+    <customValue>
+        <fullName>CBS Sports</fullName>
+        <default>false</default>
+        <label>CBS Sports</label>
+    </customValue>
+    <customValue>
+        <fullName>Tennis</fullName>
+        <default>false</default>
+        <label>Tennis</label>
+    </customValue>
+    <customValue>
+        <fullName>Tennis (Local)</fullName>
+        <default>false</default>
+        <label>Tennis (Local)</label>
+    </customValue>
+    <customValue>
+        <fullName>NHL</fullName>
+        <default>false</default>
+        <label>NHL</label>
+    </customValue>
+    <customValue>
+        <fullName>MGM HD</fullName>
+        <default>false</default>
+        <label>MGM HD</label>
+    </customValue>
+    <customValue>
+        <fullName>MAV TV</fullName>
+        <default>false</default>
+        <label>MAV TV</label>
+    </customValue>
+    <customValue>
+        <fullName>MLB</fullName>
+        <default>false</default>
+        <label>MLB</label>
+    </customValue>
+    <customValue>
+        <fullName>TVG/TVG2/Locals</fullName>
+        <default>false</default>
+        <label>TVG/TVG2/Locals</label>
+    </customValue>
+    <customValue>
+        <fullName>BuzzrTV</fullName>
+        <default>false</default>
+        <label>BuzzrTV</label>
+    </customValue>
+    <customValue>
+        <fullName>Raycom Bounce (Local Bundles)</fullName>
+        <default>false</default>
+        <label>Raycom Bounce (Local Bundles)</label>
+    </customValue>
+    <customValue>
+        <fullName>Tribune Multicast (Local Bundles)</fullName>
+        <default>false</default>
+        <label>Tribune Multicast (Local Bundles)</label>
+    </customValue>
+    <customValue>
+        <fullName>Retro Raycom</fullName>
+        <default>false</default>
+        <label>Retro Raycom</label>
+    </customValue>
+    <customValue>
+        <fullName>Judge Alex</fullName>
+        <default>false</default>
+        <label>Judge Alex</label>
+    </customValue>
+    <customValue>
+        <fullName>Lauren Lakes Paternity Court</fullName>
+        <default>false</default>
+        <label>Lauren Lakes Paternity Court</label>
+    </customValue>
+    <customValue>
+        <fullName>Power Nation</fullName>
+        <default>false</default>
+        <label>Power Nation</label>
+    </customValue>
+    <customValue>
+        <fullName>Cheaters</fullName>
+        <default>false</default>
+        <label>Cheaters</label>
+    </customValue>
+    <customValue>
+        <fullName>MGM Monthly</fullName>
+        <default>false</default>
+        <label>MGM Monthly</label>
+    </customValue>
+    <customValue>
+        <fullName>Showcase 9</fullName>
+        <default>false</default>
+        <label>Showcase 9</label>
+    </customValue>
+    <customValue>
+        <fullName>*Onyx Syndication Shows</fullName>
+        <default>false</default>
+        <label>*Onyx Syndication Shows</label>
+    </customValue>
+    <customValue>
+        <fullName>FBN (Paid Programming)</fullName>
+        <default>false</default>
+        <label>FBN (Paid Programming)</label>
+    </customValue>
+    <customValue>
+        <fullName>MAV (Paid Programming)</fullName>
+        <default>false</default>
+        <label>MAV (Paid Programming)</label>
+    </customValue>
+    <customValue>
+        <fullName>TVG (Paid Programming)</fullName>
+        <default>false</default>
+        <label>TVG (Paid Programming)</label>
+    </customValue>
+    <description>Programs for Teams</description>
+    <masterLabel>Properties</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

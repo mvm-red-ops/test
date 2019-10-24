@@ -1,0 +1,1144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Deal</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Deals</value>
+    </caseValues>
+    <fields>
+        <label><!-- AE initials --></label>
+        <name>AE_initials__c</name>
+    </fields>
+    <fields>
+        <label><!-- Access Code --></label>
+        <name>Access_Code__c</name>
+    </fields>
+    <fields>
+        <label><!-- Account+Advertiser --></label>
+        <name>Account_Advertiser__c</name>
+    </fields>
+    <fields>
+        <help><!-- Calculated Field. Test Field 11.21.  AE Dash.  Dashboard limited to two criteria in table display.  Concatenating Account+Brand so that they count once and we can use AE (Deal Owner) as well. --></help>
+        <label><!-- Account+Brand+Program --></label>
+        <name>Account_Brand_Program__c</name>
+    </fields>
+    <fields>
+        <label><!-- Account+Brand --></label>
+        <name>Account_Brand__c</name>
+    </fields>
+    <fields>
+        <label><!-- Advertiser ID --></label>
+        <name>Advertiser_ID__c</name>
+    </fields>
+    <fields>
+        <label><!-- Advertiser --></label>
+        <name>Advertiser__c</name>
+    </fields>
+    <fields>
+        <label><!-- Agency Deal Number --></label>
+        <name>Agency_Deal_Number__c</name>
+    </fields>
+    <fields>
+        <label><!-- [Dep]Assist --></label>
+        <name>Assist1__c</name>
+        <relationshipLabel><!-- Deals --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Brand ID --></label>
+        <name>Brand_ID__c</name>
+    </fields>
+    <fields>
+        <label><!-- Brands --></label>
+        <name>Brands__c</name>
+        <relationshipLabel><!-- Deals --></relationshipLabel>
+    </fields>
+    <fields>
+        <help><!-- 12.28.12  Budget :30 Rate.  Entered on &quot;Availability&quot; Deals only. --></help>
+        <label><!-- Budget :30 --></label>
+        <name>Budget_30__c</name>
+    </fields>
+    <fields>
+        <label><!-- Budget COUNT --></label>
+        <name>Budget_COUNT__c</name>
+    </fields>
+    <fields>
+        <label><!-- Bundle Action --></label>
+        <name>Bundle_Action__c</name>
+        <picklistValues>
+            <masterLabel>ADD TO SCHEDULE</masterLabel>
+            <translation><!-- ADD TO SCHEDULE --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ADD WEEK/RATE REVISION</masterLabel>
+            <translation><!-- ADD WEEK/RATE REVISION --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CANCEL BEFORE START</masterLabel>
+            <translation><!-- CANCEL BEFORE START --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CANCELED</masterLabel>
+            <translation><!-- CANCELED --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>FREQUENCY ADJUSTMENT/CANCEL</masterLabel>
+            <translation><!-- FREQUENCY ADJUSTMENT/CANCEL --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>FREQUENCY REVISION</masterLabel>
+            <translation><!-- FREQUENCY REVISION --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>NEW BUY</masterLabel>
+            <translation><!-- NEW BUY --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>RATE ADJUSTMENT/CANCEL</masterLabel>
+            <translation><!-- RATE ADJUSTMENT/CANCEL --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>RATE AND FREQUENCY REVISION</masterLabel>
+            <translation><!-- RATE AND FREQUENCY REVISION --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>RATE REVISION</masterLabel>
+            <translation><!-- RATE REVISION --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>REBOOK</masterLabel>
+            <translation><!-- REBOOK --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>TRAFFIC REVISION ONLY</masterLabel>
+            <translation><!-- TRAFFIC REVISION ONLY --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Bundle Start Week --></label>
+        <name>Bundle_Start_Week__c</name>
+    </fields>
+    <fields>
+        <help><!-- Number of Bundles - For sending Raycom Orders --></help>
+        <label><!-- [Dep]Bundles --></label>
+        <name>Bundles__c</name>
+    </fields>
+    <fields>
+        <label><!-- Cable/Synd/PP --></label>
+        <name>Cable_Synd_PP_del__c</name>
+    </fields>
+    <fields>
+        <label><!-- Campaign --></label>
+        <name>Campaign__c</name>
+    </fields>
+    <fields>
+        <label><!-- Class --></label>
+        <name>Class__c</name>
+        <picklistValues>
+            <masterLabel>None</masterLabel>
+            <translation><!-- None --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Premium</masterLabel>
+            <translation><!-- Premium --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Sponsorship</masterLabel>
+            <translation><!-- Sponsorship --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- ClientCode --></label>
+        <name>ClientCode__c</name>
+    </fields>
+    <fields>
+        <label><!-- [Dep]Client Account --></label>
+        <name>Client_Account__c</name>
+        <relationshipLabel><!-- Deals --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Client Code --></label>
+        <name>Client_Code__c</name>
+    </fields>
+    <fields>
+        <help><!-- HYBRID or DR, based on Advertiser. --></help>
+        <label><!-- Commercial Type --></label>
+        <name>Commercial_Type__c</name>
+    </fields>
+    <fields>
+        <label><!-- Competition Value --></label>
+        <name>Competition_Value__c</name>
+    </fields>
+    <fields>
+        <label><!-- ContactAccount --></label>
+        <name>ContactAccount__c</name>
+    </fields>
+    <fields>
+        <label><!-- Contact --></label>
+        <name>Contact__c</name>
+        <relationshipLabel><!-- Deals --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Count of Schedules --></label>
+        <name>Count_of_Schedules__c</name>
+    </fields>
+    <fields>
+        <label><!-- Count of Stations --></label>
+        <name>Count_of_Stations__c</name>
+    </fields>
+    <fields>
+        <label><!-- Count of Weeks --></label>
+        <name>Count_of_Weeks__c</name>
+    </fields>
+    <fields>
+        <label><!-- Date Created Numeric --></label>
+        <name>Date_Created_Numeric__c</name>
+    </fields>
+    <fields>
+        <label><!-- Ratings Demos --></label>
+        <name>Demographics__c</name>
+        <picklistValues>
+            <masterLabel>F18-24</masterLabel>
+            <translation><!-- F18-24 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>F18-25</masterLabel>
+            <translation><!-- F18-25 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>F18-34</masterLabel>
+            <translation><!-- F18-34 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>F18-49</masterLabel>
+            <translation><!-- F18-49 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>F18-99</masterLabel>
+            <translation><!-- F18-99 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>F2-99</masterLabel>
+            <translation><!-- F2-99 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>F25-34</masterLabel>
+            <translation><!-- F25-34 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>F25-49</masterLabel>
+            <translation><!-- F25-49 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>F25-54</masterLabel>
+            <translation><!-- F25-54 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>F25-64</masterLabel>
+            <translation><!-- F25-64 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>F25-99</masterLabel>
+            <translation><!-- F25-99 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>F35-49</masterLabel>
+            <translation><!-- F35-49 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>F35-54</masterLabel>
+            <translation><!-- F35-54 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>F35-64</masterLabel>
+            <translation><!-- F35-64 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>F35-99</masterLabel>
+            <translation><!-- F35-99 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>F45-54</masterLabel>
+            <translation><!-- F45-54 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>F50-64</masterLabel>
+            <translation><!-- F50-64 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>F50-99</masterLabel>
+            <translation><!-- F50-99 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>F55-64</masterLabel>
+            <translation><!-- F55-64 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>F55-99</masterLabel>
+            <translation><!-- F55-99 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>F65-99</masterLabel>
+            <translation><!-- F65-99 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>HH</masterLabel>
+            <translation><!-- HH --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>M18-24</masterLabel>
+            <translation><!-- M18-24 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>M18-34</masterLabel>
+            <translation><!-- M18-34 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>M18-49</masterLabel>
+            <translation><!-- M18-49 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>M18-99</masterLabel>
+            <translation><!-- M18-99 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>M2-99</masterLabel>
+            <translation><!-- M2-99 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>M25-34</masterLabel>
+            <translation><!-- M25-34 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>M25-49</masterLabel>
+            <translation><!-- M25-49 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>M25-54</masterLabel>
+            <translation><!-- M25-54 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>M25-64</masterLabel>
+            <translation><!-- M25-64 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>M25-99</masterLabel>
+            <translation><!-- M25-99 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>M35-49</masterLabel>
+            <translation><!-- M35-49 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>M35-54</masterLabel>
+            <translation><!-- M35-54 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>M35-64</masterLabel>
+            <translation><!-- M35-64 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>M35-99</masterLabel>
+            <translation><!-- M35-99 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>M50-64</masterLabel>
+            <translation><!-- M50-64 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>M50-99</masterLabel>
+            <translation><!-- M50-99 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>M55-64</masterLabel>
+            <translation><!-- M55-64 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>M55-99</masterLabel>
+            <translation><!-- M55-99 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>M65-99</masterLabel>
+            <translation><!-- M65-99 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>P12-17</masterLabel>
+            <translation><!-- P12-17 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>P18-24</masterLabel>
+            <translation><!-- P18-24 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>P18-34</masterLabel>
+            <translation><!-- P18-34 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>P18-49</masterLabel>
+            <translation><!-- P18-49 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>P18-99</masterLabel>
+            <translation><!-- P18-99 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>P2-11</masterLabel>
+            <translation><!-- P2-11 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>P2-17</masterLabel>
+            <translation><!-- P2-17 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>P2-99</masterLabel>
+            <translation><!-- P2-99 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>P25-34</masterLabel>
+            <translation><!-- P25-34 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>P25-49</masterLabel>
+            <translation><!-- P25-49 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>P25-54</masterLabel>
+            <translation><!-- P25-54 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>P25-64</masterLabel>
+            <translation><!-- P25-64 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>P25-99</masterLabel>
+            <translation><!-- P25-99 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>P35-49</masterLabel>
+            <translation><!-- P35-49 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>P35-54</masterLabel>
+            <translation><!-- P35-54 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>P35-64</masterLabel>
+            <translation><!-- P35-64 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>P35-99</masterLabel>
+            <translation><!-- P35-99 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>P45-54</masterLabel>
+            <translation><!-- P45-54 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>P50-64</masterLabel>
+            <translation><!-- P50-64 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>P50-99</masterLabel>
+            <translation><!-- P50-99 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>P55-64</masterLabel>
+            <translation><!-- P55-64 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>P55-99</masterLabel>
+            <translation><!-- P55-99 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>P6-11</masterLabel>
+            <translation><!-- P6-11 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>P65-99</masterLabel>
+            <translation><!-- P65-99 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>W18-34</masterLabel>
+            <translation><!-- W18-34 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>W18-49</masterLabel>
+            <translation><!-- W18-49 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>W18-99</masterLabel>
+            <translation><!-- W18-99 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>W2-99</masterLabel>
+            <translation><!-- W2-99 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>W25-54</masterLabel>
+            <translation><!-- W25-54 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>W35-99</masterLabel>
+            <translation><!-- W35-99 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>W50-99</masterLabel>
+            <translation><!-- W50-99 --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Entity Name --></label>
+        <name>Entity_Name__c</name>
+    </fields>
+    <fields>
+        <help><!-- case(Length__c, &quot;30&quot;, 30, &quot;60&quot;, 60, &quot;120&quot;, 120, &quot;300&quot;, 300, &quot;15&quot;, 15, 0)
+ /30
+ * Units__c --></help>
+        <label><!-- Equiv :30 --></label>
+        <name>Equiv_30__c</name>
+    </fields>
+    <fields>
+        <label><!-- Estimate --></label>
+        <name>Estimate__c</name>
+    </fields>
+    <fields>
+        <label><!-- FF Invoice Month --></label>
+        <name>FF_Invoice_Month__c</name>
+    </fields>
+    <fields>
+        <label><!-- FF Long Form Invoice Month --></label>
+        <name>FF_Long_Form_Invoice_Month__c</name>
+    </fields>
+    <fields>
+        <label><!-- Flight Dates --></label>
+        <name>Flight_Dates__c</name>
+    </fields>
+    <fields>
+        <label><!-- Flight End Date --></label>
+        <name>Flight_End_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Flighted --></label>
+        <name>Flighted__c</name>
+    </fields>
+    <fields>
+        <label><!-- [Dep]Invoice Processed --></label>
+        <name>Invoice_Processed__c</name>
+    </fields>
+    <fields>
+        <label><!-- Katz Hybrid --></label>
+        <name>Katz_Hybrid__c</name>
+        <picklistValues>
+            <masterLabel>DR</masterLabel>
+            <translation><!-- DR --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>GM</masterLabel>
+            <translation><!-- GM --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Hybrid</masterLabel>
+            <translation><!-- Hybrid --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- LTC Date --></label>
+        <name>LTC_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Length --></label>
+        <name>Length__c</name>
+        <picklistValues>
+            <masterLabel>05</masterLabel>
+            <translation><!-- 05 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>10</masterLabel>
+            <translation><!-- 10 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>105</masterLabel>
+            <translation><!-- 105 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>120</masterLabel>
+            <translation><!-- 120 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>15</masterLabel>
+            <translation><!-- 15 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>150</masterLabel>
+            <translation><!-- 150 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>1710</masterLabel>
+            <translation><!-- 1710 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>1714</masterLabel>
+            <translation><!-- 1714 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>180</masterLabel>
+            <translation><!-- 180 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>20</masterLabel>
+            <translation><!-- 20 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>240</masterLabel>
+            <translation><!-- 240 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>30</masterLabel>
+            <translation><!-- 30 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>300</masterLabel>
+            <translation><!-- 300 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>35</masterLabel>
+            <translation><!-- 35 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>40</masterLabel>
+            <translation><!-- 40 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>45</masterLabel>
+            <translation><!-- 45 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>5</masterLabel>
+            <translation><!-- 5 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>60</masterLabel>
+            <translation><!-- 60 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>75</masterLabel>
+            <translation><!-- 75 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>90</masterLabel>
+            <translation><!-- 90 --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Max/Day --></label>
+        <name>Max_Day__c</name>
+    </fields>
+    <fields>
+        <help><!-- Use Brand Separation. If not on paperwork, enter 30 min. --></help>
+        <label><!-- [Dep]Max Sep --></label>
+        <name>Max_Sep__c</name>
+    </fields>
+    <fields>
+        <help><!-- Uses Brand Separation. If not on paperwork, enter 15 min. --></help>
+        <label><!-- Min Sep --></label>
+        <name>Min_Sep__c</name>
+        <picklistValues>
+            <masterLabel>15</masterLabel>
+            <translation><!-- 15 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>20</masterLabel>
+            <translation><!-- 20 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>25</masterLabel>
+            <translation><!-- 25 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>30</masterLabel>
+            <translation><!-- 30 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>60</masterLabel>
+            <translation><!-- 60 --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- Used for money movements. --></help>
+        <label><!-- Money Movement --></label>
+        <name>Money_Movement__c</name>
+    </fields>
+    <fields>
+        <help><!-- Deal number in Network&apos;s paper work, in Network&apos;s records.  Equals 1 if the PI campaign is no longer airing on the network. --></help>
+        <label><!-- Network Deal Number --></label>
+        <name>Network_Deal_Number__c</name>
+    </fields>
+    <fields>
+        <label><!-- PI --></label>
+        <name>PI__c</name>
+    </fields>
+    <fields>
+        <label><!-- Priority --></label>
+        <name>Priority__c</name>
+    </fields>
+    <fields>
+        <label><!-- Product Category --></label>
+        <name>Product_Category__c</name>
+    </fields>
+    <fields>
+        <label><!-- Product Code --></label>
+        <name>Product_Code__c</name>
+    </fields>
+    <fields>
+        <label><!-- Program Team --></label>
+        <name>Program_Team_del__c</name>
+    </fields>
+    <fields>
+        <label><!-- Program --></label>
+        <name>Program__c</name>
+        <relationshipLabel><!-- Deals --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- [Dep]Rate --></label>
+        <name>Rate__c</name>
+    </fields>
+    <fields>
+        <label><!-- Bundle Comments --></label>
+        <name>Raycom_Comments__c</name>
+    </fields>
+    <fields>
+        <help><!-- Used for sending emails to Salesforce so that they can be filed directly to the Deal --></help>
+        <label><!-- SF Deal ID --></label>
+        <name>SF_Deal_ID__c</name>
+    </fields>
+    <fields>
+        <label><!-- [Dep]Invoice Number --></label>
+        <name>Sales_Invoice__c</name>
+        <relationshipLabel><!-- Deals --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Salesforce Invoices URL --></label>
+        <name>Salesforce_Invoices_URL__c</name>
+    </fields>
+    <fields>
+        <label><!-- Competition --></label>
+        <name>Score__c</name>
+        <picklistValues>
+            <masterLabel>Existing Advertiser to Team</masterLabel>
+            <translation><!-- Existing Advertiser to Team --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>New Added Value</masterLabel>
+            <translation><!-- New Added Value --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>New Advertiser to Industry</masterLabel>
+            <translation><!-- New Advertiser to Industry --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>New Advertiser to Off Peak</masterLabel>
+            <translation><!-- New Advertiser to Off Peak --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>New Agency to Marathon</masterLabel>
+            <translation><!-- New Agency to Marathon --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>New Agency to Team</masterLabel>
+            <translation><!-- New Agency to Team --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- ONLY For RAYCOM XML --></help>
+        <label><!-- SendRaycomXMLnow --></label>
+        <name>SendRaycomXMLnow__c</name>
+    </fields>
+    <fields>
+        <label><!-- Status --></label>
+        <name>Status__c</name>
+        <picklistValues>
+            <masterLabel>Budget</masterLabel>
+            <translation><!-- Budget --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Canceled</masterLabel>
+            <translation><!-- Canceled --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Historical</masterLabel>
+            <translation><!-- Historical --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Sold</masterLabel>
+            <translation><!-- Sold --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- Sum of Total Dollars for the schedules for this deal. --></help>
+        <label><!-- Sum of Total Dollars --></label>
+        <name>Sum_of_Total_Dollars__c</name>
+    </fields>
+    <fields>
+        <label><!-- Sum of Units Available --></label>
+        <name>Sum_of_Units_Available__c</name>
+    </fields>
+    <fields>
+        <help><!-- Paid Programming ONLY.  Check to indicate a test deal for month. --></help>
+        <label><!-- [Dep]Test PP --></label>
+        <name>Test_PP__c</name>
+    </fields>
+    <fields>
+        <label><!-- Today&apos;s Date/Time --></label>
+        <name>Today_s_Date_Time__c</name>
+    </fields>
+    <fields>
+        <label><!-- [Dep]Units --></label>
+        <name>Units__c</name>
+    </fields>
+    <fields>
+        <label><!-- Vendor Account --></label>
+        <name>Vendor_Account__c</name>
+    </fields>
+    <fields>
+        <label><!-- Vendor Commission --></label>
+        <name>Vendor_Commission__c</name>
+    </fields>
+    <fields>
+        <label><!-- Week MIN Field --></label>
+        <name>Week_MIN_Field__c</name>
+    </fields>
+    <fields>
+        <label><!-- Week Max --></label>
+        <name>Week_Max__c</name>
+    </fields>
+    <fields>
+        <label><!-- Week Pending --></label>
+        <name>Week_Pending__c</name>
+    </fields>
+    <layouts>
+        <layout>Deal Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Paid Programming</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Historical Information --></label>
+            <section>Historical Information</section>
+        </sections>
+        <sections>
+            <label><!-- Sales Information --></label>
+            <section>Sales Information</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Short Form</layout>
+        <sections>
+            <label><!-- Bundle Order Information --></label>
+            <section>Bundle Order Information</section>
+        </sections>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Double Check Report --></label>
+            <section>Double Check Report</section>
+        </sections>
+        <sections>
+            <label><!-- History Information --></label>
+            <section>History Information</section>
+        </sections>
+        <sections>
+            <label><!-- Sales Information --></label>
+            <section>Sales Information</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Short Form Apricot</layout>
+        <sections>
+            <label><!-- Bundle Order Information --></label>
+            <section>Bundle Order Information</section>
+        </sections>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Double Check Report --></label>
+            <section>Double Check Report</section>
+        </sections>
+        <sections>
+            <label><!-- History Information --></label>
+            <section>History Information</section>
+        </sections>
+        <sections>
+            <label><!-- Sales Information --></label>
+            <section>Sales Information</section>
+        </sections>
+    </layouts>
+    <recordTypes>
+        <description><!-- This is a Paid Programming deal. --></description>
+        <label><!-- Paid Programming --></label>
+        <name>Paid_Programming</name>
+    </recordTypes>
+    <recordTypes>
+        <description><!-- This is a Short Form deal. --></description>
+        <label><!-- Short Form --></label>
+        <name>Short_Form</name>
+    </recordTypes>
+    <recordTypes>
+        <description><!-- Short Form Apricot: Special Short Form for Programs that process traffic in-house --></description>
+        <label><!-- Short Form Apricot --></label>
+        <name>Short_Form_Apricot</name>
+    </recordTypes>
+    <startsWith>Consonant</startsWith>
+    <validationRules>
+        <errorMessage><!-- AE initials have to be set! --></errorMessage>
+        <name>AE_initials_for_FIRE</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Cannot add to the Bundle Information fields when uploading information on individual units. --></errorMessage>
+        <name>Cannot_Input_Bundle_In_Spot</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Have to add Bundle information into the TVG Bundles deal. --></errorMessage>
+        <name>Cannot_Input_Spot_In_Bundle</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Commercial Type must be added to all Advertisers airing on Bounce, Escape or GRIT. --></errorMessage>
+        <name>Commercial_Type_Katz_Broadcast</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Need to enter a value for Competition if giving an Assist. --></errorMessage>
+        <name>Competition_Not_Blank_If_Assited</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- [Waiting for Arunna]The Account on the Contact field does not match the Account associated with the Brand. Change the Account on the Advertiser (from Brand) Brand -&gt; Advertiser -&gt; Account = Contact Account. --></errorMessage>
+        <name>Contact_Account_is_Brand_Account</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Can only enter a 7 digit number for Cornerstone PI Deals.  For example: type 7775555 instead of 8007775555.  This is necessary for PI Payout uploads. --></errorMessage>
+        <name>Cornerstone_800_Number_Character_Limit</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- This brand does not have an advertiser entered.  Please go to the brand page to enter. --></errorMessage>
+        <name>Deal_Brand_Needs_Advertiser</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- The Deal Owner needs to be set to an Account Executive.  Please check the Contact to make sure the AE is set. --></errorMessage>
+        <name>Deal_Needs_Account_Exec_Owner</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Make sure to populate all agency code fields: Client Code, Product Code, Access Code and Estimate --></errorMessage>
+        <name>EMT_Agency_Code_Required</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Minimum separation required. --></errorMessage>
+        <name>Minimum_Separation_Required</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Please enter a Contact. --></errorMessage>
+        <name>Needs_Contact</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Missing Unit Length --></errorMessage>
+        <name>Needs_Unit_Length</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Please fill in the 800 Number in the Agency Deal Number Field. --></errorMessage>
+        <name>PI_Deals_Agency_Deal_Number_Required</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- The program selected is Paid Programming and the length must equal 1710. --></errorMessage>
+        <name>Paid_Programming_Length_1710</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- We no longer book :15s on Retro Raycom. --></errorMessage>
+        <name>Retro_No_15s</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Historical Deals must be booked with an historical contact. --></errorMessage>
+        <name>Status_Not_Equal_to_Historical</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Please go to the Advertiser page to submit the new advertiser for approval. --></errorMessage>
+        <name>Submit_for_New_Advertiser_Approval</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Please go to the Brand page to submit the new brand for approval. --></errorMessage>
+        <name>Submit_for_New_Brand_Approval</name>
+    </validationRules>
+    <webLinks>
+        <label><!-- Agency_Paperwork --></label>
+        <name>Agency_Paperwork</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Beta_xml_Test --></label>
+        <name>Beta_xml_Test</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Bill_Missed_Schedules --></label>
+        <name>Bill_Missed_Schedules</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- BlueHighways_Bundle_Order --></label>
+        <name>BlueHighways_Bundle_Order</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Cancel_Schedules --></label>
+        <name>Cancel_Schedules</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Create_FF_Invoice --></label>
+        <name>Create_FF_Invoice</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Create_FF_Invoice_s --></label>
+        <name>Create_FF_Invoice_s</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Create_Intacct_Credit_Memo_s --></label>
+        <name>Create_Intacct_Credit_Memo_s</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Create_Intacct_Invoice_s --></label>
+        <name>Create_Intacct_Invoice_s</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Create_OSI_Deal --></label>
+        <name>Create_OSI_Deal</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Create_XML_Bundle --></label>
+        <name>Create_XML_Bundle</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Credit_Non_Aired_Long_Form_Deals --></label>
+        <name>Credit_Non_Aired_Long_Form_Deals</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Deal_Revisions --></label>
+        <name>Deal_Revisions</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Hybrid_Bundle --></label>
+        <name>Hybrid_Bundle</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Hybrid_Bundle_Next_Q --></label>
+        <name>Hybrid_Bundle_Next_Q</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- MGM_HD_Bundle_Order --></label>
+        <name>MGM_HD_Bundle_Order</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- MG_Modular_TEST --></label>
+        <name>MG_Modular_TEST</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- New_Apricot_Schedule --></label>
+        <name>New_Apricot_Schedule</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- New_Clone --></label>
+        <name>New_Clone</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- New_Hearst_Unwired_Order --></label>
+        <name>New_Hearst_Unwired_Order</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- New_Media_General_Order --></label>
+        <name>New_Media_General_Order</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- New_Raycom_Connect_Extra_Order --></label>
+        <name>New_Raycom_Connect_Extra_Order</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- New_Raycom_Connect_Order --></label>
+        <name>New_Raycom_Connect_Order</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- New_Retro_Raycom_Order --></label>
+        <name>New_Retro_Raycom_Order</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- New_Retro_Raycom_Order_Next_Q --></label>
+        <name>New_Retro_Raycom_Order_Next_Q</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- New_Schedule --></label>
+        <name>New_Schedule</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- New_Tribune_Multicast_Connect_Order --></label>
+        <name>New_Tribune_Multicast_Connect_Order</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Nielsen_Network_Paperwork --></label>
+        <name>Nielsen_Network_Paperwork</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Posting_Tool --></label>
+        <name>Posting_Tool</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Program_Priority_List --></label>
+        <name>Program_Priority_List</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- RaycomXML --></label>
+        <name>RaycomXML</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Raycom_Connect_Order --></label>
+        <name>Raycom_Connect_Order</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Raycom_Order --></label>
+        <name>Raycom_Order</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Retro_Raycom --></label>
+        <name>Retro_Raycom</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Salesforce_Invoice --></label>
+        <name>Salesforce_Invoice</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Salesforce_Invoice_s --></label>
+        <name>Salesforce_Invoice_s</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Standardized_Paperwork --></label>
+        <name>Standardized_Paperwork</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Standardized_Paperwork_Custom_Clearance --></label>
+        <name>Standardized_Paperwork_Custom_Clearance</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- TVG2_Bundle_Order --></label>
+        <name>TVG2_Bundle_Order</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- TVG_Bundle_Order --></label>
+        <name>TVG_Bundle_Order</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Tribune_Unwired_Order --></label>
+        <name>Tribune_Unwired_Order</name>
+    </webLinks>
+</CustomObjectTranslation>

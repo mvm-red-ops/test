@@ -1,0 +1,384 @@
+<apex:page controller="managementController" title="Management">
+    <style>
+        .dateFormat{
+            display:none;
+        }
+    </style>
+    <apex:form id="frm">
+        <apex:actionFunction name="search" action="{!newSearch}" status="status" reRender="frm"/>
+        <apex:actionStatus id="status" startText="Loading..." startStyle="font-size:18px"/>
+        <apex:actionStatus id="saveStatus" startText="Saving..." startStyle="font-size:18px"/>
+        <apex:actionStatus id="refreshStatus" startText="Refreshing..." startStyle="font-size:18px"/>
+        <apex:actionFunction name="refresh" action="{!refresh}" reRender="frm" status="status" />
+        <apex:actionFunction action="{!save}" name="save" reRender="frm" status="saveStatus"/>
+        <apex:sectionHeader title="Management Report"/>
+        
+        <apex:pagemessages />
+        
+        
+        <apex:pageBlock >
+            <table>
+                <tr>
+                    <td> TEAM </td>
+                    <td> DEAL </td>
+                    <td> PROGRAM </td>
+                    <td> AGENCY </td>
+                    <td> BRAND </td>
+                    <td> Filler </td>
+                    <td> FROM </td>
+                    <td> TO </td>
+                    <td width="5%" colspan="2">&nbsp;</td>
+                    <td><B>TOTAL SPEND</B></td>
+                    <td>$<apex:outputText value="{!ROUND(totalSpend,0)}"/></td>
+                    <td width="2%">&nbsp;</td>
+                    <td><B><U>COUNTS:</U></B></td>
+                    
+                <tr>
+                </tr>
+                    <td>
+                        <apex:selectList size="1" value="{!selectedTeam}">
+                            <apex:selectOptions value="{!team}"/>
+                        </apex:selectList>
+                    </td>
+                    <td>
+                        <apex:inputField value="{!sch.Deal_Parent__c}" required="false" onkeypress="if(event.keyCode==13){search(); return false;}"/>
+                    </td>
+                    <td>
+                        <apex:inputField value="{!deal.Program__c}" onkeypress="if(event.keyCode==13){search(); return false;}"/>
+                    </td>
+                    <td>
+                        <apex:inputField value="{!deal.Client_Account__c}" onkeypress="if(event.keyCode==13){search(); return false;}"/>
+                    </td>
+                    <td>
+                        <apex:inputField value="{!sch.LF_Brand__c}" onkeypress="if(event.keyCode==13){search(); return false;}"/>    <!--deal.Brands__c-->
+                    </td>     
+                    <td><apex:inputCheckbox value="{!filler}"/></td>
+                    <td><apex:inputField value="{!sch.Week__c}" onkeypress="if(event.keyCode==13){search(); return false;}"/></td>
+                    <td><apex:inputField value="{!sch.Day__c}" onkeypress="if(event.keyCode==13){search(); return false;}"/></td>
+                    <td colspan="2">&nbsp;</td>
+                    <td><B>Equiv :30</B></td>
+                    <td><apex:outputText value="{!sumEquiv}"/></td>
+                    <td>&nbsp;</td>
+                    <td><B>:15 =</B></td>
+                    <td><apex:outputText value="{!count15}"/></td>
+                    <td width="3%">&nbsp;</td>
+                    <td width="50px"><B>:30 =</B></td>
+                    <td><apex:outputText value="{!count30}"/></td>
+                </tr>
+                <tr>
+                    <td><apex:commandButton value="Search" action="{!newSearch}" reRender="frm" status="status"/></td>
+                    <td><apex:commandButton value="Back" action="{!back}"/></td>
+                    <td colspan="3">&nbsp;</td>
+                    <td><apex:commandButton value="Previous Week" action="{!oneWeekBack}" reRender="frm" status="status"/></td>
+                    <td><apex:commandButton value="Next Week" action="{!oneWeekLater}" reRender="frm" status="status"/></td>
+                    <td colspan="2">&nbsp;</td>
+                    <td><B>AVG:30</B></td>
+                    <td>$<apex:outputText value="{!ROUND(average,0)}"/></td>
+                    <td>&nbsp;</td>
+                    <td><B>:60 =</B></td>
+                    <td><apex:outputText value="{!count60}"/></td>
+                    <td width="3%">&nbsp;</td>
+                    <td width="50px"><B>:90 =</B></td>
+                    <td><apex:outputText value="{!count90}"/></td>
+                    
+                </tr>
+                <tr>
+                    <td colspan="12">&nbsp;</td>
+                    <td><B>:120 =</B></td>
+                    <td><apex:outputText value="{!count120}"/></td>
+                </tr>
+            </table>
+        </apex:pageBlock>
+        <apex:outputPanel >
+        <center><table><tr>
+                <td><apex:commandButton value="Refresh" action="{!newSearch}" reRender="frm" status="refreshStatus"/></td>
+                <td><apex:commandButton value="Save" onClick="save();return false;" onkeypress="return runScript(event)" status="saveStatus"/></td>
+                <td><apex:commandButton value="Request Traffic"/></td>
+                <td><apex:commandButton value="Multi Edit" onclick="editSchedules(); return false;" reRender="frm"/></td>
+                <td><apex:commandButton value="Send Logs"/></td>
+        </tr></table></center>
+        </apex:outputPanel>
+        <apex:outputPanel rendered="{!missingReq}">
+                <apex:pagemessages />
+        </apex:outputPanel>
+        <apex:outputPanel rendered="{!(!hasRecords)}">
+             <apex:pagemessages />
+        </apex:outputPanel>
+        <div id="divSec">
+        <apex:pageBlock title="AIR SCHEDULE" rendered="{!(!missingReq)&& hasRecords}">
+        <div id="airSch">
+            <apex:pageBlockSection >
+                <apex:pageBlockTable value="{!airScheduleList}" var="as">
+                    
+                    <apex:column headerValue="Edit/Select">
+                        <apex:facet name="header">
+                            <apex:OutputPanel >
+                                <input type="checkbox" onClick="selectAll(this.checked,'airSch');return true;" name="allchk" id="allAirChk" />
+                            </apex:OutputPanel>
+                        </apex:facet>
+                        <input type="checkbox" value="{!as.schedule.Id}" name="chk_{!as.SrNo}" id="chk_{!as.SrNo}" />
+                    </apex:column>
+                    
+                    <apex:column headerValue="Week"><apex:inputField value="{!as.schedule.Week__c}"/></apex:column>
+                    
+                    
+                    <apex:column headerValue="Deal">
+                        <a href="/{!as.schedule.Deal_Parent__c}" target="_blank">
+                            <apex:inputField value="{!as.schedule.Deal_Parent__c}"/>
+                        </a>
+                    </apex:column>
+                    
+                    <apex:column headerValue="Deal Program"><apex:inputField value="{!as.schedule.DealProgram__c}"/></apex:column>
+                    
+                    <apex:column headerValue="Deal Account"><apex:inputField value="{!as.schedule.DealAccount__c}"/></apex:column>
+                    
+                    <apex:column headerValue="Deal Brand"><apex:inputField value="{!as.schedule.DealBrand__c}"/></apex:column>
+                    
+                    <apex:column headerValue="Units Aired" width="1"><apex:inputField value="{!as.schedule.Units_Aired__c}" style="width:50px;"/></apex:column>
+                    
+                    <apex:column headerValue="Units Booked" width="1"><apex:inputField value="{!as.schedule.Units_Available__c}" style="width:50px;"/></apex:column>
+                    
+                    <apex:column headerValue="Units Pre-Empted" style="width:50px"><apex:inputField value="{!as.schedule.Units_Preempted__c}" style="width:50px;"/></apex:column>
+                    
+                    <apex:column headerValue="Unit Length" width="1"><apex:inputField value="{!as.schedule.UnitLength__c}" style="width:50px;"/></apex:column>
+                    
+                    <apex:column headerValue="Rate"><apex:inputField value="{!as.schedule.Rate__c}" style="width:50px"/></apex:column>
+                    
+                    <apex:column headerValue=":30 Rate"><apex:inputField value="{!as.schedule.X30_Rate__c}"/></apex:column>
+                    
+                    <apex:column headerValue="Campaign"><apex:outputField value="{!as.schedule.Deal_Parent__r.Campaign__c}"/></apex:column>
+                        
+                    <apex:column headerValue="ISCI Code"><apex:inputField value="{!as.schedule.ISCI_CODE__c}"/></apex:column>
+                    
+                    <apex:column headerValue="800 Number"><apex:inputField value="{!as.schedule.X800_Number__c}"/></apex:column>
+                    <apex:column headerValue="Days of Air"><apex:inputField value="{!as.schedule.Days_of_Air__c }"/></apex:column>
+                    <apex:column headerValue="Pod"><apex:inputField value="{!as.schedule.Pod__c }"/></apex:column>
+                    
+                    <apex:column headerValue="Comments"><apex:inputField value="{!as.schedule.Comments__c}"/></apex:column>
+                    <apex:column headerValue="Status"><apex:inputField value="{!as.schedule.Status__c}"/></apex:column>
+                    
+                    <apex:column headerValue="Schedule">
+                        <a href="/{!as.schedule.id}" target="_blank">
+                            <apex:inputField value="{!as.schedule.Name}"/>
+                        </a>
+                    </apex:column>
+                    
+                    <apex:column headerValue="Filler"><apex:inputField value="{!as.schedule.Filler__c}"/> </apex:column>
+                    <apex:column headerValue="Test"><apex:inputField value="{!as.schedule.TEST__c}"/></apex:column>
+                    
+                  
+                </apex:pageBlockTable>
+            </apex:pageBlockSection>
+        </div>
+        </apex:pageBlock>
+        
+        <apex:pageBlock title="PRE-EMPTIONS" rendered="{!(!missingReq)&& hasRecords}">
+        <div id="preEmp">
+            <apex:pageBlockSection >
+                <apex:pageBlockTable value="{!preEmptionsList}" var="as">
+                    <apex:column headerValue="Edit/Select">
+                        <apex:facet name="header">
+                            <APEX:OUTPutPanel >
+                                <input type="checkbox" onClick="selectAll(this.checked,'preEmp');return true;" name="allchk" id="allPreChk"/>
+                            </APEX:OUTPutPanel>
+                        </apex:facet>
+                        <input type="checkbox" value="{!as.schedule.Id}" name="chk_{!as.SrNo}" id="chk_{!as.SrNo}" />
+                    </apex:column>
+                    <apex:column headerValue="Week"><apex:inputField value="{!as.schedule.Week__c}"/></apex:column>
+                    <apex:column headerValue="Deal">
+                        <a href="/{!as.schedule.Deal_Parent__c}" target="_blank">
+                            <apex:inputField value="{!as.schedule.Deal_Parent__c}"/>
+                        </a>
+                    </apex:column>
+                    <apex:column headerValue="Deal Program"><apex:inputField value="{!as.schedule.DealProgram__c}"/></apex:column>
+                    <apex:column headerValue="Deal Account"><apex:inputField value="{!as.schedule.DealAccount__c}"/></apex:column>
+                    <apex:column headerValue="Deal Brand"><apex:inputField value="{!as.schedule.DealBrand__c}"/></apex:column>
+                    <apex:column headerValue="Units Aired"><apex:inputField value="{!as.schedule.Units_Aired__c}" style="width:50px;"/></apex:column>
+                    <apex:column headerValue="Units Booked"><apex:inputField value="{!as.schedule.Units_Available__c}" style="width:50px;"/></apex:column>
+                    <apex:column headerValue="Units Pre-Empted"><apex:inputField value="{!as.schedule.Units_Preempted__c}" style="width:50px;"/></apex:column>
+                    <apex:column headerValue="Unit Length"><apex:inputField value="{!as.schedule.UnitLength__c}" style="width:50px;"/></apex:column>
+                    <apex:column headerValue="Rate"><apex:inputField value="{!as.schedule.Rate__c}" style="width:50px"/></apex:column>
+                    <apex:column headerValue=":30 Rate"><apex:inputField value="{!as.schedule.X30_Rate__c}"/></apex:column>
+                    <apex:column headerValue="Campaign"><apex:outputField value="{!as.schedule.Deal_Parent__r.Campaign__c}"/></apex:column>
+                    <apex:column headerValue="ISCI Code"><apex:inputField value="{!as.schedule.ISCI_CODE__c}"/></apex:column>
+                    <apex:column headerValue="800 Number"><apex:inputField value="{!as.schedule.X800_Number__c}"/></apex:column>
+                    <apex:column headerValue="Days of Air"><apex:inputField value="{!as.schedule.Days_of_Air__c }"/></apex:column>
+                    <apex:column headerValue="Pod"><apex:inputField value="{!as.schedule.Pod__c }"/></apex:column>
+                    <apex:column headerValue="Comments"><apex:inputField value="{!as.schedule.Comments__c}"/></apex:column>
+                    <apex:column headerValue="Status"><apex:inputField value="{!as.schedule.Status__c}"/></apex:column>
+                    <apex:column headerValue="Schedule">
+                        <a href="/{!as.schedule.id}" target="_blank">
+                            <apex:inputField value="{!as.schedule.Name}"/>
+                        </a>
+                    </apex:column>
+                    <apex:column headerValue="Filler"><apex:inputField value="{!as.schedule.Filler__c}"/></apex:column>
+                    <apex:column headerValue="Test"><apex:inputField value="{!as.schedule.TEST__c}"/></apex:column>
+                 
+                </apex:pageBlockTable>
+            </apex:pageBlockSection>
+        </div>
+        </apex:pageBlock>
+        
+        <apex:pageBlock title="CANCELLED" rendered="{!(!missingReq)&& hasRecords}">
+        <div id="cancel">
+            <apex:pageBlockSection >
+                <apex:pageBlockTable value="{!canceledList}" var="as">
+                    <apex:column headerValue="Edit/Select">
+                        <apex:facet name="header">
+                            <APEX:OUTPutPanel >
+                                <input type="checkbox" onClick="selectAll(this.checked,'cancel');return true;" name="allchk" id="allCancelChk"/>
+                            </APEX:OUTPutPanel>
+                        </apex:facet>
+                        <input type="checkbox" value="{!as.schedule.Id}" name="chk_{!as.SrNo}" id="chk_{!as.SrNo}" />
+                    </apex:column>
+                    <apex:column headerValue="Week"><apex:inputField value="{!as.schedule.Week__c}"/></apex:column>
+                    <apex:column headerValue="Deal">
+                        <a href="/{!as.schedule.Deal_Parent__c}" target="_blank">
+                            <apex:inputField value="{!as.schedule.Deal_Parent__c}"/>
+                        </a>
+                    </apex:column>
+                    <apex:column headerValue="Deal Program"><apex:inputField value="{!as.schedule.DealProgram__c}"/></apex:column>
+                    <apex:column headerValue="Deal Account"><apex:inputField value="{!as.schedule.DealAccount__c}"/></apex:column>
+                    <apex:column headerValue="Deal Brand"><apex:inputField value="{!as.schedule.DealBrand__c}"/></apex:column>
+                    <apex:column headerValue="Units Aired"><apex:inputField value="{!as.schedule.Units_Aired__c}" style="width:50px;"/></apex:column>
+                    <apex:column headerValue="Units Booked"><apex:inputField value="{!as.schedule.Units_Available__c}" style="width:50px;"/></apex:column>
+                    <apex:column headerValue="Units Pre-Empted"><apex:inputField value="{!as.schedule.Units_Preempted__c}" style="width:50px;"/></apex:column>
+                    <apex:column headerValue="Unit Length"><apex:inputField value="{!as.schedule.UnitLength__c}" style="width:50px;"/></apex:column>
+                    <apex:column headerValue="Rate"><apex:inputField value="{!as.schedule.Rate__c}" style="width:50px"/></apex:column>
+                    <apex:column headerValue=":30 Rate"><apex:inputField value="{!as.schedule.X30_Rate__c}"/></apex:column>
+                    <apex:column headerValue="Campaign"><apex:outputField value="{!as.schedule.Deal_Parent__r.Campaign__c}"/></apex:column>
+                    <apex:column headerValue="ISCI Code"><apex:inputField value="{!as.schedule.ISCI_CODE__c}"/></apex:column>
+                    <apex:column headerValue="800 Number"><apex:inputField value="{!as.schedule.X800_Number__c}"/></apex:column>
+                    <apex:column headerValue="Days of Air"><apex:inputField value="{!as.schedule.Days_of_Air__c }"/></apex:column>
+                    <apex:column headerValue="Pod"><apex:inputField value="{!as.schedule.Pod__c }"/></apex:column>
+                    <apex:column headerValue="Comments"><apex:inputField value="{!as.schedule.Comments__c}"/></apex:column>
+                    <apex:column headerValue="Status"><apex:inputField value="{!as.schedule.Status__c}"/></apex:column>
+                    <apex:column headerValue="Schedule">
+                        <a href="/{!as.schedule.id}" target="_blank">
+                            <apex:inputField value="{!as.schedule.Name}"/>
+                        </a>
+                    </apex:column>
+                    <apex:column headerValue="Filler"><apex:inputField value="{!as.schedule.Filler__c}"/></apex:column>
+                    <apex:column headerValue="Test"><apex:inputField value="{!as.schedule.TEST__c}"/></apex:column>
+               
+                </apex:pageBlockTable>
+            </apex:pageBlockSection>
+        </div>
+        </apex:pageBlock>
+        
+        <apex:pageBlock title="AVAILABILITY" rendered="{!(!missingReq)&& hasRecords}">
+        <div id="avail">
+            <apex:pageBlockSection >
+                <apex:pageBlockTable value="{!availabilityList}" var="as">
+                    <apex:column headerValue="Edit/Select">
+                        <apex:facet name="header">
+                            <APEX:OUTPutPanel >
+                                <input type="checkbox" onClick="selectAll(this.checked,'avail');return true;" name="allchk" id="allAvailChk"/>
+                            </APEX:OUTPutPanel>
+                        </apex:facet>
+                        <input type="checkbox" value="{!as.schedule.Id}" name="chk_{!as.SrNo}" id="chk_{!as.SrNo}" />
+                    </apex:column>
+                    <apex:column headerValue="Week"><apex:inputField value="{!as.schedule.Week__c}"/></apex:column>
+                    <apex:column headerValue="Deal">
+                        <a href="/{!as.schedule.Deal_Parent__c}" target="_blank">
+                            <apex:inputField value="{!as.schedule.Deal_Parent__c}"/>
+                        </a>
+                    </apex:column>
+                    <apex:column headerValue="Deal Program"><apex:inputField value="{!as.schedule.DealProgram__c}"/></apex:column>
+                    <apex:column headerValue="Deal Account"><apex:inputField value="{!as.schedule.DealAccount__c}"/></apex:column>
+                    <apex:column headerValue="Deal Brand"><apex:inputField value="{!as.schedule.DealBrand__c}"/></apex:column>
+                    <apex:column headerValue="Units Aired"><apex:inputField value="{!as.schedule.Units_Aired__c}" style="width:50px;"/></apex:column>
+                    <apex:column headerValue="Units Booked"><apex:inputField value="{!as.schedule.Units_Available__c}" style="width:50px;"/></apex:column>
+                    <apex:column headerValue="Units Pre-Empted"><apex:inputField value="{!as.schedule.Units_Preempted__c}" style="width:50px;"/></apex:column>
+                    <apex:column headerValue="Unit Length"><apex:inputField value="{!as.schedule.UnitLength__c}" style="width:50px;"/></apex:column>
+                    <apex:column headerValue="Rate"><apex:inputField value="{!as.schedule.Rate__c}" style="width:50px"/></apex:column>
+                    <apex:column headerValue=":30 Rate"><apex:inputField value="{!as.schedule.X30_Rate__c}"/></apex:column>
+                    <apex:column headerValue="Campaign"><apex:outputField value="{!as.schedule.Deal_Parent__r.Campaign__c}"/></apex:column>
+                    <apex:column headerValue="ISCI Code"><apex:inputField value="{!as.schedule.ISCI_CODE__c}"/></apex:column>
+                    <apex:column headerValue="800 Number"><apex:inputField value="{!as.schedule.X800_Number__c}"/></apex:column>
+                    <apex:column headerValue="Days of Air"><apex:inputField value="{!as.schedule.Days_of_Air__c }"/></apex:column>
+                    <apex:column headerValue="Pod"><apex:inputField value="{!as.schedule.Pod__c }"/></apex:column>
+                    <apex:column headerValue="Schedule">
+                        <a href="/{!as.schedule.id}" target="_blank">
+                            <apex:inputField value="{!as.schedule.Name}"/>
+                        </a>
+                    </apex:column>
+                    <apex:column headerValue="Filler"><apex:inputField value="{!as.schedule.Filler__c}"/></apex:column>
+                    <apex:column headerValue="Test"><apex:inputField value="{!as.schedule.TEST__c}"/></apex:column>
+         
+                </apex:pageBlockTable>
+            </apex:pageBlockSection>
+        </div>
+        </apex:pageblock>
+        </div>
+    </apex:form>
+    
+    
+    <script>
+    
+        function editSchedules(){
+            var url= '/apex/editManagementSchedule?'
+            var allchks = document.getElementById("airSch").getElementsByTagName('input');
+            var j = 0;
+            var amp = '';
+            //alert(allchks.length);
+            for(var i = 0; i < allchks.length;i++){
+                if(allchks[i].type == 'checkbox' && allchks[i].checked && allchks[i].id != 'allAirChk' && allchks[i].value.length>=15){
+                    url+=amp + "id_" + j++ +'='+ allchks[i].value;                
+                    amp = "&";
+                    //alert(allchks[i].id);
+                }
+            }
+            //alert(url);
+            allchks = document.getElementById("preEmp").getElementsByTagName('input');
+            //j = 0;
+            for(var i = 0; i < allchks.length;i++){
+                if(allchks[i].type == 'checkbox' && allchks[i].checked && allchks[i].id != 'allPreChk' && allchks[i].value.length>=15){
+                    url+=amp + "id_" + j++ +'='+ allchks[i].value;                
+                    amp = "&";
+                }
+            }
+            
+            allchks = document.getElementById("cancel").getElementsByTagName('input');
+            //j = 0;
+            for(var i = 0; i < allchks.length;i++){
+                if(allchks[i].type == 'checkbox' && allchks[i].checked && allchks[i].id != 'allCancelChk' && allchks[i].value.length>=15){
+                    url+=amp + "id_" + j++ +'='+ allchks[i].value;                
+                    amp = "&";
+                }
+            }
+            
+            allchks = document.getElementById("avail").getElementsByTagName('input');
+            //j = 0;
+            for(var i = 0; i < allchks.length;i++){
+                if(allchks[i].type == 'checkbox' && allchks[i].checked && allchks[i].id != 'allAvailChk' && allchks[i].value.length>=15){
+                    url+=amp + "id_" + j++ +'='+ allchks[i].value;                
+                    amp = "&";
+                }
+            } 
+            if(j > 0){
+                window.open(url ,'Edit Management Schedule','menubar=0,resizable=0,width=800,height=300,screenX=150,left=450,screenY=150,top=300,status=yes,scrollbars=no');
+            }
+            else{
+                alert("No Record Selected");                
+            }
+        }
+        function refreshMe(){        
+            refresh();
+        }
+        function selectAll(flag,id){
+            var allchks = document.getElementById(id).getElementsByTagName('input')
+            for(var i = 0; i < allchks.length;i++){
+                if(allchks[i].type == "checkbox" && allchks[i].id != 'allchk' && (allchks[i].id != 'allAirChk' || allchks[i].id != 'allPreChk' || allchks[i].id != 'allAvailChk')){
+                    allchks[i].checked = flag;
+                }
+            }
+        }
+        function runScript(e) {
+            if (e.keyCode == 13) {
+                save();
+                return false;
+            }
+        }
+    </script>
+</apex:page>

@@ -1,0 +1,1577 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <allowInChatterGroups>true</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <enableActivities>true</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableEnhancedLookup>true</enableEnhancedLookup>
+    <enableFeeds>true</enableFeeds>
+    <enableHistory>true</enableHistory>
+    <enableLicensing>false</enableLicensing>
+    <enableReports>true</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <externalSharingModel>ReadWrite</externalSharingModel>
+    <fields>
+        <fullName>Account__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Account</label>
+        <referenceTo>Account</referenceTo>
+        <relationshipLabel>Brands</relationshipLabel>
+        <relationshipName>Brands</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Advertiser__c</fullName>
+        <deleteConstraint>Restrict</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Advertiser</label>
+        <referenceTo>Advertiser__c</referenceTo>
+        <relationshipLabel>Brands</relationshipLabel>
+        <relationshipName>Brands</relationshipName>
+        <required>true</required>
+        <trackFeedHistory>true</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Agency_Client__c</fullName>
+        <description>DELETE</description>
+        <externalId>false</externalId>
+        <inlineHelpText>DELETE</inlineHelpText>
+        <label>[Dep]Agency Client</label>
+        <length>6</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Agency_Estimate__c</fullName>
+        <description>DELETE</description>
+        <externalId>false</externalId>
+        <inlineHelpText>DELETE</inlineHelpText>
+        <label>[Dep]Agency Estimate</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Agency_Product_del__c</fullName>
+        <description>DELETE</description>
+        <externalId>false</externalId>
+        <inlineHelpText>DELETE</inlineHelpText>
+        <label>[Dep]Agency Product</label>
+        <length>6</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Approved_Duplicate__c</fullName>
+        <externalId>false</externalId>
+        <label>Duplicate Approval</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Approved</fullName>
+                    <default>false</default>
+                    <label>Approved</label>
+                </value>
+                <value>
+                    <fullName>Not Approved</fullName>
+                    <default>false</default>
+                    <label>Not Approved</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Approved__c</fullName>
+        <description>Networks on which a specific commercial is approved for air. DELETE</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Networks on which a specific commercial is approved for air. DELETE</inlineHelpText>
+        <label>[Dep]Approved</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>MultiselectPicklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>21st Century Fox Syndication</fullName>
+                    <default>false</default>
+                    <label>21st Century Fox Syndication</label>
+                </value>
+                <value>
+                    <fullName>Antenna TV</fullName>
+                    <default>false</default>
+                    <label>Antenna TV</label>
+                </value>
+                <value>
+                    <fullName>Bill Cunningham</fullName>
+                    <default>false</default>
+                    <label>Bill Cunningham</label>
+                </value>
+                <value>
+                    <fullName>BounceTV</fullName>
+                    <default>false</default>
+                    <label>BounceTV</label>
+                </value>
+                <value>
+                    <fullName>BuzzrTV</fullName>
+                    <default>false</default>
+                    <label>BuzzrTV</label>
+                </value>
+                <value>
+                    <fullName>Cheaters</fullName>
+                    <default>false</default>
+                    <label>Cheaters</label>
+                </value>
+                <value>
+                    <fullName>COZI</fullName>
+                    <default>false</default>
+                    <label>COZI</label>
+                </value>
+                <value>
+                    <fullName>EscapeTV</fullName>
+                    <default>false</default>
+                    <label>EscapeTV</label>
+                </value>
+                <value>
+                    <fullName>FBN</fullName>
+                    <default>false</default>
+                    <label>FBN</label>
+                </value>
+                <value>
+                    <fullName>GritTV</fullName>
+                    <default>false</default>
+                    <label>GritTV</label>
+                </value>
+                <value>
+                    <fullName>Justice Network</fullName>
+                    <default>false</default>
+                    <label>Justice Network</label>
+                </value>
+                <value>
+                    <fullName>MAV TV</fullName>
+                    <default>false</default>
+                    <label>MAV TV</label>
+                </value>
+                <value>
+                    <fullName>MGM HD</fullName>
+                    <default>false</default>
+                    <label>MGM HD</label>
+                </value>
+                <value>
+                    <fullName>MGM Syndication</fullName>
+                    <default>false</default>
+                    <label>MGM Syndication</label>
+                </value>
+                <value>
+                    <fullName>MLB Network</fullName>
+                    <default>false</default>
+                    <label>MLB Network</label>
+                </value>
+                <value>
+                    <fullName>Paternity Court</fullName>
+                    <default>false</default>
+                    <label>Paternity Court</label>
+                </value>
+                <value>
+                    <fullName>Real Life 101</fullName>
+                    <default>false</default>
+                    <label>Real Life 101</label>
+                </value>
+                <value>
+                    <fullName>Ron Hazelton</fullName>
+                    <default>false</default>
+                    <label>Ron Hazelton</label>
+                </value>
+                <value>
+                    <fullName>Showcase</fullName>
+                    <default>false</default>
+                    <label>Showcase</label>
+                </value>
+                <value>
+                    <fullName>Tennis Channel</fullName>
+                    <default>false</default>
+                    <label>Tennis Channel</label>
+                </value>
+                <value>
+                    <fullName>This TV</fullName>
+                    <default>false</default>
+                    <label>This TV</label>
+                </value>
+                <value>
+                    <fullName>TKN</fullName>
+                    <default>false</default>
+                    <label>TKN</label>
+                </value>
+                <value>
+                    <fullName>Wild America</fullName>
+                    <default>false</default>
+                    <label>Wild America</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+        <visibleLines>10</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Brand_CIA__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>To identify which brands are CIA DELETE</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Please check this box only if the brand is CIA DELETE</inlineHelpText>
+        <label>[Dep]Brand CIA</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Brand_Credit_Limit__c</fullName>
+        <defaultValue>0</defaultValue>
+        <externalId>false</externalId>
+        <label>Brand Credit Limit</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Brand_Number__c</fullName>
+        <description>Unique number created per Intacct request</description>
+        <displayFormat>B-{000000}</displayFormat>
+        <externalId>true</externalId>
+        <label>Brand Number</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>AutoNumber</type>
+    </fields>
+    <fields>
+        <fullName>Brands_Advertisers__c</fullName>
+        <externalId>false</externalId>
+        <formula>Name  &amp;&quot; - &quot;&amp; Advertiser__r.Name</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Brands Advertisers</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>CPM_P_Secondary__c</fullName>
+        <description>Secondary CPM/CPP DELETE</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Secondary CPM/CPP DELETE</inlineHelpText>
+        <label>[Dep]CPM/P - Secondary</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>CPM_Primary__c</fullName>
+        <description>Primary CPM/CPP for Brand DELETE</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Primary CPM/CPP for Brand DELETE</inlineHelpText>
+        <label>[Dep]CPM/P - Primary</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>CPO_CPA__c</fullName>
+        <description>Cost Per Order/Acquisition/Action</description>
+        <externalId>false</externalId>
+        <inlineHelpText>DELETE</inlineHelpText>
+        <label>[Dep]CPO/CPA</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Case_Insensitive_ID__c</fullName>
+        <description>Case Sensitive ID For Use in Excel Matching</description>
+        <externalId>false</externalId>
+        <formula>CASESAFEID(Id)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>Case Sensitive ID For Use in Excel Matching (VLookups)</inlineHelpText>
+        <label>Case Insensitive ID</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Category__c</fullName>
+        <externalId>false</externalId>
+        <label>Category</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>.Com/E-Commerce</fullName>
+                    <default>false</default>
+                    <label>.Com/E-Commerce</label>
+                </value>
+                <value>
+                    <fullName>Apparel/Accessories</fullName>
+                    <default>false</default>
+                    <label>Apparel/Accessories</label>
+                </value>
+                <value>
+                    <fullName>Appliances/Home Gadgets</fullName>
+                    <default>false</default>
+                    <label>Appliances/Home Gadgets</label>
+                </value>
+                <value>
+                    <fullName>Attorney/General Legal Services</fullName>
+                    <default>false</default>
+                    <label>Attorney/General Legal Services</label>
+                </value>
+                <value>
+                    <fullName>Attorney-Medical Services/Equipments/Prescriptions</fullName>
+                    <default>false</default>
+                    <label>Attorney-Medical Services/Equipments/Prescriptions</label>
+                </value>
+                <value>
+                    <fullName>Auto Accessories/Parts/Repair</fullName>
+                    <default>false</default>
+                    <label>Auto Accessories/Parts/Repair</label>
+                </value>
+                <value>
+                    <fullName>Baby</fullName>
+                    <default>false</default>
+                    <label>Baby</label>
+                </value>
+                <value>
+                    <fullName>Beauty/Cosmetics/Hair Care</fullName>
+                    <default>false</default>
+                    <label>Beauty/Cosmetics/Hair Care</label>
+                </value>
+                <value>
+                    <fullName>Business/Professional Services</fullName>
+                    <default>false</default>
+                    <label>Business/Professional Services</label>
+                </value>
+                <value>
+                    <fullName>Charity</fullName>
+                    <default>false</default>
+                    <label>Charity</label>
+                </value>
+                <value>
+                    <fullName>Cleaning Supplies</fullName>
+                    <default>false</default>
+                    <label>Cleaning Supplies</label>
+                </value>
+                <value>
+                    <fullName>Crafts/Hobbies/Sporting goods/Toys</fullName>
+                    <default>false</default>
+                    <label>Crafts/Hobbies/Sporting goods/Toys</label>
+                </value>
+                <value>
+                    <fullName>Education</fullName>
+                    <default>false</default>
+                    <label>Education</label>
+                </value>
+                <value>
+                    <fullName>Electronics/Software</fullName>
+                    <default>false</default>
+                    <label>Electronics/Software</label>
+                </value>
+                <value>
+                    <fullName>Entertainment/Gaming</fullName>
+                    <default>false</default>
+                    <label>Entertainment/Gaming</label>
+                </value>
+                <value>
+                    <fullName>Fitness/Health/Medical Equipment</fullName>
+                    <default>false</default>
+                    <label>Fitness/Health/Medical Equipment</label>
+                </value>
+                <value>
+                    <fullName>Food and Beverages</fullName>
+                    <default>false</default>
+                    <label>Food and Beverages</label>
+                </value>
+                <value>
+                    <fullName>Home Improvement/Furniture</fullName>
+                    <default>false</default>
+                    <label>Home Improvement/Furniture</label>
+                </value>
+                <value>
+                    <fullName>Insurance- Auto</fullName>
+                    <default>false</default>
+                    <label>Insurance- Auto</label>
+                </value>
+                <value>
+                    <fullName>Insurance- Health/ Dental/ Disability</fullName>
+                    <default>false</default>
+                    <label>Insurance- Health/ Dental/ Disability</label>
+                </value>
+                <value>
+                    <fullName>Insurance- Life</fullName>
+                    <default>false</default>
+                    <label>Insurance- Life</label>
+                </value>
+                <value>
+                    <fullName>Media/Telecom</fullName>
+                    <default>false</default>
+                    <label>Media/Telecom</label>
+                </value>
+                <value>
+                    <fullName>Medical Services</fullName>
+                    <default>false</default>
+                    <label>Medical Services</label>
+                </value>
+                <value>
+                    <fullName>Mental Health</fullName>
+                    <default>false</default>
+                    <label>Mental Health</label>
+                </value>
+                <value>
+                    <fullName>Mobile Apps</fullName>
+                    <default>false</default>
+                    <label>Mobile Apps</label>
+                </value>
+                <value>
+                    <fullName>Office Supplies</fullName>
+                    <default>false</default>
+                    <label>Office Supplies</label>
+                </value>
+                <value>
+                    <fullName>Pets</fullName>
+                    <default>false</default>
+                    <label>Pets</label>
+                </value>
+                <value>
+                    <fullName>Pharmaceuticals/Drugs</fullName>
+                    <default>false</default>
+                    <label>Pharmaceuticals/Drugs</label>
+                </value>
+                <value>
+                    <fullName>Social Networking/Dating</fullName>
+                    <default>false</default>
+                    <label>Social Networking/Dating</label>
+                </value>
+                <value>
+                    <fullName>Toiletry</fullName>
+                    <default>false</default>
+                    <label>Toiletry</label>
+                </value>
+                <value>
+                    <fullName>Travel/Recreation/Outdoors</fullName>
+                    <default>false</default>
+                    <label>Travel/Recreation/Outdoors</label>
+                </value>
+                <value>
+                    <fullName>Financial Services</fullName>
+                    <default>false</default>
+                    <label>Financial Services</label>
+                </value>
+                <value>
+                    <fullName>Other</fullName>
+                    <default>false</default>
+                    <label>Other</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Demo_Primary__c</fullName>
+        <description>DELETE</description>
+        <externalId>false</externalId>
+        <inlineHelpText>DELETE</inlineHelpText>
+        <label>[Dep]Demo - Primary</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>HH</fullName>
+                    <default>false</default>
+                    <label>HH</label>
+                </value>
+                <value>
+                    <fullName>A18+</fullName>
+                    <default>false</default>
+                    <label>A18+</label>
+                </value>
+                <value>
+                    <fullName>A18-34</fullName>
+                    <default>false</default>
+                    <label>A18-34</label>
+                </value>
+                <value>
+                    <fullName>A18-49</fullName>
+                    <default>false</default>
+                    <label>A18-49</label>
+                </value>
+                <value>
+                    <fullName>A25-49</fullName>
+                    <default>false</default>
+                    <label>A25-49</label>
+                </value>
+                <value>
+                    <fullName>A25-54</fullName>
+                    <default>false</default>
+                    <label>A25-54</label>
+                </value>
+                <value>
+                    <fullName>A35-64</fullName>
+                    <default>false</default>
+                    <label>A35-64</label>
+                </value>
+                <value>
+                    <fullName>A50+</fullName>
+                    <default>false</default>
+                    <label>A50+</label>
+                </value>
+                <value>
+                    <fullName>A65+</fullName>
+                    <default>false</default>
+                    <label>A65+</label>
+                </value>
+                <value>
+                    <fullName>W18+</fullName>
+                    <default>false</default>
+                    <label>W18+</label>
+                </value>
+                <value>
+                    <fullName>W18-34</fullName>
+                    <default>false</default>
+                    <label>W18-34</label>
+                </value>
+                <value>
+                    <fullName>W18-49</fullName>
+                    <default>false</default>
+                    <label>W18-49</label>
+                </value>
+                <value>
+                    <fullName>W25-49</fullName>
+                    <default>false</default>
+                    <label>W25-49</label>
+                </value>
+                <value>
+                    <fullName>W25-54</fullName>
+                    <default>false</default>
+                    <label>W25-54</label>
+                </value>
+                <value>
+                    <fullName>W35-64</fullName>
+                    <default>false</default>
+                    <label>W35-64</label>
+                </value>
+                <value>
+                    <fullName>W50+</fullName>
+                    <default>false</default>
+                    <label>W50+</label>
+                </value>
+                <value>
+                    <fullName>W65+</fullName>
+                    <default>false</default>
+                    <label>W65+</label>
+                </value>
+                <value>
+                    <fullName>M18+</fullName>
+                    <default>false</default>
+                    <label>M18+</label>
+                </value>
+                <value>
+                    <fullName>M18-34</fullName>
+                    <default>false</default>
+                    <label>M18-34</label>
+                </value>
+                <value>
+                    <fullName>M18-49</fullName>
+                    <default>false</default>
+                    <label>M18-49</label>
+                </value>
+                <value>
+                    <fullName>M25-49</fullName>
+                    <default>false</default>
+                    <label>M25-49</label>
+                </value>
+                <value>
+                    <fullName>M25-54</fullName>
+                    <default>false</default>
+                    <label>M25-54</label>
+                </value>
+                <value>
+                    <fullName>M35-64</fullName>
+                    <default>false</default>
+                    <label>M35-64</label>
+                </value>
+                <value>
+                    <fullName>M50+</fullName>
+                    <default>false</default>
+                    <label>M50+</label>
+                </value>
+                <value>
+                    <fullName>M65+</fullName>
+                    <default>false</default>
+                    <label>M65+</label>
+                </value>
+                <value>
+                    <fullName>P2-11</fullName>
+                    <default>false</default>
+                    <label>P2-11</label>
+                </value>
+                <value>
+                    <fullName>P6-11</fullName>
+                    <default>false</default>
+                    <label>P6-11</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Demo_Secondary__c</fullName>
+        <description>DELETE</description>
+        <externalId>false</externalId>
+        <inlineHelpText>DELETE</inlineHelpText>
+        <label>[Dep]Demo - Secondary</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>HH</fullName>
+                    <default>false</default>
+                    <label>HH</label>
+                </value>
+                <value>
+                    <fullName>A18+</fullName>
+                    <default>false</default>
+                    <label>A18+</label>
+                </value>
+                <value>
+                    <fullName>A18-34</fullName>
+                    <default>false</default>
+                    <label>A18-34</label>
+                </value>
+                <value>
+                    <fullName>A18-49</fullName>
+                    <default>false</default>
+                    <label>A18-49</label>
+                </value>
+                <value>
+                    <fullName>A25-49</fullName>
+                    <default>false</default>
+                    <label>A25-49</label>
+                </value>
+                <value>
+                    <fullName>A25-54</fullName>
+                    <default>false</default>
+                    <label>A25-54</label>
+                </value>
+                <value>
+                    <fullName>A35-64</fullName>
+                    <default>false</default>
+                    <label>A35-64</label>
+                </value>
+                <value>
+                    <fullName>A50+</fullName>
+                    <default>false</default>
+                    <label>A50+</label>
+                </value>
+                <value>
+                    <fullName>A65+</fullName>
+                    <default>false</default>
+                    <label>A65+</label>
+                </value>
+                <value>
+                    <fullName>W18+</fullName>
+                    <default>false</default>
+                    <label>W18+</label>
+                </value>
+                <value>
+                    <fullName>W18-34</fullName>
+                    <default>false</default>
+                    <label>W18-34</label>
+                </value>
+                <value>
+                    <fullName>W18-49</fullName>
+                    <default>false</default>
+                    <label>W18-49</label>
+                </value>
+                <value>
+                    <fullName>W25-49</fullName>
+                    <default>false</default>
+                    <label>W25-49</label>
+                </value>
+                <value>
+                    <fullName>W25-54</fullName>
+                    <default>false</default>
+                    <label>W25-54</label>
+                </value>
+                <value>
+                    <fullName>W35-64</fullName>
+                    <default>false</default>
+                    <label>W35-64</label>
+                </value>
+                <value>
+                    <fullName>W50+</fullName>
+                    <default>false</default>
+                    <label>W50+</label>
+                </value>
+                <value>
+                    <fullName>W65+</fullName>
+                    <default>false</default>
+                    <label>W65+</label>
+                </value>
+                <value>
+                    <fullName>M18+</fullName>
+                    <default>false</default>
+                    <label>M18+</label>
+                </value>
+                <value>
+                    <fullName>M18-34</fullName>
+                    <default>false</default>
+                    <label>M18-34</label>
+                </value>
+                <value>
+                    <fullName>M18-49</fullName>
+                    <default>false</default>
+                    <label>M18-49</label>
+                </value>
+                <value>
+                    <fullName>M25-49</fullName>
+                    <default>false</default>
+                    <label>M25-49</label>
+                </value>
+                <value>
+                    <fullName>M25-54</fullName>
+                    <default>false</default>
+                    <label>M25-54</label>
+                </value>
+                <value>
+                    <fullName>M35-64</fullName>
+                    <default>false</default>
+                    <label>M35-64</label>
+                </value>
+                <value>
+                    <fullName>M50+</fullName>
+                    <default>false</default>
+                    <label>M50+</label>
+                </value>
+                <value>
+                    <fullName>M65+</fullName>
+                    <default>false</default>
+                    <label>M65+</label>
+                </value>
+                <value>
+                    <fullName>P2-11</fullName>
+                    <default>false</default>
+                    <label>P2-11</label>
+                </value>
+                <value>
+                    <fullName>P6-11</fullName>
+                    <default>false</default>
+                    <label>P6-11</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Description__c</fullName>
+        <externalId>false</externalId>
+        <label>[Dep]Description</label>
+        <length>255</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Dupe__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>DELETE</description>
+        <externalId>false</externalId>
+        <inlineHelpText>DELETE</inlineHelpText>
+        <label>Dupe</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Email_to_SF_ID__c</fullName>
+        <externalId>false</externalId>
+        <formula>&quot;(ref:&quot;&amp; Id &amp;&quot;)&quot;</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Email to SF ID</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Hitlisted__c</fullName>
+        <description>DELETE</description>
+        <externalId>false</externalId>
+        <inlineHelpText>If a brand hitlists a program, select the program here DELETE</inlineHelpText>
+        <label>Hitlisted</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>MultiselectPicklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Bill Cunningham Show</fullName>
+                    <default>false</default>
+                    <label>Bill Cunningham Show</label>
+                </value>
+                <value>
+                    <fullName>Bounce TV</fullName>
+                    <default>false</default>
+                    <label>Bounce TV</label>
+                </value>
+                <value>
+                    <fullName>Cheaters</fullName>
+                    <default>false</default>
+                    <label>Cheaters</label>
+                </value>
+                <value>
+                    <fullName>MLB Network</fullName>
+                    <default>false</default>
+                    <label>MLB Network</label>
+                </value>
+                <value>
+                    <fullName>MGM Syndication</fullName>
+                    <default>false</default>
+                    <label>MGM Syndication</label>
+                </value>
+                <value>
+                    <fullName>MGM HD</fullName>
+                    <default>false</default>
+                    <label>MGM HD</label>
+                </value>
+                <value>
+                    <fullName>Ron Hazelton</fullName>
+                    <default>false</default>
+                    <label>Ron Hazelton</label>
+                </value>
+                <value>
+                    <fullName>Tennis Channel</fullName>
+                    <default>false</default>
+                    <label>Tennis Channel</label>
+                </value>
+                <value>
+                    <fullName>Paternity Court</fullName>
+                    <default>false</default>
+                    <label>Paternity Court</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+        <visibleLines>10</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Merge__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>DELETE</description>
+        <externalId>false</externalId>
+        <inlineHelpText>DELETE</inlineHelpText>
+        <label>[Dep]Merge</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Not_Approved__c</fullName>
+        <description>Networks on which a commercial is not approved for air</description>
+        <externalId>false</externalId>
+        <inlineHelpText>DELETE</inlineHelpText>
+        <label>[Dep]Not Approved</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>MultiselectPicklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>21st Century Fox Syndication</fullName>
+                    <default>false</default>
+                    <label>21st Century Fox Syndication</label>
+                </value>
+                <value>
+                    <fullName>Antenna TV</fullName>
+                    <default>false</default>
+                    <label>Antenna TV</label>
+                </value>
+                <value>
+                    <fullName>Bill Cunningham</fullName>
+                    <default>false</default>
+                    <label>Bill Cunningham</label>
+                </value>
+                <value>
+                    <fullName>Bounce TV</fullName>
+                    <default>false</default>
+                    <label>Bounce TV</label>
+                </value>
+                <value>
+                    <fullName>BuzzrTV</fullName>
+                    <default>false</default>
+                    <label>BuzzrTV</label>
+                </value>
+                <value>
+                    <fullName>CBS Sports</fullName>
+                    <default>false</default>
+                    <label>CBS Sports</label>
+                </value>
+                <value>
+                    <fullName>Cheaters</fullName>
+                    <default>false</default>
+                    <label>Cheaters</label>
+                </value>
+                <value>
+                    <fullName>COZI</fullName>
+                    <default>false</default>
+                    <label>COZI</label>
+                </value>
+                <value>
+                    <fullName>Documentary</fullName>
+                    <default>false</default>
+                    <label>Documentary</label>
+                </value>
+                <value>
+                    <fullName>Escape TV</fullName>
+                    <default>false</default>
+                    <label>Escape TV</label>
+                </value>
+                <value>
+                    <fullName>FBN</fullName>
+                    <default>false</default>
+                    <label>FBN</label>
+                </value>
+                <value>
+                    <fullName>Grit TV</fullName>
+                    <default>false</default>
+                    <label>Grit TV</label>
+                </value>
+                <value>
+                    <fullName>Justice Network</fullName>
+                    <default>false</default>
+                    <label>Justice Network</label>
+                </value>
+                <value>
+                    <fullName>MAV TV</fullName>
+                    <default>false</default>
+                    <label>MAV TV</label>
+                </value>
+                <value>
+                    <fullName>MGM HD</fullName>
+                    <default>false</default>
+                    <label>MGM HD</label>
+                </value>
+                <value>
+                    <fullName>MGM Syndication</fullName>
+                    <default>false</default>
+                    <label>MGM Syndication</label>
+                </value>
+                <value>
+                    <fullName>MLB Network</fullName>
+                    <default>false</default>
+                    <label>MLB Network</label>
+                </value>
+                <value>
+                    <fullName>Paternity Court</fullName>
+                    <default>false</default>
+                    <label>Paternity Court</label>
+                </value>
+                <value>
+                    <fullName>Real Life 101</fullName>
+                    <default>false</default>
+                    <label>Real Life 101</label>
+                </value>
+                <value>
+                    <fullName>Ron Hazelton</fullName>
+                    <default>false</default>
+                    <label>Ron Hazelton</label>
+                </value>
+                <value>
+                    <fullName>Showcase</fullName>
+                    <default>false</default>
+                    <label>Showcase</label>
+                </value>
+                <value>
+                    <fullName>Tennis Channel</fullName>
+                    <default>false</default>
+                    <label>Tennis Channel</label>
+                </value>
+                <value>
+                    <fullName>This TV</fullName>
+                    <default>false</default>
+                    <label>This TV</label>
+                </value>
+                <value>
+                    <fullName>TKN</fullName>
+                    <default>false</default>
+                    <label>TKN</label>
+                </value>
+                <value>
+                    <fullName>Wild America</fullName>
+                    <default>false</default>
+                    <label>Wild America</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+        <visibleLines>10</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Screened__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Screened for content and redflags by MVMS</description>
+        <externalId>false</externalId>
+        <inlineHelpText>DELETE</inlineHelpText>
+        <label>[Dep]Screened</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Spanish_Language__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>DELETE</description>
+        <externalId>false</externalId>
+        <inlineHelpText>DELETE</inlineHelpText>
+        <label>Spanish Language</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Unique_Brand_Identifer__c</fullName>
+        <caseSensitive>false</caseSensitive>
+        <externalId>false</externalId>
+        <label>Unique Brand Identifer</label>
+        <length>60</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>true</unique>
+    </fields>
+    <fields>
+        <fullName>X21st_Century_Fox_Syndcation_Credit_Term__c</fullName>
+        <description>DELETE</description>
+        <externalId>false</externalId>
+        <inlineHelpText>DELETE</inlineHelpText>
+        <label>21st Century Fox Syndcation Credit Terms</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>CIA</fullName>
+                    <default>false</default>
+                    <label>CIA</label>
+                </value>
+                <value>
+                    <fullName>Net 30</fullName>
+                    <default>false</default>
+                    <label>Net 30</label>
+                </value>
+                <value>
+                    <fullName>Net 60</fullName>
+                    <default>false</default>
+                    <label>Net 60</label>
+                </value>
+                <value>
+                    <fullName>Net 90</fullName>
+                    <default>false</default>
+                    <label>Net 90</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>X28_30__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>28:30</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <label>Brands</label>
+    <listViews>
+        <fullName>Advertiser_Move</fullName>
+        <columns>Account__c</columns>
+        <columns>NAME</columns>
+        <columns>Advertiser__c</columns>
+        <columns>Category__c</columns>
+        <columns>CREATED_DATE</columns>
+        <columns>Unique_Brand_Identifer__c</columns>
+        <columns>Dupe__c</columns>
+        <columns>Merge__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Advertiser__c</field>
+            <operation>equals</operation>
+            <value>Idea Village</value>
+        </filters>
+        <label>Advertiser Move</label>
+    </listViews>
+    <listViews>
+        <fullName>All2</fullName>
+        <columns>Account__c</columns>
+        <columns>NAME</columns>
+        <columns>Advertiser__c</columns>
+        <columns>Category__c</columns>
+        <columns>CREATED_DATE</columns>
+        <columns>Unique_Brand_Identifer__c</columns>
+        <columns>Dupe__c</columns>
+        <columns>Merge__c</columns>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+    </listViews>
+    <listViews>
+        <fullName>All_BRANDS_w_Credit_Limits</fullName>
+        <columns>Account__c</columns>
+        <columns>NAME</columns>
+        <columns>CREATED_DATE</columns>
+        <columns>Unique_Brand_Identifer__c</columns>
+        <columns>Brand_Credit_Limit__c</columns>
+        <columns>Brand_CIA__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Brand_Credit_Limit__c</field>
+            <operation>greaterThan</operation>
+            <value>0</value>
+        </filters>
+        <label>All BRANDS w Credit Limits</label>
+    </listViews>
+    <listViews>
+        <fullName>All_CIA_BRANDS</fullName>
+        <columns>Account__c</columns>
+        <columns>NAME</columns>
+        <columns>CREATED_DATE</columns>
+        <columns>Unique_Brand_Identifer__c</columns>
+        <columns>Brand_Credit_Limit__c</columns>
+        <columns>Brand_CIA__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Brand_CIA__c</field>
+            <operation>equals</operation>
+            <value>1</value>
+        </filters>
+        <label>All CIA BRANDS</label>
+    </listViews>
+    <listViews>
+        <fullName>Alltest</fullName>
+        <columns>Account__c</columns>
+        <columns>NAME</columns>
+        <columns>Advertiser__c</columns>
+        <columns>Category__c</columns>
+        <columns>CREATED_DATE</columns>
+        <columns>Unique_Brand_Identifer__c</columns>
+        <columns>Dupe__c</columns>
+        <columns>Merge__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>NAME</field>
+            <operation>contains</operation>
+            <value>z&amp;</value>
+        </filters>
+        <label>Alle</label>
+    </listViews>
+    <listViews>
+        <fullName>Brand_Check</fullName>
+        <columns>Account__c</columns>
+        <columns>NAME</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>NAME</field>
+            <operation>contains</operation>
+            <value>aspca,bark off,big top cupcake,beezid,crazy critters,direct buy national</value>
+        </filters>
+        <label>Brand Check</label>
+    </listViews>
+    <listViews>
+        <fullName>DealProcess</fullName>
+        <filterScope>Queue</filterScope>
+        <label>Deal Process</label>
+        <queue>DealProcess</queue>
+    </listViews>
+    <listViews>
+        <fullName>FBN_Approved</fullName>
+        <booleanFilter>( 1 or 2)</booleanFilter>
+        <columns>NAME</columns>
+        <columns>Approved__c</columns>
+        <columns>Not_Approved__c</columns>
+        <columns>Screened__c</columns>
+        <columns>X28_30__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Approved__c</field>
+            <operation>includes</operation>
+            <value>FBN</value>
+        </filters>
+        <filters>
+            <field>Not_Approved__c</field>
+            <operation>includes</operation>
+            <value>FBN</value>
+        </filters>
+        <label>FBN Approved</label>
+    </listViews>
+    <listViews>
+        <fullName>Horizon_Brands</fullName>
+        <columns>Account__c</columns>
+        <columns>NAME</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Account__c</field>
+            <operation>equals</operation>
+            <value>horizon media</value>
+        </filters>
+        <filters>
+            <field>X28_30__c</field>
+            <operation>equals</operation>
+            <value>0</value>
+        </filters>
+        <label>Horizon Brands</label>
+    </listViews>
+    <listViews>
+        <fullName>LF_Brands</fullName>
+        <columns>NAME</columns>
+        <columns>Account__c</columns>
+        <columns>Category__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>X28_30__c</field>
+            <operation>equals</operation>
+            <value>1</value>
+        </filters>
+        <label>LF Brands</label>
+    </listViews>
+    <listViews>
+        <fullName>New_Brands</fullName>
+        <columns>NAME</columns>
+        <columns>Description__c</columns>
+        <columns>Account__c</columns>
+        <columns>Category__c</columns>
+        <columns>UPDATEDBY_USER</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>CREATED_DATE</field>
+            <operation>equals</operation>
+            <value>LAST_N_DAYS:10</value>
+        </filters>
+        <filters>
+            <field>X28_30__c</field>
+            <operation>equals</operation>
+            <value>0</value>
+        </filters>
+        <filters>
+            <field>Account__c</field>
+            <operation>notContain</operation>
+            <value>cornerstone,rev share,cannella</value>
+        </filters>
+        <label>New Brands</label>
+    </listViews>
+    <listViews>
+        <fullName>OLD_BRANDS</fullName>
+        <columns>NAME</columns>
+        <columns>Account__c</columns>
+        <columns>LAST_UPDATE</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>CREATED_DATE</field>
+            <operation>lessThan</operation>
+            <value>1/1/2009 12:00 AM</value>
+        </filters>
+        <filters>
+            <field>LAST_UPDATE</field>
+            <operation>lessThan</operation>
+            <value>5/1/2009 12:00 AM</value>
+        </filters>
+        <label>OLD BRANDS</label>
+    </listViews>
+    <listViews>
+        <fullName>P_G</fullName>
+        <columns>Account__c</columns>
+        <columns>NAME</columns>
+        <columns>Advertiser__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Advertiser__c</field>
+            <operation>equals</operation>
+            <value>P&amp;G</value>
+        </filters>
+        <label>P&amp;G</label>
+    </listViews>
+    <listViews>
+        <fullName>Screening</fullName>
+        <columns>NAME</columns>
+        <columns>Screened__c</columns>
+        <columns>Approved__c</columns>
+        <columns>Not_Approved__c</columns>
+        <columns>Description__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>X28_30__c</field>
+            <operation>equals</operation>
+            <value>1</value>
+        </filters>
+        <label>Screening</label>
+    </listViews>
+    <listViews>
+        <fullName>z</fullName>
+        <columns>NAME</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>NAME</field>
+            <operation>startsWith</operation>
+            <value>z&amp;</value>
+        </filters>
+        <label>z-</label>
+    </listViews>
+    <nameField>
+        <label>Brand</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>true</trackHistory>
+        <type>Text</type>
+    </nameField>
+    <pluralLabel>Brands</pluralLabel>
+    <searchLayouts>
+        <customTabListAdditionalFields>Account__c</customTabListAdditionalFields>
+        <lookupDialogsAdditionalFields>Advertiser__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Approved_Duplicate__c</lookupDialogsAdditionalFields>
+        <searchResultsAdditionalFields>Advertiser__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Approved_Duplicate__c</searchResultsAdditionalFields>
+    </searchLayouts>
+    <sharingModel>ReadWrite</sharingModel>
+    <validationRules>
+        <fullName>Category_Required</fullName>
+        <active>true</active>
+        <errorConditionFormula>ISPICKVAL( Category__c , &quot;&quot;)</errorConditionFormula>
+        <errorMessage>Category is required. Please select appropriate category from list.</errorMessage>
+    </validationRules>
+    <visibility>Public</visibility>
+    <webLinks>
+        <fullName>Clone</fullName>
+        <availability>online</availability>
+        <displayType>button</displayType>
+        <encodingKey>UTF-8</encodingKey>
+        <linkType>url</linkType>
+        <masterLabel>Clone</masterLabel>
+        <openType>replace</openType>
+        <protected>false</protected>
+        <url>/{!Brands__c.Id}/e?clone=1&amp;retURL={!Brands__c.Id}&amp;00NC0000005hlnh=</url>
+    </webLinks>
+</CustomObject>

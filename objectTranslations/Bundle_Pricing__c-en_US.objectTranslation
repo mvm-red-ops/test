@@ -1,0 +1,510 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Bundle Pricing</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Bundle Pricing</value>
+    </caseValues>
+    <fields>
+        <label><!-- Active? --></label>
+        <name>Active__c</name>
+    </fields>
+    <fields>
+        <label><!-- Call Letters --></label>
+        <name>Call_Letters__c</name>
+    </fields>
+    <fields>
+        <label><!-- Days --></label>
+        <name>Days__c</name>
+        <picklistValues>
+            <masterLabel>Friday</masterLabel>
+            <translation><!-- Friday --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Monday</masterLabel>
+            <translation><!-- Monday --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Saturday</masterLabel>
+            <translation><!-- Saturday --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Sunday</masterLabel>
+            <translation><!-- Sunday --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Thursday</masterLabel>
+            <translation><!-- Thursday --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Tuesday</masterLabel>
+            <translation><!-- Tuesday --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Wednesday</masterLabel>
+            <translation><!-- Wednesday --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Edited Days --></label>
+        <name>Edited_Days__c</name>
+    </fields>
+    <fields>
+        <label><!-- End Time --></label>
+        <name>End_Time__c</name>
+        <picklistValues>
+            <masterLabel>01:00A</masterLabel>
+            <translation><!-- 01:00A --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>01:00P</masterLabel>
+            <translation><!-- 01:00P --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>01:30A</masterLabel>
+            <translation><!-- 01:30A --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>01:30P</masterLabel>
+            <translation><!-- 01:30P --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>02:00A</masterLabel>
+            <translation><!-- 02:00A --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>02:00P</masterLabel>
+            <translation><!-- 02:00P --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>02:30A</masterLabel>
+            <translation><!-- 02:30A --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>02:30P</masterLabel>
+            <translation><!-- 02:30P --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>03:00A</masterLabel>
+            <translation><!-- 03:00A --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>03:00P</masterLabel>
+            <translation><!-- 03:00P --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>03:30A</masterLabel>
+            <translation><!-- 03:30A --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>03:30P</masterLabel>
+            <translation><!-- 03:30P --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>04:00A</masterLabel>
+            <translation><!-- 04:00A --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>04:00P</masterLabel>
+            <translation><!-- 04:00P --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>04:30A</masterLabel>
+            <translation><!-- 04:30A --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>04:30P</masterLabel>
+            <translation><!-- 04:30P --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>05:00A</masterLabel>
+            <translation><!-- 05:00A --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>05:00P</masterLabel>
+            <translation><!-- 05:00P --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>05:30A</masterLabel>
+            <translation><!-- 05:30A --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>05:30P</masterLabel>
+            <translation><!-- 05:30P --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>06:00A</masterLabel>
+            <translation><!-- 06:00A --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>06:00P</masterLabel>
+            <translation><!-- 06:00P --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>06:30A</masterLabel>
+            <translation><!-- 06:30A --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>06:30P</masterLabel>
+            <translation><!-- 06:30P --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>07:00A</masterLabel>
+            <translation><!-- 07:00A --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>07:00P</masterLabel>
+            <translation><!-- 07:00P --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>07:30A</masterLabel>
+            <translation><!-- 07:30A --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>07:30P</masterLabel>
+            <translation><!-- 07:30P --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>08:00A</masterLabel>
+            <translation><!-- 08:00A --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>08:00P</masterLabel>
+            <translation><!-- 08:00P --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>08:30A</masterLabel>
+            <translation><!-- 08:30A --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>08:30P</masterLabel>
+            <translation><!-- 08:30P --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>09:00A</masterLabel>
+            <translation><!-- 09:00A --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>09:00P</masterLabel>
+            <translation><!-- 09:00P --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>09:30A</masterLabel>
+            <translation><!-- 09:30A --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>09:30P</masterLabel>
+            <translation><!-- 09:30P --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>10:00A</masterLabel>
+            <translation><!-- 10:00A --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>10:00P</masterLabel>
+            <translation><!-- 10:00P --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>10:30A</masterLabel>
+            <translation><!-- 10:30A --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>10:30P</masterLabel>
+            <translation><!-- 10:30P --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>11:00A</masterLabel>
+            <translation><!-- 11:00A --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>11:00P</masterLabel>
+            <translation><!-- 11:00P --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>11:30A</masterLabel>
+            <translation><!-- 11:30A --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>11:30P</masterLabel>
+            <translation><!-- 11:30P --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>12:00A</masterLabel>
+            <translation><!-- 12:00A --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>12:00P</masterLabel>
+            <translation><!-- 12:00P --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>12:30A</masterLabel>
+            <translation><!-- 12:30A --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>12:30P</masterLabel>
+            <translation><!-- 12:30P --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Group --></label>
+        <name>Group__c</name>
+        <picklistValues>
+            <masterLabel>Group 1</masterLabel>
+            <translation><!-- Group 1 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Group 2</masterLabel>
+            <translation><!-- Group 2 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Group 3</masterLabel>
+            <translation><!-- Group 3 --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Market --></label>
+        <name>Market__c</name>
+    </fields>
+    <fields>
+        <label><!-- Program --></label>
+        <name>Program__c</name>
+        <relationshipLabel><!-- Bundle Pricing --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Rate per 30 --></label>
+        <name>Rate_per_30__c</name>
+    </fields>
+    <fields>
+        <label><!-- Raycom Bundle --></label>
+        <name>Raycom_Bundle__c</name>
+    </fields>
+    <fields>
+        <label><!-- Start End Time --></label>
+        <name>Start_End_Time__c</name>
+    </fields>
+    <fields>
+        <label><!-- Start Time --></label>
+        <name>Start_Time__c</name>
+        <picklistValues>
+            <masterLabel>01:00A</masterLabel>
+            <translation><!-- 01:00A --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>01:00P</masterLabel>
+            <translation><!-- 01:00P --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>01:30A</masterLabel>
+            <translation><!-- 01:30A --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>01:30P</masterLabel>
+            <translation><!-- 01:30P --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>02:00A</masterLabel>
+            <translation><!-- 02:00A --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>02:00P</masterLabel>
+            <translation><!-- 02:00P --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>02:30A</masterLabel>
+            <translation><!-- 02:30A --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>02:30P</masterLabel>
+            <translation><!-- 02:30P --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>03:00A</masterLabel>
+            <translation><!-- 03:00A --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>03:00P</masterLabel>
+            <translation><!-- 03:00P --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>03:30A</masterLabel>
+            <translation><!-- 03:30A --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>03:30P</masterLabel>
+            <translation><!-- 03:30P --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>04:00A</masterLabel>
+            <translation><!-- 04:00A --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>04:00P</masterLabel>
+            <translation><!-- 04:00P --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>04:30A</masterLabel>
+            <translation><!-- 04:30A --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>04:30P</masterLabel>
+            <translation><!-- 04:30P --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>05:00A</masterLabel>
+            <translation><!-- 05:00A --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>05:00P</masterLabel>
+            <translation><!-- 05:00P --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>05:30A</masterLabel>
+            <translation><!-- 05:30A --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>05:30P</masterLabel>
+            <translation><!-- 05:30P --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>06:00A</masterLabel>
+            <translation><!-- 06:00A --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>06:00P</masterLabel>
+            <translation><!-- 06:00P --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>06:30A</masterLabel>
+            <translation><!-- 06:30A --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>06:30P</masterLabel>
+            <translation><!-- 06:30P --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>07:00A</masterLabel>
+            <translation><!-- 07:00A --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>07:00P</masterLabel>
+            <translation><!-- 07:00P --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>07:30A</masterLabel>
+            <translation><!-- 07:30A --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>07:30P</masterLabel>
+            <translation><!-- 07:30P --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>08:00A</masterLabel>
+            <translation><!-- 08:00A --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>08:00P</masterLabel>
+            <translation><!-- 08:00P --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>08:30A</masterLabel>
+            <translation><!-- 08:30A --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>08:30P</masterLabel>
+            <translation><!-- 08:30P --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>09:00A</masterLabel>
+            <translation><!-- 09:00A --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>09:00P</masterLabel>
+            <translation><!-- 09:00P --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>09:30A</masterLabel>
+            <translation><!-- 09:30A --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>09:30P</masterLabel>
+            <translation><!-- 09:30P --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>10:00A</masterLabel>
+            <translation><!-- 10:00A --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>10:00P</masterLabel>
+            <translation><!-- 10:00P --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>10:30A</masterLabel>
+            <translation><!-- 10:30A --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>10:30P</masterLabel>
+            <translation><!-- 10:30P --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>11:00A</masterLabel>
+            <translation><!-- 11:00A --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>11:00P</masterLabel>
+            <translation><!-- 11:00P --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>11:30A</masterLabel>
+            <translation><!-- 11:30A --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>11:30P</masterLabel>
+            <translation><!-- 11:30P --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>12:00A</masterLabel>
+            <translation><!-- 12:00A --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>12:00P</masterLabel>
+            <translation><!-- 12:00P --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>12:30A</masterLabel>
+            <translation><!-- 12:30A --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>12:30P</masterLabel>
+            <translation><!-- 12:30P --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Station --></label>
+        <name>Station__c</name>
+        <relationshipLabel><!-- Bundle Pricing --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Stationn --></label>
+        <name>Stationn__c</name>
+        <relationshipLabel><!-- Bundle Pricing --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Total --></label>
+        <name>Total__c</name>
+    </fields>
+    <fields>
+        <label><!-- Units --></label>
+        <name>Units__c</name>
+    </fields>
+    <layouts>
+        <layout>Bundle Daypart Pricing Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

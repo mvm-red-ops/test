@@ -1,0 +1,270 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Credit Application</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Credit Applications</value>
+    </caseValues>
+    <fields>
+        <label><!-- AOR Received --></label>
+        <name>AOR_Received__c</name>
+    </fields>
+    <fields>
+        <label><!-- Account --></label>
+        <name>Account__c</name>
+        <relationshipLabel><!-- Credit Applications --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Advertiser Website --></label>
+        <name>Advertiser_Website__c</name>
+    </fields>
+    <fields>
+        <label><!-- Advertiser --></label>
+        <name>Advertiser__c</name>
+        <relationshipLabel><!-- Credit Applications --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Agency LOG Comments --></label>
+        <name>Agency_LOG_Comments__c</name>
+    </fields>
+    <fields>
+        <label><!-- Agency LOG --></label>
+        <name>Agency_LOG__c</name>
+    </fields>
+    <fields>
+        <label><!-- Agency Website --></label>
+        <name>Agency_Website__c</name>
+    </fields>
+    <fields>
+        <label><!-- Application Status --></label>
+        <name>Application_Status__c</name>
+        <picklistValues>
+            <masterLabel>Complete</masterLabel>
+            <translation><!-- Complete --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Pending Finance Manager Review</masterLabel>
+            <translation><!-- Pending Finance Manager Review --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Pending Upper Management Review</masterLabel>
+            <translation><!-- Pending Upper Management Review --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Submitted</masterLabel>
+            <translation><!-- Submitted --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Application Submitted --></label>
+        <name>Application_Submitted__c</name>
+    </fields>
+    <fields>
+        <label><!-- Application Type --></label>
+        <name>Application_Type__c</name>
+        <picklistValues>
+            <masterLabel>Credit Limit Increase</masterLabel>
+            <translation><!-- Credit Limit Increase --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Credit Limit Review</masterLabel>
+            <translation><!-- Credit Limit Review --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>New Advertiser</masterLabel>
+            <translation><!-- New Advertiser --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>New Agency</masterLabel>
+            <translation><!-- New Agency --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- Please provide details related to company applying for credit. Make sure to identify the industry and brief background of the client. --></help>
+        <label><!-- Client Information --></label>
+        <name>Client_Information__c</name>
+    </fields>
+    <fields>
+        <label><!-- Comments --></label>
+        <name>Comments__c</name>
+    </fields>
+    <fields>
+        <label><!-- Contact Email --></label>
+        <name>Contact_Email__c</name>
+        <relationshipLabel><!-- Credit Applications --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Credit Application --></label>
+        <name>Credit_Application__c</name>
+        <relationshipLabel><!-- Credit Applications --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Credit Granted --></label>
+        <name>Credit_Granted__c</name>
+    </fields>
+    <fields>
+        <label><!-- Credit Limit Increase Details --></label>
+        <name>Credit_Limit_Increase_Details__c</name>
+        <picklistValues>
+            <masterLabel>Advertiser</masterLabel>
+            <translation><!-- Advertiser --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Agency</masterLabel>
+            <translation><!-- Agency --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Current Credit Limit --></label>
+        <name>Current_Credit_Limit__c</name>
+    </fields>
+    <fields>
+        <help><!-- Comments used to support terms granted --></help>
+        <label><!-- Finance Credit Term Support --></label>
+        <name>Finance_Credit_Term_Support__c</name>
+    </fields>
+    <fields>
+        <label><!-- Finance Recommended Credit --></label>
+        <name>Finance_Recommended_Credit__c</name>
+    </fields>
+    <fields>
+        <label><!-- Finance Recommended Terms --></label>
+        <name>Finance_Recommended_Terms__c</name>
+        <picklistValues>
+            <masterLabel>CIA</masterLabel>
+            <translation><!-- CIA --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Due Upon Receipt</masterLabel>
+            <translation><!-- Due Upon Receipt --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Net 10</masterLabel>
+            <translation><!-- Net 10 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Net 15</masterLabel>
+            <translation><!-- Net 15 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Net 30</masterLabel>
+            <translation><!-- Net 30 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Net 45</masterLabel>
+            <translation><!-- Net 45 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Net 60</masterLabel>
+            <translation><!-- Net 60 --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- These are the comments that will support the review of the credit application process. --></help>
+        <label><!-- Finance Review Comments --></label>
+        <name>Finance_Review_Comments__c</name>
+    </fields>
+    <fields>
+        <label><!-- Google Search Comments --></label>
+        <name>Google_Search_Comments__c</name>
+    </fields>
+    <fields>
+        <label><!-- Google Search --></label>
+        <name>Google_Search__c</name>
+    </fields>
+    <fields>
+        <label><!-- SF Bookings (AVG) Type --></label>
+        <name>SF_Bookings_AVG_Type__c</name>
+        <picklistValues>
+            <masterLabel>Bi-Weekly</masterLabel>
+            <translation><!-- Bi-Weekly --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Monthly</masterLabel>
+            <translation><!-- Monthly --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>N/A</masterLabel>
+            <translation><!-- N/A --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Quarterly</masterLabel>
+            <translation><!-- Quarterly --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Weekly</masterLabel>
+            <translation><!-- Weekly --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- SF Bookings Notes --></label>
+        <name>SF_Bookings_Notes__c</name>
+    </fields>
+    <fields>
+        <label><!-- SF Bookings (AVG) --></label>
+        <name>SF_Bookings__c</name>
+    </fields>
+    <fields>
+        <label><!-- SF Ref ID --></label>
+        <name>SF_Ref_ID__c</name>
+    </fields>
+    <fields>
+        <label><!-- Terms Granted --></label>
+        <name>Terms_Granted__c</name>
+        <picklistValues>
+            <masterLabel>CIA</masterLabel>
+            <translation><!-- CIA --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Due Upon Receipt</masterLabel>
+            <translation><!-- Due Upon Receipt --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Net 10</masterLabel>
+            <translation><!-- Net 10 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Net 15</masterLabel>
+            <translation><!-- Net 15 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Net 30</masterLabel>
+            <translation><!-- Net 30 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Net 45</masterLabel>
+            <translation><!-- Net 45 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Net 60</masterLabel>
+            <translation><!-- Net 60 --></translation>
+        </picklistValues>
+    </fields>
+    <layouts>
+        <layout>Credit Application Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Finance Recommendation --></label>
+            <section>Finance Recommendation</section>
+        </sections>
+        <sections>
+            <label><!-- Record Detail --></label>
+            <section>Record Detail</section>
+        </sections>
+    </layouts>
+    <startsWith>Consonant</startsWith>
+    <validationRules>
+        <errorMessage><!-- Finance must obtain an AOR. The AOR must be reviewed and authorized by Finance Manager before credit application can be approved and completed. --></errorMessage>
+        <name>AOR_Review_Required</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Finance Manager must provide comments supporting credit limit/ terms granted --></errorMessage>
+        <name>Finance_Credit_Term_Support_Required</name>
+    </validationRules>
+</CustomObjectTranslation>

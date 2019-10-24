@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Queue xmlns="http://soap.sforce.com/2006/04/metadata">
+    <doesSendEmailToMembers>true</doesSendEmailToMembers>
+    <email>njbrenner@marathonventures.com</email>
+    <name>Deal Process</name>
+    <queueMembers>
+        <users>
+            <user>devonbondy@mvmediasales.com</user>
+            <user>jakebrenner@mvmediasales.com</user>
+        </users>
+    </queueMembers>
+    <queueSobject>
+        <sobjectType>Brands__c</sobjectType>
+    </queueSobject>
+    <queueSobject>
+        <sobjectType>Case</sobjectType>
+    </queueSobject>
+    <queueSobject>
+        <sobjectType>Lead</sobjectType>
+    </queueSobject>
+</Queue>

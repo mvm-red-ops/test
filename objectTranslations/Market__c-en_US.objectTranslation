@@ -1,0 +1,1239 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Market</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Markets</value>
+    </caseValues>
+    <fields>
+        <label><!-- AA HH % --></label>
+        <name>AA_HH__c</name>
+    </fields>
+    <fields>
+        <label><!-- ADS % --></label>
+        <name>ADS__c</name>
+    </fields>
+    <fields>
+        <label><!-- AntennaTV Affiliate --></label>
+        <name>AntennaTV_Affiliate__c</name>
+        <picklistValues>
+            <masterLabel>ABC</masterLabel>
+            <translation><!-- ABC --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CBS</masterLabel>
+            <translation><!-- CBS --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CW</masterLabel>
+            <translation><!-- CW --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Cozi TV</masterLabel>
+            <translation><!-- Cozi TV --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>FOX</masterLabel>
+            <translation><!-- FOX --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>H&amp;I</masterLabel>
+            <translation><!-- H&amp;I --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Independent</masterLabel>
+            <translation><!-- Independent --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>MeTV</masterLabel>
+            <translation><!-- MeTV --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>MundoMax</masterLabel>
+            <translation><!-- MundoMax --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>MyNetworkTV</masterLabel>
+            <translation><!-- MyNetworkTV --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>NBC</masterLabel>
+            <translation><!-- NBC --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Star</masterLabel>
+            <translation><!-- Star --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Telemundo</masterLabel>
+            <translation><!-- Telemundo --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ThisTV</masterLabel>
+            <translation><!-- ThisTV --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- AntennaTV Call Letters --></label>
+        <name>AntennaTV_Call_Letters__c</name>
+    </fields>
+    <fields>
+        <label><!-- AntennaTV Channel Position --></label>
+        <name>AntennaTV_Channel_Position__c</name>
+    </fields>
+    <fields>
+        <label><!-- AntennaTV Launch Date --></label>
+        <name>AntennaTV_Launch_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- AntennaTV Affiliate Owner --></label>
+        <name>AntennaTV__c</name>
+        <picklistValues>
+            <masterLabel>Bahakel Comm</masterLabel>
+            <translation><!-- Bahakel Comm --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Belo Corporation</masterLabel>
+            <translation><!-- Belo Corporation --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Block</masterLabel>
+            <translation><!-- Block --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Boise Telecasters</masterLabel>
+            <translation><!-- Boise Telecasters --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Bonten</masterLabel>
+            <translation><!-- Bonten --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Broadland Properties</masterLabel>
+            <translation><!-- Broadland Properties --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Calkins Media</masterLabel>
+            <translation><!-- Calkins Media --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Camino Real</masterLabel>
+            <translation><!-- Camino Real --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Cedar Rapids Television Co</masterLabel>
+            <translation><!-- Cedar Rapids Television Co --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Cocola Broadcasting</masterLabel>
+            <translation><!-- Cocola Broadcasting --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Community Broadcast Group</masterLabel>
+            <translation><!-- Community Broadcast Group --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Cox</masterLabel>
+            <translation><!-- Cox --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>DTV America Corp</masterLabel>
+            <translation><!-- DTV America Corp --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Delta Media</masterLabel>
+            <translation><!-- Delta Media --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Dreamcatcher</masterLabel>
+            <translation><!-- Dreamcatcher --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Ellington Broadcasting</masterLabel>
+            <translation><!-- Ellington Broadcasting --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Esteem Broadcasting</masterLabel>
+            <translation><!-- Esteem Broadcasting --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>FOX</masterLabel>
+            <translation><!-- FOX --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Fireweed Communications Corporation</masterLabel>
+            <translation><!-- Fireweed Communications Corporation --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Flood Communication</masterLabel>
+            <translation><!-- Flood Communication --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Freelancer TV</masterLabel>
+            <translation><!-- Freelancer TV --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Gannett Company</masterLabel>
+            <translation><!-- Gannett Company --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>GoCom Media Of Illinois/Sinclair</masterLabel>
+            <translation><!-- GoCom Media Of Illinois/Sinclair --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Gray</masterLabel>
+            <translation><!-- Gray --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Great Plains Television</masterLabel>
+            <translation><!-- Great Plains Television --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Guardian Television Network</masterLabel>
+            <translation><!-- Guardian Television Network --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Howard Stirk Holdings</masterLabel>
+            <translation><!-- Howard Stirk Holdings --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Hubbard</masterLabel>
+            <translation><!-- Hubbard --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>JKB Associates</masterLabel>
+            <translation><!-- JKB Associates --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Journal</masterLabel>
+            <translation><!-- Journal --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>KGBY Partners</masterLabel>
+            <translation><!-- KGBY Partners --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>KTBS LLC</masterLabel>
+            <translation><!-- KTBS LLC --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>King Kong Broadcasting</masterLabel>
+            <translation><!-- King Kong Broadcasting --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>LIN TV Corporation</masterLabel>
+            <translation><!-- LIN TV Corporation --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Lenfest Broadcasting</masterLabel>
+            <translation><!-- Lenfest Broadcasting --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Louisiana Media Company</masterLabel>
+            <translation><!-- Louisiana Media Company --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>MMMAC, LLC</masterLabel>
+            <translation><!-- MMMAC, LLC --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Media General</masterLabel>
+            <translation><!-- Media General --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Meredith Corporation</masterLabel>
+            <translation><!-- Meredith Corporation --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Mission Broadcasting Group</masterLabel>
+            <translation><!-- Mission Broadcasting Group --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Morris</masterLabel>
+            <translation><!-- Morris --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Mountain Licenses LP</masterLabel>
+            <translation><!-- Mountain Licenses LP --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>NGB, Inc</masterLabel>
+            <translation><!-- NGB, Inc --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>National Cable Network</masterLabel>
+            <translation><!-- National Cable Network --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Nexstar Broadcasting Group</masterLabel>
+            <translation><!-- Nexstar Broadcasting Group --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Northland TV</masterLabel>
+            <translation><!-- Northland TV --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Oregon TV, LLC</masterLabel>
+            <translation><!-- Oregon TV, LLC --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Other</masterLabel>
+            <translation><!-- Other --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Pacific Southern, LLC</masterLabel>
+            <translation><!-- Pacific Southern, LLC --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Palm Television, LP</masterLabel>
+            <translation><!-- Palm Television, LP --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Pappas</masterLabel>
+            <translation><!-- Pappas --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Paxton Media Group</masterLabel>
+            <translation><!-- Paxton Media Group --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Perkin Media</masterLabel>
+            <translation><!-- Perkin Media --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Raycom Media</masterLabel>
+            <translation><!-- Raycom Media --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Red River</masterLabel>
+            <translation><!-- Red River --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Register Communications</masterLabel>
+            <translation><!-- Register Communications --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Saga Broadcasting, LLC</masterLabel>
+            <translation><!-- Saga Broadcasting, LLC --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>San Antonio Television LLC</masterLabel>
+            <translation><!-- San Antonio Television LLC --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Sarkes Tarzian, Inc.</masterLabel>
+            <translation><!-- Sarkes Tarzian, Inc. --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Scripps</masterLabel>
+            <translation><!-- Scripps --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Sinclair</masterLabel>
+            <translation><!-- Sinclair --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Son Broadcasting</masterLabel>
+            <translation><!-- Son Broadcasting --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Tegna</masterLabel>
+            <translation><!-- Tegna --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Three Sisters Brpadcasting, LLC</masterLabel>
+            <translation><!-- Three Sisters Brpadcasting, LLC --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Titan</masterLabel>
+            <translation><!-- Titan --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Tribune</masterLabel>
+            <translation><!-- Tribune --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Tutt Media</masterLabel>
+            <translation><!-- Tutt Media --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Union Street Video LLC</masterLabel>
+            <translation><!-- Union Street Video LLC --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Univision</masterLabel>
+            <translation><!-- Univision --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Venture Technologies</masterLabel>
+            <translation><!-- Venture Technologies --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>WBIN, Inc</masterLabel>
+            <translation><!-- WBIN, Inc --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>WBOC, INC</masterLabel>
+            <translation><!-- WBOC, INC --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Weese Enterprises</masterLabel>
+            <translation><!-- Weese Enterprises --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Weigel Broadcasting</masterLabel>
+            <translation><!-- Weigel Broadcasting --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Winstar Broadcasting</masterLabel>
+            <translation><!-- Winstar Broadcasting --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Woods</masterLabel>
+            <translation><!-- Woods --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- BounceTV Call Letters --></label>
+        <name>BounceTV_Call_Letters__c</name>
+    </fields>
+    <fields>
+        <label><!-- BounceTV Channel Position --></label>
+        <name>BounceTV_Channel_Position__c</name>
+    </fields>
+    <fields>
+        <label><!-- BounceTV Launch Date --></label>
+        <name>BounceTV_Launch_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Bounce TV Affiliate Owner --></label>
+        <name>Bounce_TV_Affiliate_Owner__c</name>
+        <picklistValues>
+            <masterLabel>Belo Corporation</masterLabel>
+            <translation><!-- Belo Corporation --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Broadland Properties</masterLabel>
+            <translation><!-- Broadland Properties --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Calkins Media</masterLabel>
+            <translation><!-- Calkins Media --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Cocola Broadcasting</masterLabel>
+            <translation><!-- Cocola Broadcasting --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Esteem Broadcasting</masterLabel>
+            <translation><!-- Esteem Broadcasting --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>FOX</masterLabel>
+            <translation><!-- FOX --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Gannett Company</masterLabel>
+            <translation><!-- Gannett Company --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Great Plains Television</masterLabel>
+            <translation><!-- Great Plains Television --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Guardian Television Network</masterLabel>
+            <translation><!-- Guardian Television Network --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>JKB Associates</masterLabel>
+            <translation><!-- JKB Associates --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>King Kong Broadcasting</masterLabel>
+            <translation><!-- King Kong Broadcasting --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>LIN TV Corporation</masterLabel>
+            <translation><!-- LIN TV Corporation --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Lenfest Broadcasting</masterLabel>
+            <translation><!-- Lenfest Broadcasting --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Louisiana Media Company</masterLabel>
+            <translation><!-- Louisiana Media Company --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Meredith Corporation</masterLabel>
+            <translation><!-- Meredith Corporation --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Mission Broadcasting Group</masterLabel>
+            <translation><!-- Mission Broadcasting Group --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Nexstar Broadcasting Group</masterLabel>
+            <translation><!-- Nexstar Broadcasting Group --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Other</masterLabel>
+            <translation><!-- Other --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Raycom Media</masterLabel>
+            <translation><!-- Raycom Media --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Register Communications</masterLabel>
+            <translation><!-- Register Communications --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Scripps</masterLabel>
+            <translation><!-- Scripps --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Titan</masterLabel>
+            <translation><!-- Titan --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Univision</masterLabel>
+            <translation><!-- Univision --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Weigel Broadcasting</masterLabel>
+            <translation><!-- Weigel Broadcasting --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Bounce TV Affiliate --></label>
+        <name>Bounce_TV_Affiliate__c</name>
+        <picklistValues>
+            <masterLabel>ABC</masterLabel>
+            <translation><!-- ABC --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CBS</masterLabel>
+            <translation><!-- CBS --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CW</masterLabel>
+            <translation><!-- CW --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>FOX</masterLabel>
+            <translation><!-- FOX --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>HSN</masterLabel>
+            <translation><!-- HSN --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ME-TV</masterLabel>
+            <translation><!-- ME-TV --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>My Network TV</masterLabel>
+            <translation><!-- My Network TV --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>NBC</masterLabel>
+            <translation><!-- NBC --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Telefutura</masterLabel>
+            <translation><!-- Telefutura --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>UNIMAS</masterLabel>
+            <translation><!-- UNIMAS --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Univision</masterLabel>
+            <translation><!-- Univision --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- BuzzrTV Affiliate Owner --></label>
+        <name>BuzzrTV_Affiliate_Owner__c</name>
+        <picklistValues>
+            <masterLabel>American Spirit Media</masterLabel>
+            <translation><!-- American Spirit Media --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>COX Media Group</masterLabel>
+            <translation><!-- COX Media Group --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Citadel Communications</masterLabel>
+            <translation><!-- Citadel Communications --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Cox</masterLabel>
+            <translation><!-- Cox --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>DTV</masterLabel>
+            <translation><!-- DTV --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>FOX</masterLabel>
+            <translation><!-- FOX --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Gannett</masterLabel>
+            <translation><!-- Gannett --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Great Plains Television</masterLabel>
+            <translation><!-- Great Plains Television --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Independent</masterLabel>
+            <translation><!-- Independent --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>LIN TV</masterLabel>
+            <translation><!-- LIN TV --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Nexstar Broadcasting Group</masterLabel>
+            <translation><!-- Nexstar Broadcasting Group --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>PMCM TV, LLC</masterLabel>
+            <translation><!-- PMCM TV, LLC --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Ramar Communications</masterLabel>
+            <translation><!-- Ramar Communications --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Raycom Media</masterLabel>
+            <translation><!-- Raycom Media --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Scripps</masterLabel>
+            <translation><!-- Scripps --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Sinclair Broadcast Group</masterLabel>
+            <translation><!-- Sinclair Broadcast Group --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Sunbeam</masterLabel>
+            <translation><!-- Sunbeam --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Univision</masterLabel>
+            <translation><!-- Univision --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Weigel Broadcasting</masterLabel>
+            <translation><!-- Weigel Broadcasting --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- BuzzrTV Call Letters --></label>
+        <name>BuzzrTV_Call_Letters__c</name>
+    </fields>
+    <fields>
+        <label><!-- BuzzrTV Channel Position --></label>
+        <name>BuzzrTV_Channel_Position__c</name>
+    </fields>
+    <fields>
+        <label><!-- BuzzrTV Launch Date --></label>
+        <name>BuzzrTV_Launch_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- BuzzrTV Affiliate --></label>
+        <name>BuzzrTV__c</name>
+        <picklistValues>
+            <masterLabel>ABC</masterLabel>
+            <translation><!-- ABC --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CBS</masterLabel>
+            <translation><!-- CBS --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>COZI</masterLabel>
+            <translation><!-- COZI --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CW</masterLabel>
+            <translation><!-- CW --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>FOX</masterLabel>
+            <translation><!-- FOX --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Independent</masterLabel>
+            <translation><!-- Independent --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ME-TV</masterLabel>
+            <translation><!-- ME-TV --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>MyNetworkTV</masterLabel>
+            <translation><!-- MyNetworkTV --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>NBC</masterLabel>
+            <translation><!-- NBC --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Unimas</masterLabel>
+            <translation><!-- Unimas --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Univision</masterLabel>
+            <translation><!-- Univision --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Cozi TV Affiliate Owner --></label>
+        <name>Cozi_TV_Affiliate_Owner__c</name>
+        <picklistValues>
+            <masterLabel>Block Communications</masterLabel>
+            <translation><!-- Block Communications --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Community Broadcast Group</masterLabel>
+            <translation><!-- Community Broadcast Group --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Cordillera Communications</masterLabel>
+            <translation><!-- Cordillera Communications --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Dispatch Broadcast Group</masterLabel>
+            <translation><!-- Dispatch Broadcast Group --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Ellis-Wilson</masterLabel>
+            <translation><!-- Ellis-Wilson --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Franklin Media</masterLabel>
+            <translation><!-- Franklin Media --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Granite Broadcasting Corporation</masterLabel>
+            <translation><!-- Granite Broadcasting Corporation --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Intermountain West</masterLabel>
+            <translation><!-- Intermountain West --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>London Broadcast Group</masterLabel>
+            <translation><!-- London Broadcast Group --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Morris Multimedia</masterLabel>
+            <translation><!-- Morris Multimedia --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>NBC</masterLabel>
+            <translation><!-- NBC --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>NRJ TV, LLC</masterLabel>
+            <translation><!-- NRJ TV, LLC --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Red River Broadcasting</masterLabel>
+            <translation><!-- Red River Broadcasting --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Scripps</masterLabel>
+            <translation><!-- Scripps --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Trans America</masterLabel>
+            <translation><!-- Trans America --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Cozi TV Affiliate --></label>
+        <name>Cozi_TV_Affiliate__c</name>
+        <picklistValues>
+            <masterLabel>ABC</masterLabel>
+            <translation><!-- ABC --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CBS/This TV</masterLabel>
+            <translation><!-- CBS/This TV --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Cozi</masterLabel>
+            <translation><!-- Cozi --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>FOX</masterLabel>
+            <translation><!-- FOX --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Independent</masterLabel>
+            <translation><!-- Independent --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Me-TV</masterLabel>
+            <translation><!-- Me-TV --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>My Network</masterLabel>
+            <translation><!-- My Network --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>NBC</masterLabel>
+            <translation><!-- NBC --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Cozi TV Call Letters --></label>
+        <name>Cozi_TV_Call_Letters__c</name>
+    </fields>
+    <fields>
+        <label><!-- Cozi TV Channel Position --></label>
+        <name>Cozi_TV_Channel_Position__c</name>
+    </fields>
+    <fields>
+        <label><!-- Cozi TV Launch Date --></label>
+        <name>Cozi_TV_Launch_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- DMA Rank --></label>
+        <name>DMA_Rank__c</name>
+    </fields>
+    <fields>
+        <label><!-- EscapeTV Affiliate Owner --></label>
+        <name>EscapeTV_Affiliate_Owner__c</name>
+        <picklistValues>
+            <masterLabel>American Spirit Media</masterLabel>
+            <translation><!-- American Spirit Media --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Citadel Communications</masterLabel>
+            <translation><!-- Citadel Communications --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Cox Media Group</masterLabel>
+            <translation><!-- Cox Media Group --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Great Plains Television</masterLabel>
+            <translation><!-- Great Plains Television --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Lockwood</masterLabel>
+            <translation><!-- Lockwood --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Louisiana Media Company</masterLabel>
+            <translation><!-- Louisiana Media Company --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>PMCM TV, LLC</masterLabel>
+            <translation><!-- PMCM TV, LLC --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Raycom</masterLabel>
+            <translation><!-- Raycom --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Scripps</masterLabel>
+            <translation><!-- Scripps --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Univision</masterLabel>
+            <translation><!-- Univision --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- EscapeTV Affiliate --></label>
+        <name>EscapeTV_Affiliate__c</name>
+        <picklistValues>
+            <masterLabel>ABC</masterLabel>
+            <translation><!-- ABC --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CBS</masterLabel>
+            <translation><!-- CBS --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CW</masterLabel>
+            <translation><!-- CW --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>FOX</masterLabel>
+            <translation><!-- FOX --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Independent</masterLabel>
+            <translation><!-- Independent --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ME-TV</masterLabel>
+            <translation><!-- ME-TV --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>My Network TV</masterLabel>
+            <translation><!-- My Network TV --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>NBC</masterLabel>
+            <translation><!-- NBC --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Unimas</masterLabel>
+            <translation><!-- Unimas --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Univision</masterLabel>
+            <translation><!-- Univision --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- EscapeTV Call Letters --></label>
+        <name>EscapeTV_Call_Letters__c</name>
+    </fields>
+    <fields>
+        <label><!-- EscapeTV Channel Position --></label>
+        <name>EscapeTV_Channel_Position__c</name>
+    </fields>
+    <fields>
+        <label><!-- EscapeTV Launch Date --></label>
+        <name>EscapeTV_Launch_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- GritTV Affiliate Owner --></label>
+        <name>GritTV_Affiliate_Owner__c</name>
+        <picklistValues>
+            <masterLabel>Carlisle One Media</masterLabel>
+            <translation><!-- Carlisle One Media --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Citadel Communications</masterLabel>
+            <translation><!-- Citadel Communications --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Cox Media Group</masterLabel>
+            <translation><!-- Cox Media Group --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Great Plains Television</masterLabel>
+            <translation><!-- Great Plains Television --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>PMCM TV, LLC</masterLabel>
+            <translation><!-- PMCM TV, LLC --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Raycom</masterLabel>
+            <translation><!-- Raycom --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Sinclair Broadcast Group</masterLabel>
+            <translation><!-- Sinclair Broadcast Group --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Univision</masterLabel>
+            <translation><!-- Univision --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- GritTV Affiliate --></label>
+        <name>GritTV_Affiliate__c</name>
+        <picklistValues>
+            <masterLabel>ABC</masterLabel>
+            <translation><!-- ABC --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CBS</masterLabel>
+            <translation><!-- CBS --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CW</masterLabel>
+            <translation><!-- CW --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>FOX</masterLabel>
+            <translation><!-- FOX --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Independent</masterLabel>
+            <translation><!-- Independent --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Me-TV</masterLabel>
+            <translation><!-- Me-TV --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>MyNetworkTV</masterLabel>
+            <translation><!-- MyNetworkTV --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>NBC</masterLabel>
+            <translation><!-- NBC --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Unimas</masterLabel>
+            <translation><!-- Unimas --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Univision</masterLabel>
+            <translation><!-- Univision --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- GritTV Call Letters --></label>
+        <name>GritTV_Call_Letters__c</name>
+    </fields>
+    <fields>
+        <label><!-- GritTV Channel Position --></label>
+        <name>GritTV_Channel_Position__c</name>
+    </fields>
+    <fields>
+        <label><!-- GritTV Launch Date --></label>
+        <name>GritTV_Launch_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Justice Network Affiliate Owner --></label>
+        <name>Justice_Network_Affiliate_Owner__c</name>
+        <picklistValues>
+            <masterLabel>COX Media Group</masterLabel>
+            <translation><!-- COX Media Group --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Cocola Broadcasting</masterLabel>
+            <translation><!-- Cocola Broadcasting --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>LIN TV</masterLabel>
+            <translation><!-- LIN TV --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>PMCM TV, LLC</masterLabel>
+            <translation><!-- PMCM TV, LLC --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Raycom Media</masterLabel>
+            <translation><!-- Raycom Media --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Scripps</masterLabel>
+            <translation><!-- Scripps --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Tegna</masterLabel>
+            <translation><!-- Tegna --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Univision</masterLabel>
+            <translation><!-- Univision --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Weigel broadcasting</masterLabel>
+            <translation><!-- Weigel broadcasting --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Justice Network Affiliate --></label>
+        <name>Justice_Network_Affiliate__c</name>
+        <picklistValues>
+            <masterLabel>ABC</masterLabel>
+            <translation><!-- ABC --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CBS</masterLabel>
+            <translation><!-- CBS --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>FOX</masterLabel>
+            <translation><!-- FOX --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ME-TV</masterLabel>
+            <translation><!-- ME-TV --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>NBC</masterLabel>
+            <translation><!-- NBC --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Justice Network Call Letters --></label>
+        <name>Justice_Network_Call_Letters__c</name>
+    </fields>
+    <fields>
+        <label><!-- Justice Network Channel Position --></label>
+        <name>Justice_Network_Channel_Position__c</name>
+    </fields>
+    <fields>
+        <label><!-- Justice Network Launch Date --></label>
+        <name>Justice_Network_Launch_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Market Rank --></label>
+        <name>Market_Rank__c</name>
+    </fields>
+    <fields>
+        <label><!-- OTA % --></label>
+        <name>OTA__c</name>
+    </fields>
+    <fields>
+        <label><!-- ThisTV Affiliate Owner --></label>
+        <name>ThisTV_Affiliate_Owner__c</name>
+    </fields>
+    <fields>
+        <label><!-- ThisTV Affiliate --></label>
+        <name>ThisTV_Affiliate__c</name>
+        <picklistValues>
+            <masterLabel>ABC</masterLabel>
+            <translation><!-- ABC --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CBS</masterLabel>
+            <translation><!-- CBS --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CW</masterLabel>
+            <translation><!-- CW --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>EstrellaTV</masterLabel>
+            <translation><!-- EstrellaTV --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>FOX</masterLabel>
+            <translation><!-- FOX --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Independent</masterLabel>
+            <translation><!-- Independent --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>MeTV</masterLabel>
+            <translation><!-- MeTV --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>MyNetworkTV</masterLabel>
+            <translation><!-- MyNetworkTV --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>NBC</masterLabel>
+            <translation><!-- NBC --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SonLife</masterLabel>
+            <translation><!-- SonLife --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>TBD</masterLabel>
+            <translation><!-- TBD --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- ThisTV Call Letters --></label>
+        <name>ThisTV_Call_Letters__c</name>
+    </fields>
+    <fields>
+        <label><!-- ThisTV Channel Position --></label>
+        <name>ThisTV_Channel_Position__c</name>
+    </fields>
+    <fields>
+        <label><!-- ThisTV Launch Date --></label>
+        <name>ThisTV_Launch_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Time Zone --></label>
+        <name>Time_Zone__c</name>
+        <picklistValues>
+            <masterLabel>AKST</masterLabel>
+            <translation><!-- AKST --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AST</masterLabel>
+            <translation><!-- AST --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CST</masterLabel>
+            <translation><!-- CST --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>EST</masterLabel>
+            <translation><!-- EST --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>HST</masterLabel>
+            <translation><!-- HST --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>MST</masterLabel>
+            <translation><!-- MST --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>PST</masterLabel>
+            <translation><!-- PST --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- US HH % --></label>
+        <name>US_HH__c</name>
+    </fields>
+    <fields>
+        <label><!-- Wired Cable % --></label>
+        <name>Wired_Cable__c</name>
+    </fields>
+    <fields>
+        <label><!-- 2014 - 2015 DMA Rank --></label>
+        <name>X2014_2015_DMA_Rank__c</name>
+    </fields>
+    <layouts>
+        <layout>Market Layout</layout>
+        <sections>
+            <label><!-- AntennaTV Clearance --></label>
+            <section>AntennaTV Clearance</section>
+        </sections>
+        <sections>
+            <label><!-- BounceTV Clearance --></label>
+            <section>BounceTV Clearance</section>
+        </sections>
+        <sections>
+            <label><!-- BuzzrTV Clearance --></label>
+            <section>BuzzrTV Clearance</section>
+        </sections>
+        <sections>
+            <label><!-- COZI Clearance --></label>
+            <section>COZI Clearance</section>
+        </sections>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- EscapeTV Clearance --></label>
+            <section>EscapeTV Clearance</section>
+        </sections>
+        <sections>
+            <label><!-- GritTV Clearance --></label>
+            <section>GritTV Clearance</section>
+        </sections>
+        <sections>
+            <label><!-- Justice Network Clearance --></label>
+            <section>Justice Network Clearance</section>
+        </sections>
+        <sections>
+            <label><!-- ThisTV Clearance --></label>
+            <section>ThisTV Clearance</section>
+        </sections>
+    </layouts>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

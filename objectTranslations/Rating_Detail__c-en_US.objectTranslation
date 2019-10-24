@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Rating Detail</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Rating Details</value>
+    </caseValues>
+    <fields>
+        <label><!-- Bounce Daypart --></label>
+        <name>Bounce_Daypart__c</name>
+        <picklistValues>
+            <masterLabel>MF 4P-7P</masterLabel>
+            <translation><!-- MF 4P-7P --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>MF 6A-8A</masterLabel>
+            <translation><!-- MF 6A-8A --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>MF 8A-4P</masterLabel>
+            <translation><!-- MF 8A-4P --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>MS 11P-1A</masterLabel>
+            <translation><!-- MS 11P-1A --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>MS 7P-11P</masterLabel>
+            <translation><!-- MS 7P-11P --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SS 11A-7P</masterLabel>
+            <translation><!-- SS 11A-7P --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Demo --></label>
+        <name>Demo__c</name>
+        <picklistValues>
+            <masterLabel>A18+</masterLabel>
+            <translation><!-- A18+ --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>A18-34</masterLabel>
+            <translation><!-- A18-34 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>A18-49</masterLabel>
+            <translation><!-- A18-49 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>A2+</masterLabel>
+            <translation><!-- A2+ --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>A25+</masterLabel>
+            <translation><!-- A25+ --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>A25-34</masterLabel>
+            <translation><!-- A25-34 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>A25-49</masterLabel>
+            <translation><!-- A25-49 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>A25-54</masterLabel>
+            <translation><!-- A25-54 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>A35+</masterLabel>
+            <translation><!-- A35+ --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>A35-64</masterLabel>
+            <translation><!-- A35-64 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>A50+</masterLabel>
+            <translation><!-- A50+ --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>A55+</masterLabel>
+            <translation><!-- A55+ --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>A65+</masterLabel>
+            <translation><!-- A65+ --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>HH</masterLabel>
+            <translation><!-- HH --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>M18+</masterLabel>
+            <translation><!-- M18+ --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>M18-34</masterLabel>
+            <translation><!-- M18-34 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>M18-49</masterLabel>
+            <translation><!-- M18-49 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>M2+</masterLabel>
+            <translation><!-- M2+ --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>M25+</masterLabel>
+            <translation><!-- M25+ --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>M25-49</masterLabel>
+            <translation><!-- M25-49 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>M25-54</masterLabel>
+            <translation><!-- M25-54 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>M35+</masterLabel>
+            <translation><!-- M35+ --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>M35-64</masterLabel>
+            <translation><!-- M35-64 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>M50+</masterLabel>
+            <translation><!-- M50+ --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>M55+</masterLabel>
+            <translation><!-- M55+ --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>M65+</masterLabel>
+            <translation><!-- M65+ --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>P12-17</masterLabel>
+            <translation><!-- P12-17 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>P2-11</masterLabel>
+            <translation><!-- P2-11 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>P6-11</masterLabel>
+            <translation><!-- P6-11 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>W12-17</masterLabel>
+            <translation><!-- W12-17 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>W18+</masterLabel>
+            <translation><!-- W18+ --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>W18-34</masterLabel>
+            <translation><!-- W18-34 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>W18-49</masterLabel>
+            <translation><!-- W18-49 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>W2+</masterLabel>
+            <translation><!-- W2+ --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>W25+</masterLabel>
+            <translation><!-- W25+ --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>W25-49</masterLabel>
+            <translation><!-- W25-49 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>W25-54</masterLabel>
+            <translation><!-- W25-54 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>W35+</masterLabel>
+            <translation><!-- W35+ --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>W35-64</masterLabel>
+            <translation><!-- W35-64 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>W50+</masterLabel>
+            <translation><!-- W50+ --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>W55+</masterLabel>
+            <translation><!-- W55+ --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>W65+</masterLabel>
+            <translation><!-- W65+ --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Impressions (000) --></label>
+        <name>Impressions_000__c</name>
+    </fields>
+    <fields>
+        <label><!-- Market Rank --></label>
+        <name>Market_Rank__c</name>
+    </fields>
+    <fields>
+        <label><!-- Market --></label>
+        <name>Market__c</name>
+    </fields>
+    <fields>
+        <label><!-- Rank --></label>
+        <name>Rank__c</name>
+    </fields>
+    <fields>
+        <label><!-- Rating Header --></label>
+        <name>Rating_Header__c</name>
+        <relationshipLabel><!-- Rating Details --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Rating --></label>
+        <name>Rating__c</name>
+    </fields>
+    <fields>
+        <label><!-- Station --></label>
+        <name>Station__c</name>
+        <relationshipLabel><!-- Rating Details --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- US HH% --></label>
+        <name>US_HH__c</name>
+    </fields>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

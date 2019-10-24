@@ -1,0 +1,784 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Program</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Programs</value>
+    </caseValues>
+    <fields>
+        <label><!-- Account Exec 1 --></label>
+        <name>Account_Exec_1__c</name>
+        <relationshipLabel><!-- Programs (Account Exec 1) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Account Exec 2 --></label>
+        <name>Account_Exec_2__c</name>
+        <relationshipLabel><!-- Programs (Account Exec 2) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Assistant --></label>
+        <name>Assistant__c</name>
+        <relationshipLabel><!-- Programs (Assistant) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Barter --></label>
+        <name>Barter__c</name>
+    </fields>
+    <fields>
+        <help><!-- Formula field that calculates whether all bundle upload checks have been completed. --></help>
+        <label><!-- Bundle Checklist Count --></label>
+        <name>Bundle_Checklist_Count__c</name>
+    </fields>
+    <fields>
+        <help><!-- Checks for any large discrepancies between clearances for different lengths.
+Checklist for Bundles. Clears all checkboxes after a new version is uploaded. --></help>
+        <label><!-- [Dep]Bundle Clearance by Length --></label>
+        <name>Bundle_Clearance_by_Length__c</name>
+    </fields>
+    <fields>
+        <help><!-- Reminder to check for overall low clearance or declines in bundle clearance
+Used by Operations to check for errors in bundle uploads and correct asap. --></help>
+        <label><!-- [Dep]Bundle Low Clearance Levels --></label>
+        <name>Bundle_Low_Clearance_Levels__c</name>
+    </fields>
+    <fields>
+        <help><!-- Reminder to check for missing orders (orders with 0% clearance by station or overall)
+Checklist for Bundles. Clears all checkboxes after a new version is uploaded. --></help>
+        <label><!-- [Dep]Bundle Missing Orders --></label>
+        <name>Bundle_Missing_Orders__c</name>
+    </fields>
+    <fields>
+        <help><!-- Reminder to check for stations with 0% clearance that may no longer participate in the bundle
+Checklist for Bundles. Clears all checkboxes after a new version is uploaded. --></help>
+        <label><!-- [Dep]Bundle Missing Stations --></label>
+        <name>Bundle_Missing_Stations__c</name>
+    </fields>
+    <fields>
+        <label><!-- Bundle Name --></label>
+        <name>Bundle_Name__c</name>
+    </fields>
+    <fields>
+        <help><!-- Reminder to check for Stations that may have overrun orders
+Used by Operations to check for errors in bundle uploads and correct asap. --></help>
+        <label><!-- [DeBundle Over Clearing Station / Orders --></label>
+        <name>Bundle_Over_Clearing_Station_Orders__c</name>
+    </fields>
+    <fields>
+        <help><!-- Rollup of Active Bundle Daypart Pricing Records --></help>
+        <label><!-- Bundle Rate --></label>
+        <name>Bundle_Rate__c</name>
+    </fields>
+    <fields>
+        <help><!-- Reminder to check to see if any spots were uploaded that did not match to stations
+Used by Operations to check for errors in bundle uploads and correct asap. --></help>
+        <label><!-- [Dep]Bundle Spots without Stations --></label>
+        <name>Bundle_Spots_without_Stations__c</name>
+    </fields>
+    <fields>
+        <label><!-- [Dep]Bundle Tier 1 Rate --></label>
+        <name>Bundle_Tier_1_Rate__c</name>
+    </fields>
+    <fields>
+        <label><!-- Bundle Tier 1 --></label>
+        <name>Bundle_Tier_1__c</name>
+    </fields>
+    <fields>
+        <label><!-- [Dep]Bundle Tier 2 Rate --></label>
+        <name>Bundle_Tier_2_Rate__c</name>
+    </fields>
+    <fields>
+        <label><!-- Bundle Tier 2 --></label>
+        <name>Bundle_Tier_2__c</name>
+    </fields>
+    <fields>
+        <label><!-- [Dep]Bundle Tier 3 --></label>
+        <name>Bundle_Tier_3__c</name>
+    </fields>
+    <fields>
+        <label><!-- [Dep]Bundle --></label>
+        <name>Bundle__c</name>
+    </fields>
+    <fields>
+        <label><!-- Cable/Synd/PP --></label>
+        <name>Cable_Synd__c</name>
+        <picklistValues>
+            <masterLabel>Bundle</masterLabel>
+            <translation><!-- Bundle --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Cable</masterLabel>
+            <translation><!-- Cable --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>PP</masterLabel>
+            <translation><!-- PP --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Syndication</masterLabel>
+            <translation><!-- Syndication --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Capping Revisions --></label>
+        <name>Capping_Revisions__c</name>
+        <picklistValues>
+            <masterLabel>Inactive</masterLabel>
+            <translation><!-- Inactive --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Planner In Progress</masterLabel>
+            <translation><!-- Planner In Progress --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SF In Progress</masterLabel>
+            <translation><!-- SF In Progress --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- Assigned by Finance --></help>
+        <label><!-- ClientCode --></label>
+        <name>ClientCode__c</name>
+    </fields>
+    <fields>
+        <label><!-- Client --></label>
+        <name>Client__c</name>
+        <picklistValues>
+            <masterLabel>Amer Latino</masterLabel>
+            <translation><!-- Amer Latino --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Broadway Channel</masterLabel>
+            <translation><!-- Broadway Channel --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CBS</masterLabel>
+            <translation><!-- CBS --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Cookie Jar</masterLabel>
+            <translation><!-- Cookie Jar --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Documentary</masterLabel>
+            <translation><!-- Documentary --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>FOX</masterLabel>
+            <translation><!-- FOX --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Gameday</masterLabel>
+            <translation><!-- Gameday --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>LAMC</masterLabel>
+            <translation><!-- LAMC --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>MGM</masterLabel>
+            <translation><!-- MGM --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Mustard</masterLabel>
+            <translation><!-- Mustard --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>NFL</masterLabel>
+            <translation><!-- NFL --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Somedia</masterLabel>
+            <translation><!-- Somedia --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>TVS</masterLabel>
+            <translation><!-- TVS --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Tribune</masterLabel>
+            <translation><!-- Tribune --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>WB</masterLabel>
+            <translation><!-- WB --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Clock Start Time --></label>
+        <name>Clock_Start_Time__c</name>
+        <picklistValues>
+            <masterLabel>4AM</masterLabel>
+            <translation><!-- 4AM --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>5AM</masterLabel>
+            <translation><!-- 5AM --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>6AM</masterLabel>
+            <translation><!-- 6AM --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- [Dep]Competitive Set --></label>
+        <name>Competitive_Set__c</name>
+        <picklistValues>
+            <masterLabel>African American</masterLabel>
+            <translation><!-- African American --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Broadcast</masterLabel>
+            <translation><!-- Broadcast --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Classic TV</masterLabel>
+            <translation><!-- Classic TV --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Game Show</masterLabel>
+            <translation><!-- Game Show --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Men</masterLabel>
+            <translation><!-- Men --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Sports</masterLabel>
+            <translation><!-- Sports --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Upscale</masterLabel>
+            <translation><!-- Upscale --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Women</masterLabel>
+            <translation><!-- Women --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- [Dep]Competitive --></label>
+        <name>Competitive__c</name>
+    </fields>
+    <fields>
+        <label><!-- Conga Log Template --></label>
+        <name>Conga_Log_Template__c</name>
+    </fields>
+    <fields>
+        <label><!-- DA Filler --></label>
+        <name>Da_Filler__c</name>
+    </fields>
+    <fields>
+        <label><!-- Deal Entity --></label>
+        <name>Deal_Entity__c</name>
+        <picklistValues>
+            <masterLabel>Marathon Ventures LLC</masterLabel>
+            <translation><!-- Marathon Ventures LLC --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- EF Filler --></label>
+        <name>EF_Filler__c</name>
+    </fields>
+    <fields>
+        <label><!-- Filler EM --></label>
+        <name>Filler_EM__c</name>
+    </fields>
+    <fields>
+        <help><!-- Check if inventory is fixed at a certain amount each week. --></help>
+        <label><!-- [Dep]Fixed Inventory --></label>
+        <name>Fixed_Inventory__c</name>
+    </fields>
+    <fields>
+        <label><!-- DA Floor --></label>
+        <name>Floor_DA__c</name>
+    </fields>
+    <fields>
+        <label><!-- EM Floor --></label>
+        <name>Floor_EM__c</name>
+    </fields>
+    <fields>
+        <label><!-- LN Floor --></label>
+        <name>Floor_LN__c</name>
+    </fields>
+    <fields>
+        <label><!-- ON Floor --></label>
+        <name>Floor_ON__c</name>
+    </fields>
+    <fields>
+        <label><!-- PR Floor --></label>
+        <name>Floor_PR__c</name>
+    </fields>
+    <fields>
+        <label><!-- Friday&apos;s Logs Close At --></label>
+        <name>Friday_Order_Deadline__c</name>
+    </fields>
+    <fields>
+        <help><!-- Select for properties that are no longer handled by Marathon; affects some budgeting and forecast reports. --></help>
+        <label><!-- Inactive --></label>
+        <name>Inactive__c</name>
+    </fields>
+    <fields>
+        <help><!-- Integration Day: Mon - 0, Tues - 1, Wed - 2, Th - 3, Fri - 4 --></help>
+        <label><!-- Intg Day --></label>
+        <name>Intg_Day__c</name>
+    </fields>
+    <fields>
+        <label><!-- LF Filler --></label>
+        <name>LF_Filler__c</name>
+    </fields>
+    <fields>
+        <label><!-- LN Filler --></label>
+        <name>LN_Filler__c</name>
+    </fields>
+    <fields>
+        <label><!-- Launch Week --></label>
+        <name>Launch_Week__c</name>
+    </fields>
+    <fields>
+        <label><!-- Lead --></label>
+        <name>Lead__c</name>
+        <relationshipLabel><!-- Programs (Lead) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Local Minutes Per Hour --></label>
+        <name>Local_Minutes_Per_Hour__c</name>
+    </fields>
+    <fields>
+        <help><!-- Log Week:
+0 - Current
+1 - Next Week
+2 - Two Weeks Later --></help>
+        <label><!-- Log Week --></label>
+        <name>Log_Week__c</name>
+    </fields>
+    <fields>
+        <help><!-- Enter any required CC: fields for the logs separated by commas. --></help>
+        <label><!-- Logs CC --></label>
+        <name>Logs_CC__c</name>
+    </fields>
+    <fields>
+        <help><!-- Primary contact for integration instructions at client/network --></help>
+        <label><!-- Logs Contact --></label>
+        <name>Logs_Contact__c</name>
+        <relationshipLabel><!-- Programs --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Monday&apos;s Logs Close At --></label>
+        <name>Monday_Order_Deadline__c</name>
+    </fields>
+    <fields>
+        <label><!-- National Minutes Per Hour --></label>
+        <name>National_Minutes_Per_Hour__c</name>
+    </fields>
+    <fields>
+        <label><!-- Network System Entry Back Up --></label>
+        <name>Network_System_Entry_Back_Up__c</name>
+        <relationshipLabel><!-- Programs (Network System Entry Back Up) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Network System Entry --></label>
+        <name>Network_System_Entry__c</name>
+    </fields>
+    <fields>
+        <label><!-- Network System --></label>
+        <name>Network_System__c</name>
+    </fields>
+    <fields>
+        <label><!-- Number of Stations --></label>
+        <name>Number_of_Stations__c</name>
+    </fields>
+    <fields>
+        <label><!-- ON Filler --></label>
+        <name>ON_Filler__c</name>
+    </fields>
+    <fields>
+        <label><!-- Original Orders Sent --></label>
+        <name>Original_Orders_Sent__c</name>
+    </fields>
+    <fields>
+        <help><!-- When a new month&apos;s initial PP Log is ready to be sent to a network, update this field and PP Current Start END with the first and last day of the new month PP Log to be sent. --></help>
+        <label><!-- PP Current Month End --></label>
+        <name>PP_Current_Month_End__c</name>
+    </fields>
+    <fields>
+        <help><!-- When a new month&apos;s initial PP Log is ready to be sent to a network, update this field and PP Current Month END with the first and last day of the new month PP Log to be sent. --></help>
+        <label><!-- PP Current Month Start --></label>
+        <name>PP_Current_Month_Start__c</name>
+    </fields>
+    <fields>
+        <label><!-- PP Revision +1 --></label>
+        <name>PP_Revision_1__c</name>
+    </fields>
+    <fields>
+        <label><!-- PP Revision --></label>
+        <name>PP_Revision__c</name>
+    </fields>
+    <fields>
+        <label><!-- PR Filler --></label>
+        <name>PR_Filler__c</name>
+    </fields>
+    <fields>
+        <label><!-- Package --></label>
+        <name>Package__c</name>
+        <picklistValues>
+            <masterLabel>E1</masterLabel>
+            <translation><!-- E1 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>LL3</masterLabel>
+            <translation><!-- LL3 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>N11</masterLabel>
+            <translation><!-- N11 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>N12</masterLabel>
+            <translation><!-- N12 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>P1</masterLabel>
+            <translation><!-- P1 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>P2</masterLabel>
+            <translation><!-- P2 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>P3</masterLabel>
+            <translation><!-- P3 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>P4</masterLabel>
+            <translation><!-- P4 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>P5</masterLabel>
+            <translation><!-- P5 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>P6</masterLabel>
+            <translation><!-- P6 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SS9</masterLabel>
+            <translation><!-- SS9 --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Post Log Backup --></label>
+        <name>Post_Log_Backup__c</name>
+        <relationshipLabel><!-- Programs (Post Log Backup) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Post Log --></label>
+        <name>Post_Log__c</name>
+        <relationshipLabel><!-- Programs (Post Log) --></relationshipLabel>
+    </fields>
+    <fields>
+        <help><!-- Checklist for Prelogs.  Clears all checkboxes after a new version is uploaded.
+Used by Operations to check for errors in prelogs and catch before air. --></help>
+        <label><!-- [DePrelog Canceled Orders with Clearance --></label>
+        <name>Prelog_Canceled_Orders_with_Clearance__c</name>
+    </fields>
+    <fields>
+        <label><!-- Prelog Check Count --></label>
+        <name>Prelog_Check_Count__c</name>
+    </fields>
+    <fields>
+        <label><!-- Prelog Date / Time --></label>
+        <name>Prelog_Date_Time__c</name>
+    </fields>
+    <fields>
+        <label><!-- Prelog/Entry Backup --></label>
+        <name>Prelog_Entry_Backup__c</name>
+        <relationshipLabel><!-- Programs (Prelog/Entry Backup) --></relationshipLabel>
+    </fields>
+    <fields>
+        <help><!-- Checklist for Prelogs.  Clears all checkboxes after a new version is uploaded.
+Used by Operations to check for errors in prelogs and catch before air. --></help>
+        <label><!-- [Dep]Prelog High AUR &amp; Low Clearance --></label>
+        <name>Prelog_High_AUR_Low_Clearance__c</name>
+    </fields>
+    <fields>
+        <help><!-- Checklist for Prelogs.  Clears all checkboxes after a new version is uploaded.
+Used by Operations to check for errors in prelogs and catch before air. --></help>
+        <label><!-- [Dep]Prelog Overbooked Units --></label>
+        <name>Prelog_Overbooked_Units__c</name>
+    </fields>
+    <fields>
+        <help><!-- Checklist for Prelogs.  Clears all checkboxes after a new version is uploaded.
+Used by Operations to check for errors in prelogs and catch before air. --></help>
+        <label><!-- [Dep]Prelog Priority/Test less than 100% --></label>
+        <name>Prelog_Priority_Test_less_than_100__c</name>
+    </fields>
+    <fields>
+        <label><!-- Prelog Version --></label>
+        <name>Prelog_Version__c</name>
+    </fields>
+    <fields>
+        <label><!-- Prelog --></label>
+        <name>Prelog__c</name>
+        <relationshipLabel><!-- Programs (Prelog) --></relationshipLabel>
+    </fields>
+    <fields>
+        <help><!-- Checklist for Prelogs.  Clears all checkboxes after a new version is uploaded.
+Used by Operations to check for errors in prelogs and catch before air. --></help>
+        <label><!-- [DepPrelog Ghosted Orders with Clearance --></label>
+        <name>Prelog_ghosted_Orders_with_Clearance__c</name>
+    </fields>
+    <fields>
+        <help><!-- Defined Field value of &quot;1&quot;. To Count number of Networks/Programs in a Data Set/SF Report --></help>
+        <label><!-- Program Count --></label>
+        <name>Program_Count__c</name>
+    </fields>
+    <fields>
+        <label><!-- Program Number --></label>
+        <name>Program_Number__c</name>
+    </fields>
+    <fields>
+        <label><!-- RCreconciled Week --></label>
+        <name>RCreconciled_Week__c</name>
+    </fields>
+    <fields>
+        <label><!-- Ratings Reconciled --></label>
+        <name>Ratings_Reconciled__c</name>
+    </fields>
+    <fields>
+        <help><!-- The last fully reconciled week in Salesforce --></help>
+        <label><!-- Reconciled Week --></label>
+        <name>Reconciled_Week__c</name>
+    </fields>
+    <fields>
+        <label><!-- SF Entry --></label>
+        <name>SF_Entry__c</name>
+        <relationshipLabel><!-- Programs (SF Entry) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Saturday&apos;s Logs Close At --></label>
+        <name>Saturday_Order_Deadline__c</name>
+    </fields>
+    <fields>
+        <label><!-- Station Call Letter --></label>
+        <name>Station_Call_Letter__c</name>
+    </fields>
+    <fields>
+        <label><!-- Sunday&apos;s Logs Close At --></label>
+        <name>Sunday_Order_Deadline__c</name>
+    </fields>
+    <fields>
+        <label><!-- Syndication Filler --></label>
+        <name>Syndication_Filler__c</name>
+    </fields>
+    <fields>
+        <help><!-- Blue, Red, Green, Orange --></help>
+        <label><!-- Team --></label>
+        <name>Team__c</name>
+    </fields>
+    <fields>
+        <help><!-- Determines the template for integration instructions
+
+0 - Red Team Without Traffic
+1 - Red Team With Traffic
+2 - Red Team With Traffic, Without Rates
+3 - Blue Team Without Traffic
+4 - Blue Team With Traffic
+5 - Blue Team With Traffic, Without Rates --></help>
+        <label><!-- Template --></label>
+        <name>Template__c</name>
+    </fields>
+    <fields>
+        <label><!-- Thursday&apos;s Logs Close At --></label>
+        <name>Thursday_Order_Deadline__c</name>
+    </fields>
+    <fields>
+        <label><!-- Today --></label>
+        <name>Today__c</name>
+    </fields>
+    <fields>
+        <label><!-- Today&apos;s Date --></label>
+        <name>Today_s_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Tuesday&apos;s Logs Close At --></label>
+        <name>Tuesday_Order_Deadline__c</name>
+    </fields>
+    <fields>
+        <help><!-- Assigned by Finance --></help>
+        <label><!-- Vendor Account --></label>
+        <name>Vendor_Account__c</name>
+        <relationshipLabel><!-- Programs --></relationshipLabel>
+    </fields>
+    <fields>
+        <help><!-- Captures Time Stamp of when Version was changed --></help>
+        <label><!-- Version Time Stamp --></label>
+        <name>Version_Time_Stamp__c</name>
+    </fields>
+    <fields>
+        <label><!-- WC Filler --></label>
+        <name>WC_Filler__c</name>
+    </fields>
+    <fields>
+        <label><!-- WKND DA Filler --></label>
+        <name>WKND_DA_Filler__c</name>
+    </fields>
+    <fields>
+        <label><!-- WKND ON Filler --></label>
+        <name>WKND_ON_Filler__c</name>
+    </fields>
+    <fields>
+        <label><!-- Wednesday&apos;s Logs Close At --></label>
+        <name>Wednesday_Order_Deadline__c</name>
+    </fields>
+    <fields>
+        <label><!-- Week Pending --></label>
+        <name>Week_Pending__c</name>
+    </fields>
+    <layouts>
+        <layout>Program Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Filler --></label>
+            <section>Filler</section>
+        </sections>
+        <sections>
+            <label><!-- Floor --></label>
+            <section>Floor</section>
+        </sections>
+        <sections>
+            <label><!-- Logs Schedule --></label>
+            <section>Logs Schedule</section>
+        </sections>
+        <sections>
+            <label><!-- Paid Programming --></label>
+            <section>Paid Programming</section>
+        </sections>
+        <sections>
+            <label><!-- Pre-logs --></label>
+            <section>Pre-logs</section>
+        </sections>
+        <sections>
+            <label><!-- Station Group --></label>
+            <section>Station Group</section>
+        </sections>
+    </layouts>
+    <startsWith>Consonant</startsWith>
+    <validationRules>
+        <errorMessage><!-- Cannot run Ratings trigger for weeks before Reconcile. --></errorMessage>
+        <name>RC_Reconciled_Week_Cannot_Run_Past_Weeks</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- RCreconciled_week has to be set to a Monday --></errorMessage>
+        <name>RC_Week</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Reconciled Week must be set to a past week. --></errorMessage>
+        <name>Reconciled_Future_Weeks</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- The reconciled week field must fall within the last 30 days --></errorMessage>
+        <name>Reconciled_Week_Date</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- For paid programming, the reconciled week field must fall within the last 45 days. --></errorMessage>
+        <name>Reconciled_Week_Date_PP</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Reconciled Week must be set to a Monday. --></errorMessage>
+        <name>Reconciled_Week_Mondays</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Please populate the &apos;Station Call Letter&apos; field. If this is an issue, please follow up with Finance. --></errorMessage>
+        <name>Station_Call_Letter</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Not Allowed to change the Ratings Reconciled Field, Chang Liu and Margaret Farris, only user allowed --></errorMessage>
+        <name>User_Permissions</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Local Minutes per Hour can&apos;t be less than 0 or more than 60 --></errorMessage>
+        <name>ZERO_Lcl_SIXTY</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Number inserted cannot be more than 60 or less than 0 --></errorMessage>
+        <name>ZERO_Natl_SIXTY</name>
+    </validationRules>
+    <webLinks>
+        <label><!-- BLUE_TEAM_LOGS --></label>
+        <name>BLUE_TEAM_LOGS</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- BlueHighways_Traffic_Grid --></label>
+        <name>BlueHighways_Traffic_Grid</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Create_XML_Bundle --></label>
+        <name>Create_XML_Bundle</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- FBN_Change_Log --></label>
+        <name>FBN_Change_Log</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- ONYX_TEAM_LOGS --></label>
+        <name>ONYX_TEAM_LOGS</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- PP_Bid_Sheet --></label>
+        <name>PP_Bid_Sheet</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- PP_Change_Log --></label>
+        <name>PP_Change_Log</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Red_Team_Logs --></label>
+        <name>Red_Team_Logs</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Stadium_Order_NW --></label>
+        <name>Stadium_Order_NW</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Stadium_PI_Revisions --></label>
+        <name>Stadium_PI_Revisions</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Stadium_PIs --></label>
+        <name>Stadium_PIs</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Stadium_PP_Traffic_Grid --></label>
+        <name>Stadium_PP_Traffic_Grid</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Stadium_Revisions --></label>
+        <name>Stadium_Revisions</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Stadium_Syndication --></label>
+        <name>Stadium_Syndication</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- TVG_PP_Traffic_Grid --></label>
+        <name>TVG_PP_Traffic_Grid</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Tennis_Traffic_Grid --></label>
+        <name>Tennis_Traffic_Grid</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- WOLF_TEAM_LOGS --></label>
+        <name>WOLF_TEAM_LOGS</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- YELLOW_TEAM_LOGS --></label>
+        <name>YELLOW_TEAM_LOGS</name>
+    </webLinks>
+</CustomObjectTranslation>

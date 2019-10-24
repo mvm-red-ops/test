@@ -1,0 +1,775 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Brands</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Brands</value>
+    </caseValues>
+    <fields>
+        <label><!-- Account --></label>
+        <name>Account__c</name>
+        <relationshipLabel><!-- Brands --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Advertiser --></label>
+        <name>Advertiser__c</name>
+        <relationshipLabel><!-- Brands --></relationshipLabel>
+    </fields>
+    <fields>
+        <help><!-- DELETE --></help>
+        <label><!-- [Dep]Agency Client --></label>
+        <name>Agency_Client__c</name>
+    </fields>
+    <fields>
+        <help><!-- DELETE --></help>
+        <label><!-- [Dep]Agency Estimate --></label>
+        <name>Agency_Estimate__c</name>
+    </fields>
+    <fields>
+        <help><!-- DELETE --></help>
+        <label><!-- [Dep]Agency Product --></label>
+        <name>Agency_Product_del__c</name>
+    </fields>
+    <fields>
+        <label><!-- Duplicate Approval --></label>
+        <name>Approved_Duplicate__c</name>
+        <picklistValues>
+            <masterLabel>Approved</masterLabel>
+            <translation><!-- Approved --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Not Approved</masterLabel>
+            <translation><!-- Not Approved --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- Networks on which a specific commercial is approved for air. DELETE --></help>
+        <label><!-- [Dep]Approved --></label>
+        <name>Approved__c</name>
+        <picklistValues>
+            <masterLabel>21st Century Fox Syndication</masterLabel>
+            <translation><!-- 21st Century Fox Syndication --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Antenna TV</masterLabel>
+            <translation><!-- Antenna TV --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Bill Cunningham</masterLabel>
+            <translation><!-- Bill Cunningham --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>BounceTV</masterLabel>
+            <translation><!-- BounceTV --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>BuzzrTV</masterLabel>
+            <translation><!-- BuzzrTV --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>COZI</masterLabel>
+            <translation><!-- COZI --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Cheaters</masterLabel>
+            <translation><!-- Cheaters --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>EscapeTV</masterLabel>
+            <translation><!-- EscapeTV --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>FBN</masterLabel>
+            <translation><!-- FBN --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>GritTV</masterLabel>
+            <translation><!-- GritTV --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Justice Network</masterLabel>
+            <translation><!-- Justice Network --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>MAV TV</masterLabel>
+            <translation><!-- MAV TV --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>MGM HD</masterLabel>
+            <translation><!-- MGM HD --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>MGM Syndication</masterLabel>
+            <translation><!-- MGM Syndication --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>MLB Network</masterLabel>
+            <translation><!-- MLB Network --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Paternity Court</masterLabel>
+            <translation><!-- Paternity Court --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Real Life 101</masterLabel>
+            <translation><!-- Real Life 101 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Ron Hazelton</masterLabel>
+            <translation><!-- Ron Hazelton --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Showcase</masterLabel>
+            <translation><!-- Showcase --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>TKN</masterLabel>
+            <translation><!-- TKN --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Tennis Channel</masterLabel>
+            <translation><!-- Tennis Channel --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>This TV</masterLabel>
+            <translation><!-- This TV --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Wild America</masterLabel>
+            <translation><!-- Wild America --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- Please check this box only if the brand is CIA DELETE --></help>
+        <label><!-- [Dep]Brand CIA --></label>
+        <name>Brand_CIA__c</name>
+    </fields>
+    <fields>
+        <label><!-- Brand Credit Limit --></label>
+        <name>Brand_Credit_Limit__c</name>
+    </fields>
+    <fields>
+        <label><!-- Brand Number --></label>
+        <name>Brand_Number__c</name>
+    </fields>
+    <fields>
+        <label><!-- Brands Advertisers --></label>
+        <name>Brands_Advertisers__c</name>
+    </fields>
+    <fields>
+        <help><!-- Secondary CPM/CPP DELETE --></help>
+        <label><!-- [Dep]CPM/P - Secondary --></label>
+        <name>CPM_P_Secondary__c</name>
+    </fields>
+    <fields>
+        <help><!-- Primary CPM/CPP for Brand DELETE --></help>
+        <label><!-- [Dep]CPM/P - Primary --></label>
+        <name>CPM_Primary__c</name>
+    </fields>
+    <fields>
+        <help><!-- DELETE --></help>
+        <label><!-- [Dep]CPO/CPA --></label>
+        <name>CPO_CPA__c</name>
+    </fields>
+    <fields>
+        <help><!-- Case Sensitive ID For Use in Excel Matching (VLookups) --></help>
+        <label><!-- Case Insensitive ID --></label>
+        <name>Case_Insensitive_ID__c</name>
+    </fields>
+    <fields>
+        <label><!-- Category --></label>
+        <name>Category__c</name>
+        <picklistValues>
+            <masterLabel>.Com/E-Commerce</masterLabel>
+            <translation><!-- .Com/E-Commerce --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Apparel/Accessories</masterLabel>
+            <translation><!-- Apparel/Accessories --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Appliances/Home Gadgets</masterLabel>
+            <translation><!-- Appliances/Home Gadgets --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Attorney-Medical Services/Equipments/Prescriptions</masterLabel>
+            <translation><!-- Attorney-Medical Services/Equipments/Prescriptions --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Attorney/General Legal Services</masterLabel>
+            <translation><!-- Attorney/General Legal Services --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Auto Accessories/Parts/Repair</masterLabel>
+            <translation><!-- Auto Accessories/Parts/Repair --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Baby</masterLabel>
+            <translation><!-- Baby --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Beauty/Cosmetics/Hair Care</masterLabel>
+            <translation><!-- Beauty/Cosmetics/Hair Care --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Business/Professional Services</masterLabel>
+            <translation><!-- Business/Professional Services --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Charity</masterLabel>
+            <translation><!-- Charity --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Cleaning Supplies</masterLabel>
+            <translation><!-- Cleaning Supplies --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Crafts/Hobbies/Sporting goods/Toys</masterLabel>
+            <translation><!-- Crafts/Hobbies/Sporting goods/Toys --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Education</masterLabel>
+            <translation><!-- Education --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Electronics/Software</masterLabel>
+            <translation><!-- Electronics/Software --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Entertainment/Gaming</masterLabel>
+            <translation><!-- Entertainment/Gaming --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Financial Services</masterLabel>
+            <translation><!-- Financial Services --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Fitness/Health/Medical Equipment</masterLabel>
+            <translation><!-- Fitness/Health/Medical Equipment --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Food and Beverages</masterLabel>
+            <translation><!-- Food and Beverages --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Home Improvement/Furniture</masterLabel>
+            <translation><!-- Home Improvement/Furniture --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Insurance- Auto</masterLabel>
+            <translation><!-- Insurance- Auto --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Insurance- Health/ Dental/ Disability</masterLabel>
+            <translation><!-- Insurance- Health/ Dental/ Disability --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Insurance- Life</masterLabel>
+            <translation><!-- Insurance- Life --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Media/Telecom</masterLabel>
+            <translation><!-- Media/Telecom --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Medical Services</masterLabel>
+            <translation><!-- Medical Services --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Mental Health</masterLabel>
+            <translation><!-- Mental Health --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Mobile Apps</masterLabel>
+            <translation><!-- Mobile Apps --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Office Supplies</masterLabel>
+            <translation><!-- Office Supplies --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Other</masterLabel>
+            <translation><!-- Other --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Pets</masterLabel>
+            <translation><!-- Pets --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Pharmaceuticals/Drugs</masterLabel>
+            <translation><!-- Pharmaceuticals/Drugs --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Social Networking/Dating</masterLabel>
+            <translation><!-- Social Networking/Dating --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Toiletry</masterLabel>
+            <translation><!-- Toiletry --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Travel/Recreation/Outdoors</masterLabel>
+            <translation><!-- Travel/Recreation/Outdoors --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- DELETE --></help>
+        <label><!-- [Dep]Demo - Primary --></label>
+        <name>Demo_Primary__c</name>
+        <picklistValues>
+            <masterLabel>A18+</masterLabel>
+            <translation><!-- A18+ --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>A18-34</masterLabel>
+            <translation><!-- A18-34 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>A18-49</masterLabel>
+            <translation><!-- A18-49 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>A25-49</masterLabel>
+            <translation><!-- A25-49 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>A25-54</masterLabel>
+            <translation><!-- A25-54 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>A35-64</masterLabel>
+            <translation><!-- A35-64 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>A50+</masterLabel>
+            <translation><!-- A50+ --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>A65+</masterLabel>
+            <translation><!-- A65+ --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>HH</masterLabel>
+            <translation><!-- HH --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>M18+</masterLabel>
+            <translation><!-- M18+ --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>M18-34</masterLabel>
+            <translation><!-- M18-34 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>M18-49</masterLabel>
+            <translation><!-- M18-49 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>M25-49</masterLabel>
+            <translation><!-- M25-49 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>M25-54</masterLabel>
+            <translation><!-- M25-54 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>M35-64</masterLabel>
+            <translation><!-- M35-64 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>M50+</masterLabel>
+            <translation><!-- M50+ --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>M65+</masterLabel>
+            <translation><!-- M65+ --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>P2-11</masterLabel>
+            <translation><!-- P2-11 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>P6-11</masterLabel>
+            <translation><!-- P6-11 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>W18+</masterLabel>
+            <translation><!-- W18+ --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>W18-34</masterLabel>
+            <translation><!-- W18-34 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>W18-49</masterLabel>
+            <translation><!-- W18-49 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>W25-49</masterLabel>
+            <translation><!-- W25-49 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>W25-54</masterLabel>
+            <translation><!-- W25-54 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>W35-64</masterLabel>
+            <translation><!-- W35-64 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>W50+</masterLabel>
+            <translation><!-- W50+ --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>W65+</masterLabel>
+            <translation><!-- W65+ --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- DELETE --></help>
+        <label><!-- [Dep]Demo - Secondary --></label>
+        <name>Demo_Secondary__c</name>
+        <picklistValues>
+            <masterLabel>A18+</masterLabel>
+            <translation><!-- A18+ --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>A18-34</masterLabel>
+            <translation><!-- A18-34 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>A18-49</masterLabel>
+            <translation><!-- A18-49 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>A25-49</masterLabel>
+            <translation><!-- A25-49 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>A25-54</masterLabel>
+            <translation><!-- A25-54 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>A35-64</masterLabel>
+            <translation><!-- A35-64 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>A50+</masterLabel>
+            <translation><!-- A50+ --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>A65+</masterLabel>
+            <translation><!-- A65+ --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>HH</masterLabel>
+            <translation><!-- HH --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>M18+</masterLabel>
+            <translation><!-- M18+ --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>M18-34</masterLabel>
+            <translation><!-- M18-34 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>M18-49</masterLabel>
+            <translation><!-- M18-49 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>M25-49</masterLabel>
+            <translation><!-- M25-49 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>M25-54</masterLabel>
+            <translation><!-- M25-54 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>M35-64</masterLabel>
+            <translation><!-- M35-64 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>M50+</masterLabel>
+            <translation><!-- M50+ --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>M65+</masterLabel>
+            <translation><!-- M65+ --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>P2-11</masterLabel>
+            <translation><!-- P2-11 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>P6-11</masterLabel>
+            <translation><!-- P6-11 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>W18+</masterLabel>
+            <translation><!-- W18+ --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>W18-34</masterLabel>
+            <translation><!-- W18-34 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>W18-49</masterLabel>
+            <translation><!-- W18-49 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>W25-49</masterLabel>
+            <translation><!-- W25-49 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>W25-54</masterLabel>
+            <translation><!-- W25-54 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>W35-64</masterLabel>
+            <translation><!-- W35-64 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>W50+</masterLabel>
+            <translation><!-- W50+ --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>W65+</masterLabel>
+            <translation><!-- W65+ --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- [Dep]Description --></label>
+        <name>Description__c</name>
+    </fields>
+    <fields>
+        <help><!-- DELETE --></help>
+        <label><!-- Dupe --></label>
+        <name>Dupe__c</name>
+    </fields>
+    <fields>
+        <label><!-- Email to SF ID --></label>
+        <name>Email_to_SF_ID__c</name>
+    </fields>
+    <fields>
+        <help><!-- If a brand hitlists a program, select the program here DELETE --></help>
+        <label><!-- Hitlisted --></label>
+        <name>Hitlisted__c</name>
+        <picklistValues>
+            <masterLabel>Bill Cunningham Show</masterLabel>
+            <translation><!-- Bill Cunningham Show --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Bounce TV</masterLabel>
+            <translation><!-- Bounce TV --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Cheaters</masterLabel>
+            <translation><!-- Cheaters --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>MGM HD</masterLabel>
+            <translation><!-- MGM HD --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>MGM Syndication</masterLabel>
+            <translation><!-- MGM Syndication --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>MLB Network</masterLabel>
+            <translation><!-- MLB Network --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Paternity Court</masterLabel>
+            <translation><!-- Paternity Court --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Ron Hazelton</masterLabel>
+            <translation><!-- Ron Hazelton --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Tennis Channel</masterLabel>
+            <translation><!-- Tennis Channel --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- DELETE --></help>
+        <label><!-- [Dep]Merge --></label>
+        <name>Merge__c</name>
+    </fields>
+    <fields>
+        <help><!-- DELETE --></help>
+        <label><!-- [Dep]Not Approved --></label>
+        <name>Not_Approved__c</name>
+        <picklistValues>
+            <masterLabel>21st Century Fox Syndication</masterLabel>
+            <translation><!-- 21st Century Fox Syndication --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Antenna TV</masterLabel>
+            <translation><!-- Antenna TV --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Bill Cunningham</masterLabel>
+            <translation><!-- Bill Cunningham --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Bounce TV</masterLabel>
+            <translation><!-- Bounce TV --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>BuzzrTV</masterLabel>
+            <translation><!-- BuzzrTV --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CBS Sports</masterLabel>
+            <translation><!-- CBS Sports --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>COZI</masterLabel>
+            <translation><!-- COZI --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Cheaters</masterLabel>
+            <translation><!-- Cheaters --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Documentary</masterLabel>
+            <translation><!-- Documentary --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Escape TV</masterLabel>
+            <translation><!-- Escape TV --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>FBN</masterLabel>
+            <translation><!-- FBN --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Grit TV</masterLabel>
+            <translation><!-- Grit TV --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Justice Network</masterLabel>
+            <translation><!-- Justice Network --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>MAV TV</masterLabel>
+            <translation><!-- MAV TV --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>MGM HD</masterLabel>
+            <translation><!-- MGM HD --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>MGM Syndication</masterLabel>
+            <translation><!-- MGM Syndication --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>MLB Network</masterLabel>
+            <translation><!-- MLB Network --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Paternity Court</masterLabel>
+            <translation><!-- Paternity Court --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Real Life 101</masterLabel>
+            <translation><!-- Real Life 101 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Ron Hazelton</masterLabel>
+            <translation><!-- Ron Hazelton --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Showcase</masterLabel>
+            <translation><!-- Showcase --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>TKN</masterLabel>
+            <translation><!-- TKN --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Tennis Channel</masterLabel>
+            <translation><!-- Tennis Channel --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>This TV</masterLabel>
+            <translation><!-- This TV --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Wild America</masterLabel>
+            <translation><!-- Wild America --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- DELETE --></help>
+        <label><!-- [Dep]Screened --></label>
+        <name>Screened__c</name>
+    </fields>
+    <fields>
+        <help><!-- DELETE --></help>
+        <label><!-- Spanish Language --></label>
+        <name>Spanish_Language__c</name>
+    </fields>
+    <fields>
+        <label><!-- Unique Brand Identifer --></label>
+        <name>Unique_Brand_Identifer__c</name>
+    </fields>
+    <fields>
+        <help><!-- DELETE --></help>
+        <label><!-- 21st Century Fox Syndcation Credit Terms --></label>
+        <name>X21st_Century_Fox_Syndcation_Credit_Term__c</name>
+        <picklistValues>
+            <masterLabel>CIA</masterLabel>
+            <translation><!-- CIA --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Net 30</masterLabel>
+            <translation><!-- Net 30 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Net 60</masterLabel>
+            <translation><!-- Net 60 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Net 90</masterLabel>
+            <translation><!-- Net 90 --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- 28:30 --></label>
+        <name>X28_30__c</name>
+    </fields>
+    <layouts>
+        <layout>Brand Layout</layout>
+        <sections>
+            <label><!-- Approvals --></label>
+            <section>Approvals</section>
+        </sections>
+        <sections>
+            <label><!-- Billing Information --></label>
+            <section>Billing Information</section>
+        </sections>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Target Audience --></label>
+            <section>Target Audience</section>
+        </sections>
+    </layouts>
+    <startsWith>Consonant</startsWith>
+    <validationRules>
+        <errorMessage><!-- Category is required. Please select appropriate category from list. --></errorMessage>
+        <name>Category_Required</name>
+    </validationRules>
+    <webLinks>
+        <label><!-- Clone --></label>
+        <name>Clone</name>
+    </webLinks>
+</CustomObjectTranslation>

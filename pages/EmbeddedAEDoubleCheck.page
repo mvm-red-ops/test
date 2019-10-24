@@ -1,0 +1,72 @@
+<apex:page Standardcontroller="Deal__c" extensions="EmbeddedAEDoubleCheck" title="Double check Report" >
+	<apex:form >
+		<apex:pageMessages />
+		<apex:outputPanel id="ScheduleDisplay" style="overflow:scroll;height:250px;" layout="block"> 
+       		<apex:pageblock >
+       			<table width="100%">
+       				<tr>
+       					<td align="left" style="font-size:20px;font-weight:bold;">
+       						{!SelectedDealWrapper.DealREcord.ContactAccount__c} - {!SelectedDealWrapper.DealRecord.Brands__r.Name} - {!SelectedDealWrapper.DealRecord.Length__c} - {!SelectedDealWrapper.DealRecord.Program__r.Name} - <apex:outputLInk value="/{!SelectedDealWrapper.DealRecord.Id}" target="_blank" > {!SelectedDealWrapper.DealRecord.Name} </apex:outputLInk> - {!SelectedDealWrapper.DealREcord.SF_Deal_ID__c}
+       					</td>
+       				</tr>
+       			</table>
+            	<table border="1" cellpadding="5" cellspacing="0" >
+                    <tr>
+                        <td style="width:80px;"><B>Days&nbsp;Allowed</B></td>
+                        <td style="width:100px;"><B>Start&nbsp;-&nbsp;End</B></td>
+                        <td style="width:80px;"><B>Rate</B></td>
+                        <apex:repeat value="{!SelectedDealWrapper.HeadingList}" var="headingModel">
+                            <td style="background-color:{!headingModel.bgcolor};"> 
+                                <b>
+                                    <apex:outputText >                            
+                                        <apex:outputText value="{0,date,M/d}">
+                                           <apex:param value="{!headingModel.startOfWeek}" />
+                                        </apex:outputText>
+                                    </apex:outputText>
+                                </b> 
+                            </td>
+                        </apex:repeat>
+                    </tr>
+                    <apex:repeat value="{!SelectedDealWrapper.LineItemModelList}" var="rt">
+                        <tr>
+                            <td style="text-align:center;">
+                                <apex:outputText value="{!rt.DaysAllowed}" style="width:5px"/>
+                            </td>
+                            <td style="text-align:center;white-space:nowrap;">
+                                <apex:outputText value="{!rt.SETime}" style="width:10px"/>
+                            </td>
+                            <td style="text-align:center;">
+                                <apex:outputText value="{0, number,$###,###,##0}"><apex:param value="{!rt.rate}" /></apex:outputText>
+                            </td>
+                            <apex:repeat value="{!rt.weeks}" var="wk">
+                                <td style="background-color:{!wk.schObj.BGColor__c};text-align:center;" valign="bottom" class="LTCavailable" CellId="{!wk.schObj.id}"  HasValues="{!wk.CellAvailable}" CanceledStatus="{!wk.schobj.Status__c}" RateforCell="{!wk.schObj.rate__c}" CellName="{!wk.schObj.name}">
+                                    <apex:outputPanel rendered="{!AND ( NOT ( ISBLANK ( wk.schObj.Units_Aired__c ) ) , NOT ( ISBLANK ( wk.schObj.Units_Available__c ) ) ) }" >
+	                                    <apex:outputLink value="/{!wk.schObj.id}" id="eventlink" target="_blank">
+	                                        <apex:outputText value="{0, number, 0}"><apex:param value="{!wk.schObj.Units_Aired__c}" /></apex:outputText>/<apex:outputText value="{0, number,0}"><apex:param value="{!wk.schObj.Units_Available__c}" /></apex:outputText>
+	                                    </apex:outputLink>
+                                    </apex:outputPanel>
+                                </td>
+                            </apex:repeat>
+                        </tr>
+                    </apex:repeat>
+                    <tr>
+                       	<td colspan="3"></td>
+                       	<apex:repeat value="{!SelectedDealWrapper.WeekDollarsList}" var="WeekPrice">
+                       		<td>
+                       			<apex:outputText value="{!WeekPrice}"/>
+                       		</td>
+                       	</apex:repeat>
+                       </tr>
+                </table> 
+                <table>
+                	<tr>
+                		<td style="padding-right:20px;"><b>Dollars Booked: <apex:outputText value="{0, number, $###,###,##0}"><apex:param value="{!SelectedDealWrapper.DealRecord.Sum_of_Total_Dollars__c}"/></apex:outputText></b></td>
+                  		<td style="padding-left:20px;padding-right:20px;"><b>Units Booked: <apex:outputText value="{0, number, 0}"><apex:param value="{!SelectedDealWrapper.DealRecord.Sum_of_Units_Available__c}"/></apex:outputText></b></td>
+                  		<td style="padding-left:20px;padding-right:20px;"><b>Dollar Clearance: <apex:outputText value="{0, number, $###,###,##0}"><apex:param value="{!SelectedDealWrapper.TotalDollars}"/></apex:outputText>/<apex:outputText value="{0, number,$###,###,##0}"><apex:param value="{!SelectedDealWrapper.TotalDollarsBooked}"/></apex:outputText> = <apex:outputText value="{0, number, 0}%"><apex:param value="{!SelectedDealWrapper.DollarClearancePercentage}"/></apex:outputText></b></td>
+                  		<td style="padding-left:20px;padding-right:20px;"><b>Unit Clearance: <apex:outputText value="{0, number, 0}"><apex:param value="{!SelectedDealWrapper.UnitsAired}"/></apex:outputText>/<apex:outputText value="{0, number,0}"><apex:param value="{!SelectedDealWrapper.UnitsAvailable}"/></apex:outputText> = <apex:outputText value="{0, number, 0}%"><apex:param value="{!SelectedDealWrapper.ClearancePercentage}"/></apex:outputText></b></td>
+                  	</tr>
+                </table>
+            </apex:pageblock>
+        </apex:outputPanel>
+	</apex:form>
+</apex:page>

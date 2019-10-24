@@ -1,0 +1,35 @@
+<apex:page controller="OUTDOORFilterByDealAccountController">
+  <apex:form >
+      <Apex:pageblock >
+          Deal Account <apex:inputText value="{!dealAccountName}" />
+      </Apex:pageblock>
+
+  <apex:pageBlock >
+    <apex:actionfunction name="selectAccount" action="{!selectAccount}">
+        <apex:param name="accName" value=""/>
+    </apex:actionFunction>
+      <table>
+        <apex:repeat value="{!lstDealAccount}" var="dealAccount">
+          <tr>
+              <td >
+                <a href="#" onclick="closeMe('{!dealAccount.ContactAccount__c}')">
+                    {!dealAccount.ContactAccount__c}
+                </a>
+              </td>
+              <td>
+                    {!dealAccount.name}
+              </td>
+          
+          </tr>
+        </apex:repeat>
+      </table>
+  </apex:pageBlock>
+ </apex:form>
+ <Script>
+    function closeMe(dealname){
+        alert('Hello');
+        window.opener.document.getElementById('ac').value = dealname;
+        window.close();
+    }
+ </script>
+</apex:page>
